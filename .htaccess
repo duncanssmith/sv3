@@ -1,7 +1,7 @@
 AddHandler fcgid-script .fcgi
 Options +FollowSymLinks +ExecCGI
 RewriteEngine On
-RewriteBase /<your_application>
+RewriteBase /sv3
 RewriteRule ^$ index.html [QSA]
 RewriteRule ^([^.]+)$ $1.html [QSA]
 RewriteCond %{REQUEST_FILENAME} !-f
