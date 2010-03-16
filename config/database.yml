@@ -20,5 +20,5 @@ production:
   adapter: mysql
   database: sammyeclat_sv3 
   username: sammyeclat
-  password: 37A$&amp;spring
+  password: 59p1ngu 
   socket: /tmp/mysql.sock
