@@ -1,7 +1,7 @@
 <h1>Listing compliances</h1>
 
 <table>
-  <tr>
+  <tr >
     <th>Product</th>
     <th>Edition</th>
     <th>Entitlement qty</th>
@@ -15,7 +15,7 @@
   </tr>
 
 <% for compliance in @compliances %>
-  <tr>
+  <tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
     <td><%=h compliance.product %></td>
     <td><%=h compliance.edition %></td>
     <td><%=h compliance.entitlement_qty %></td>

@@ -9,3 +9,9 @@ body {
 p {
   font-size: 8pt;
   color: green; }
+
+tr.list-line-odd {
+  background: #ddffbb; }
+
+tr.list-line-even {
+  background: #ddffdd; }
