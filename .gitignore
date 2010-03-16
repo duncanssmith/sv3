@@ -1,6 +1,5 @@
 *.*~
 log/*
-log/development.log
 *.log
 *.sql
 *.sqlite
@@ -16,6 +15,7 @@ log/development.log
 *.jpg
 *.gif
 *.png
+*.ico
 *.swf
 *.flv
 *.tmp
