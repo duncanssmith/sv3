@@ -1,0 +1,38 @@
+<h1>Listing compliances</h1>
+
+<table>
+  <tr>
+    <th>Product</th>
+    <th>Edition</th>
+    <th>Entitlement qty</th>
+    <th>Installs</th>
+    <th>Value</th>
+    <th>Unit cost</th>
+    <th>Entitlement status</th>
+    <th>Compliance</th>
+    <th>Compliance value</th>
+    <th>Compliance status</th>
+  </tr>
+
+<% for compliance in @compliances %>
+  <tr>
+    <td><%=h compliance.product %></td>
+    <td><%=h compliance.edition %></td>
+    <td><%=h compliance.entitlement_qty %></td>
+    <td><%=h compliance.installs %></td>
+    <td><%=h compliance.value %></td>
+    <td><%=h compliance.unit_cost %></td>
+    <td><%=h compliance.entitlement_status %></td>
+    <td><%=h compliance.compliance %></td>
+    <td><%=h compliance.compliance_value %></td>
+    <td><%=h compliance.compliance_status %></td>
+    <td><%= link_to 'Show', compliance %></td>
+    <td><%= link_to 'Edit', edit_compliance_path(compliance) %></td>
+    <td><%= link_to 'Destroy', compliance, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New compliance', new_compliance_path %>

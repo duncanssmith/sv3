@@ -1,0 +1,52 @@
+<h1>Editing compliance</h1>
+
+<% form_for(@compliance) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :product %><br />
+    <%= f.text_field :product %>
+  </p>
+  <p>
+    <%= f.label :edition %><br />
+    <%= f.text_field :edition %>
+  </p>
+  <p>
+    <%= f.label :entitlement_qty %><br />
+    <%= f.text_field :entitlement_qty %>
+  </p>
+  <p>
+    <%= f.label :installs %><br />
+    <%= f.text_field :installs %>
+  </p>
+  <p>
+    <%= f.label :value %><br />
+    <%= f.text_field :value %>
+  </p>
+  <p>
+    <%= f.label :unit_cost %><br />
+    <%= f.text_field :unit_cost %>
+  </p>
+  <p>
+    <%= f.label :entitlement_status %><br />
+    <%= f.text_field :entitlement_status %>
+  </p>
+  <p>
+    <%= f.label :compliance %><br />
+    <%= f.text_field :compliance %>
+  </p>
+  <p>
+    <%= f.label :compliance_value %><br />
+    <%= f.text_field :compliance_value %>
+  </p>
+  <p>
+    <%= f.label :compliance_status %><br />
+    <%= f.text_field :compliance_status %>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @compliance %> |
+<%= link_to 'Back', compliances_path %>
