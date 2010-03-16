@@ -1,5 +1,6 @@
 *.*~
 log/*
+log/development.log
 *.log
 *.sql
 *.sqlite
