@@ -3,14 +3,21 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
 	  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-    <title>Users: <%= controller.action_name %></title>
+    <title>Compliances: <%= controller.action_name %></title>
     <%= stylesheet_link_tag 'scaffold', 'sv3' %>
 	</head>		
 	<body>
+	  <h1>SAM &Eacute;clat</h1>
+
+			<% if session[:user_id] %>
+			  <%= link_to 'Users', :controller => 'users' %><br/>
+			  <%= link_to 'Compliances', :controller => 'compliances' %><br/>
+				<%= link_to 'Logout', :controller => 'admin', :action => 'logout' %><br/>
+      <% end %>
 
 	  <p style="color: green"><%= flash[:notice] %></p>
 
-		<%= yield %>
+		<%= yield  :layout %>
 
 	</body>
 </html>
