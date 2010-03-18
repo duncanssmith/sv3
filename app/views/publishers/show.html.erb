@@ -1,0 +1,18 @@
+<p>
+  <b>Name:</b>
+  <%=h @publisher.name %>
+</p>
+
+<p>
+  <b>Shortname:</b>
+  <%=h @publisher.shortname %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @publisher.description %>
+</p>
+
+
+<%= link_to 'Edit', edit_publisher_path(@publisher) %> |
+<%= link_to 'Back', publishers_path %>

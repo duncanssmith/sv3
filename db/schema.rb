@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100318104405) do
+ActiveRecord::Schema.define(:version => 20100318182329) do
 
   create_table "compliances", :force => true do |t|
     t.string   "product"
@@ -22,6 +22,14 @@ ActiveRecord::Schema.define(:version => 20100318104405) do
     t.integer  "compliance"
     t.float    "compliance_value"
     t.string   "compliance_status"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "publishers", :force => true do |t|
+    t.string   "name"
+    t.string   "shortname"
+    t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
