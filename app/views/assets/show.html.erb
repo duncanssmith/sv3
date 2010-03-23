@@ -1,0 +1,23 @@
+<p>
+  <b>Name:</b>
+  <%=h @asset.name %>
+</p>
+
+<p>
+  <b>Serial:</b>
+  <%=h @asset.serial %>
+</p>
+
+<p>
+  <b>Assetnumber:</b>
+  <%=h @asset.assetnumber %>
+</p>
+
+<p>
+  <b>Deploymentstatus:</b>
+  <%=h @asset.deploymentstatus %>
+</p>
+
+
+<%= link_to 'Edit', edit_asset_path(@asset) %> |
+<%= link_to 'Back', assets_path %>

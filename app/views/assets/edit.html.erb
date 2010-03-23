@@ -1,0 +1,28 @@
+<h1>Editing asset</h1>
+
+<% form_for(@asset) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :serial %><br />
+    <%= f.text_field :serial %>
+  </p>
+  <p>
+    <%= f.label :assetnumber %><br />
+    <%= f.text_field :assetnumber %>
+  </p>
+  <p>
+    <%= f.label :deploymentstatus %><br />
+    <%= f.text_field :deploymentstatus %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @asset %> |
+<%= link_to 'Back', assets_path %>

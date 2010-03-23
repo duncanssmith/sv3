@@ -11,8 +11,8 @@ require File.join(File.dirname(__FILE__), 'boot')
 Rails::Initializer.run do |config|
 	
 
-	# DUNCAN
-	#config.action_controller.session_store = :active_record_store
+	# DUNCAN - set sessions to be stored in database
+	config.action_controller.session_store = :active_record_store
 
   # Settings in config/environments/* take precedence over those specified here.
   # Application configuration should go into files in config/initializers

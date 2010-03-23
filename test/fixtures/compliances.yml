@@ -1,0 +1,54 @@
+#
+
+compliance_1:
+  id: 1
+  product: Autocad
+  edition: 1.2
+  entitlement_qty: 3
+  installs: 25
+  value: 850.00
+  unit_cost: 127.00
+  entitlement_status: 3
+  compliance: 2
+  compliance_value: 1250.00
+  compliance_status: GREEN
+
+compliance_2:
+  id: 2
+  product: Photoshop 
+  edition: 2.2
+  entitlement_qty: 7
+  installs: 29
+  value: 250.00
+  unit_cost: 127.00
+  entitlement_status: 2
+  compliance: 8
+  compliance_value: 1435.00
+  compliance_status: AMBER
+
+compliance_3:
+  id: 3
+  product: Word
+  edition: 2003 
+  entitlement_qty: 3
+  installs: 26
+  value: 350.00
+  unit_cost: 220.00
+  entitlement_status: 5
+  compliance: 1
+  compliance_value: 1850.00
+  compliance_status: RED
+
+compliance_4:
+  id: 4
+  product: Lotus123
+  edition: 5.2
+  entitlement_qty: 30
+  installs: 12
+  value: 450.00
+  unit_cost: 197.00
+  entitlement_status: 9
+  compliance: 4
+  compliance_value: 2050.00
+  compliance_status: GREEN
+

@@ -1,11 +1,97 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-one:
-  name: MyString
-  shortname: MyString
-  description: MyText
+publisher_1:
+  id: 1
+  name: Adobe 
+  shortname:  Adobe
+  description:
 
-two:
-  name: MyString
-  shortname: MyString
-  description: MyText
+publisher_2:
+  id: 2
+  name: Autodesk 
+  shortname:  Autodesk
+  description:
+
+publisher_3:
+  id: 3
+  name: Badley Geoscience 
+  shortname:  Badley Geoscience
+  description:
+
+publisher_4:
+  id: 4
+  name: ePulse 
+  shortname:  ePulse
+  description:
+
+publisher_5:
+  id: 5
+  name: Globalview Software Inc. 
+  shortname: Globalview 
+  description:
+
+publisher_6:
+  id: 6
+  name: Informatica Corporation 
+  shortname: Informatica 
+  description:
+
+publisher_7:
+  id: 7
+  name: Information Builders 
+  shortname: Information Builders 
+  description:
+
+publisher_8:
+  id: 8
+  name: Open Text Corporation 
+  shortname: Open Text 
+  description:
+
+publisher_9:
+  id: 9
+  name: Primavera System Inc.
+  shortname: Primavera 
+  description: 
+
+publisher_10:
+  id: 10
+  name: Quest Software 
+  shortname: Quest 
+  description:
+
+publisher_11:
+  id: 11
+  name: Salesforce.com Inc. 
+  shortname: Salesforce
+  description:
+
+publisher_12:
+  id: 12 
+  name: SAS Institute Inc. 
+  shortname:  SAS Institute
+  description:
+
+publisher_13:
+  id: 13
+  name: Serverware Group Inc. 
+  shortname: Serverware
+  description:
+
+publisher_14:
+  id: 14
+  name: Silicon Graphics Inc. 
+  shortname: Silicon Graphics
+  description:
+
+publisher_15:
+  id: 15
+  name: The Mathworks Limited 
+  shortname: The Mathworks
+  description:
+
+publisher_16:
+  id: 16
+  name: Websense Inc.
+  shortname: Websense
+  description:

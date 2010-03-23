@@ -9,7 +9,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100318182329) do
+ActiveRecord::Schema.define(:version => 20100323175440) do
+
+  create_table "assets", :force => true do |t|
+    t.string   "name"
+    t.string   "serial"
+    t.string   "assetnumber"
+    t.string   "deploymentstatus"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "compliances", :force => true do |t|
     t.string   "product"

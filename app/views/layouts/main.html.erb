@@ -10,6 +10,7 @@
 					<h1>SAM &Eacute;clat</h1>
 
 			<% if session[:user_id] %>
+			  <%= link_to 'Assets', :controller => 'assets' %><br/>
 			  <%= link_to 'Publishers', :controller => 'publishers' %><br/>
 			  <%= link_to 'Users', :controller => 'users' %><br/>
 			  <%= link_to 'Compliances', :controller => 'compliances' %><br/>
