@@ -12,7 +12,7 @@ Rails::Initializer.run do |config|
 	
 
 	# DUNCAN
-	config.action_controller.session_store = :active_record_store
+	#config.action_controller.session_store = :active_record_store
 
   # Settings in config/environments/* take precedence over those specified here.
   # Application configuration should go into files in config/initializers

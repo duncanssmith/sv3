@@ -1,7 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
   map.resources :publishers
 
-
   map.resources :users
 
   map.resources :compliances
