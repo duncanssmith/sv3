@@ -18,7 +18,8 @@ test:
 
 production:
   adapter: mysql
+  host: localhost
+  port: 3306
   database: sammyeclat_sv3 
   username: sammyeclat
   password: 59p1ngu 
-  socket: /tmp/mysql.sock
