@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  fullname: MyString
+  product_id: 1
+  serial: MyString
+  language: MyString
+
+two:
+  name: MyString
+  fullname: MyString
+  product_id: 1
+  serial: MyString
+  language: MyString

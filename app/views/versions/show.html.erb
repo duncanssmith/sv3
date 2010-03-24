@@ -1,0 +1,28 @@
+<p>
+  <b>Name:</b>
+  <%=h @version.name %>
+</p>
+
+<p>
+  <b>Fullname:</b>
+  <%=h @version.fullname %>
+</p>
+
+<p>
+  <b>Product:</b>
+  <%=h @version.product_id %>
+</p>
+
+<p>
+  <b>Serial:</b>
+  <%=h @version.serial %>
+</p>
+
+<p>
+  <b>Language:</b>
+  <%=h @version.language %>
+</p>
+
+
+<%= link_to 'Edit', edit_version_path(@version) %> |
+<%= link_to 'Back', versions_path %>
