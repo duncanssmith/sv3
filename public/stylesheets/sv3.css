@@ -20,6 +20,9 @@ tr.list-line-odd {
 tr.list-line-even {
   background: #dec; }
 
+div.content{
+				background: #eeffd3;}
+
 .navbar{
 				padding:2px;
 				padding-bottom:2px;
