@@ -1,21 +1,45 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-one:
-  name: MyString
-  reference: MyString
-  address1: MyString
-  address2: MyString
-  address3: MyString
-  address4: MyString
-  address5: MyString
-  postcode: MyString
+location_1:
+  id: 1
+  name: Antares Incorporated
+  reference: 1234
+  address1: 1342 Ocean Boulevard
+  address2: Santa Ana
+  address3: California
+  address4: USA
+  address5: 
+  postcode: 98231
 
-two:
-  name: MyString
-  reference: MyString
-  address1: MyString
-  address2: MyString
-  address3: MyString
-  address4: MyString
-  address5: MyString
-  postcode: MyString
+location_2:
+  id: 2
+  name: Vega Ltd
+  reference: 89223
+  address1: Vega Point
+  address2: 1 London Bridge Street
+  address3: London
+  address4: UK
+  address5:
+  postcode: SE1 1AZ
+
+location_3:
+  id: 3
+  name: Sirius GmbH
+  reference: 66473
+  address1: Sirius Plaza 
+  address2: 345 Steinerstrasse 
+  address3: Frankfurt
+  address4: Deutschland
+  address5: Germany
+  postcode: 891002 
+
+location_4:
+  id: 4
+  name: Aquarius Holdings plc
+  reference: 477382
+  address1: Glass House Estates 
+  address2: 10 Great Pulteney Street 
+  address3: London
+  address4: UK
+  address5: 
+  postcode: W1N 3RT 

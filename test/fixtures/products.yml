@@ -1,17 +1,55 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-one:
-  name: MyString
-  fullname: MyString
+product_1:
+  id: 1
+  name: Photoshop
+  fullname: Photoshop CS4
   publisher_id: 1
-  serial: MyString
-  sku: MyString
-  identifier: MyString
+  serial: 1829939802928734
+  sku: 992038801209
+  identifier: 23413234
 
-two:
-  name: MyString
-  fullname: MyString
+product_2:
+  id: 2
+  name: Illustrator
+  fullname: Illustrator CS4
   publisher_id: 1
-  serial: MyString
-  sku: MyString
-  identifier: MyString
+  serial: 3928829293
+  sku: 929910980923
+  identifier: 12332223
+
+product_3:
+  id: 3
+  name: Acrobat Reader
+  fullname: Acrobat Reader Pro 
+  publisher_id: 1
+  serial: 1829939802928734
+  sku: 998038801209
+  identifier: 2233411111
+
+product_4:
+  id: 4
+  name: Air
+  fullname: Air Home Edition 
+  publisher_id: 1
+  serial: 898793874983
+  sku: 93874537498983
+  identifier: 21483723
+
+product_5:
+  id: 5
+  name: Acrobat Reader
+  fullname: Acrobat Reader Pro 
+  publisher_id: 1
+  serial: 1829939802928734
+  sku: 998038801209
+  identifier: 2233411111
+
+product_6:
+  id: 6
+  name: AutoCAD
+  fullname: AutoCAD XYZ 
+  publisher_id: 2
+  serial: 237482774983
+  sku: 28739872938728
+  identifier: 288282882

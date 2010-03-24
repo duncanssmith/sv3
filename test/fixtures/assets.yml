@@ -1,49 +1,57 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 asset_1:
+  id: 1
   name: CI-55577
   serial: YBER087308
   assetnumber: 241728
   deploymentstatus: Current
 
 asset_2:
+  id: 2
   name: Pocket_PC
   serial: P2CK5030QMS 
   assetnumber: 240796
   deploymentstatus: Current
 
 asset_3:
+  id: 3
   name: CI-55577
   serial: XRTR070238
   assetnumber: 242739
   deploymentstatus: Current
 
 asset_4:
-  name: 2CK5030QMS 
-  serial: Pocket_PC
+  id: 4
+  name: Pocket_PC
+  serial: 2CK5030QMS 
   assetnumber: 240796
   deploymentstatus: Current
 
 asset_5:
+  id: 5
   name: CI-55577
   serial: YBER087308
   assetnumber: 241728
   deploymentstatus: Current
 
 asset_6:
-  name: 2CK5030QMS 
-  serial: Pocket_PC
+  id: 6
+  name: Pocket_PC
+  serial: 2CK5030QMS 
   assetnumber: 240796
   deploymentstatus: Current
 
 asset_7:
+  id: 7
   name: CI-55577
   serial: YBER087308
   assetnumber: 241728
   deploymentstatus: Current
 
 asset_8:
-  name: 2CK5030QMS 
-  serial: Pocket_PC
+  id: 8
+  name: Pocket_PC
+  serial: 2CK5030QMS 
   assetnumber: 240796
   deploymentstatus: Current

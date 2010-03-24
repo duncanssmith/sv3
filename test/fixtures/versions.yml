@@ -1,15 +1,17 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-one:
-  name: MyString
-  fullname: MyString
+version_1:
+  id: 1
+  name: 6.22.10
+  fullname: Photoshop CS4 6.22.10
   product_id: 1
-  serial: MyString
-  language: MyString
+  serial: XVAH23787623456
+  language: EN
 
-two:
-  name: MyString
-  fullname: MyString
+version_2:
+  id: 2
+  name: 5.223.144 
+  fullname: Photoshop CS4 5.223.144
   product_id: 1
-  serial: MyString
-  language: MyString
+  serial: RU9879879
+  language: EN

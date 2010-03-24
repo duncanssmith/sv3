@@ -1,9 +1,33 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-one:
+installation_1:
   version_id: 1
   device_id: 1
 
-two:
+installation_2:
   version_id: 1
+  device_id: 2
+
+installation_3:
+  version_id: 2
+  device_id: 1
+
+installation_4:
+  version_id: 3
+  device_id: 1
+
+installation_5:
+  version_id: 1
+  device_id: 3
+
+installation_6:
+  version_id: 6
+  device_id: 2
+
+installation_7:
+  version_id: 2
+  device_id: 3
+
+installation_8:
+  version_id: 5
   device_id: 1

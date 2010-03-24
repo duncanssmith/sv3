@@ -1,37 +1,59 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-one:
-  asset_id: MyString
-  make: MyString
-  model: MyString
-  serial: MyString
-  network_user_name: MyString
-  node: MyString
-  os: MyString
-  os_service_level: MyString
-  chassis: MyString
-  domain: MyString
-  ip: MyString
+device_1:
+  id: 1
+  asset_id: 393744
+  make: Dell 
+  model: Latitude D410 
+  serial: D9LZ42J 
+  location_id: 1
+  network_user_name: agay
+  node: DCAL08320 
+  os: Windows XP 
+  os_service_level: 2 
+  chassis: Network Portable 
+  domain: Aramis 
+  ip: 170.22.33.87 
   processor_count: 1
-  processor_type: MyString
-  processor_speed: 1
-  ram: 1
-  bios_date: 2010-03-24
+  processor_type: x64 Family 6 Model 15 Stepping 6 Intel Core 2
+  processor_speed: 1733
+  ram: 1024
+  bios_date: 2004-05-14
 
-two:
-  asset_id: MyString
-  make: MyString
-  model: MyString
-  serial: MyString
-  network_user_name: MyString
-  node: MyString
-  os: MyString
-  os_service_level: MyString
-  chassis: MyString
-  domain: MyString
-  ip: MyString
+device_2:
+  asset_id: 432234
+  make: Dell 
+  model: Latitude D510
+  serial: QZSD798A 
+  location_id: 1
+  network_user_name: dsmith 
+  node: DCAL08321 
+  os: Windows XP
+  os_service_level: 2 
+  chassis: Network Portable
+  domain: Aramis
+  ip: 170.22.33.89 
   processor_count: 1
-  processor_type: MyString
-  processor_speed: 1
-  ram: 1
-  bios_date: 2010-03-24
+  processor_type: x64 Family 6 Model 15 Stepping Intel Core 2 
+  processor_speed: 2366
+  ram: 4096 
+  bios_date: 2009-09-24
+
+device_3:
+  asset_id: 537729
+  make: Dell 
+  model: Latitude D510
+  serial: RREX238B 
+  location_id: 4
+  network_user_name: tcollis 
+  node: ER0034A91 
+  os: Windows XP
+  os_service_level: 2 
+  chassis: Network Portable
+  domain: Aramis
+  ip: 170.22.33.62 
+  processor_count: 1
+  processor_type: x64 Family 6 Model 15 Stepping Intel Core 2 
+  processor_speed: 1733
+  ram: 2048 
+  bios_date: 2008-07-11

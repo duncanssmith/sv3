@@ -1,35 +1,109 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-one:
+entitlement_1:
+  id: 1
   installation_id: 1
-  version_id: 1
-  region: MyString
-  agreement_type: MyString
-  licence_type: MyString
-  location_id: 1
+  version_id: 6
+  region: Europe
+  agreement_type: 
+  licence_type: Perpetual
+  location_id: 3
   quantity: 1
-  cost: 1
-  currency: MyString
-  document_reference: MyString
-  document_type: MyString
-  expiry: 2010-03-24
-  support_expiry: 2010-03-24
-  entitlement_id: 1
-  supplier: MyString
+  cost: 10000
+  currency: USD
+  document_reference: 123ABC 
+  document_type: Original Document
+  expiry: 2015-03-24
+  support_expiry: 2010-05-24
+  entitlement_id: 7
+  supplier: A Software Vendor
 
-two:
-  installation_id: 1
+entitlement_2:
+  id: 2
+  installation_id: 4
   version_id: 1
-  region: MyString
-  agreement_type: MyString
-  licence_type: MyString
+  region: Europe
+  agreement_type: 
+  licence_type: Site
   location_id: 1
   quantity: 1
-  cost: 1
-  currency: MyString
-  document_reference: MyString
-  document_type: MyString
-  expiry: 2010-03-24
-  support_expiry: 2010-03-24
+  cost: 35000
+  currency: GBP
+  document_reference: 182XYZ 
+  document_type: Resellers Document
+  expiry: 2012-06-12
+  support_expiry: 2012-03-24
+  entitlement_id: 5
+  supplier: Software R Us
+
+entitlement_3:
+  id: 3
+  installation_id: 3
+  version_id: 2
+  region: North America
+  agreement_type: Volume
+  licence_type: Concurrent
+  location_id: 2
+  quantity: 2
+  cost: 14595
+  currency: USD
+  document_reference: RDX133 
+  document_type: Invoice
+  expiry: 2011-10-24
+  support_expiry: 2010-08-24
+  entitlement_id: 3
+  supplier: A Software Vendor
+
+entitlement_4:
+  id: 4
+  installation_id: 4
+  version_id: 1
+  region: Europe
+  agreement_type: 
+  licence_type: Site
+  location_id: 1
+  quantity: 1
+  cost: 3500
+  currency: GBP
+  document_reference: 33TTYU 
+  document_type: Purchase Record
+  expiry: 2012-06-12
+  support_expiry: 2012-03-24
+  entitlement_id: 5
+  supplier: Software R Us
+
+entitlement_5:
+  id: 5
+  installation_id: 3
+  version_id: 2
+  region: North America
+  agreement_type: Volume
+  licence_type: Concurrent
+  location_id: 2
+  quantity: 2
+  cost: 14595
+  currency: USD
+  document_reference: RDX133 
+  document_type: Invoice
+  expiry: 2011-10-24
+  support_expiry: 2010-08-24
+  entitlement_id: 3
+  supplier: A Software Vendor
+
+entitlement_6:
+  id: 6
+  installation_id: 4
+  version_id: 1
+  region: EMEA
+  agreement_type: 
+  licence_type: Site
+  location_id: 1
+  quantity: 1
+  cost: 113500
+  currency: USD
+  document_reference: WTYRUII
+  document_type: Purchase Record
+  expiry: 2013-06-12
+  support_expiry: 2013-03-24
   entitlement_id: 1
-  supplier: MyString
+  supplier: Software R Us
