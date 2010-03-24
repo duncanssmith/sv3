@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  fullname: MyString
+  publisher_id: 1
+  serial: MyString
+  sku: MyString
+  identifier: MyString
+
+two:
+  name: MyString
+  fullname: MyString
+  publisher_id: 1
+  serial: MyString
+  sku: MyString
+  identifier: MyString

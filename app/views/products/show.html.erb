@@ -1,0 +1,33 @@
+<p>
+  <b>Name:</b>
+  <%=h @product.name %>
+</p>
+
+<p>
+  <b>Fullname:</b>
+  <%=h @product.fullname %>
+</p>
+
+<p>
+  <b>Publisher:</b>
+  <%=h @product.publisher_id %>
+</p>
+
+<p>
+  <b>Serial:</b>
+  <%=h @product.serial %>
+</p>
+
+<p>
+  <b>Sku:</b>
+  <%=h @product.sku %>
+</p>
+
+<p>
+  <b>Identifier:</b>
+  <%=h @product.identifier %>
+</p>
+
+
+<%= link_to 'Edit', edit_product_path(@product) %> |
+<%= link_to 'Back', products_path %>
