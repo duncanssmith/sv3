@@ -1,0 +1,48 @@
+<h1>Listing entitlements</h1>
+
+<table>
+  <tr>
+    <th>Installation</th>
+    <th>Version</th>
+    <th>Region</th>
+    <th>Agreement type</th>
+    <th>Licence type</th>
+    <th>Location</th>
+    <th>Quantity</th>
+    <th>Cost</th>
+    <th>Currency</th>
+    <th>Document reference</th>
+    <th>Document type</th>
+    <th>Expiry</th>
+    <th>Support expiry</th>
+    <th>Entitlement</th>
+    <th>Supplier</th>
+  </tr>
+
+<% @entitlements.each do |entitlement| %>
+  <tr>
+    <td><%=h entitlement.installation_id %></td>
+    <td><%=h entitlement.version_id %></td>
+    <td><%=h entitlement.region %></td>
+    <td><%=h entitlement.agreement_type %></td>
+    <td><%=h entitlement.licence_type %></td>
+    <td><%=h entitlement.location_id %></td>
+    <td><%=h entitlement.quantity %></td>
+    <td><%=h entitlement.cost %></td>
+    <td><%=h entitlement.currency %></td>
+    <td><%=h entitlement.document_reference %></td>
+    <td><%=h entitlement.document_type %></td>
+    <td><%=h entitlement.expiry %></td>
+    <td><%=h entitlement.support_expiry %></td>
+    <td><%=h entitlement.entitlement_id %></td>
+    <td><%=h entitlement.supplier %></td>
+    <td><%= link_to 'Show', entitlement %></td>
+    <td><%= link_to 'Edit', edit_entitlement_path(entitlement) %></td>
+    <td><%= link_to 'Destroy', entitlement, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New entitlement', new_entitlement_path %>

@@ -1,0 +1,35 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  installation_id: 1
+  version_id: 1
+  region: MyString
+  agreement_type: MyString
+  licence_type: MyString
+  location_id: 1
+  quantity: 1
+  cost: 1
+  currency: MyString
+  document_reference: MyString
+  document_type: MyString
+  expiry: 2010-03-24
+  support_expiry: 2010-03-24
+  entitlement_id: 1
+  supplier: MyString
+
+two:
+  installation_id: 1
+  version_id: 1
+  region: MyString
+  agreement_type: MyString
+  licence_type: MyString
+  location_id: 1
+  quantity: 1
+  cost: 1
+  currency: MyString
+  document_reference: MyString
+  document_type: MyString
+  expiry: 2010-03-24
+  support_expiry: 2010-03-24
+  entitlement_id: 1
+  supplier: MyString

@@ -1,0 +1,78 @@
+<p>
+  <b>Installation:</b>
+  <%=h @entitlement.installation_id %>
+</p>
+
+<p>
+  <b>Version:</b>
+  <%=h @entitlement.version_id %>
+</p>
+
+<p>
+  <b>Region:</b>
+  <%=h @entitlement.region %>
+</p>
+
+<p>
+  <b>Agreement type:</b>
+  <%=h @entitlement.agreement_type %>
+</p>
+
+<p>
+  <b>Licence type:</b>
+  <%=h @entitlement.licence_type %>
+</p>
+
+<p>
+  <b>Location:</b>
+  <%=h @entitlement.location_id %>
+</p>
+
+<p>
+  <b>Quantity:</b>
+  <%=h @entitlement.quantity %>
+</p>
+
+<p>
+  <b>Cost:</b>
+  <%=h @entitlement.cost %>
+</p>
+
+<p>
+  <b>Currency:</b>
+  <%=h @entitlement.currency %>
+</p>
+
+<p>
+  <b>Document reference:</b>
+  <%=h @entitlement.document_reference %>
+</p>
+
+<p>
+  <b>Document type:</b>
+  <%=h @entitlement.document_type %>
+</p>
+
+<p>
+  <b>Expiry:</b>
+  <%=h @entitlement.expiry %>
+</p>
+
+<p>
+  <b>Support expiry:</b>
+  <%=h @entitlement.support_expiry %>
+</p>
+
+<p>
+  <b>Entitlement:</b>
+  <%=h @entitlement.entitlement_id %>
+</p>
+
+<p>
+  <b>Supplier:</b>
+  <%=h @entitlement.supplier %>
+</p>
+
+
+<%= link_to 'Edit', edit_entitlement_path(@entitlement) %> |
+<%= link_to 'Back', entitlements_path %>

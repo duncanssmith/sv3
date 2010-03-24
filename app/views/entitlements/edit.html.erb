@@ -1,0 +1,72 @@
+<h1>Editing entitlement</h1>
+
+<% form_for(@entitlement) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :installation_id %><br />
+    <%= f.text_field :installation_id %>
+  </p>
+  <p>
+    <%= f.label :version_id %><br />
+    <%= f.text_field :version_id %>
+  </p>
+  <p>
+    <%= f.label :region %><br />
+    <%= f.text_field :region %>
+  </p>
+  <p>
+    <%= f.label :agreement_type %><br />
+    <%= f.text_field :agreement_type %>
+  </p>
+  <p>
+    <%= f.label :licence_type %><br />
+    <%= f.text_field :licence_type %>
+  </p>
+  <p>
+    <%= f.label :location_id %><br />
+    <%= f.text_field :location_id %>
+  </p>
+  <p>
+    <%= f.label :quantity %><br />
+    <%= f.text_field :quantity %>
+  </p>
+  <p>
+    <%= f.label :cost %><br />
+    <%= f.text_field :cost %>
+  </p>
+  <p>
+    <%= f.label :currency %><br />
+    <%= f.text_field :currency %>
+  </p>
+  <p>
+    <%= f.label :document_reference %><br />
+    <%= f.text_field :document_reference %>
+  </p>
+  <p>
+    <%= f.label :document_type %><br />
+    <%= f.text_field :document_type %>
+  </p>
+  <p>
+    <%= f.label :expiry %><br />
+    <%= f.date_select :expiry %>
+  </p>
+  <p>
+    <%= f.label :support_expiry %><br />
+    <%= f.date_select :support_expiry %>
+  </p>
+  <p>
+    <%= f.label :entitlement_id %><br />
+    <%= f.text_field :entitlement_id %>
+  </p>
+  <p>
+    <%= f.label :supplier %><br />
+    <%= f.text_field :supplier %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @entitlement %> |
+<%= link_to 'Back', entitlements_path %>
