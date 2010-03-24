@@ -1,0 +1,76 @@
+<h1>Editing device</h1>
+
+<% form_for(@device) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :asset_id %><br />
+    <%= f.text_field :asset_id %>
+  </p>
+  <p>
+    <%= f.label :make %><br />
+    <%= f.text_field :make %>
+  </p>
+  <p>
+    <%= f.label :model %><br />
+    <%= f.text_field :model %>
+  </p>
+  <p>
+    <%= f.label :serial %><br />
+    <%= f.text_field :serial %>
+  </p>
+  <p>
+    <%= f.label :network_user_name %><br />
+    <%= f.text_field :network_user_name %>
+  </p>
+  <p>
+    <%= f.label :node %><br />
+    <%= f.text_field :node %>
+  </p>
+  <p>
+    <%= f.label :os %><br />
+    <%= f.text_field :os %>
+  </p>
+  <p>
+    <%= f.label :os_service_level %><br />
+    <%= f.text_field :os_service_level %>
+  </p>
+  <p>
+    <%= f.label :chassis %><br />
+    <%= f.text_field :chassis %>
+  </p>
+  <p>
+    <%= f.label :domain %><br />
+    <%= f.text_field :domain %>
+  </p>
+  <p>
+    <%= f.label :ip %><br />
+    <%= f.text_field :ip %>
+  </p>
+  <p>
+    <%= f.label :processor_count %><br />
+    <%= f.text_field :processor_count %>
+  </p>
+  <p>
+    <%= f.label :processor_type %><br />
+    <%= f.text_field :processor_type %>
+  </p>
+  <p>
+    <%= f.label :processor_speed %><br />
+    <%= f.text_field :processor_speed %>
+  </p>
+  <p>
+    <%= f.label :ram %><br />
+    <%= f.text_field :ram %>
+  </p>
+  <p>
+    <%= f.label :bios_date %><br />
+    <%= f.date_select :bios_date %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @device %> |
+<%= link_to 'Back', devices_path %>

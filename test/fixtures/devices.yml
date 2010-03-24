@@ -1,0 +1,37 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  asset_id: MyString
+  make: MyString
+  model: MyString
+  serial: MyString
+  network_user_name: MyString
+  node: MyString
+  os: MyString
+  os_service_level: MyString
+  chassis: MyString
+  domain: MyString
+  ip: MyString
+  processor_count: 1
+  processor_type: MyString
+  processor_speed: 1
+  ram: 1
+  bios_date: 2010-03-24
+
+two:
+  asset_id: MyString
+  make: MyString
+  model: MyString
+  serial: MyString
+  network_user_name: MyString
+  node: MyString
+  os: MyString
+  os_service_level: MyString
+  chassis: MyString
+  domain: MyString
+  ip: MyString
+  processor_count: 1
+  processor_type: MyString
+  processor_speed: 1
+  ram: 1
+  bios_date: 2010-03-24
