@@ -1,0 +1,13 @@
+<p>
+  <b>Version:</b>
+  <%=h @installation.version_id %>
+</p>
+
+<p>
+  <b>Device:</b>
+  <%=h @installation.device_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_installation_path(@installation) %> |
+<%= link_to 'Back', installations_path %>
