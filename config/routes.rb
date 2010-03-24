@@ -1,4 +1,8 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :versions
+
+  map.resources :products
+
   map.resources :assets
 
   map.resources :publishers

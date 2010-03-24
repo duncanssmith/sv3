@@ -11,9 +11,16 @@
 
 			<% if session[:user_id] %>
 			  <%= link_to 'Assets', :controller => 'assets' %><br/>
+				<br/>
 			  <%= link_to 'Publishers', :controller => 'publishers' %><br/>
-			  <%= link_to 'Users', :controller => 'users' %><br/>
+			  <%= link_to 'Products', :controller => 'products' %><br/>
+			  <%= link_to 'Versions', :controller => 'versions' %><br/>
+				<br/>
+
 			  <%= link_to 'Compliances', :controller => 'compliances' %><br/>
+				<br/>
+
+			  <%= link_to 'Users', :controller => 'users' %><br/>
 				<%= link_to 'Logout', :controller => 'admin', :action => 'logout' %><br/>
       <% end %>
 
