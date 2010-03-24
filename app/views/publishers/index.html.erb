@@ -8,7 +8,7 @@
   </tr>
 
 <% @publishers.each do |publisher| %>
-  <tr>
+	  <tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
     <td><%=h publisher.name %></td>
     <td><%=h publisher.shortname %></td>
     <td><%=h publisher.description %></td>

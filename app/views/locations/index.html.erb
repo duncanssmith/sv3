@@ -13,7 +13,7 @@
   </tr>
 
 <% @locations.each do |location| %>
-  <tr>
+	  <tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
     <td><%=h location.name %></td>
     <td><%=h location.reference %></td>
     <td><%=h location.address1 %></td>

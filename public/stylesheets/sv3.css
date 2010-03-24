@@ -10,8 +10,36 @@ p {
   font-size: 8pt;
   color: green; }
 
+h2{
+	font-size: 9pt;
+	font-weight:bold; }
+
 tr.list-line-odd {
-  background: #ddffbb; }
+  background: #efb; }
 
 tr.list-line-even {
-  background: #ddffdd; }
+  background: #dec; }
+
+.navbar{
+				padding:2px;
+				padding-bottom:2px;
+				margin-bottom:2px;
+				background-color:LightBlue; }
+
+table.nav{
+				padding:0px;
+				padding-left:2px;
+				padding-right:0px;
+				padding-bottom:2px;
+				margin:2px;
+				margin:2px;
+				border:solid 0px grey; }
+
+td.nav{
+				padding:1px;
+				padding-left:6px;
+				padding-right:7px;
+				margin:2px;
+				border:solid 1px grey;
+				border-left :solid 1px grey;
+				border-right :solid 1px grey; }

@@ -7,7 +7,7 @@
   </tr>
 
 <% @installations.each do |installation| %>
-  <tr>
+	<tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
     <td><%=h installation.version_id %></td>
     <td><%=h installation.device_id %></td>
     <td><%= link_to 'Show', installation %></td>

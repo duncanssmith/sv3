@@ -9,8 +9,8 @@
     <th>Assetlabel</th>
   </tr>
 
-<% @assets.each do |asset| %>
-  <tr>
+<% for asset in @assets %>
+	  <tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
     <td><%=h asset.name %></td>
     <td><%=h asset.serial %></td>
     <td><%=h asset.assetnumber %></td>

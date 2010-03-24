@@ -10,7 +10,7 @@
   </tr>
 
 <% @versions.each do |version| %>
-  <tr>
+	  <tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
     <td><%=h version.name %></td>
     <td><%=h version.fullname %></td>
     <td><%=h version.product_id %></td>

@@ -23,7 +23,7 @@
   </tr>
 
 <% @devices.each do |device| %>
-  <tr>
+	  <tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
     <td><%=h device.asset_id %></td>
     <td><%=h device.make %></td>
     <td><%=h device.model %></td>

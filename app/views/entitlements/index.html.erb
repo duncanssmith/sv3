@@ -20,7 +20,7 @@
   </tr>
 
 <% @entitlements.each do |entitlement| %>
-  <tr>
+	<tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
     <td><%=h entitlement.installation_id %></td>
     <td><%=h entitlement.version_id %></td>
     <td><%=h entitlement.region %></td>
