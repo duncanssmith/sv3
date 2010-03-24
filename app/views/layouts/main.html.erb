@@ -4,32 +4,47 @@
   <head>
 	  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 		<title>SAM &Eacute;clat: <%= controller.action_name %></title>
-    <%= stylesheet_link_tag 'scaffold', 'sv3' %>
+    <%= stylesheet_link_tag  'sv3' %>
 	</head>		
 	<body>
-					<h1>SAM &Eacute;clat</h1>
-
-					<% if session[:user_id] %>
+					<h1>SAM &Eacute;clat Asset CIO</h1>
+ 					<div style="background-color:LightBlue">
+					  <p class="navbar">
+						<% if session[:user_id] %>
+						<table class="nav"><tr><td class="nav">
 						<h2>Hardware</h2>
-			      <%= link_to 'Locations', :controller => 'locations' %><br/>
-			      <%= link_to 'Assets', :controller => 'assets' %><br/>
-			      <%= link_to 'Devices', :controller => 'devices' %><br/>
-				    <br/>
+						&nbsp;
+			      <%= link_to 'Locations', :controller => 'locations' %>
+						&nbsp;
+			      <%= link_to 'Assets', :controller => 'assets' %>
+						&nbsp;
+						<%= link_to 'Devices', :controller => 'devices' %>
+						</td><td class="nav">
 						<h2>Software</h2>
-			      <%= link_to 'Publishers', :controller => 'publishers' %><br/>
-			      <%= link_to 'Products', :controller => 'products' %><br/>
-			      <%= link_to 'Versions', :controller => 'versions' %><br/>
-			    	<br/>
+						&nbsp;
+			      <%= link_to 'Publishers', :controller => 'publishers' %>
+						&nbsp;
+			      <%= link_to 'Products', :controller => 'products' %>
+						&nbsp;
+			      <%= link_to 'Versions', :controller => 'versions' %>
+						</td><td class="nav">
 						<h2>Licencing</h2>
-			      <%= link_to 'Installations', :controller => 'installations' %><br/>
-			      <%= link_to 'Entitlements', :controller => 'entitlements' %><br/>
-			      <%= link_to 'Compliances', :controller => 'compliances' %><br/>
-				    <br/>
-
+						&nbsp;
+			      <%= link_to 'Installations', :controller => 'installations' %>
+						&nbsp;
+			      <%= link_to 'Entitlements', :controller => 'entitlements' %>
+						&nbsp;
+			      <%= link_to 'Compliances', :controller => 'compliances' %>
+						</td><td class="nav">
 						<h2>Adminstration</h2>
-			      <%= link_to 'Users', :controller => 'users' %><br/>
-				    <%= link_to 'Logout', :controller => 'admin', :action => 'logout' %><br/>
-          <% end %>
+						&nbsp;
+			      <%= link_to 'Users', :controller => 'users' %>
+						&nbsp;
+				    <%= link_to 'Logout', :controller => 'admin', :action => 'logout' %>
+		        <% end %>
+		        </td></tr></table>
+						</p>
+	       	</div>
 
 	  <p style="color: green"><%= flash[:notice] %></p>
 
