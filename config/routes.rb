@@ -1,4 +1,12 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :installations
+
+  map.resources :entitlements
+
+  map.resources :locations
+
+  map.resources :devices
+
   map.resources :versions
 
   map.resources :products

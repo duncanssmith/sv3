@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100324112232) do
+ActiveRecord::Schema.define(:version => 20100324160655) do
 
   create_table "assets", :force => true do |t|
     t.string   "name"
@@ -32,6 +32,69 @@ ActiveRecord::Schema.define(:version => 20100324112232) do
     t.integer  "compliance"
     t.float    "compliance_value"
     t.string   "compliance_status"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "devices", :force => true do |t|
+    t.string   "asset_id"
+    t.string   "make"
+    t.string   "model"
+    t.string   "serial"
+    t.string   "network_user_name"
+    t.string   "node"
+    t.string   "os"
+    t.string   "os_service_level"
+    t.string   "chassis"
+    t.string   "domain"
+    t.string   "ip"
+    t.integer  "processor_count"
+    t.string   "processor_type"
+    t.integer  "processor_speed"
+    t.integer  "ram"
+    t.date     "bios_date"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "mac_address"
+    t.integer  "location_id"
+  end
+
+  create_table "entitlements", :force => true do |t|
+    t.integer  "installation_id"
+    t.integer  "version_id"
+    t.string   "region"
+    t.string   "agreement_type"
+    t.string   "licence_type"
+    t.integer  "location_id"
+    t.integer  "quantity"
+    t.integer  "cost"
+    t.string   "currency"
+    t.string   "document_reference"
+    t.string   "document_type"
+    t.date     "expiry"
+    t.date     "support_expiry"
+    t.integer  "entitlement_id"
+    t.string   "supplier"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "installations", :force => true do |t|
+    t.integer  "version_id"
+    t.integer  "device_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "locations", :force => true do |t|
+    t.string   "name"
+    t.string   "reference"
+    t.string   "address1"
+    t.string   "address2"
+    t.string   "address3"
+    t.string   "address4"
+    t.string   "address5"
+    t.string   "postcode"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

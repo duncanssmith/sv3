@@ -9,20 +9,27 @@
 	<body>
 					<h1>SAM &Eacute;clat</h1>
 
-			<% if session[:user_id] %>
-			  <%= link_to 'Assets', :controller => 'assets' %><br/>
-				<br/>
-			  <%= link_to 'Publishers', :controller => 'publishers' %><br/>
-			  <%= link_to 'Products', :controller => 'products' %><br/>
-			  <%= link_to 'Versions', :controller => 'versions' %><br/>
-				<br/>
+					<% if session[:user_id] %>
+						<h2>Hardware</h2>
+			      <%= link_to 'Locations', :controller => 'locations' %><br/>
+			      <%= link_to 'Assets', :controller => 'assets' %><br/>
+			      <%= link_to 'Devices', :controller => 'devices' %><br/>
+				    <br/>
+						<h2>Software</h2>
+			      <%= link_to 'Publishers', :controller => 'publishers' %><br/>
+			      <%= link_to 'Products', :controller => 'products' %><br/>
+			      <%= link_to 'Versions', :controller => 'versions' %><br/>
+			    	<br/>
+						<h2>Licencing</h2>
+			      <%= link_to 'Installations', :controller => 'installations' %><br/>
+			      <%= link_to 'Entitlements', :controller => 'entitlements' %><br/>
+			      <%= link_to 'Compliances', :controller => 'compliances' %><br/>
+				    <br/>
 
-			  <%= link_to 'Compliances', :controller => 'compliances' %><br/>
-				<br/>
-
-			  <%= link_to 'Users', :controller => 'users' %><br/>
-				<%= link_to 'Logout', :controller => 'admin', :action => 'logout' %><br/>
-      <% end %>
+						<h2>Adminstration</h2>
+			      <%= link_to 'Users', :controller => 'users' %><br/>
+				    <%= link_to 'Logout', :controller => 'admin', :action => 'logout' %><br/>
+          <% end %>
 
 	  <p style="color: green"><%= flash[:notice] %></p>
 
