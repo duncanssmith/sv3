@@ -6,6 +6,7 @@
     <th>Serial</th>
     <th>Assetnumber</th>
     <th>Deploymentstatus</th>
+    <th>Assetlabel</th>
   </tr>
 
 <% @assets.each do |asset| %>
@@ -14,6 +15,7 @@
     <td><%=h asset.serial %></td>
     <td><%=h asset.assetnumber %></td>
     <td><%=h asset.deploymentstatus %></td>
+    <td><%=h asset.asset_label %></td>
     <td><%= link_to 'Show', asset %></td>
     <td><%= link_to 'Edit', edit_asset_path(asset) %></td>
     <td><%= link_to 'Destroy', asset, :confirm => 'Are you sure?', :method => :delete %></td>

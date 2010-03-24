@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100323175440) do
+ActiveRecord::Schema.define(:version => 20100324112232) do
 
   create_table "assets", :force => true do |t|
     t.string   "name"
@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(:version => 20100323175440) do
     t.string   "deploymentstatus"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "asset_label"
   end
 
   create_table "compliances", :force => true do |t|
@@ -31,6 +32,17 @@ ActiveRecord::Schema.define(:version => 20100323175440) do
     t.integer  "compliance"
     t.float    "compliance_value"
     t.string   "compliance_status"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "products", :force => true do |t|
+    t.string   "name"
+    t.string   "fullname"
+    t.integer  "publisher_id"
+    t.string   "serial"
+    t.string   "sku"
+    t.string   "identifier"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -57,6 +69,16 @@ ActiveRecord::Schema.define(:version => 20100323175440) do
     t.string   "name"
     t.string   "hashed_password"
     t.string   "salt"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "versions", :force => true do |t|
+    t.string   "name"
+    t.string   "fullname"
+    t.integer  "product_id"
+    t.string   "serial"
+    t.string   "language"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
