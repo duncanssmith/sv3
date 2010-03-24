@@ -1,0 +1,43 @@
+<p>
+  <b>Name:</b>
+  <%=h @location.name %>
+</p>
+
+<p>
+  <b>Reference:</b>
+  <%=h @location.reference %>
+</p>
+
+<p>
+  <b>Address1:</b>
+  <%=h @location.address1 %>
+</p>
+
+<p>
+  <b>Address2:</b>
+  <%=h @location.address2 %>
+</p>
+
+<p>
+  <b>Address3:</b>
+  <%=h @location.address3 %>
+</p>
+
+<p>
+  <b>Address4:</b>
+  <%=h @location.address4 %>
+</p>
+
+<p>
+  <b>Address5:</b>
+  <%=h @location.address5 %>
+</p>
+
+<p>
+  <b>Postcode:</b>
+  <%=h @location.postcode %>
+</p>
+
+
+<%= link_to 'Edit', edit_location_path(@location) %> |
+<%= link_to 'Back', locations_path %>
