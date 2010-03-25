@@ -57,6 +57,8 @@ class DevicesController < ApplicationController
   # PUT /devices/1
   # PUT /devices/1.xml
   def update
+		#params[:device][:asset_ids] ||= []
+		params[:device][:register_ids] ||= []
     @device = Device.find(params[:id])
 
     respond_to do |format|

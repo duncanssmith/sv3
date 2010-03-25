@@ -68,13 +68,13 @@
     <%= f.date_select :bios_date %>
 	</p>
 	<p>
-	<% for asset in Asset.find :all %> 		
+	<% for register in Register.find :all %> 		
 	<div>
-	  <%= check_box_tag "device[asset_ids][]", asset.id, @device.assets.include?(asset) %>
-	  <%= asset.name %>
+	  <%= check_box_tag "device[register_ids][]", register.id, @device.registers.include?(register) %>
+	  <%= register.name %>
 	</div>
-	</p>
   <% end %>
+	</p>
   <p>
     <%= f.submit 'Update' %>
   </p>
