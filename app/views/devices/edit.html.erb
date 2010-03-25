@@ -66,7 +66,15 @@
   <p>
     <%= f.label :bios_date %><br />
     <%= f.date_select :bios_date %>
-  </p>
+	</p>
+	<p>
+	<% for asset in Asset.find :all %> 		
+	<div>
+	  <%= check_box_tag "device[asset_ids][]", asset.id, @device.assets.include?(asset) %>
+	  <%= asset.name %>
+	</div>
+	</p>
+  <% end %>
   <p>
     <%= f.submit 'Update' %>
   </p>

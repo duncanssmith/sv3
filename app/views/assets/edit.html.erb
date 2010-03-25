@@ -20,6 +20,15 @@
     <%= f.text_field :deploymentstatus %>
   </p>
   <p>
+    <%= f.label :device_id %><br />
+    <%= f.text_field :device_id %>
+  </p>
+  <p>
+    <%= f.label :audit_type %><br />
+    <%= f.text_field :audit_type %>
+	</p>
+
+  <p>
     <%= f.submit 'Update' %>
   </p>
 <% end %>

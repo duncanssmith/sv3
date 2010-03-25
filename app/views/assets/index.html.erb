@@ -7,6 +7,8 @@
     <th>Assetnumber</th>
     <th>Deploymentstatus</th>
     <th>Assetlabel</th>
+    <th>Device</th>
+    <th>Audit type</th>
   </tr>
 
 <% for asset in @assets %>
@@ -16,6 +18,8 @@
     <td><%=h asset.assetnumber %></td>
     <td><%=h asset.deploymentstatus %></td>
     <td><%=h asset.asset_label %></td>
+    <td><%=h asset.device_id %></td>
+    <td><%=h asset.audit_type %></td>
     <td><%= link_to 'Show', asset %></td>
     <td><%= link_to 'Edit', edit_asset_path(asset) %></td>
     <td><%= link_to 'Destroy', asset, :confirm => 'Are you sure?', :method => :delete %></td>
