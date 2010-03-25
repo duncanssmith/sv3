@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100325175212) do
+ActiveRecord::Schema.define(:version => 20100325191512) do
 
   create_table "assets", :force => true do |t|
     t.string   "name"
@@ -64,6 +64,11 @@ ActiveRecord::Schema.define(:version => 20100325175212) do
     t.datetime "updated_at"
     t.string   "mac_address"
     t.integer  "location_id"
+  end
+
+  create_table "devices_registers", :id => false, :force => true do |t|
+    t.integer "device_id"
+    t.integer "register_id"
   end
 
   create_table "entitlements", :force => true do |t|
@@ -121,6 +126,18 @@ ActiveRecord::Schema.define(:version => 20100325175212) do
     t.string   "name"
     t.string   "shortname"
     t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "registers", :force => true do |t|
+    t.string   "name"
+    t.datetime "date"
+    t.string   "frequency"
+    t.string   "regtype"
+    t.integer  "accuracy"
+    t.integer  "device_id"
+    t.integer  "asset_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
