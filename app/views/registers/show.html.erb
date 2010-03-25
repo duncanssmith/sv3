@@ -1,0 +1,38 @@
+<p>
+  <b>Name:</b>
+  <%=h @register.name %>
+</p>
+
+<p>
+  <b>Date:</b>
+  <%=h @register.date %>
+</p>
+
+<p>
+  <b>Frequency:</b>
+  <%=h @register.frequency %>
+</p>
+
+<p>
+  <b>Type:</b>
+  <%=h @register.type %>
+</p>
+
+<p>
+  <b>Accuracy:</b>
+  <%=h @register.accuracy %>
+</p>
+
+<p>
+  <b>Device:</b>
+  <%=h @register.device_id %>
+</p>
+
+<p>
+  <b>Asset:</b>
+  <%=h @register.asset_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_register_path(@register) %> |
+<%= link_to 'Back', registers_path %>

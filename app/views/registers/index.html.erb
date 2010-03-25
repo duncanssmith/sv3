@@ -1,0 +1,32 @@
+<h1>Listing registers</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Date</th>
+    <th>Frequency</th>
+    <th>Type</th>
+    <th>Accuracy</th>
+    <th>Device</th>
+    <th>Asset</th>
+  </tr>
+
+<% @registers.each do |register| %>
+  <tr>
+    <td><%=h register.name %></td>
+    <td><%=h register.date %></td>
+    <td><%=h register.frequency %></td>
+    <td><%=h register.type %></td>
+    <td><%=h register.accuracy %></td>
+    <td><%=h register.device_id %></td>
+    <td><%=h register.asset_id %></td>
+    <td><%= link_to 'Show', register %></td>
+    <td><%= link_to 'Edit', edit_register_path(register) %></td>
+    <td><%= link_to 'Destroy', register, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New register', new_register_path %>

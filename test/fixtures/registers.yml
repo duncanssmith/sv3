@@ -1,0 +1,41 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+register_1:
+  id: 1
+  name: Walkaround Audit
+  date: 2010-03-25 18:42:43
+  frequency: Annual
+  type: Main
+  accuracy: 99
+  device_id: 1
+  asset_id: 1
+
+register_2:
+  id: 2
+  name: Network Discovery
+  date: 2010-03-25 18:42:43
+  frequency: Monthly
+  type: Centennial
+  accuracy: 89
+  device_id: 1
+  asset_id: 1
+
+register_3:
+  id: 3
+  name: Fixed Asset Register
+  date: 2010-03-25 18:42:43
+  frequency: Once
+  type: Excel Spreadsheet 
+  accuracy: 72
+  device_id: 1
+  asset_id: 1
+
+register_4:
+  id: 4
+  name: Purchase Records
+  date: 2010-03-25 18:42:43
+  frequency: Once
+  type: Manual
+  accuracy: 55
+  device_id: 1
+  asset_id: 1
