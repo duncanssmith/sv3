@@ -5,5 +5,7 @@ class AddMacAddress < ActiveRecord::Migration
   end
 
   def self.down
+    remove_column :devices, :mac_address
+		remove_column :devices, :location_id
   end
 end
