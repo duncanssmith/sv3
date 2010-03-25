@@ -24,6 +24,13 @@ INSERT INTO `assets` VALUES
 (9, "CI-55577","WWPO011139","664430","Current","","",""),
 (10, "Pocket_PC","EEOI112334X","233220","","","","");
 
+DROP TABLE IF EXISTS `assets_devices`;
+
+CREATE TABLE `assets_devices`(
+	`asset_id` SMALLINT UNSIGNED NOT NULL,
+	`device_id` SMALLINT UNSIGNED NOT NULL
+);
+
 DROP TABLE IF EXISTS `compliances`;
 
 CREATE TABLE `compliances` (
@@ -215,6 +222,33 @@ INSERT INTO `publishers` VALUES
 (14, "Silicon Graphics Inc.","Silicon Graphics","","2010-03-18 18:32:24","2010-03-18 18:32:24"),
 (15, "The Mathworks Limited","The Mathworks","","2010-03-18 18:32:50","2010-03-18 18:32:50"),
 (16, "Websense Inc.","Websense","","2010-03-18 18:33:21","2010-03-18 18:33:21");
+
+DROP TABLE IF EXISTS `registers`;
+
+CREATE TABLE `registers` (
+	`id`	SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(24),
+  `date` DATETIME,
+  `frequency` VARCHAR(48),
+  `regtype` VARCHAR(24),
+  `accuracy` SMALLINT,
+  `device_id` SMALLINT,
+  `asset_id` SMALLINT,
+  `created_at` DATETIME,
+	`updated_at` DATETIME,
+	PRIMARY KEY (`id`)
+);
+
+INSERT INTO `registers` VALUES
+(1, "Walkaround Audit","2010-03-25 18:36:09","Annual","Register",99, 1, 1,"2010-03-18 18:25:09","2010-03-18 18:25:09"),
+(2, "Network Discovery","2010-03-25 18:36:09","Monthly","Register",99, 1, 1,"2010-03-18 18:25:09","2010-03-18 18:25:09"),
+(3, "Fixed Asset Register","2010-03-25 18:36:09","Once","Register",99, 1, 1,"2010-03-18 18:25:09","2010-03-18 18:25:09"),
+(4, "Purchase Record","2010-03-25 18:36:09","Once","Register",99, 1, 1,"2010-03-18 18:25:09","2010-03-18 18:25:09");
+
+CREATE TABLE `registers_devices`(
+	`registers_id` SMALLINT UNSIGNED NOT NULL,
+	`device_id` SMALLINT UNSIGNED NOT NULL
+);
 
 
 CREATE TABLE `sessions`(
