@@ -1,5 +1,7 @@
 *.*~
 log/*
+log/production.log
+log/development.log
 development.log
 production.log
 *.log
