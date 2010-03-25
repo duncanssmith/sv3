@@ -159,12 +159,11 @@ CREATE TABLE `locations`(
 );
 
 INSERT INTO `locations` VALUES
-(1,"","","","","","","","","",""),
-(2,"","","","","","","","","",""),
-(3,"","","","","","","","","",""),
-(4,"","","","","","","","","",""),
-(5,"","","","","","","","","",""),
-(6,"","","","","","","","","","");
+(1,"Antares Incorporated","1234","12 Ocean Blvd","Santa Ana","CA","USA","","97837","2010-02-19 14:02:01","2010-02-19 14:02:01"),
+(2,"Vega Ltd","89223","Vega Point","3 London Bridge Street","London","UK", "","SE1 8ZZ","2010-02-19 14:02:01","2010-02-19 14:02:01"),
+(3,"Sirius GmbH","66473","Sirius Plaza","345 Steinerstrasse","Frankfurt","Germany", "","123328","2010-02-19 14:02:01","2010-02-19 14:02:01"),
+(4,"Aquarius Ltd","99933","Glass Shard","5 Tooley Street","London","UK", "","SE1 8AA","2010-02-19 14:02:01","2010-02-19 14:02:01"),
+(5,"Orion Incorporated","777333","Axe Yard","13 Leadenhall","London","UK", "","EC1 9UU","2010-02-19 14:02:01","2010-02-19 14:02:01");
 
 CREATE TABLE `products`(
 	`id` SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT,
