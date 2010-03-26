@@ -1,4 +1,6 @@
 <h1>Welcome, Administrator</h1>
 <p>It's <%= Time.now %>.
 <%= pluralize(@total_users, "user") %>.
+<%= link_to "Continue", :controller => "/" %>
 </p>
+
