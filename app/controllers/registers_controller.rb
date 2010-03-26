@@ -10,16 +10,19 @@ class RegistersController < ApplicationController
     end
   end
 
+
   # GET /registers/1
   # GET /registers/1.xml
   def show
     @register = Register.find(params[:id])
+		@devices = @register.devices
 
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @register }
     end
   end
+
 
   # GET /registers/new
   # GET /registers/new.xml

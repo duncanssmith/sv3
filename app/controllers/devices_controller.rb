@@ -14,7 +14,7 @@ class DevicesController < ApplicationController
   # GET /devices/1.xml
   def show
     @device = Device.find(params[:id])
-
+		@registers = @device.registers
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @device }

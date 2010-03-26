@@ -33,6 +33,16 @@
   <%=h @register.asset_id %>
 </p>
 
+<p>
+<b>Devices:</b>
+				<%=h @devices.count %><br/>
+<% for device in @devices %>
+				<%=h device.make %>
+				<%=h device.model %>
+				<%=h device.serial %><br/>
+<% end %>
+</p>
+
 
 <%= link_to 'Edit', edit_register_path(@register) %> |
 <%= link_to 'Back', registers_path %>
