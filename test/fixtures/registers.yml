@@ -5,7 +5,7 @@ register_1:
   name: Walkaround Audit
   date: 2010-03-25 18:42:43
   frequency: Annual
-  type: Main
+  regtype: Main
   accuracy: 99
   device_id: 1
   asset_id: 1
@@ -15,7 +15,7 @@ register_2:
   name: Network Discovery
   date: 2010-03-25 18:42:43
   frequency: Monthly
-  type: Centennial
+  regtype: Centennial
   accuracy: 89
   device_id: 1
   asset_id: 1
@@ -25,7 +25,7 @@ register_3:
   name: Fixed Asset Register
   date: 2010-03-25 18:42:43
   frequency: Once
-  type: Excel Spreadsheet 
+  regtype: Excel Spreadsheet 
   accuracy: 72
   device_id: 1
   asset_id: 1
@@ -35,7 +35,7 @@ register_4:
   name: Purchase Records
   date: 2010-03-25 18:42:43
   frequency: Once
-  type: Manual
+  regtype: Manual
   accuracy: 55
   device_id: 1
   asset_id: 1

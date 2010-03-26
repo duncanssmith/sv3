@@ -97,6 +97,14 @@ INSERT INTO `devices` VALUES
 (7, "534801","Dell","Optiplex 220","AAEE9388","2","","","Windows 7 Pro","0","Network Portable","ARAMIS","170.22.33.91",2,"",2200,4096,"","","","",0),
 (8, "393765","Dell","Optiplex 220","SIOP2382","2","","","Windows 7 Pro","0","Network Portable","ARAMIS","170.22.33.95",2,"",2200,4096,"","","","",0);
 
+
+CREATE TABLE `devices_registers`(
+	`device_id` SMALLINT UNSIGNED NOT NULL,
+	`register_id` SMALLINT UNSIGNED NOT NULL,
+  PRIMARY KEY (`device_id`,`register_id`)
+);
+
+
 DROP TABLE IF EXISTS `entitlements`;
 
 CREATE TABLE `entitlements`(
@@ -150,6 +158,8 @@ INSERT INTO `installations` VALUES
 (7, 0,0,"",""),
 (8, 0,0,"","");
 
+DROP TABLE IF EXISTS `locations`;
+
 CREATE TABLE `locations`(
 	`id` SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT,
 	`name` VARCHAR(256),
@@ -172,6 +182,8 @@ INSERT INTO `locations` VALUES
 (4,"Aquarius Ltd","99933","Glass Shard","5 Tooley Street","London","UK", "","SE1 8AA","2010-02-19 14:02:01","2010-02-19 14:02:01"),
 (5,"Orion Incorporated","777333","Axe Yard","13 Leadenhall","London","UK", "","EC1 9UU","2010-02-19 14:02:01","2010-02-19 14:02:01");
 
+DROP TABLE IF EXISTS `products`;
+
 CREATE TABLE `products`(
 	`id` SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT,
 	`name` VARCHAR(256),
@@ -186,12 +198,20 @@ CREATE TABLE `products`(
 );
 
 INSERT INTO `products` VALUES
-(1,"","",0,"","","","",""),
-(2,"","",0,"","","","",""),
-(3,"","",0,"","","","",""),
-(4,"","",0,"","","","",""),
-(5,"","",0,"","","","",""),
-(6,"","",0,"","","","","");
+(1,"Photoshop","Photoshop CS4",1,"1829939802928734","992038801209","23413234","2010-02-19 14:02:01","2010-02-19 14:02:01"),
+(2,"Illustrator","Illustrator CS4",1,"3928829293","929910980923","12332223","2010-02-19 14:02:01","2010-02-19 14:02:01"),
+(3,"Acrobat Reader","Acrobat Reader Pro ",1,"1829939802928734","998038801209","2233114411","2010-02-19 14:02:01","2010-02-19 14:02:01"),
+(4,"Acrobat Reader","Acrobat Reader Standard ",1,"2738476283677632","745784398543","3728374827","2010-02-19 14:02:01","2010-02-19 14:02:01"),
+(5,"Air","Air Home Edition",1,"8237984238","38274827384","98394823984","2010-02-19 14:02:01","2010-02-19 14:02:01"),
+(6,"Word","Microsoft Word 2003",17,"8237984238","38274827384","98394823984","2010-02-19 14:02:01","2010-02-19 14:02:01"),
+(7,"Excel","Microsoft Excel 2003",17,"8237984238","38274827384","98394823984","2010-02-19 14:02:01","2010-02-19 14:02:01"),
+(8,"Powerpoint","Microsoft Powerpoint 2003",17,"8237984238","38274827384","98394823984","2010-02-19 14:02:01","2010-02-19 14:02:01"),
+(9,"Outlook","Microsoft Outlook 2003",17,"8237984238","38274827384","98394823984","2010-02-19 14:02:01","2010-02-19 14:02:01"),
+(10,"Access","Microsoft Access 2003",17,"8237984238","38274827384","98394823984","2010-02-19 14:02:01","2010-02-19 14:02:01"),
+(11,"Entourage","Microsoft Entourage 2008 for Mac",17,"8237984238","38274827384","98394823984","2010-02-19 14:02:01","2010-02-19 14:02:01"),
+(12,"Excel","Microsoft Excel 2008 for Mac",17,"8237984238","38274827384","98394823984","2010-02-19 14:02:01","2010-02-19 14:02:01"),
+(13,"AutoCAD","AutoCAD",2,"8237984238","38274827384","98394823984","2010-02-19 14:02:01","2010-02-19 14:02:01"),
+(14,"AutoCAD","AutoCAD Extended",2,"8237984238","38274827384","98394823984","2010-02-19 14:02:01","2010-02-19 14:02:01");
 
 DROP TABLE IF EXISTS `publishers`;
 
@@ -222,6 +242,7 @@ INSERT INTO `publishers` VALUES
 (14, "Silicon Graphics Inc.","Silicon Graphics","","2010-03-18 18:32:24","2010-03-18 18:32:24"),
 (15, "The Mathworks Limited","The Mathworks","","2010-03-18 18:32:50","2010-03-18 18:32:50"),
 (16, "Websense Inc.","Websense","","2010-03-18 18:33:21","2010-03-18 18:33:21");
+(17, "Microsoft","Microsoft","Operating System Software and Office Productivity Software","2010-03-18 18:33:21","2010-03-18 18:33:21");
 
 DROP TABLE IF EXISTS `registers`;
 
@@ -229,7 +250,7 @@ CREATE TABLE `registers` (
 	`id`	SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(24),
   `date` DATETIME,
-  `frequency` VARCHAR(48),
+  `frequency` VARCHAR(24),
   `regtype` VARCHAR(24),
   `accuracy` SMALLINT,
   `device_id` SMALLINT,
@@ -241,15 +262,9 @@ CREATE TABLE `registers` (
 
 INSERT INTO `registers` VALUES
 (1, "Walkaround Audit","2010-03-25 18:36:09","Annual","Register",99, 1, 1,"2010-03-18 18:25:09","2010-03-18 18:25:09"),
-(2, "Network Discovery","2010-03-25 18:36:09","Monthly","Register",99, 1, 1,"2010-03-18 18:25:09","2010-03-18 18:25:09"),
-(3, "Fixed Asset Register","2010-03-25 18:36:09","Once","Register",99, 1, 1,"2010-03-18 18:25:09","2010-03-18 18:25:09"),
-(4, "Purchase Record","2010-03-25 18:36:09","Once","Register",99, 1, 1,"2010-03-18 18:25:09","2010-03-18 18:25:09");
-
-CREATE TABLE `registers_devices`(
-	`registers_id` SMALLINT UNSIGNED NOT NULL,
-	`device_id` SMALLINT UNSIGNED NOT NULL
-);
-
+(2, "Network Discovery","2010-03-25 18:36:09","Monthly","Register",89, 1, 1,"2010-03-18 18:25:09","2010-03-18 18:25:09"),
+(3, "Fixed Asset Register","2010-03-25 18:36:09","Once","Register",72, 1, 1,"2010-03-18 18:25:09","2010-03-18 18:25:09"),
+(4, "Purchase Record","2010-03-25 18:36:09","Once","Register",55, 1, 1,"2010-03-18 18:25:09","2010-03-18 18:25:09");
 
 CREATE TABLE `sessions`(
 	`id` SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT,
@@ -298,13 +313,13 @@ CREATE TABLE `versions`(
 );
 
 INSERT INTO `versions` VALUES
-(1,"","",0,"","","",""),
-(2,"","",0,"","","",""),
-(3,"","",0,"","","",""),
-(4,"","",0,"","","",""),
-(5,"","",0,"","","",""),
-(6,"","",0,"","","",""),
-(7,"","",0,"","","",""),
-(8,"","",0,"","","","");
+(1,"6.22.10","Photoshop CS4 6.22.10",1,"XVAH23787623456","EN","2010-03-26 09:28:02","2010-03-26 09:28:02"),
+(2,"5.223.144","Illustrator",1,"RU9879879","EN","2010-03-26 09:28:02","2010-03-26 09:28:02"),
+(3,"2.4","AutoCAD",0,"IUY898798","EN","2010-03-26 09:28:02","2010-03-26 09:28:02"),
+(4,"5.3","",0,"","EN","2010-03-26 09:28:02","2010-03-26 09:28:02"),
+(5,"3.4","",0,"","EN","2010-03-26 09:28:02","2010-03-26 09:28:02"),
+(6,"","",0,"","EN","2010-03-26 09:28:02","2010-03-26 09:28:02"),
+(7,"","",0,"","EN","2010-03-26 09:28:02","2010-03-26 09:28:02"),
+(8,"","",0,"","EN","2010-03-26 09:28:02","2010-03-26 09:28:02");
 
 
