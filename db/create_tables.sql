@@ -98,11 +98,38 @@ INSERT INTO `devices` VALUES
 (8, "393765","Dell","Optiplex 220","SIOP2382","2","","","Windows 7 Pro","0","Network Portable","ARAMIS","170.22.33.95",2,"",2200,4096,"","","","",0);
 
 
+DROP TABLE IF EXISTS `devices_registers`;
+
 CREATE TABLE `devices_registers`(
 	`device_id` SMALLINT UNSIGNED NOT NULL,
 	`register_id` SMALLINT UNSIGNED NOT NULL,
   PRIMARY KEY (`device_id`,`register_id`)
 );
+
+INSERT INTO `devices_registers` VALUES
+(1,1),
+(1,2),
+(1,3),
+(1,4),
+(2,1),
+(2,2),
+(2,3),
+(2,4),
+(3,1),
+(3,2),
+(3,3),
+(3,4),
+(4,1),
+(4,4),
+(5,2),
+(5,3),
+(6,3),
+(6,2),
+(7,2),
+(7,3),
+(8,3),
+(9,3);
+
 
 
 DROP TABLE IF EXISTS `entitlements`;
@@ -261,10 +288,10 @@ CREATE TABLE `registers` (
 );
 
 INSERT INTO `registers` VALUES
-(1, "Walkaround Audit","2010-03-25 18:36:09","Annual","Register",99, 1, 1,"2010-03-18 18:25:09","2010-03-18 18:25:09"),
-(2, "Network Discovery","2010-03-25 18:36:09","Monthly","Register",89, 1, 1,"2010-03-18 18:25:09","2010-03-18 18:25:09"),
-(3, "Fixed Asset Register","2010-03-25 18:36:09","Once","Register",72, 1, 1,"2010-03-18 18:25:09","2010-03-18 18:25:09"),
-(4, "Purchase Record","2010-03-25 18:36:09","Once","Register",55, 1, 1,"2010-03-18 18:25:09","2010-03-18 18:25:09");
+(1, "Walkaround Audit","2010-03-25 18:36:09","Annual","Catalog X",99, 1, 1,"2010-03-18 18:25:09","2010-03-18 18:25:09"),
+(2, "Network Discovery","2010-03-25 18:36:09","Monthly","Catalog Y",89, 1, 1,"2010-03-18 18:25:09","2010-03-18 18:25:09"),
+(3, "Fixed Asset Register","2010-03-25 18:36:09","Once","Catalog Z",72, 1, 1,"2010-03-18 18:25:09","2010-03-18 18:25:09"),
+(4, "Purchase Record","2010-03-25 18:36:09","Once","Catalog AA",55, 1, 1,"2010-03-18 18:25:09","2010-03-18 18:25:09");
 
 CREATE TABLE `sessions`(
 	`id` SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT,
