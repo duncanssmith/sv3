@@ -1,4 +1,11 @@
 <p>
+  <b>Registered in:</b>
+<% for register in @registers do  %>
+	<%=h register.name %> | 
+	<% end %>
+</p>
+
+<p>
   <b>Asset:</b>
   <%=h @device.asset_id %>
 </p>

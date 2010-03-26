@@ -12,7 +12,7 @@
   </tr>
 
 <% @registers.each do |register| %>
-  <tr>
+	  <tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
     <td><%=h register.name %></td>
     <td><%=h register.date %></td>
     <td><%=h register.frequency %></td>
