@@ -1,0 +1,8 @@
+<div class="version">
+  <% fields_for "product[version_attributes][]", version do |version_form| %>
+    <p>
+	    Version: <%= version_form.text_field :name %>			
+	    <%= link_to_function "remove", "this.up('.version').remove()"  %>
+	  </p>
+  <% end %>
+</div>

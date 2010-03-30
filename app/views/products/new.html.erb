@@ -26,7 +26,11 @@
   <p>
     <%= f.label :identifier %><br />
     <%= f.text_field :identifier %>
-  </p>
+	</p>
+	<div id="versions">
+		<%= render :partial => 'version', :collection => @product.versions %>
+	</div>
+	  <%= add_version_link "Add a version"  %>
   <p>
     <%= f.submit 'Create' %>
   </p>

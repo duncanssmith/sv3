@@ -25,6 +25,7 @@ class ProductsController < ApplicationController
   # GET /products/new.xml
   def new
     @product = Product.new
+		#3.times { @product.versions.build }
 
     respond_to do |format|
       format.html # new.html.erb

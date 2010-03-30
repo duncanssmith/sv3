@@ -1,5 +1,5 @@
 class Version < ActiveRecord::Base
 	belongs_to :product
-	belongs_to :publisher
+	validates_presence_of :name
 	has_many :installations
 end
