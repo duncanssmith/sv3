@@ -7,14 +7,25 @@
     <%= stylesheet_link_tag  'sv3' %>
 	</head>		
 	<body>
-					<div style="background-color:LightBlue">
-						<h1>SAMView Software Asset Management</h1>
-					  <h2>Welome to the Customer Management Portal</h2>
-					</div>
+	  <div id="header">
 
-	  <p style="color: green"><%= flash[:notice] %></p>
-    <div class="content">
+		  <div style="background-color:LightBlue">
+			  <h1>SAMView Software Asset Management</h1>
+				<h2>Welome to the secure Customer Management Portal</h2>
+			</div>
+
+		</div>
+
+		<p style="color: green"><%= flash[:notice] %></p>
+
+    <div id="content">
 						<%= yield  :layout %>
+		</div>
+
+    <div id="sidebar">
+		</div>
+
+    <div id="footer">
 		</div>
 
 	</body>

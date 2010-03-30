@@ -4,7 +4,8 @@
   <head>
 	  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 		<title>SAM &Eacute;clat: <%= controller.action_name %></title>
-    <%= stylesheet_link_tag  'sv3' %>
+    <%= stylesheet_link_tag 'sv3' %>
+    <%= javascript_include_tag :defaults  %>
 	</head>		
 	<body>
 					<h1>SAM &Eacute;clat Asset CIO</h1>
@@ -12,6 +13,14 @@
 					  <p class="navbar">
 						<% if session[:user_id] %>
 						<table class="nav"><tr><td class="nav">
+						<h2>Adminstration</h2>
+						&nbsp;
+			      <%= link_to 'Dashboard', :controller => 'dashboard' %>
+						&nbsp;
+			      <%= link_to 'Users', :controller => 'users' %>
+						&nbsp;
+				    <%= link_to 'Logout', :controller => 'admin', :action => 'logout' %>
+						</td><td class="nav">
 						<h2>Hardware</h2>
 						&nbsp;
 			      <%= link_to 'Locations', :controller => 'locations' %>
@@ -21,6 +30,7 @@
 			      <%= link_to 'Assets', :controller => 'assets' %>
 						&nbsp;
 						<%= link_to 'Devices', :controller => 'devices' %>
+						&nbsp;
 						</td><td class="nav">
 						<h2>Software</h2>
 						&nbsp;
@@ -37,12 +47,6 @@
 			      <%= link_to 'Entitlements', :controller => 'entitlements' %>
 						&nbsp;
 			      <%= link_to 'Compliances', :controller => 'compliances' %>
-						</td><td class="nav">
-						<h2>Adminstration</h2>
-						&nbsp;
-			      <%= link_to 'Users', :controller => 'users' %>
-						&nbsp;
-				    <%= link_to 'Logout', :controller => 'admin', :action => 'logout' %>
 		        <% end %>
 		        </td></tr></table>
 						</p>
