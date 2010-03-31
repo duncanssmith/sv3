@@ -1,8 +1,14 @@
 <div class="version">
   <% fields_for "product[version_attributes][]", version do |version_form| %>
     <p>
-	    Version: <%= version_form.text_field :name %>			
-	    <%= link_to_function "remove", "this.up('.version').remove()"  %>
+		Version: <%= version_form.text_field :name, :index => nil %>			
+		<% if version.new_record? %>
+		  <%= link_to_function "remove", "this.up('.version').remove()"  %>
+		<% else %>
+		  <%= link_to_function "remove", "mark_for_destroy(this)"  %>
+		  <%= version_form.hidden_field :id, :index => nil %>
+			<%= version_form.hidden_field :should_destroy, :index => nil, :class => 'should_destroy' %>
+		<% end %>
 	  </p>
   <% end %>
 </div>
