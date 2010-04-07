@@ -1,0 +1,170 @@
+<h1>New licence</h1>
+
+<% form_for(@licence) do |f| %>
+  <%= f.error_messages %>
+	<div id="main">
+					<div>
+					<div>
+  <p>
+    <%= f.label :sku %><br />
+    <%= f.text_field :sku %>
+  </p>
+  <p>
+    <%= f.label :publisher %><br />
+    <%= f.text_field :publisher %>
+  </p>
+  <p>
+    <%= f.label :product %><br />
+    <%= f.text_field :product %>
+  </p>
+  <p>
+    <%= f.label :edition %><br />
+    <%= f.text_field :edition %>
+  </p>
+  <p>
+    <%= f.label :version %><br />
+    <%= f.text_field :version %>
+  </p>
+  <p>
+    <%= f.label :identifying_number %><br />
+    <%= f.text_field :identifying_number %>
+  </p>
+  <p>
+    <%= f.label :product_id %><br />
+    <%= f.text_field :product_id %>
+  </p>
+					</div>
+					<div>
+  <p>
+    <%= f.label :region_or_country %><br />
+    <%= f.text_field :region_or_country %>
+  </p>
+  <p>
+    <%= f.label :cal %><br />
+    <%= f.text_field :cal %>
+  </p>
+  <p>
+    <%= f.label :licence_type %><br />
+    <%= f.text_field :licence_type %>
+  </p>
+  <p>
+    <%= f.label :term %><br />
+    <%= f.text_field :term %>
+  </p>
+  <p>
+    <%= f.label :upgrade %><br />
+    <%= f.text_field :upgrade %>
+  </p>
+  <p>
+    <%= f.label :term_expiry_date %><br />
+    <%= f.date_select :term_expiry_date %>
+  </p>
+  <p>
+    <%= f.label :ci_name %><br />
+    <%= f.text_field :ci_name %>
+  </p>
+  <p>
+    <%= f.label :base_licence %><br />
+    <%= f.text_field :base_licence %>
+  </p>
+  <p>
+    <%= f.label :maintenance_expiry %><br />
+    <%= f.date_select :maintenance_expiry %>
+  </p>
+  <p>
+    <%= f.label :entitlement_type %><br />
+    <%= f.text_field :entitlement_type %>
+  </p>
+					</div>
+					<div>
+  <p>
+    <%= f.label :cost_centre %><br />
+    <%= f.text_field :cost_centre %>
+  </p>
+  <p>
+    <%= f.label :volume_licence_agreement_number %><br />
+    <%= f.text_field :volume_licence_agreement_number %>
+  </p>
+  <p>
+    <%= f.label :agreement_location %><br />
+    <%= f.text_field :agreement_location %>
+  </p>
+  <p>
+    <%= f.label :entitlement_location %><br />
+    <%= f.text_field :entitlement_location %>
+  </p>
+					</div>
+					<div>
+  <p>
+    <%= f.label :supplier %><br />
+    <%= f.text_field :supplier %>
+  </p>
+  <p>
+    <%= f.label :supplier_invoice_number %><br />
+    <%= f.text_field :supplier_invoice_number %>
+  </p>
+  <p>
+    <%= f.label :invoice_date %><br />
+    <%= f.date_select :invoice_date %>
+  </p>
+  <p>
+    <%= f.label :po_number %><br />
+    <%= f.text_field :po_number %>
+  </p>
+  <p>
+    <%= f.label :country_of_usage %><br />
+    <%= f.text_field :country_of_usage %>
+  </p>
+					</div>
+					<div>
+  <p>
+    <%= f.label :product_substitution_rights %><br />
+    <%= f.text_field :product_substitution_rights %>
+  </p>
+  <p>
+    <%= f.label :secondary_rights %><br />
+    <%= f.text_field :secondary_rights %>
+  </p>
+  <p>
+    <%= f.label :transferability %><br />
+    <%= f.text_field :transferability %>
+  </p>
+  <p>
+    <%= f.label :external_licence_transfer_requirements %><br />
+    <%= f.text_field :external_licence_transfer_requirements %>
+  </p>
+  <p>
+    <%= f.label :linkages %><br />
+    <%= f.text_field :linkages %>
+  </p>
+					</div>
+					<div>
+  <p>
+    <%= f.label :total_cost_of_line_item %><br />
+    <%= f.text_field :total_cost_of_line_item %>
+  </p>
+  <p>
+    <%= f.label :quantity %><br />
+    <%= f.text_field :quantity %>
+  </p>
+  <p>
+    <%= f.label :unit %><br />
+    <%= f.text_field :unit %>
+  </p>
+  <p>
+    <%= f.label :cost_unit %><br />
+    <%= f.text_field :cost_unit %>
+  </p>
+  <p>
+    <%= f.label :maintenance_pa %><br />
+    <%= f.text_field :maintenance_pa %>
+		</p>
+					</div>
+					</div>
+		</div>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', licences_path %>

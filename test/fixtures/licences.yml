@@ -1,0 +1,79 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+licence_1:
+  sku: 1233221983
+  publisher: Adobe
+  product: Photoshop
+  edition: CS4
+  version: 6.445
+  identifying_number: 1920938
+  product_id: 1
+  region_or_country: Europe
+  cal: 23
+  licence_type: Perpetual
+  term: Unlimited
+  upgrade: Unlimited
+  term_expiry_date: 2010-04-07
+  ci_name: All 
+  base_licence: 124432234
+  maintenance_expiry: 2010-04-07
+  entitlement_type: Perpetual
+  cost_centre: CHYUX9203
+  volume_licence_agreement_number: AUER9304SERX8839 
+  agreement_location: Vancouver Office
+  entitlement_location: Vancouver Office 
+  supplier: Adobe Reseller XYZ
+  supplier_invoice_number: 12443
+  invoice_date: 2010-04-07
+  po_number: 93249203492  
+  country_of_usage: UK
+  product_substitution_rights: All
+  secondary_rights: None
+  transferability: OK
+  external_licence_transfer_requirements: Flexible
+  linkages: Both
+  total_cost_of_line_item: 64500 
+  quantity: 1000
+  unit: GBP
+  cost_unit: 2134
+  maintenance_pa: 1234 
+
+
+licence_2:
+  sku: 827638472
+  publisher: Autodesk
+  product: AutoCAD
+  edition: 300.99
+  version: 4.223
+  identifying_number: 928739428
+  product_id: 4
+  region_or_country: North America
+  cal: 34
+  licence_type: Perpetual
+  term: Unlimited
+  upgrade: Unlimited
+  term_expiry_date: 2010-04-07
+  ci_name: All 
+  base_licence: 29834928
+  maintenance_expiry: 2010-04-07
+  entitlement_type: Perpetual
+  cost_centre: UXB345
+  volume_licence_agreement_number: YUAKJH928394 
+  agreement_location: New York Office
+  entitlement_location: New York Office 
+  supplier: Autodesk Reseller XYZ
+  supplier_invoice_number: 1283
+  invoice_date: 2010-04-07
+  po_number: 8479384983  
+  country_of_usage: USA
+  product_substitution_rights: All
+  secondary_rights: None
+  transferability: OK
+  external_licence_transfer_requirements: Flexible
+  linkages: Both
+  total_cost_of_line_item: 320000 
+  quantity: 3
+  unit: GBP
+  cost_unit: 320000
+  maintenance_pa: 20000 
+
