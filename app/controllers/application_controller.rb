@@ -3,6 +3,7 @@
 
 class ApplicationController < ActionController::Base
 	layout "main"
+	filter_parameter_logging "password"
 	before_filter :authorize, :except => :login
   helper :all # include all helpers, all the time
   protect_from_forgery # See ActionController::RequestForgeryProtection for details
@@ -13,7 +14,9 @@ class ApplicationController < ActionController::Base
 	
 protected
   def authorize
-	  unless User.find_by_id(session[:user_id])
+		#@current_user ||= User.find_by_id(session[:user_id])
+	  #unless User.find_by_id(session[:user_id])
+	  unless @current_user ||= User.find_by_id(session[:user_id])
 			session[:original_uri] = request.request_uri
 		  flash[:notice] = "Please log in"
 			redirect_to :controller => 'admin', :action => 'login'
