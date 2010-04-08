@@ -2,9 +2,6 @@
 
 <% form_for(@licence) do |f| %>
   <%= f.error_messages %>
-	<div id="main">
-					<div>
-					<div>
   <p>
     <%= f.label :sku %><br />
     <%= f.text_field :sku %>
@@ -21,7 +18,7 @@
     <%= f.label :edition %><br />
     <%= f.text_field :edition %>
   </p>
-  <p>
+	<p>
     <%= f.label :version %><br />
     <%= f.text_field :version %>
   </p>
@@ -32,9 +29,10 @@
   <p>
     <%= f.label :product_id %><br />
     <%= f.text_field :product_id %>
-  </p>
-					</div>
-					<div>
+	</p>
+
+	<%= render :partial => 'countries', :locals => { :f => f } %>
+		
   <p>
     <%= f.label :region_or_country %><br />
     <%= f.text_field :region_or_country %>
@@ -75,8 +73,6 @@
     <%= f.label :entitlement_type %><br />
     <%= f.text_field :entitlement_type %>
   </p>
-					</div>
-					<div>
   <p>
     <%= f.label :cost_centre %><br />
     <%= f.text_field :cost_centre %>
@@ -93,8 +89,6 @@
     <%= f.label :entitlement_location %><br />
     <%= f.text_field :entitlement_location %>
   </p>
-					</div>
-					<div>
   <p>
     <%= f.label :supplier %><br />
     <%= f.text_field :supplier %>
@@ -115,8 +109,6 @@
     <%= f.label :country_of_usage %><br />
     <%= f.text_field :country_of_usage %>
   </p>
-					</div>
-					<div>
   <p>
     <%= f.label :product_substitution_rights %><br />
     <%= f.text_field :product_substitution_rights %>
@@ -137,8 +129,6 @@
     <%= f.label :linkages %><br />
     <%= f.text_field :linkages %>
   </p>
-					</div>
-					<div>
   <p>
     <%= f.label :total_cost_of_line_item %><br />
     <%= f.text_field :total_cost_of_line_item %>
@@ -159,9 +149,6 @@
     <%= f.label :maintenance_pa %><br />
     <%= f.text_field :maintenance_pa %>
 		</p>
-					</div>
-					</div>
-		</div>
   <p>
     <%= f.submit 'Create' %>
   </p>
