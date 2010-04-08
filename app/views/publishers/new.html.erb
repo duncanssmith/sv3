@@ -14,7 +14,12 @@
   <p>
     <%= f.label :description %><br />
     <%= f.text_area :description %>
-  </p>
+		</p>
+	<div id="products">
+		<%= render :partial => 'product', :collection => @publisher.products %>
+	</div>
+	  <%= add_product_link "Add a product"  %>
+
   <p>
     <%= f.submit 'Create' %>
   </p>

@@ -25,6 +25,7 @@ class PublishersController < ApplicationController
   # GET /publishers/new.xml
   def new
     @publisher = Publisher.new
+#    @publisher.products.build
 
     respond_to do |format|
       format.html # new.html.erb
@@ -44,8 +45,9 @@ class PublishersController < ApplicationController
 
     respond_to do |format|
       if @publisher.save
-        flash[:notice] = 'Publisher was successfully created.'
-        format.html { redirect_to(@publisher) }
+        flash[:notice] = 'Publisher (and products) successfully created.'
+        #format.html { redirect_to(@publisher) }
+        format.html { redirect_to publisher_path }
         format.xml  { render :xml => @publisher, :status => :created, :location => @publisher }
       else
         format.html { render :action => "new" }
@@ -57,7 +59,17 @@ class PublishersController < ApplicationController
   # PUT /publishers/1
   # PUT /publishers/1.xml
   def update
+		params[:publisher][:existing_product_attributes] ||= {}
+
     @publisher = Publisher.find(params[:id])
+
+		if @publisher.update_attributes(params[:publisher])
+			flash[:notice] = "Successfully updated publisher and products."
+			redirect_to publisher_path(@publisher)
+		else
+			render :action => 'edit'
+		end
+
 
     respond_to do |format|
       if @publisher.update_attributes(params[:publisher])
