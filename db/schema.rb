@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100325191512) do
+ActiveRecord::Schema.define(:version => 20100407142802) do
 
   create_table "assets", :force => true do |t|
     t.string   "name"
@@ -39,6 +39,11 @@ ActiveRecord::Schema.define(:version => 20100325191512) do
     t.integer  "compliance"
     t.float    "compliance_value"
     t.string   "compliance_status"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "data_files", :force => true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -94,6 +99,47 @@ ActiveRecord::Schema.define(:version => 20100325191512) do
   create_table "installations", :force => true do |t|
     t.integer  "version_id"
     t.integer  "device_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "licences", :force => true do |t|
+    t.string   "sku"
+    t.string   "publisher"
+    t.string   "product"
+    t.string   "edition"
+    t.string   "version"
+    t.string   "identifying_number"
+    t.integer  "product_id"
+    t.string   "region_or_country"
+    t.string   "cal"
+    t.string   "licence_type"
+    t.string   "term"
+    t.string   "upgrade"
+    t.date     "term_expiry_date"
+    t.string   "ci_name"
+    t.string   "base_licence"
+    t.date     "maintenance_expiry"
+    t.string   "entitlement_type"
+    t.string   "cost_centre"
+    t.string   "volume_licence_agreement_number"
+    t.string   "agreement_location"
+    t.string   "entitlement_location"
+    t.string   "supplier"
+    t.string   "supplier_invoice_number"
+    t.date     "invoice_date"
+    t.string   "po_number"
+    t.string   "country_of_usage"
+    t.string   "product_substitution_rights"
+    t.string   "secondary_rights"
+    t.string   "transferability"
+    t.string   "external_licence_transfer_requirements"
+    t.string   "linkages"
+    t.integer  "total_cost_of_line_item"
+    t.integer  "quantity"
+    t.string   "unit"
+    t.integer  "cost_unit"
+    t.integer  "maintenance_pa"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -158,6 +204,9 @@ ActiveRecord::Schema.define(:version => 20100325191512) do
     t.string   "salt"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "type"
+    t.string   "company"
+    t.integer  "client_id"
   end
 
   create_table "versions", :force => true do |t|

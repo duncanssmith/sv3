@@ -1,24 +1,16 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :licences
+
   map.resources :registers
-
   map.resources :installations
-
   map.resources :entitlements
-
   map.resources :locations
-
   map.resources :devices
-
   map.resources :versions
-
   map.resources :products
-
   map.resources :assets
-
   map.resources :publishers
-
   map.resources :users
-
   map.resources :compliances
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -56,7 +48,7 @@ ActionController::Routing::Routes.draw do |map|
   # map.root :controller => "welcome"
 	# map.root :controller => "users"
 	map.root :controller => "dashboard"
-
+  map.upload '', :controller => "dashboard", :action => "upload"
   # See how all your routes lay out with "rake routes"
 
   # Install the default routes as the lowest priority.
