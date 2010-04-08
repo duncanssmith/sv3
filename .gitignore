@@ -15,6 +15,7 @@ production.log
 *.doc
 *.docx
 *.psd
+*.ai
 *.jpg
 *.gif
 *.png
