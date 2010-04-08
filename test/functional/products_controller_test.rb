@@ -1,6 +1,8 @@
 require 'test_helper'
 
 class ProductsControllerTest < ActionController::TestCase
+	fixtures :products, :versions, :publishers
+
   test "should get index" do
     get :index
     assert_response :success
