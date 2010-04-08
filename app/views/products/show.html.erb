@@ -27,7 +27,13 @@
   <b>Identifier:</b>
   <%=h @product.identifier %>
 </p>
-
+<p>
+<b>Versions:</b>
+there are <%=h @versions.count %> versions of this product.<br/>
+  <% for version in @versions %>
+					<%=h version.name %><br/>
+	<% end %>
+</p>
 
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>

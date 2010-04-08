@@ -14,6 +14,7 @@ class ProductsController < ApplicationController
   # GET /products/1.xml
   def show
     @product = Product.find(params[:id])
+		@versions = @product.versions
 
     respond_to do |format|
       format.html # show.html.erb
