@@ -2,6 +2,7 @@ require 'digest/sha1'
 
 class User < ActiveRecord::Base
 
+
 	validates_presence_of	:name
 	validates_uniqueness_of :name
 
@@ -52,4 +53,10 @@ class User < ActiveRecord::Base
 		  string_to_hash = password + "wibble" + salt
 			Digest::SHA1.hexdigest(string_to_hash)
 		end
+end
+
+class Administrator < User
+end
+
+class Client < User
 end

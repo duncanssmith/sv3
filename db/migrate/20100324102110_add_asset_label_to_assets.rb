@@ -4,5 +4,6 @@ class AddAssetLabelToAssets < ActiveRecord::Migration
   end
 
   def self.down
+		remove_column :assets, :asset_label
   end
 end
