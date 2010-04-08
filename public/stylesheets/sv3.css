@@ -6,6 +6,24 @@ body {
   margin: 20px;
   padding: 10px; }
 
+h1 {
+  font-size: 12pt; }
+
+h2 {
+  font-size: 11pt; }
+
+h3 {
+  font-size: 9pt; }
+
+h4 {
+  font-size: 8pt; }
+
+h5 {
+  font-size: 7pt; }
+
+h6 {
+  font-size: 6pt; }
+
 p {
   font-size: 8pt;
   color: green; }
