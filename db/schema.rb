@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100407142802) do
+ActiveRecord::Schema.define(:version => 20100409084803) do
 
   create_table "assets", :force => true do |t|
     t.string   "name"
@@ -41,6 +41,13 @@ ActiveRecord::Schema.define(:version => 20100407142802) do
     t.string   "compliance_status"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "countries", :force => true do |t|
+    t.string   "country"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "iso_code"
   end
 
   create_table "data_files", :force => true do |t|
