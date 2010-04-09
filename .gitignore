@@ -9,7 +9,7 @@ production.log
 *.sqlite3
 *.swp
 *.swo
-*.csv
+*.txt
 *.xls
 *.xlsx
 *.doc
