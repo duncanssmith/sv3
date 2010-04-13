@@ -1,41 +1,36 @@
 <h1>New user</h1>
 
-<% form_for(@user) do |f| %>
-				<%= f.error_messages %>
-
   <fieldset>
   <legend>Enter User Details</legend>
 
+<% form_for(@user) do |f| %>
+				<%= f.error_messages %>
+
   <div>
     <%= f.label :name %><br />
-		<%= f.text_field :name, :size => 40 %>
+		<%= f.text_field :name %>
   </div>
   <div>
-    <%= f.label :type %><br />
-		<%= f.text_field :type, :size => 40 %>
-  </div>
-  <div>
-    <%= f.label :company %><br />
-		<%= f.text_field :company, :size => 40 %>
+    <%= f.label :email %><br />
+		<%= f.text_field :email %>
   </div>
   <div>
     <%= f.label :client_id %><br />
-		<%= f.text_field :client_id, :size => 6 %>
+		<%= f.text_field :client_id %>
   </div>
   <div>
     <%= f.label :password, "Password" %><br />
-		<%= f.password_field :password, :size => 40 %>
+		<%= f.password_field :password %>
   </div>
   <div>
     <%= f.label :password_confirmation, 'Confirm' %><br />
-		<%= f.password_field :password_confirmation, :size => 40 %>
+		<%= f.password_field :password_confirmation  %>
   </div>
 	<div>
 		<br/>
     <%= f.submit "Create" %>
 	</div>
-
+	<% end %>
 	</fieldset>
-<% end %>
 
 <%= link_to 'Back', users_path %>

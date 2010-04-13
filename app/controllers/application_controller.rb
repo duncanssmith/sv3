@@ -3,7 +3,7 @@
 
 class ApplicationController < ActionController::Base
 	layout "main"
-	before_filter :authorize, :except => :login
+	#before_filter :authorize, :except => :login
   helper :all # include all helpers, all the time
   protect_from_forgery # See ActionController::RequestForgeryProtection for details
 
@@ -11,19 +11,33 @@ class ApplicationController < ActionController::Base
   # filter_parameter_logging :password
 	filter_parameter_logging "password"
 
+	helper_method :current_user
 
-		protected
+  protected
 
-			def authorize
-				#@current_user ||= User.find_by_id(session[:user_id])
-				#unless User.find_by_id(session[:user_id])
-				@current_user ||= User.find_by_id(session[:user_id])
-				unless @current_user
-					session[:original_uri] = request.request_uri
-					flash[:notice] = "Please log in"
-					redirect_to :controller => 'admin', :action => 'login'
-				end
+	  #def authorize
+		#  #@current_user ||= User.find_by_id(session[:user_id])
+		#  #unless User.find_by_id(session[:user_id])
+		#	@current_user ||= User.find_by_id(session[:user_id])
+		#	unless @current_user
+		#		session[:original_uri] = request.request_uri
+		#		flash[:notice] = "Please log in"
+		#		redirect_to :controller => 'admin', :action => 'login'
+		#	end
+#
+#		end
 
-			end
+	private
+
+	def current_user_session
+		return @current_user_session if defined?(@current_user_session)
+		@current_user_session = UserSession.find
+	end
+
+	def current_user
+		return @current_user if defined?(@current_user)
+		@current_user = current_user_session && current_user_session.record
+	end
+
 
 end

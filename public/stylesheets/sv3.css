@@ -60,6 +60,10 @@ tr.list-line-even {
 div.content {
   background: #eeffd3; }
 
+#user_nav {
+  float: right;
+  font-size: 8pt; }
+
 .navbar {
   padding: 2px;
   padding-bottom: 2px;
