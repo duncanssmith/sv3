@@ -3,23 +3,39 @@
 
 class ApplicationController < ActionController::Base
 	layout "main"
-	filter_parameter_logging "password"
 	before_filter :authorize, :except => :login
+	before_filter :authorize2, :except => :login
   helper :all # include all helpers, all the time
   protect_from_forgery # See ActionController::RequestForgeryProtection for details
 
   # Scrub sensitive parameters from your log
   # filter_parameter_logging :password
-	#
-	
-protected
-  def authorize
-		#@current_user ||= User.find_by_id(session[:user_id])
-	  #unless User.find_by_id(session[:user_id])
-	  unless @current_user ||= User.find_by_id(session[:user_id])
-			session[:original_uri] = request.request_uri
-		  flash[:notice] = "Please log in"
-			redirect_to :controller => 'admin', :action => 'login'
-	  end
-	end
+	filter_parameter_logging "password"
+
+		helper_method :admin?	
+		helper_method :authorize2
+
+		protected
+
+			def authorize2
+				unless admin?
+					flash[:error] = "  *** Unauthorised Access *** "
+				end
+			end
+
+			def authorize
+				#@current_user ||= User.find_by_id(session[:user_id])
+				#unless User.find_by_id(session[:user_id])
+				@current_user ||= User.find_by_id(session[:user_id])
+				unless @current_user
+					session[:original_uri] = request.request_uri
+					flash[:notice] = "Please log in"
+					redirect_to :controller => 'admin', :action => 'login'
+				end
+
+			end
+
+			def admin? 
+				true
+			end
 end

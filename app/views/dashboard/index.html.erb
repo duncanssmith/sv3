@@ -9,14 +9,16 @@
 			<img src="images/cpgraph.png" width="300" />
 		</td>
 		<td valign="top">
+
 			<h3>
 				Financial Summary
-			</h3>
+</h3>
+		<% if admin? %>
 			<table border="0" bgcolor="#ccc" cellpadding="20" cellspacing="10">
 				<tr><td align="top">Total over-licenced cost</td><td>£1,203,321.00</td></tr>
 				<tr><td align="top">Total under-licenced cost</td><td>£157,015.00</td></tr>
 			</table>
-
+		<% end %>
   	</td>
 	</tr>
 	<tr>
