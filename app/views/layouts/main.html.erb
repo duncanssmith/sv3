@@ -10,8 +10,7 @@
 
 	<body>
 	<p>PARAMS: controller: [<%= params['controller']%>], action: [<%= params['action'] %>]</p>
-					<p>session: <pre> <%= session %></pre></p>
-					<p>current: <pre> <%= current_user %></pre></p>
+					<p>session: <%= session %> current:  <%= current_user %></p>
 
 	<div id="user_nav">
 					<% if current_user %>
