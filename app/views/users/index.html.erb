@@ -9,7 +9,9 @@
 	<tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
     <td><%=h user.name %></td>
     <td><%=h user.email %></td>
+    <td><%=h user.role %></td>
     <td><%=h user.client_id %></td>
+    <td><%=h user.persistence_token %></td>
     <td><%= link_to 'Show', user %></td>
     <td><%= link_to 'Edit', edit_user_path(user) %></td>
     <td><%= link_to 'Destroy', user, :confirm => 'Are you sure?', :method => :delete %></td>

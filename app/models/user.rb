@@ -1,4 +1,4 @@
 class User < ActiveRecord::Base
-  attr_accessible :name, :user, :email, :password, :password_confirmation, :client_id
-	acts_as_authentic
+	acts_as_authentic { |c| c.login_field = :name } 
+  attr_accessible :name, :email, :role, :password, :password_confirmation, :client_id
 end

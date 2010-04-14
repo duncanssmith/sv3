@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100413115029) do
+ActiveRecord::Schema.define(:version => 20100414142310) do
 
   create_table "assets", :force => true do |t|
     t.string   "name"
@@ -214,6 +214,7 @@ ActiveRecord::Schema.define(:version => 20100413115029) do
     t.integer  "client_id"
     t.string   "email"
     t.string   "persistence_token"
+    t.string   "role"
   end
 
   create_table "versions", :force => true do |t|

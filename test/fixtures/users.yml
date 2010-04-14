@@ -3,24 +3,40 @@
 user_1:
   id: 1
   name: duncan
-  hashed_password: 'd9464c082551a64fdd0cbefd7d29c3cffd2def7a'
-  salt: '21586780800.256940676954111'
+  role: admin
+  email: duncan.smith@sameclat.com
+  client_id: 1
+  persistence_token: 0
+  crypted_password: 'f1b1d25271fd1efc8e63946dd45a2b4bfdc0a6790ba9d04c565215158bb56d92506e653e7bbfc9bc1522fa700715b75aeebd6f24fa699eefb346cea61877b2d6'
+  password_salt: 'me_hWqEbQl_FEaTOlyXc'
 
 user_2:
   id: 2
   name: john
-  hashed_password: '27d5bcad2102a41ae5795c5838a87e38145e1275'
-  salt: '21824608000.864389558610036'
+  role: admin
+  email: john.springall@sameclat.com
+  client_id: 1
+  persistence_token: 0
+  crypted_password: '27d5bcad2102a41ae5795c5838a87e38145e1275'
+  password_salt: '21824608000.864389558610036'
 
 user_3:
   id: 3
   name: fraz
-  hashed_password: '8976b79e3a2fe494b95b55cc1303a0417475f54a'
-  salt: '21814510400.541328778331048'
+  role: client
+  email: fraz.hamid@sameclat.com
+  client_id: 1
+  persistence_token: 0
+  crypted_password: '8976b79e3a2fe494b95b55cc1303a0417475f54a'
+  password_salt: '21814510400.541328778331048'
 
 user_4:
   id: 4
   name: tim
-  hashed_password: 'c98c80dcee7a4f7f8e7f2a4674b8991e2c54837d'
-  salt: '21825893800.738525852055951'
+  role: client
+  email: tim.collis@sameclat.com
+  client_id: 1
+  persistence_token: 0
+  crypted_password: 'c98c80dcee7a4f7f8e7f2a4674b8991e2c54837d'
+  password_salt: '21825893800.738525852055951'
 

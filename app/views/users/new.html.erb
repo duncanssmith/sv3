@@ -7,23 +7,31 @@
 				<%= f.error_messages %>
 
   <div>
-    <%= f.label :name %><br />
+    <%= f.label :name, "Name" %><br />
 		<%= f.text_field :name %>
   </div>
   <div>
-    <%= f.label :email %><br />
+    <%= f.label :email, "Email" %><br />
 		<%= f.text_field :email %>
   </div>
   <div>
-    <%= f.label :client_id %><br />
+    <%= f.label :client_id, "Client ID" %><br />
 		<%= f.text_field :client_id %>
+  </div>
+  <div>
+    <%= f.label :role, "Role" %><br />
+		<%= f.text_field :role %>
+  </div>
+  <div>
+    <%= f.label :persistence_token, "Persistence Token" %><br />
+		<%= f.text_field :persistence_token %>
   </div>
   <div>
     <%= f.label :password, "Password" %><br />
 		<%= f.password_field :password %>
   </div>
   <div>
-    <%= f.label :password_confirmation, "Confirm" %><br />
+    <%= f.label :password_confirmation, "Confirm Password" %><br />
 		<%= f.password_field :password_confirmation  %>
   </div>
 	<div>
