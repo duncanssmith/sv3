@@ -13,10 +13,12 @@
 	<p>session: <%= session %> current:  <%= current_user %></p>
 	<div id="user_nav">
 					<% if current_user %>
-					  <%= link_to "Edit Profile", edit_user_path(:current) %> |
+									<%= link_to "Edit Profile", edit_user_path(:current) %> |
+						<% if current_user.role == 'admin' %>
+										<%= link_to "Create User", new_user_path %> |
+						<% end %>
 					  <%= link_to "Logout", logout_path %> 
 					<% else %>
-					  <%= link_to "Register", new_user_path %> |
 					  <%= link_to "Login", login_path %> 
 					<% end %>
 	</div>
@@ -25,7 +27,7 @@
  					<div style="background-color:LightBlue">
 					  <p class="navbar">
 
-						<% if session[:user_id] %>
+						<% if current_user %>
 
 						<table class="nav"><tr><td class="nav">
 						<h2>Client View</h2>
@@ -38,16 +40,12 @@
 						&nbsp;
 			      <%= link_to 'Licences', :controller => 'licences' %>
 						</td></tr></table>
+            <% end %>
 
-						</td><td class="nav">
+						<% if current_user && current_user.role == 'admin' %>
+				    </td><td> 	
 						<h2>Adminstration View</h2>
 						<table class="nav"><tr><td class="nav">
-						<h3>Users </h3>
-						&nbsp;
-			      <%= link_to 'Users', :controller => 'users' %>
-						&nbsp;
-				    <%= link_to 'Logout', :controller => 'admin', :action => 'logout' %>
-						</td><td class="nav">
 						<h3>Hardware</h3>
 						&nbsp;
 			      <%= link_to 'Locations', :controller => 'locations' %>

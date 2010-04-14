@@ -7,8 +7,8 @@ user_1:
   email: duncan.smith@sameclat.com
   client_id: 1
   persistence_token: 0
-  crypted_password: 'f1b1d25271fd1efc8e63946dd45a2b4bfdc0a6790ba9d04c565215158bb56d92506e653e7bbfc9bc1522fa700715b75aeebd6f24fa699eefb346cea61877b2d6'
-  password_salt: 'me_hWqEbQl_FEaTOlyXc'
+  crypted_password: 'a9eb68b19ca177bb9390484bcb18077b3a8c725d2cd9b91d9ed95bb3644b0aedeee9e7a176bc990b11cee2873c12adaf3f098e8668f93d1b8057c443931595b9'
+  password_salt: '5a8wyjsIyKIztIGMjqRl'
 
 user_2:
   id: 2
@@ -17,8 +17,8 @@ user_2:
   email: john.springall@sameclat.com
   client_id: 1
   persistence_token: 0
-  crypted_password: '27d5bcad2102a41ae5795c5838a87e38145e1275'
-  password_salt: '21824608000.864389558610036'
+  crypted_password: '2314bed3e92f00f9b0e2eac0c74f5fefc61fdbfdfc67fab3fd4f15f7bf0b642a7d204310b17b26416dc6f4a62e2721c3fa5f55b065fb7a931ec9d87c023e3508'
+  password_salt: '4WAj-Subnz06HiU0ASwG'
 
 user_3:
   id: 3
@@ -27,8 +27,8 @@ user_3:
   email: fraz.hamid@sameclat.com
   client_id: 1
   persistence_token: 0
-  crypted_password: '8976b79e3a2fe494b95b55cc1303a0417475f54a'
-  password_salt: '21814510400.541328778331048'
+  crypted_password: '9bb51d932c527dc83cd5b3ea2ce96c166258d81f0dff146c689b9e2c46735f4376579245967ab1e03ca505e0a322c61a48bfde598caba4a1df50ca17e2741965'
+  password_salt: 'Acy2xGODHCEZh05bELpu'
 
 user_4:
   id: 4
@@ -37,6 +37,6 @@ user_4:
   email: tim.collis@sameclat.com
   client_id: 1
   persistence_token: 0
-  crypted_password: 'c98c80dcee7a4f7f8e7f2a4674b8991e2c54837d'
-  password_salt: '21825893800.738525852055951'
+  crypted_password: '95a72263b0affc65abb9a85b427cab17d552c975ff8f2a810d18e14225ec1805a01f944ab11b249234d3587559a213a149aef123707307bb1e2c7d02ab168f39'
+  password_salt: '8leQruhRbGLxPB_EWMvD'
 

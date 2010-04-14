@@ -10,7 +10,8 @@
   <div>
     <%= f.label :email, "Email" %><br />
 		<%= f.text_field :email %>
-  </div>
+	</div>
+	<% if current_user && current_user.role == 'admin' %>
   <div>
     <%= f.label :client_id, "Client ID" %><br />
 		<%= f.text_field :client_id %>
@@ -22,7 +23,8 @@
   <div>
     <%= f.label :persistence_token, "Persistence Token" %><br />
 		<%= f.text_field :persistence_token %>
-  </div>
+	</div>
+	<% end %>
   <div>
     <%= f.label :password, "Password" %><br />
 		<%= f.password_field :password %>
