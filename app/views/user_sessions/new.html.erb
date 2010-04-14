@@ -3,8 +3,12 @@
 <% form_for @user_session do |f| %>
   <%= f.error_messages %>
   <p>
-    <%= f.label :username %><br />
-    <%= f.text_field :username %>
+    <%= f.label :user%><br />
+    <%= f.text_field :user%>
+  </p>
+  <p>
+    <%= f.label :email%><br />
+    <%= f.text_field :email%>
   </p>
   <p>
     <%= f.label :password %><br />
