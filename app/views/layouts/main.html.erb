@@ -13,9 +13,6 @@
 					<% if current_user %>
 									<%= current_user.name %> is logged in as <%= current_user.role %> &nbsp; 
 									<%= link_to "Edit Profile", edit_user_path(:current) %> |
-						<% if current_user.role == 'admin' %>
-									<%= link_to "Create User", new_user_path %> |
-						<% end %>
 					  <%= link_to "Logout", logout_path %> 
 					<% else %>
 					  <%= link_to "Login", login_path %> 
@@ -23,10 +20,10 @@
 	</div>
 
 					<h1>SAM &Eacute;clat Asset CIO</h1>
- 					<div style="background-color:LightBlue">
-					  <p class="navbar">
+					<% if current_user %>
+ 					  <div style="background-color:LightBlue">
+					    <p class="navbar">
 
-						<% if current_user %>
 
 						<table class="nav"><tr><td class="nav">
 						<h2>Client View</h2>
@@ -40,12 +37,20 @@
 			      <%= link_to 'Licences', :controller => 'licences' %>
 						</td></tr></table>
 
-            <% end %>
+          <% end %>
 
-						<% if current_user && current_user.role == 'admin' %>
+					<% if current_user && current_user.role == 'admin' %>
 				    </td><td class="nav"> 	
 						<h2>Adminstration View</h2>
 						<table class="nav"><tr><td class="nav">
+						<h3>Users</h3>
+						&nbsp;
+						<%= link_to "New user", new_user_path %>
+						&nbsp;
+						<%= link_to "Users", :controller => 'users' %>
+						&nbsp;
+						<%= link_to "Clients", :controller => 'clients' %>
+						</td><td class="nav">
 						<h3>Hardware</h3>
 						&nbsp;
 			      <%= link_to 'Locations', :controller => 'locations' %>
@@ -75,7 +80,7 @@
 						&nbsp;
 			      <%= link_to 'Compliances', :controller => 'compliances' %>
 						</td></tr></table>
-						<% end %>
+					<% end %>
 		        </td></tr></table>
 						</p>
 	       	</div>
