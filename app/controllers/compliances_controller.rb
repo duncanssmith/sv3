@@ -1,4 +1,5 @@
 class CompliancesController < ApplicationController
+	load_and_authorize_resource
   # GET /compliances
   # GET /compliances.xml
   def index
@@ -13,8 +14,6 @@ class CompliancesController < ApplicationController
   # GET /compliances/1
   # GET /compliances/1.xml
   def show
-    @compliance = Compliance.find(params[:id])
-
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @compliance }
@@ -24,8 +23,6 @@ class CompliancesController < ApplicationController
   # GET /compliances/new
   # GET /compliances/new.xml
   def new
-    @compliance = Compliance.new
-
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @compliance }
@@ -34,14 +31,12 @@ class CompliancesController < ApplicationController
 
   # GET /compliances/1/edit
   def edit
-    @compliance = Compliance.find(params[:id])
+		#unauthorized! if cannot? :update, @compliance
   end
 
   # POST /compliances
   # POST /compliances.xml
   def create
-    @compliance = Compliance.new(params[:compliance])
-
     respond_to do |format|
       if @compliance.save
         flash[:notice] = 'Compliance was successfully created.'
@@ -57,8 +52,6 @@ class CompliancesController < ApplicationController
   # PUT /compliances/1
   # PUT /compliances/1.xml
   def update
-    @compliance = Compliance.find(params[:id])
-
     respond_to do |format|
       if @compliance.update_attributes(params[:compliance])
         flash[:notice] = 'Compliance was successfully updated.'
@@ -74,7 +67,6 @@ class CompliancesController < ApplicationController
   # DELETE /compliances/1
   # DELETE /compliances/1.xml
   def destroy
-    @compliance = Compliance.find(params[:id])
     @compliance.destroy
 
     respond_to do |format|

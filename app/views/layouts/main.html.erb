@@ -83,7 +83,10 @@
 					<% end %>
 		        </td></tr></table>
 						</p>
-	       	</div>
+					</div>
+						<% if can? :read, @compliances %>
+							<%= link_to 'Compliances', :controller => 'compliances' %>
+						<% end %>
 
 	  <p style="color: green"><%= flash[:notice] %></p>
     <div class="content">
