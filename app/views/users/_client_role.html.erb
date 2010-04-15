@@ -1,0 +1,10 @@
+  <div>
+    <%= f.label :role, "Role" %><br />
+		<%= f.collection_select :role, User::ROLES, :to_s, :humanize %>
+  </div>
+  <div>
+    <% @clients = Client.find (:all, :select => 'id, name') %>
+    <%= f.label :client_id, "Client" %><br />
+		<%= select_tag(:client_id, "\n<option value=\"0\">None</option>\n" + options_from_collection_for_select(@clients, :id, :name)) %>
+  </div>
+
