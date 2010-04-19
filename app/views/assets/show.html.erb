@@ -29,5 +29,7 @@
 </p>
 
 
-<%= link_to 'Edit', edit_asset_path(@asset) %> |
+    <% if can? :update, @asset %>
+						<%= link_to 'Edit', edit_asset_path(@asset) %> |
+		<% end %>
 <%= link_to 'Back', assets_path %>

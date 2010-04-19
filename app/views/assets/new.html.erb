@@ -28,7 +28,9 @@
     <%= f.text_field :audit_type %>
   </p>
   <p>
-    <%= f.submit 'Create' %>
+    <% if can? :create, @asset %>
+						<%= f.submit 'Create' %>
+		<% end %>
   </p>
 <% end %>
 

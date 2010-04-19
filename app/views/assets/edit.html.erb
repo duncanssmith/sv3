@@ -29,7 +29,9 @@
 	</p>
 
   <p>
-    <%= f.submit 'Update' %>
+    <% if can? :update, @asset %>
+						<%= f.submit 'Update' %>
+		<% end %>
   </p>
 <% end %>
 

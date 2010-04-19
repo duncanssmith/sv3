@@ -6,8 +6,7 @@
 		  <h3>
 				Compliance Position by Product
 			</h3>
-			<img src="images/cpgraph.png" width="300" />
-			<%= image_tag("cpgraph.png")  %>
+			<%= image_tag("cpgraph.png", { :width => "300", :title => "Position Graph"})  %>
 		</td>
 		<td valign="top">
 
@@ -40,10 +39,20 @@
 			</h3>
 		<h4>All products by RAG status</h4>
 			<table border="0" bgcolor="#ccc" cellpadding="6" cellspacing="7">
-							<tr><td><img src="images/spacer_40.gif"/></td><td><img src="images/spacer_40.gif"/></td></tr>
-							<tr><td>121</td><td><img src="images/red_traffic_light.png"/></td></tr>
-							<tr><td>37</td><td><img src="images/amber_traffic_light.png"/></td></tr>
-							<tr><td>537</td><td><img src="images/green_traffic_light.png"/></td></tr>
+							<tr><td>
+							<%= image_tag("spacer_40.gif", { :title => "spacer"})  %>
+							</td><td>
+							<%= image_tag("spacer_40.gif", { :title => "spacer"})  %>
+							</td></tr>
+							<tr><td>121</td><td>
+							<%= image_tag("red_traffic_light.png", { :size => "20x20", :title => "red traffic light"})  %>
+							</td></tr>
+							<tr><td>37</td><td>
+							<%= image_tag("amber_traffic_light.png", { :title => "amber traffic light"})  %>
+							</td></tr>
+							<tr><td>537</td><td>
+							<%= image_tag("green_traffic_light.png", { :title => "green traffic light"})  %>
+							</td></tr>
 			</table> &nbsp;
 		</td>
 	</tr>

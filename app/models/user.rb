@@ -1,7 +1,11 @@
 class User < ActiveRecord::Base
 	acts_as_authentic { |c| c.login_field = :name } 
-  attr_accessible :name, :email, :role, :password, :password_confirmation, :client_id
+  attr_accessible :name, :email, :password, :confirm_password, :role
 
-	ROLES = %w[admin client salesperson superuser ]
+	ROLES = %w[admin client superuser ]
+
+	def role?(role)
+		role.to_s
+	end
 
 end

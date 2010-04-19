@@ -21,12 +21,18 @@
     <td><%=h asset.device_id %></td>
     <td><%=h asset.audit_type %></td>
     <td><%= link_to 'Show', asset %></td>
-    <td><%= link_to 'Edit', edit_asset_path(asset) %></td>
+    <% if can? :update, @asset %>
+						<td><%= link_to 'Edit', edit_asset_path(asset) %></td>
+		<% end %>
+    <% if can? :destroy, @asset %>
     <td><%= link_to 'Destroy', asset, :confirm => 'Are you sure?', :method => :delete %></td>
+		<% end %>
   </tr>
 <% end %>
 </table>
 
 <br />
 
+    <% if can? :create, @asset %>
 <%= link_to 'New asset', new_asset_path %>
+		<% end %>
