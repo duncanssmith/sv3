@@ -1,5 +1,4 @@
 #
-
 user_1:
   id: 1
   name: duncan
@@ -23,9 +22,9 @@ user_2:
 user_3:
   id: 3
   name: fraz
-  role: client
+  role: admin
   email: fraz.hamid@sameclat.com
-  client_id: 1
+  client_id: 0
   persistence_token: 0
   crypted_password: '9bb51d932c527dc83cd5b3ea2ce96c166258d81f0dff146c689b9e2c46735f4376579245967ab1e03ca505e0a322c61a48bfde598caba4a1df50ca17e2741965'
   password_salt: 'Acy2xGODHCEZh05bELpu'
@@ -33,10 +32,41 @@ user_3:
 user_4:
   id: 4
   name: tim
-  role: client
+  role: admin
   email: tim.collis@sameclat.com
-  client_id: 1
+  client_id: 0
   persistence_token: 0
   crypted_password: '95a72263b0affc65abb9a85b427cab17d552c975ff8f2a810d18e14225ec1805a01f944ab11b249234d3587559a213a149aef123707307bb1e2c7d02ab168f39'
   password_salt: '8leQruhRbGLxPB_EWMvD'
+
+user_5:
+  id: 5
+  name: admin
+  role: admin
+  email: admin@sameclat.com
+  client_id: 0
+  persistence_token: 0
+  crypted_password: '4e17a991c62470639abc5f7a7e9f0eb99b2e8eb46e2520e68636afdf5f0c26060e1200eb5b3424a87157291575b674ad12a170df17a70beabe95ce1c4d5616b1'
+  password_salt: 'f1mvaOl0YOR_n0qoDRS8'
+
+user_6:
+  id: 6
+  name: client
+  role: client
+  email: client@sameclat.com
+  client_id: 1
+  persistence_token: 0
+  crypted_password: 'ba3ff0b7cb5e376a343f2e930f374934d0a80f4c2b74cddf91ab1b44f0cc6a696b230a80ed7509882812a93af0631be861796fc83fb48e7594b4c4f5ab106fe9'
+  password_salt: 'Rt6wZ07E_5zW-xyerPAB'
+
+user_7:
+  id: 7
+  name: clientmaintainer
+  role: clientmaintainer
+  email: clientmaintainer@sameclat.com
+  client_id: 1
+  persistence_token: 0
+  crypted_password: '625057bcc44ea3710c2152ce87c81d1739d4faa768b978f72b044b03ac7e7c4eaef3f4c1871d780a342caf09fd3b5c7ce2896e28f3f97f7281509d178e0692a8'
+  password_salt: '1lvy8He6F2QaemGnrzWW'
+
 
