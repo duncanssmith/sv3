@@ -14,7 +14,6 @@ class DevicesController < ApplicationController
   # GET /devices/1
   # GET /devices/1.xml
   def show
-    @device = Device.find(params[:id])
 		@registers = @device.registers
     respond_to do |format|
       format.html # show.html.erb
@@ -25,7 +24,6 @@ class DevicesController < ApplicationController
   # GET /devices/new
   # GET /devices/new.xml
   def new
-    @device = Device.new
 
     respond_to do |format|
       format.html # new.html.erb
@@ -35,13 +33,11 @@ class DevicesController < ApplicationController
 
   # GET /devices/1/edit
   def edit
-    @device = Device.find(params[:id])
   end
 
   # POST /devices
   # POST /devices.xml
   def create
-    @device = Device.new(params[:device])
 
     respond_to do |format|
       if @device.save
@@ -60,7 +56,6 @@ class DevicesController < ApplicationController
   def update
 		#params[:device][:asset_ids] ||= []
 		params[:device][:register_ids] ||= []
-    @device = Device.find(params[:id])
 
     respond_to do |format|
       if @device.update_attributes(params[:device])
@@ -77,7 +72,6 @@ class DevicesController < ApplicationController
   # DELETE /devices/1
   # DELETE /devices/1.xml
   def destroy
-    @device = Device.find(params[:id])
     @device.destroy
 
     respond_to do |format|

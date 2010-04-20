@@ -14,7 +14,6 @@ class LicencesController < ApplicationController
   # GET /licences/1
   # GET /licences/1.xml
   def show
-    @licence = Licence.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -25,7 +24,6 @@ class LicencesController < ApplicationController
   # GET /licences/new
   # GET /licences/new.xml
   def new
-    @licence = Licence.new
 
     respond_to do |format|
       format.html # new.html.erb
@@ -35,13 +33,11 @@ class LicencesController < ApplicationController
 
   # GET /licences/1/edit
   def edit
-    @licence = Licence.find(params[:id])
   end
 
   # POST /licences
   # POST /licences.xml
   def create
-    @licence = Licence.new(params[:licence])
 
     respond_to do |format|
       if @licence.save
@@ -58,7 +54,6 @@ class LicencesController < ApplicationController
   # PUT /licences/1
   # PUT /licences/1.xml
   def update
-    @licence = Licence.find(params[:id])
 
     respond_to do |format|
       if @licence.update_attributes(params[:licence])
@@ -75,7 +70,6 @@ class LicencesController < ApplicationController
   # DELETE /licences/1
   # DELETE /licences/1.xml
   def destroy
-    @licence = Licence.find(params[:id])
     @licence.destroy
 
     respond_to do |format|

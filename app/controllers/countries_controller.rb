@@ -1,4 +1,5 @@
 class CountriesController < ApplicationController
+	load_and_authorize_resource
   # GET /countries
   # GET /countries.xml
 				#
@@ -19,7 +20,6 @@ class CountriesController < ApplicationController
   # GET /countries/1
   # GET /countries/1.xml
   def show
-    @country = Country.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -30,7 +30,6 @@ class CountriesController < ApplicationController
   # GET /countries/new
   # GET /countries/new.xml
   def new
-    @country = Country.new
 
     respond_to do |format|
       format.html # new.html.erb
@@ -40,13 +39,11 @@ class CountriesController < ApplicationController
 
   # GET /countries/1/edit
   def edit
-    @country = Country.find(params[:id])
   end
 
   # POST /countries
   # POST /countries.xml
   def create
-    @country = Country.new(params[:country])
 
     respond_to do |format|
       if @country.save
@@ -63,7 +60,6 @@ class CountriesController < ApplicationController
   # PUT /countries/1
   # PUT /countries/1.xml
   def update
-    @country = Country.find(params[:id])
 
     respond_to do |format|
       if @country.update_attributes(params[:country])
@@ -80,7 +76,6 @@ class CountriesController < ApplicationController
   # DELETE /countries/1
   # DELETE /countries/1.xml
   def destroy
-    @country = Country.find(params[:id])
     @country.destroy
 
     respond_to do |format|

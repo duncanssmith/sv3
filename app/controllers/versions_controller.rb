@@ -1,4 +1,5 @@
 class VersionsController < ApplicationController
+	load_and_authorize_resource
   # GET /versions
   # GET /versions.xml
   def index
@@ -13,7 +14,6 @@ class VersionsController < ApplicationController
   # GET /versions/1
   # GET /versions/1.xml
   def show
-    @version = Version.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -24,7 +24,6 @@ class VersionsController < ApplicationController
   # GET /versions/new
   # GET /versions/new.xml
   def new
-    @version = Version.new
 
     respond_to do |format|
       format.html # new.html.erb
@@ -34,13 +33,11 @@ class VersionsController < ApplicationController
 
   # GET /versions/1/edit
   def edit
-    @version = Version.find(params[:id])
   end
 
   # POST /versions
   # POST /versions.xml
   def create
-    @version = Version.new(params[:version])
 
     respond_to do |format|
       if @version.save
@@ -57,7 +54,6 @@ class VersionsController < ApplicationController
   # PUT /versions/1
   # PUT /versions/1.xml
   def update
-    @version = Version.find(params[:id])
 
     respond_to do |format|
       if @version.update_attributes(params[:version])
@@ -74,7 +70,6 @@ class VersionsController < ApplicationController
   # DELETE /versions/1
   # DELETE /versions/1.xml
   def destroy
-    @version = Version.find(params[:id])
     @version.destroy
 
     respond_to do |format|

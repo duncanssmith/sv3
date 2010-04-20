@@ -1,4 +1,5 @@
 class PublishersController < ApplicationController
+	load_and_authorize_resource
   # GET /publishers
   # GET /publishers.xml
   def index
@@ -13,7 +14,6 @@ class PublishersController < ApplicationController
   # GET /publishers/1
   # GET /publishers/1.xml
   def show
-    @publisher = Publisher.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -24,7 +24,6 @@ class PublishersController < ApplicationController
   # GET /publishers/new
   # GET /publishers/new.xml
   def new
-    @publisher = Publisher.new
 #    @publisher.products.build
 
     respond_to do |format|
@@ -35,13 +34,11 @@ class PublishersController < ApplicationController
 
   # GET /publishers/1/edit
   def edit
-    @publisher = Publisher.find(params[:id])
   end
 
   # POST /publishers
   # POST /publishers.xml
   def create
-    @publisher = Publisher.new(params[:publisher])
 
     respond_to do |format|
       if @publisher.save
@@ -60,8 +57,6 @@ class PublishersController < ApplicationController
   # PUT /publishers/1.xml
   def update
 		params[:publisher][:existing_product_attributes] ||= {}
-
-    @publisher = Publisher.find(params[:id])
 
 		if @publisher.update_attributes(params[:publisher])
 			flash[:notice] = "Successfully updated publisher and products."
@@ -86,7 +81,6 @@ class PublishersController < ApplicationController
   # DELETE /publishers/1
   # DELETE /publishers/1.xml
   def destroy
-    @publisher = Publisher.find(params[:id])
     @publisher.destroy
 
     respond_to do |format|

@@ -1,4 +1,5 @@
 class ProductsController < ApplicationController
+	load_and_authorize_resource
   # GET /products
   # GET /products.xml
   def index
@@ -13,7 +14,6 @@ class ProductsController < ApplicationController
   # GET /products/1
   # GET /products/1.xml
   def show
-    @product = Product.find(params[:id])
 		@versions = @product.versions
 
     respond_to do |format|
@@ -25,7 +25,6 @@ class ProductsController < ApplicationController
   # GET /products/new
   # GET /products/new.xml
   def new
-    @product = Product.new
 		#3.times { @product.versions.build }
 
     respond_to do |format|
@@ -36,13 +35,11 @@ class ProductsController < ApplicationController
 
   # GET /products/1/edit
   def edit
-    @product = Product.find(params[:id])
   end
 
   # POST /products
   # POST /products.xml
   def create
-    @product = Product.new(params[:product])
 
     respond_to do |format|
       if @product.save
@@ -59,7 +56,6 @@ class ProductsController < ApplicationController
   # PUT /products/1
   # PUT /products/1.xml
   def update
-    @product = Product.find(params[:id])
 
     respond_to do |format|
       if @product.update_attributes(params[:product])
@@ -76,7 +72,6 @@ class ProductsController < ApplicationController
   # DELETE /products/1
   # DELETE /products/1.xml
   def destroy
-    @product = Product.find(params[:id])
     @product.destroy
 
     respond_to do |format|

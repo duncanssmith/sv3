@@ -1,4 +1,5 @@
 class InstallationsController < ApplicationController
+	load_and_authorize_resource
   # GET /installations
   # GET /installations.xml
   def index
@@ -13,7 +14,6 @@ class InstallationsController < ApplicationController
   # GET /installations/1
   # GET /installations/1.xml
   def show
-    @installation = Installation.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -24,7 +24,6 @@ class InstallationsController < ApplicationController
   # GET /installations/new
   # GET /installations/new.xml
   def new
-    @installation = Installation.new
 
     respond_to do |format|
       format.html # new.html.erb
@@ -34,13 +33,11 @@ class InstallationsController < ApplicationController
 
   # GET /installations/1/edit
   def edit
-    @installation = Installation.find(params[:id])
   end
 
   # POST /installations
   # POST /installations.xml
   def create
-    @installation = Installation.new(params[:installation])
 
     respond_to do |format|
       if @installation.save
@@ -57,7 +54,6 @@ class InstallationsController < ApplicationController
   # PUT /installations/1
   # PUT /installations/1.xml
   def update
-    @installation = Installation.find(params[:id])
 
     respond_to do |format|
       if @installation.update_attributes(params[:installation])
@@ -74,7 +70,6 @@ class InstallationsController < ApplicationController
   # DELETE /installations/1
   # DELETE /installations/1.xml
   def destroy
-    @installation = Installation.find(params[:id])
     @installation.destroy
 
     respond_to do |format|

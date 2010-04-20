@@ -1,4 +1,5 @@
 class RegistersController < ApplicationController
+	load_and_authorize_resource
   # GET /registers
   # GET /registers.xml
   def index
@@ -14,7 +15,6 @@ class RegistersController < ApplicationController
   # GET /registers/1
   # GET /registers/1.xml
   def show
-    @register = Register.find(params[:id])
 		@devices = @register.devices
 
     respond_to do |format|
@@ -27,7 +27,6 @@ class RegistersController < ApplicationController
   # GET /registers/new
   # GET /registers/new.xml
   def new
-    @register = Register.new
 
     respond_to do |format|
       format.html # new.html.erb
@@ -37,13 +36,11 @@ class RegistersController < ApplicationController
 
   # GET /registers/1/edit
   def edit
-    @register = Register.find(params[:id])
   end
 
   # POST /registers
   # POST /registers.xml
   def create
-    @register = Register.new(params[:register])
 
     respond_to do |format|
       if @register.save
@@ -60,7 +57,6 @@ class RegistersController < ApplicationController
   # PUT /registers/1
   # PUT /registers/1.xml
   def update
-    @register = Register.find(params[:id])
 
     respond_to do |format|
       if @register.update_attributes(params[:register])
@@ -77,7 +73,6 @@ class RegistersController < ApplicationController
   # DELETE /registers/1
   # DELETE /registers/1.xml
   def destroy
-    @register = Register.find(params[:id])
     @register.destroy
 
     respond_to do |format|
