@@ -3,34 +3,34 @@
 asset_1:
   id: 1
   name: CI-55577
-  serial: YBER087308
+  serial: YDRE78392
   assetnumber: 241728
   deploymentstatus: Current
 
 asset_2:
   id: 2
-  name: Pocket_PC
+  name: Desktop_PC
   serial: P2CK5030QMS 
   assetnumber: 240796
   deploymentstatus: Current
 
 asset_3:
   id: 3
-  name: CI-55577
+  name: CI-34738
   serial: XRTR070238
   assetnumber: 242739
   deploymentstatus: Current
 
 asset_4:
   id: 4
-  name: Pocket_PC
+  name: Laptop
   serial: 2CK5030QMS 
   assetnumber: 240796
   deploymentstatus: Current
 
 asset_5:
   id: 5
-  name: CI-55577
+  name: CI-49938
   serial: YBER087308
   assetnumber: 241728
   deploymentstatus: Current
@@ -44,14 +44,14 @@ asset_6:
 
 asset_7:
   id: 7
-  name: CI-55577
-  serial: YBER087308
+  name: CI-48723
+  serial: TERS988493
   assetnumber: 241728
   deploymentstatus: Current
 
 asset_8:
   id: 8
-  name: Pocket_PC
+  name: Laptop XTH
   serial: 2CK5030QMS 
   assetnumber: 240796
   deploymentstatus: Current

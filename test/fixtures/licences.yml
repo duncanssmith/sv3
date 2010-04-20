@@ -1,6 +1,7 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 licence_1:
+  id: 1
   sku: 1233221983
   publisher: Adobe
   product: Photoshop
@@ -40,6 +41,7 @@ licence_1:
 
 
 licence_2:
+  id: 2
   sku: 827638472
   publisher: Autodesk
   product: AutoCAD
@@ -65,6 +67,166 @@ licence_2:
   supplier_invoice_number: 1283
   invoice_date: 2010-04-07
   po_number: 8479384983  
+  country_of_usage: USA
+  product_substitution_rights: All
+  secondary_rights: None
+  transferability: OK
+  external_licence_transfer_requirements: Flexible
+  linkages: Both
+  total_cost_of_line_item: 320000 
+  quantity: 3
+  unit: GBP
+  cost_unit: 320000
+  maintenance_pa: 20000 
+
+
+licence_3:
+  id: 3
+  sku: 39287394
+  publisher: Microsoft
+  product: Office
+  edition: 2008
+  version: 7.000
+  identifying_number: 2984982
+  product_id: 5
+  region_or_country: Europe
+  cal: 34
+  licence_type: Perpetual
+  term: Unlimited
+  upgrade: Unlimited
+  term_expiry_date: 2010-04-07
+  ci_name: All 
+  base_licence: 2734539489
+  maintenance_expiry: 2010-04-19
+  entitlement_type: Perpetual
+  cost_centre: CHYUX9203
+  volume_licence_agreement_number: AUER9304SERX8839 
+  agreement_location: Vancouver Office
+  entitlement_location: Vancouver Office 
+  supplier: MS Reseller XYZ
+  supplier_invoice_number: 37644563
+  invoice_date: 2010-04-07
+  po_number: 10293829  
+  country_of_usage: USA
+  product_substitution_rights: All
+  secondary_rights: None
+  transferability: OK
+  external_licence_transfer_requirements: Flexible
+  linkages: Both
+  total_cost_of_line_item: 465738 
+  quantity: 10000
+  unit: USD
+  cost_unit: 178723
+  maintenance_pa: 12342 
+
+
+licence_4:
+  id: 4
+  sku: 48263847
+  publisher: Microsoft
+  product: Outlook
+  edition: 4
+  version: 4.23.223
+  identifying_number: 37653726
+  product_id: 5
+  region_or_country: North America
+  cal: 29381
+  licence_type: Perpetual
+  term: Unlimited
+  upgrade: Unlimited
+  term_expiry_date: 2010-04-07
+  ci_name: All 
+  base_licence: 29834928
+  maintenance_expiry: 2010-04-07
+  entitlement_type: Perpetual
+  cost_centre: UXB345
+  volume_licence_agreement_number: YUAKJH928394 
+  agreement_location: New York Office
+  entitlement_location: New York Office 
+  supplier: Autodesk Reseller XYZ
+  supplier_invoice_number: 1283
+  invoice_date: 2010-04-07
+  po_number: 8479384983  
+  country_of_usage: USA
+  product_substitution_rights: All
+  secondary_rights: None
+  transferability: OK
+  external_licence_transfer_requirements: Flexible
+  linkages: Both
+  total_cost_of_line_item: 320000 
+  quantity: 3
+  unit: GBP
+  cost_unit: 320000
+  maintenance_pa: 20000 
+
+
+licence_5:
+  id: 5
+  sku: 1233221983
+  publisher: QuarkXpress
+  product: QuarkXpress
+  edition: 8.00
+  version: 8.445
+  identifying_number: 78943845
+  product_id: 6
+  region_or_country: Europe
+  cal: 23
+  licence_type: Perpetual
+  term: Unlimited
+  upgrade: Unlimited
+  term_expiry_date: 2010-04-07
+  ci_name: All 
+  base_licence: 124432234
+  maintenance_expiry: 2010-04-07
+  entitlement_type: Perpetual
+  cost_centre: CHYUX9203
+  volume_licence_agreement_number: AUER9304SERX8839 
+  agreement_location: Vancouver Office
+  entitlement_location: Vancouver Office 
+  supplier: Adobe Reseller XYZ
+  supplier_invoice_number: 12443
+  invoice_date: 2010-04-07
+  po_number: 93249203492  
+  country_of_usage: UK
+  product_substitution_rights: All
+  secondary_rights: None
+  transferability: OK
+  external_licence_transfer_requirements: Flexible
+  linkages: Both
+  total_cost_of_line_item: 64500 
+  quantity: 1000
+  unit: GBP
+  cost_unit: 2134
+  maintenance_pa: 1234 
+
+
+licence_6:
+  id: 6
+  sku: 93874953
+  publisher: Quest
+  product: Toad
+  edition: 9.3.0
+  version: 9.3.499
+  identifying_number: 63773628
+  product_id: 8
+  region_or_country: North America
+  cal: 67
+  licence_type: Perpetual
+  term: Unlimited
+  upgrade: Unlimited
+  term_expiry_date: 2010-04-07
+  ci_name: All 
+  base_licence: 29834928
+  maintenance_expiry: 2010-04-07
+  entitlement_type: Perpetual
+  cost_centre: UXB345
+  volume_licence_agreement_number: YUAKJH928394 
+  agreement_location: New York Office
+  entitlement_location: New York Office 
+  supplier: Quest Reseller XYZ
+  supplier_invoice_number: 1283
+  invoice_date: 2010-04-07
+  po_number: 83457384  
   country_of_usage: USA
   product_substitution_rights: All
   secondary_rights: None
