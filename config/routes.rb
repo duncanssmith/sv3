@@ -1,6 +1,7 @@
 ActionController::Routing::Routes.draw do |map|
 
 
+
   map.login "login", :controller => "user_sessions", :action => "new"
   map.logout "logout", :controller => "user_sessions", :action => "destroy"
 
@@ -56,7 +57,7 @@ ActionController::Routing::Routes.draw do |map|
   # You can have the root of your site routed with map.root -- just remember to delete public/index.html.
   # map.root :controller => "welcome"
 	# map.root :controller => "users"
-#	map.root :controller => "home"
+	#map.root :controller => "home"
 	map.root :controller => "user_sessions", :action => "new"
 
   #map.upload '', :controller => "dashboard", :action => "upload"

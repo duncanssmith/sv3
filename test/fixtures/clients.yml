@@ -1,9 +1,17 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-one:
-  name: MyString
+client_1:
+  name: BP
   location_id: 1
 
-two:
-  name: MyString
-  location_id: 1
+client_2:
+  name: Vodafone
+  location_id: 2
+
+client_3:
+  name: RSPCA
+  location_id: 3
+
+client_4:
+  name: Cumbria
+  location_id: 4

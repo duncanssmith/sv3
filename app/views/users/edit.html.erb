@@ -1,0 +1,35 @@
+<h1>Editing user</h1>
+
+<% form_for(@user) do |f| %>
+				<%= f.error_messages %>
+
+  <div>
+    <%= f.label :name, "Name" %><br />
+		<%= f.text_field :name %>
+  </div>
+  <div>
+    <%= f.label :email, "Email" %><br />
+		<%= f.text_field :email %>
+	</div>
+
+	<% if current_user && current_user.role == 'admin' %>
+  	<%= render :partial => 'client_role', :locals => { :f => f } %>
+	<% end %>
+
+  <div>
+    <%= f.label :password, "Password" %><br />
+		<%= f.password_field :password %>
+  </div>
+  <div>
+    <%= f.label :password_confirmation, "Confirm Password" %><br />
+		<%= f.password_field :password_confirmation  %>
+  </div>
+	<div>
+		<br/>
+    <%= f.submit "Update" %>
+	</div>
+
+	<% end %>
+
+<%= link_to 'Show', @user %> |
+<%= link_to 'Back', users_path %>

@@ -1,13 +1,13 @@
 class Ability
 	include CanCan::Ability
 
-	def initialize(current_user)
-		current_user ||= User.new # guest user
+	def initialize(user)
+		user ||= User.new # guest user
 
-		if current_user.role? :admin
-		  can :manage, :all
+		if user.role? :admin
+		  can :read, :all
 		end
-		if current_user.role? :client
+		if user.role? :client
 			can :create, Licence 
 			can :update, Licence do |licence|
 				licence.try(:user) == current_user
