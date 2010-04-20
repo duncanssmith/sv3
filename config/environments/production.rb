@@ -25,3 +25,6 @@ config.action_view.cache_template_loading            = true
 # config.action_mailer.raise_delivery_errors = false
 # Enable threaded mode
 # config.threadsafe!
+
+
+# config.action_mailer.default_url_options = { :host => 'www.sameclat.com' } 

@@ -23,4 +23,5 @@ production.log
 *.swf
 *.flv
 *.tmp
+tmp/tmp_migrations_old/*
 *.zip
