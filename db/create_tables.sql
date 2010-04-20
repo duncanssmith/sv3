@@ -665,6 +665,7 @@ CREATE TABLE `users` (
 	`updated_at` DATETIME,
 	PRIMARY KEY (`id`)
 );
+
 INSERT INTO `users` VALUES(1,'duncan','duncan.smith@sameclat.com','admin',1,'a9eb68b19ca177bb9390484bcb18077b3a8c725d2cd9b91d9ed95bb3644b0aedeee9e7a176bc990b11cee2873c12adaf3f098e8668f93d1b8057c443931595b9','5a8wyjsIyKIztIGMjqRl',0,'2010-04-20 14:07:07','2010-04-20 14:07:07'),
 (2,'john','john.springall@sameclat.com','admin',1,'2314bed3e92f00f9b0e2eac0c74f5fefc61fdbfdfc67fab3fd4f15f7bf0b642a7d204310b17b26416dc6f4a62e2721c3fa5f55b065fb7a931ec9d87c023e3508','4WAj-Subnz06HiU0ASwG',0,'2010-04-20 14:07:07','2010-04-20 14:07:07'),
 (3,'fraz','fraz.hamid@sameclat.com','admin',0,'9bb51d932c527dc83cd5b3ea2ce96c166258d81f0dff146c689b9e2c46735f4376579245967ab1e03ca505e0a322c61a48bfde598caba4a1df50ca17e2741965','Acy2xGODHCEZh05bELpu',0,'2010-04-20 14:07:07','2010-04-20 14:07:07'),
