@@ -1,17 +1,21 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 client_1:
+  id: 1
   name: BP
   location_id: 1
 
 client_2:
+  id: 2
   name: Vodafone
   location_id: 2
 
 client_3:
+  id: 3
   name: RSPCA
   location_id: 3
 
 client_4:
+  id: 4
   name: Cumbria
   location_id: 4
