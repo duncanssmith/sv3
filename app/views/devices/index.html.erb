@@ -1,5 +1,7 @@
 <h1>Listing devices</h1>
 
+<%= will_paginate @devices %>
+
 <table>
   <tr>
     <th>Asset</th>
@@ -48,6 +50,8 @@
   </tr>
 <% end %>
 </table>
+
+<%= will_paginate @devices %>
 
 <br />
 

@@ -3,7 +3,7 @@ class LicencesController < ApplicationController
   # GET /licences
   # GET /licences.xml
   def index
-    @licences = Licence.paginate(:per_page => 2, :page => params[:page])
+    @licences = Licence.paginate(:per_page => 4, :page => params[:page])
 
     respond_to do |format|
       format.html # index.html.erb
