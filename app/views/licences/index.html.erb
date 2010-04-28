@@ -1,94 +1,12 @@
 <h1>Listing licences</h1>
 
-<%= will_paginate @licences %>
+<% javascript "pagination" %>
 
-<table>
-  <tr>
-    <th>Sku</th>
-    <th>Publisher</th>
-    <th>Product</th>
-    <th>Edition</th>
-    <th>Version</th>
-    <th>Identifying number</th>
-    <th>Product</th>
-    <th>Region or country</th>
-    <th>Cal</th>
-    <th>Licence type</th>
-    <th>Term</th>
-    <th>Upgrade</th>
-    <th>Term expiry date</th>
-    <th>Ci name</th>
-    <th>Base licence</th>
-    <th>Maintenance expiry</th>
-    <th>Entitlement type</th>
-    <th>Cost centre</th>
-    <th>Volume licence agreement number</th>
-    <th>Agreement location</th>
-    <th>Entitlement location</th>
-    <th>Supplier</th>
-    <th>Supplier invoice number</th>
-    <th>Invoice date</th>
-    <th>Po number</th>
-    <th>Country of usage</th>
-    <th>Product substitution rights</th>
-    <th>Secondary rights</th>
-    <th>Transferability</th>
-    <th>External licence transfer requirements</th>
-    <th>Linkages</th>
-    <th>Total cost of line item</th>
-    <th>Quantity</th>
-    <th>Unit</th>
-    <th>Cost unit</th>
-    <th>Maintenance pa</th>
-  </tr>
+<div id="licences">
 
-<% @licences.each do |licence| %>
- 	<tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
-    <td><%=h licence.sku %></td>
-    <td><%=h licence.publisher %></td>
-    <td><%=h licence.product %></td>
-    <td><%=h licence.edition %></td>
-    <td><%=h licence.version %></td>
-    <td><%=h licence.identifying_number %></td>
-    <td><%=h licence.product_id %></td>
-    <td><%=h licence.region_or_country %></td>
-    <td><%=h licence.cal %></td>
-    <td><%=h licence.licence_type %></td>
-    <td><%=h licence.term %></td>
-    <td><%=h licence.upgrade %></td>
-    <td><%=h licence.term_expiry_date %></td>
-    <td><%=h licence.ci_name %></td>
-    <td><%=h licence.base_licence %></td>
-    <td><%=h licence.maintenance_expiry %></td>
-    <td><%=h licence.entitlement_type %></td>
-    <td><%=h licence.cost_centre %></td>
-    <td><%=h licence.volume_licence_agreement_number %></td>
-    <td><%=h licence.agreement_location %></td>
-    <td><%=h licence.entitlement_location %></td>
-    <td><%=h licence.supplier %></td>
-    <td><%=h licence.supplier_invoice_number %></td>
-    <td><%=h licence.invoice_date %></td>
-    <td><%=h licence.po_number %></td>
-    <td><%=h licence.country_of_usage %></td>
-    <td><%=h licence.product_substitution_rights %></td>
-    <td><%=h licence.secondary_rights %></td>
-    <td><%=h licence.transferability %></td>
-    <td><%=h licence.external_licence_transfer_requirements %></td>
-    <td><%=h licence.linkages %></td>
-    <td><%=h licence.total_cost_of_line_item %></td>
-    <td><%=h licence.quantity %></td>
-    <td><%=h licence.unit %></td>
-    <td><%=h licence.cost_unit %></td>
-    <td><%=h licence.maintenance_pa %></td>
-    <td><%= link_to 'Show', licence %></td>
-    <td><%= link_to 'Edit', edit_licence_path(licence) %></td>
-    <td><%= link_to 'Destroy', licence, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
+<%= render :partial => 'licences' %>
 
-<%= will_paginate @licences %>
-
+</div>
 
 <br />
 
