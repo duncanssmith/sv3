@@ -6,10 +6,11 @@ class LicencesController < ApplicationController
   def index
     @licences = Licence.paginate(:per_page => 3, :page => params[:page])
 
-   # respond_to do |format|
-   #   format.html # index.html.erb
-   #   format.xml  { render :xml => @licences }
-   # end
+    respond_to do |format|
+      format.js
+      format.html # index.html.erb
+      format.xml  { render :xml => @licences }
+    end
   end
 
   # GET /licences/1

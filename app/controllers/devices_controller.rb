@@ -3,9 +3,10 @@ class DevicesController < ApplicationController
   # GET /devices
   # GET /devices.xml
   def index
-    @devices = Device.paginate(:per_page => 4, :page => params[:page])
+    @devices = Device.paginate(:per_page => 3, :page => params[:page])
 
     respond_to do |format|
+      format.js # index.html.erb
       format.html # index.html.erb
       format.xml  { render :xml => @devices }
     end
