@@ -4,11 +4,9 @@
 
 //$(document).ready(
 $(function() {
-	alert("1 hello!");
   $(".pagination a").live("click", function() {
-    $(".pagination").html( "Page is loading..." );
+    $(".pagination").html( "loading..." );
     $.get( this.href, null, null, "script" );
-	  alert("2 hello goodbye!");
     return false;
   });
 })

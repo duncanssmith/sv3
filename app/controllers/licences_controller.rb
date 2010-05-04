@@ -2,13 +2,14 @@ class LicencesController < ApplicationController
 	load_and_authorize_resource
   # GET /licences
   # GET /licences.xml
-  def index
-    @licences = Licence.paginate(:per_page => 2, :page => params[:page])
 
-    respond_to do |format|
-      format.html # index.html.erb
-      format.xml  { render :xml => @licences }
-    end
+  def index
+    @licences = Licence.paginate(:per_page => 3, :page => params[:page])
+
+   # respond_to do |format|
+   #   format.html # index.html.erb
+   #   format.xml  { render :xml => @licences }
+   # end
   end
 
   # GET /licences/1
