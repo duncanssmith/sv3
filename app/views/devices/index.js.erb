@@ -1,2 +1,10 @@
 
-$("#devices").html("<%= escape_javascript(render("devices")) %>");
+var $j = jQuery.noConflict();
+$j(document).ready(function() {
+
+//Enter jQuery code here
+
+  $j("#devices").html("<%= escape_javascript(render("devices")) %>");
+
+});
+

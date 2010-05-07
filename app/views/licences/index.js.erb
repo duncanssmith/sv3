@@ -1,2 +1,9 @@
 
-$("#licences").html("<%= escape_javascript(render("licences")) %>");
+var $j = jQuery.noConflict();
+$j(document).ready(function() {
+
+//Enter jQuery code here
+
+$j("#licences").html("<%= escape_javascript(render("licences")) %>");
+
+});
