@@ -1,0 +1,367 @@
+id,name,client_id,alternative_name,licence_type,alt_reference,comment,scope
+1,BLACKBERRY,2,BLACKBERRY,TSM standard Tivoli licence (STL),1,,GREEN
+2,,2,BLACKBERRY_SQL,TSM standard Tivoli licence (STL),2,not a server ,AMBER
+3,BLACKBERRYDMZ,2,BLACKBERRYDMZ,TSM standard Tivoli licence (STL),3,,GREEN
+4,BUSINESSOBJECTS,2,BUSINESSOBJECTS,TSM standard Tivoli licence (STL),4,,GREEN
+5,CARPARKS,2,CARPARKS,TSM standard Tivoli licence (STL),5,,GREEN
+6,,2,CARPARKS_SQL,TSM standard Tivoli licence (STL),6,not a server ,AMBER
+7,CFRMIS,2,CFRMIS,TSM standard Tivoli licence (STL),7,,GREEN
+8,,2,CFRMIS_SQL,TSM standard Tivoli licence (STL),8,not a server ,AMBER
+9,CTISERVER,2,CTISERVER,TSM standard Tivoli licence (STL),9,,GREEN
+10,CTXFR001,2,CTXFR001,TSM standard Tivoli licence (STL),10,,GREEN
+11,CTXHW001,2,CTXHW001,TSM standard Tivoli licence (STL),11,,GREEN
+12,CTXHW002,2,CTXHW002,TSM standard Tivoli licence (STL),12,,GREEN
+13,,2,DIP_GROUP,TSM standard Tivoli licence (STL),13,not a server ,AMBER
+14,,2,DIP_SHARES,TSM standard Tivoli licence (STL),14,not a server ,AMBER
+15,DIP1,2,DIP1,TSM standard Tivoli licence (STL),15,,GREEN
+16,DIP2,2,DIP2,TSM standard Tivoli licence (STL),16,,GREEN
+17,,2,DISNEY_GROUP,TSM standard Tivoli licence (STL),17,not a server ,AMBER
+18,,2,DISNEY_SHARES,TSM standard Tivoli licence (STL),18,not a server ,AMBER
+19,DONALD,2,DONALD,TSM standard Tivoli licence (STL),19,,GREEN
+20,GOOFY,2,GOOFY,TSM standard Tivoli licence (STL),20,,GREEN
+21,MICKEY,2,MICKEY,TSM standard Tivoli licence (STL),21,,GREEN
+22,EDUNT-3,2,EDUNT-3,TSM standard Tivoli licence (STL),22,,GREEN
+23,EDUNT-FIZ,2,EDUNT-FIZ,TSM standard Tivoli licence (STL),23,,GREEN
+24,EPICENTRE,2,EPICENTRE,TSM standard Tivoli licence (STL),24,,GREEN
+25,CORVUREP,2,CORVUREP,TSM standard Tivoli licence (STL),25,,GREEN
+26,DEVLGOL,2,DEVLGOL,TSM standard Tivoli licence (STL),26,,GREEN
+27,FARM1TEST,2,FARM1TEST,TSM standard Tivoli licence (STL),27,,GREEN
+28,,2,FARM1TEST_SQL,TSM standard Tivoli licence (STL),28,not a server ,AMBER
+29,FIRE,2,FIRE,TSM standard Tivoli licence (STL),29,,GREEN
+30,IWCEPO4,2,IWCEPO4,TSM standard Tivoli licence (STL),30,,GREEN
+31,IWCFIZAPP,2,IWCFIZAPP,TSM standard Tivoli licence (STL),31,,GREEN
+32,IWCFLARE,2,IWCFLARE,TSM standard Tivoli licence (STL),32,,GREEN
+33,IWCIKEN,2,IWCIKEN,TSM standard Tivoli licence (STL),33,,GREEN
+34,,2,IWCIKEN_SQL,TSM standard Tivoli licence (STL),34,not a server ,AMBER
+35,IWCLSDAPP,2,IWCLSDAPP,TSM standard Tivoli licence (STL),35,,GREEN
+36,IWCLSDDB,2,IWCLSDDB,TSM standard Tivoli licence (STL),36,,GREEN
+37,,2,IWCLSDDB_SQL,TSM standard Tivoli licence (STL),37,not a server ,AMBER
+38,IWCWLGYM,2,IWCWLGYM,TSM standard Tivoli licence (STL),38,,GREEN
+39,SQLREP1,2,SQLREP1,TSM standard Tivoli licence (STL),39,,GREEN
+40,,2,SQLREP1_SQL,TSM standard Tivoli licence (STL),40,not a server ,AMBER
+41,IWCCTXWEB,2,IWCCTXWEB,TSM standard Tivoli licence (STL),41,,GREEN
+42,IWCDIPAPP01,2,IWCDIPAPP01,TSM standard Tivoli licence (STL),42,,GREEN
+43,IWCEMSAPP01,2,IWCEMSAPP01,TSM standard Tivoli licence (STL),43,,GREEN
+44,IWCFWSYSLOG,2,IWCFWSYSLOG,TSM standard Tivoli licence (STL),44,,GREEN
+45,IWCLSDWCB,2,IWCLSDWCB,TSM standard Tivoli licence (STL),45,,GREEN
+46,PRINTSERVER,2,PRINTSERVER,TSM standard Tivoli licence (STL),46,,GREEN
+47,PRINTSERVER2,2,PRINTSERVER2,TSM standard Tivoli licence (STL),47,,GREEN
+48,VLANDESK,2,VLANDESK,TSM standard Tivoli licence (STL),48,,GREEN
+49,,2,VLANDESK_SQL,TSM standard Tivoli licence (STL),49,not a server ,AMBER
+50,,2,ACCOLAID,TSM standard Tivoli licence (STL),50,,GREEN
+51,,2,ACCOLAID_SQL,TSM standard Tivoli licence (STL),51,not a server ,AMBER
+52,,2,ACOLNET,TSM standard Tivoli licence (STL),52,,GREEN
+53,,2,ACOLNET_SQL,TSM standard Tivoli licence (STL),53,not a server ,AMBER
+54,,2,ARCIMS,TSM standard Tivoli licence (STL),54,,GREEN
+55,ELECTORALREG,2,ELECTORALREG,TSM standard Tivoli licence (STL),55,,GREEN
+56,,2,ELECTORALREG_SQL,TSM standard Tivoli licence (STL),56,not a server ,AMBER
+57,ENGINEERING,2,ENGINEERING,TSM standard Tivoli licence (STL),57,,GREEN
+58,HWSCAD,2,HWSCAD,TSM standard Tivoli licence (STL),58,,GREEN
+59,IWCAUDITMAN,2,IWCAUDITMAN,TSM standard Tivoli licence (STL),59,,GREEN
+60,IWCENCRYPT,2,IWCENCRYPT,TSM standard Tivoli licence (STL),60,,GREEN
+61,LGOL,2,LGOL,TSM standard Tivoli licence (STL),61,,GREEN
+62,MAYRISE,2,MAYRISE,TSM standard Tivoli licence (STL),62,,GREEN
+63,PIPSDEV,2,PIPSDEV,TSM standard Tivoli licence (STL),63,,GREEN
+64,WSUS3,2,WSUS3,TSM standard Tivoli licence (STL),64,,GREEN
+65,IWCEMSAPP02,2,IWCEMSAPP02,TSM standard Tivoli licence (STL),65,,GREEN
+66,,2,ACOLNETWEB,TSM standard Tivoli licence (STL),66,,GREEN
+67,DIPDEV,2,DIPDEV,TSM standard Tivoli licence (STL),67,,GREEN
+68,EMS,2,EMS,TSM standard Tivoli licence (STL),68,,GREEN
+69,IWCDIPAPP02,2,IWCDIPAPP02,TSM standard Tivoli licence (STL),69,,GREEN
+70,IWCEMSORACLE,2,IWCEMSORACLE,TSM standard Tivoli licence (STL),70,,GREEN
+71,IWCLANDSEV,2,IWCLANDSEV,TSM standard Tivoli licence (STL),71,,GREEN
+72,IWCLSDTRNG,2,IWCLSDTRNG,TSM standard Tivoli licence (STL),72,,GREEN
+73,IWCRBS,2,IWCRBS,TSM standard Tivoli licence (STL),73,,GREEN
+74,IWCTLCAPP,2,IWCTLCAPP,TSM standard Tivoli licence (STL),74,,GREEN
+75,IWCVCSQL,2,IWCVCSQL,TSM standard Tivoli licence (STL),75,,GREEN
+76,,2,IWCVCSQL_SQL,TSM standard Tivoli licence (STL),76,not a server ,AMBER
+77,SEACLOSE,2,SEACLOSE,TSM standard Tivoli licence (STL),77,,GREEN
+78,IWCICSAPP04,2,IWCICSAPP04,TSM standard Tivoli licence (STL),78,,GREEN
+79,IWCICSAPP05,2,IWCICSAPP05,TSM standard Tivoli licence (STL),79,,GREEN
+80,IWCICSAPP09,2,IWCICSAPP09,TSM standard Tivoli licence (STL),80,,GREEN
+81,IWCICSAPP03,2,IWCICSAPP03,TSM standard Tivoli licence (STL),81,,GREEN
+82,IWCICSAPP06,2,IWCICSAPP06,TSM standard Tivoli licence (STL),82,,GREEN
+83,IWCICSAPP07,2,IWCICSAPP07,TSM standard Tivoli licence (STL),83,,GREEN
+84,IWCICSAPP08,2,IWCICSAPP08,TSM standard Tivoli licence (STL),84,,GREEN
+85,IWCBSIPDEVEPD,2,IWCBSIPDEVEPD,TSM standard Tivoli licence (STL),85,,GREEN
+86,,2,IWCBSIPDEVEPD_SQL,TSM standard Tivoli licence (STL),86,not a server ,AMBER
+87,,2,IWCBSIPDEVEPD_SQL_MONTH,TSM standard Tivoli licence (STL),87,not a server ,AMBER
+88,,2,IWCBSIPDEVEPD_SQL_WEEK,TSM standard Tivoli licence (STL),88,not a server ,AMBER
+89,,2,IWCBSIPDEVEPD_SQL_YEAR,TSM standard Tivoli licence (STL),89,not a server ,AMBER
+90,,2,IWCBSIPDEVERD,TSM standard Tivoli licence (STL),90,,GREEN
+91,,2,IWCBSIPDEVERD_SQL,TSM standard Tivoli licence (STL),91,not a server ,AMBER
+92,,2,IWCBSIPDEVERD_SQL_MONTH,TSM standard Tivoli licence (STL),92,not a server ,AMBER
+93,,2,IWCBSIPDEVERD_SQL_WEEK,TSM standard Tivoli licence (STL),93,not a server ,AMBER
+94,,2,IWCBSIPDEVERD_SQL_YEAR,TSM standard Tivoli licence (STL),94,not a server ,AMBER
+95,IWCBSIPDEVPID,2,IWCBSIPDEVPID,TSM standard Tivoli licence (STL),95,,GREEN
+96,,2,IWCBSIPDEVPID_SQL,TSM standard Tivoli licence (STL),96,not a server ,AMBER
+97,,2,IWCBSIPDEVPID_SQL_MONTH,TSM standard Tivoli licence (STL),97,not a server ,AMBER
+98,,2,IWCBSIPDEVPID_SQL_WEEK,TSM standard Tivoli licence (STL),98,not a server ,AMBER
+99,,2,IWCBSIPDEVPID_SQL_YEAR,TSM standard Tivoli licence (STL),99,not a server ,AMBER
+100,IWCBSIPDEVSOL,2,IWCBSIPDEVSOL,TSM standard Tivoli licence (STL),100,,GREEN
+101,,2,IWCBSIPDEVSOL_SQL,TSM standard Tivoli licence (STL),101,not a server ,AMBER
+102,,2,IWCBSIPDEVSOL_SQL_MONTH,TSM standard Tivoli licence (STL),102,not a server ,AMBER
+103,,2,IWCBSIPDEVSOL_SQL_WEEK,TSM standard Tivoli licence (STL),103,not a server ,AMBER
+104,,2,IWCBSIPDEVSOL_SQL_YEAR,TSM standard Tivoli licence (STL),104,not a server ,AMBER
+105,IWCBSIPDEVSRD,2,IWCBSIPDEVSRD,TSM standard Tivoli licence (STL),105,,GREEN
+106,,2,IWCBSIPDEVSRD_SQL,TSM standard Tivoli licence (STL),106,not a server ,AMBER
+107,,2,IWCBSIPDEVSRD_SQL_MONTH,TSM standard Tivoli licence (STL),107,not a server ,AMBER
+108,,2,IWCBSIPDEVSRD_SQL_WEEK,TSM standard Tivoli licence (STL),108,not a server ,AMBER
+109,,2,IWCBSIPDEVSRD_SQL_YEAR,TSM standard Tivoli licence (STL),109,not a server ,AMBER
+110,IWCBSIPQASEPQ,2,IWCBSIPQASEPQ,TSM standard Tivoli licence (STL),110,,GREEN
+111,,2,IWCBSIPQASEPQ_SQL,TSM standard Tivoli licence (STL),111,not a server ,AMBER
+112,,2,IWCBSIPQASEPQ_SQL_MONTH,TSM standard Tivoli licence (STL),112,not a server ,AMBER
+113,,2,IWCBSIPQASEPQ_SQL_WEEK,TSM standard Tivoli licence (STL),113,not a server ,AMBER
+114,,2,IWCBSIPQASEPQ_SQL_YEAR,TSM standard Tivoli licence (STL),114,not a server ,AMBER
+115,,2,IWCBSIPQASERQ,TSM standard Tivoli licence (STL),115,,GREEN
+116,,2,IWCBSIPQASERQ_SQL,TSM standard Tivoli licence (STL),116,not a server ,AMBER
+117,,2,IWCBSIPQASERQ_SQL_MONTH,TSM standard Tivoli licence (STL),117,not a server ,AMBER
+118,,2,IWCBSIPQASERQ_SQL_WEEK,TSM standard Tivoli licence (STL),118,not a server ,AMBER
+119,,2,IWCBSIPQASERQ_SQL_YEAR,TSM standard Tivoli licence (STL),119,not a server ,AMBER
+120,IWCBSIPQASSRQ,2,IWCBSIPQASSRQ,TSM standard Tivoli licence (STL),120,,GREEN
+121,,2,IWCBSIPQASSRQ_SQL,TSM standard Tivoli licence (STL),121,not a server ,AMBER
+122,,2,IWCBSIPQASSRQ_SQL_MONTH,TSM standard Tivoli licence (STL),122,not a server ,AMBER
+123,,2,IWCBSIPQASSRQ_SQL_WEEK,TSM standard Tivoli licence (STL),123,not a server ,AMBER
+124,,2,IWCBSIPQASSRQ_SQL_YEAR,TSM standard Tivoli licence (STL),124,not a server ,AMBER
+125,IWCBSIPQASTXQ,2,IWCBSIPQASTXQ,TSM standard Tivoli licence (STL),125,,GREEN
+126,,2,FSCLUSTER_DEPT,TSM standard Tivoli licence (STL),126,not a server ,AMBER
+127,,2,FSCLUSTER_GROUP,TSM standard Tivoli licence (STL),127,not a server ,AMBER
+128,,2,FSCLUSTER_HOME,TSM standard Tivoli licence (STL),128,not a server ,AMBER
+129,,2,FSCLUSTER_PST,TSM standard Tivoli licence (STL),129,not a server ,AMBER
+130,FSCLUSTER1,2,FSCLUSTER1,TSM standard Tivoli licence (STL),130,,GREEN
+131,FSCLUSTER2,2,FSCLUSTER2,TSM standard Tivoli licence (STL),131,,GREEN
+132,,2,FSTEST_FSSHARE,TSM standard Tivoli licence (STL),132,not a server ,AMBER
+133,,2,IBMDIRECTOR,TSM standard Tivoli licence (STL),133,not a server ,AMBER
+134,ICTHELPDESKBACK,2,ICTHELPDESKBACK,TSM standard Tivoli licence (STL),134,,GREEN
+135,,2,ICTHELPDESKBACK_SQL,TSM standard Tivoli licence (STL),135,not a server ,AMBER
+136,ICTHELPDESKLIVE,2,ICTHELPDESKLIVE,TSM standard Tivoli licence (STL),136,,GREEN
+137,,2,ICTHELPDESKLIVE_SQL,TSM standard Tivoli licence (STL),137,not a server ,AMBER
+138,IIS2,2,IIS2,TSM standard Tivoli licence (STL),138,,GREEN
+139,IIS3,2,IIS3,TSM standard Tivoli licence (STL),139,,GREEN
+140,,2,IIS3_SQL,TSM standard Tivoli licence (STL),140,not a server ,AMBER
+141,IIS4,2,IIS4,TSM standard Tivoli licence (STL),141,,GREEN
+142,IKEN,2,IKEN,TSM standard Tivoli licence (STL),142,,GREEN
+143,,2,IKEN_SQL,TSM standard Tivoli licence (STL),143,not a server ,AMBER
+144,IWCBSIPCASREC,2,IWCBSIPCASREC,TSM standard Tivoli licence (STL),144,,GREEN
+145,,2,IWCBSIPCASREC_SQL,TSM standard Tivoli licence (STL),145,not a server ,AMBER
+146,,2,IWCBSIPCASREC_SQL_MONTH,TSM standard Tivoli licence (STL),146,not a server ,AMBER
+147,,2,IWCBSIPCASREC_SQL_WEEK,TSM standard Tivoli licence (STL),147,not a server ,AMBER
+148,,2,IWCBSIPCASREC_SQL_YEAR,TSM standard Tivoli licence (STL),148,not a server ,AMBER
+149,IWCBSIPPRDEPP,2,IWCBSIPPRDEPP,TSM standard Tivoli licence (STL),149,,GREEN
+150,,2,IWCBSIPPRDEPP_SQL,TSM standard Tivoli licence (STL),150,not a server ,AMBER
+151,,2,IWCBSIPPRDEPP_SQL_MONTH,TSM standard Tivoli licence (STL),151,not a server ,AMBER
+152,,2,IWCBSIPPRDEPP_SQL_WEEK,TSM standard Tivoli licence (STL),152,not a server ,AMBER
+153,,2,IWCBSIPPRDEPP_SQL_YEAR,TSM standard Tivoli licence (STL),153,not a server ,AMBER
+154,,2,IWCBSIPPRDERP,TSM standard Tivoli licence (STL),154,,GREEN
+155,,2,IWCBSIPPRDERP_SQL,TSM standard Tivoli licence (STL),155,not a server ,AMBER
+156,,2,IWCBSIPPRDERP_SQL_MONTH,TSM standard Tivoli licence (STL),156,not a server ,AMBER
+157,,2,IWCBSIPPRDERP_SQL_WEEK,TSM standard Tivoli licence (STL),157,not a server ,AMBER
+158,,2,IWCBSIPPRDERP_SQL_YEAR,TSM standard Tivoli licence (STL),158,not a server ,AMBER
+159,IWCBSIPPRDPIP,2,IWCBSIPPRDPIP,TSM standard Tivoli licence (STL),159,,GREEN
+160,,2,IWCBSIPPRDPIP_SQL,TSM standard Tivoli licence (STL),160,not a server ,AMBER
+161,,2,IWCBSIPPRDPIP_SQL_MONTH,TSM standard Tivoli licence (STL),161,not a server ,AMBER
+162,,2,IWCBSIPPRDPIP_SQL_WEEK,TSM standard Tivoli licence (STL),162,not a server ,AMBER
+163,,2,IWCBSIPPRDPIP_SQL_YEAR,TSM standard Tivoli licence (STL),163,not a server ,AMBER
+164,IWCBSIPPRDSRP,2,IWCBSIPPRDSRP,TSM standard Tivoli licence (STL),164,,GREEN
+165,,2,IWCBSIPPRDSRP_SQL,TSM standard Tivoli licence (STL),165,not a server ,AMBER
+166,,2,IWCBSIPPRDSRP_SQL_MONTH,TSM standard Tivoli licence (STL),166,not a server ,AMBER
+167,,2,IWCBSIPPRDSRP_SQL_WEEK,TSM standard Tivoli licence (STL),167,not a server ,AMBER
+168,,2,IWCBSIPPRDSRP_SQL_YEAR,TSM standard Tivoli licence (STL),168,not a server ,AMBER
+169,IWCBSIPPRDTXP,2,IWCBSIPPRDTXP,TSM standard Tivoli licence (STL),169,,GREEN
+170,IWCBSIPPRDWDP,2,IWCBSIPPRDWDP,TSM standard Tivoli licence (STL),170,,GREEN
+171,IWCBSIPQASWDQ,2,IWCBSIPQASWDQ,TSM standard Tivoli licence (STL),171,,GREEN
+172,,2,IWCCGAZ,TSM standard Tivoli licence (STL),172,,GREEN
+173,,2,IWCCGAZ_SQL,TSM standard Tivoli licence (STL),173,not a server ,AMBER
+174,IWCCHCASHUB,2,IWCCHCASHUB,TSM standard Tivoli licence (STL),174,,GREEN
+175,IWCCTX001,2,IWCCTX001,TSM standard Tivoli licence (STL),175,,GREEN
+176,IWCCTX003,2,IWCCTX003,TSM standard Tivoli licence (STL),176,,GREEN
+177,IWCCTX007,2,IWCCTX007,TSM standard Tivoli licence (STL),177,,GREEN
+178,IWCCTX015,2,IWCCTX015,TSM standard Tivoli licence (STL),178,,GREEN
+179,IWCCTXMAN2,2,IWCCTXMAN2,TSM standard Tivoli licence (STL),179,,GREEN
+180,IWCCTXMAN2,2,IWCCTXMAN2,TSM standard Tivoli licence (STL),180,Duplicate see above,AMBER
+181,,2,IWCCTXMAN2_SQL,TSM standard Tivoli licence (STL),181,not a server ,AMBER
+182,IWCCTXXEN01,2,IWCCTXXEN01,TSM standard Tivoli licence (STL),182,,GREEN
+183,IWCCTXXEN02,2,IWCCTXXEN02,TSM standard Tivoli licence (STL),183,,GREEN
+184,IWCDC01,2,IWCDC01,TSM standard Tivoli licence (STL),184,,GREEN
+185,IWCDC02,2,IWCDC02,TSM standard Tivoli licence (STL),185,,GREEN
+186,IWCDC03,2,IWCDC03,TSM standard Tivoli licence (STL),186,,GREEN
+187,IWCDC04,2,IWCDC04,TSM standard Tivoli licence (STL),187,,GREEN
+188,IWCDC05,2,IWCDC05,TSM standard Tivoli licence (STL),188,,GREEN
+189,IWCDC06,2,IWCDC06,TSM standard Tivoli licence (STL),189,,GREEN
+190,,2,IWCDIPDB_E,TSM standard Tivoli licence (STL),190,not a server ,AMBER
+191,,2,IWCDIPDB_Q,TSM standard Tivoli licence (STL),191,not a server ,AMBER
+192,,2,IWCDIPDB_SQL,TSM standard Tivoli licence (STL),192,not a server ,AMBER
+193,IWCDIPDB01,2,IWCDIPDB01,TSM standard Tivoli licence (STL),193,,GREEN
+194,IWCDIPDB02,2,IWCDIPDB02,TSM standard Tivoli licence (STL),194,,GREEN
+195,IWCENTCASHUB,2,IWCENTCASHUB,TSM standard Tivoli licence (STL),195,,GREEN
+196,IWCFFS3,2,IWCFFS3,TSM standard Tivoli licence (STL),196,,GREEN
+197,,2,IWCFFS3_SQL,TSM standard Tivoli licence (STL),197,not a server ,AMBER
+198,IWCGIS01,2,IWCGIS01,TSM standard Tivoli licence (STL),198,,GREEN
+199,IWCGIS02,2,IWCGIS02,TSM standard Tivoli licence (STL),199,,GREEN
+200,IWCGIS03,2,IWCGIS03,TSM standard Tivoli licence (STL),200,,GREEN
+201,IWCICSAPP00,2,IWCICSAPP00,TSM standard Tivoli licence (STL),201,,GREEN
+202,IWCICSAPP01,2,IWCICSAPP01,TSM standard Tivoli licence (STL),202,,GREEN
+203,IWCICSAPP02,2,IWCICSAPP02,TSM standard Tivoli licence (STL),203,,GREEN
+204,IWCISC01,2,IWCISC01,TSM standard Tivoli licence (STL),204,,GREEN
+205,IWCSQL01,2,IWCSQL01,TSM standard Tivoli licence (STL),205,,GREEN
+206,,2,IWCSQL01_SQL,TSM standard Tivoli licence (STL),206,not a server ,AMBER
+207,IWCTLCDB,2,IWCTLCDB,TSM standard Tivoli licence (STL),207,,GREEN
+208,IWCTMPRO,2,IWCTMPRO,TSM standard Tivoli licence (STL),208,,GREEN
+209,,2,IWCTMPRO_SQL,TSM standard Tivoli licence (STL),209,not a server ,AMBER
+210,IWCTSM01,2,IWCTSM01,TSM standard Tivoli licence (STL),210,,GREEN
+211,IWCTSM02,2,IWCTSM02,TSM standard Tivoli licence (STL),211,,GREEN
+212,IWCWEBSQL,2,IWCWEBSQL,TSM standard Tivoli licence (STL),212,,GREEN
+213,,2,IWCWEBSQL_SQL,TSM standard Tivoli licence (STL),213,not a server ,AMBER
+214,IWLIBAPP,2,IWLIBAPP,TSM standard Tivoli licence (STL),214,,GREEN
+215,IWLIBSQL,2,IWLIBSQL,TSM standard Tivoli licence (STL),215,,GREEN
+216,,2,IWLIBSQL_SQL,TSM standard Tivoli licence (STL),216,not a server ,AMBER
+217,,2,LINUX0025,TSM standard Tivoli licence (STL),217,,GREEN
+218,LIVECRM,2,LIVECRM,TSM standard Tivoli licence (STL),218,,GREEN
+219,LIVESQL,2,LIVESQL,TSM standard Tivoli licence (STL),219,,GREEN
+220,,2,LIVESQL_SQL,TSM standard Tivoli licence (STL),220,not a server ,AMBER
+221,LLC2KGIS,2,LLC2KGIS,TSM standard Tivoli licence (STL),221,,GREEN
+222,LLC2KORA,2,LLC2KORA,TSM standard Tivoli licence (STL),222,,GREEN
+223,LORDLIB,2,LORDLIB,TSM standard Tivoli licence (STL),223,,GREEN
+224,,2,LORDLIB_SQL,TSM standard Tivoli licence (STL),224,not a server ,AMBER
+225,,2,COUNTYMAIL_EXCH,TSM standard Tivoli licence (STL),225,,GREEN
+226,IWCCHMAIL,2,IWCCHMAIL,TSM standard Tivoli licence (STL),226,,GREEN
+227,IWCENTMAIL,2,IWCENTMAIL,TSM standard Tivoli licence (STL),227,,GREEN
+228,NEW_REGISTRARS,2,NEW_REGISTRARS,TSM standard Tivoli licence (STL),228,,GREEN
+229,NFUSE,2,NFUSE,TSM standard Tivoli licence (STL),229,,GREEN
+230,NODE1-EXCH,2,NODE1-EXCH,TSM standard Tivoli licence (STL),230,Decomissioned,AMBER
+231,NODE2-EXCH,2,NODE2-EXCH,TSM standard Tivoli licence (STL),231,Decomissioned,AMBER
+232,NTFLEX,2,NTFLEX,TSM standard Tivoli licence (STL),232,,GREEN
+233,OTM,2,OTM,TSM standard Tivoli licence (STL),233,,GREEN
+234,PC064197,2,PC064197,TSM standard Tivoli licence (STL),234,,GREEN
+235,PLUTO,2,PLUTO,TSM standard Tivoli licence (STL),235,,GREEN
+236,PNCSERVER,2,PNCSERVER,TSM standard Tivoli licence (STL),236,,GREEN
+237,PROPSERV,2,PROPSERV,TSM standard Tivoli licence (STL),237,,GREEN
+238,,2,PROPSERV_SQL,TSM standard Tivoli licence (STL),238,not a server ,AMBER
+239,PROXY,2,PROXY,TSM standard Tivoli licence (STL),239,,GREEN
+240,SPOCC,2,SPOCC,TSM standard Tivoli licence (STL),240,,GREEN
+241,,2,SPOCC_SQL,TSM standard Tivoli licence (STL),241,not a server ,AMBER
+242,,2,SRV179033,TSM standard Tivoli licence (STL),242,,GREEN
+243,,2,SRV179033_SQL,TSM standard Tivoli licence (STL),243,not a server ,AMBER
+244,SURESTART-FS2,2,SURESTART-FS2,TSM standard Tivoli licence (STL),244,,GREEN
+245,TPAPPS1,2,TPAPPS1,TSM standard Tivoli licence (STL),245,,GREEN
+246,,2,VCENTER,TSM standard Tivoli licence (STL),246,,GREEN
+247,VITEX,2,VITEX,TSM standard Tivoli licence (STL),247,,GREEN
+248,WALNUT,2,WALNUT,TSM standard Tivoli licence (STL),248,,GREEN
+249,WEB11,2,WEB11,TSM standard Tivoli licence (STL),249,,GREEN
+250,,2,CAD,TSM Extended Edition Accessed after 30 days - decommissioned kit,250,removed by KPMG from first draft,RED
+251,,2,DIPTEST,TSM Extended Edition Accessed after 30 days - decommissioned kit,251,removed by KPMG from first draft,RED
+252,,2,EDUNT-4,TSM Extended Edition Accessed after 30 days - decommissioned kit,252,removed by KPMG from first draft,RED
+253,,2,EDUWIGHT,TSM Extended Edition Accessed after 30 days - decommissioned kit,253,removed by KPMG from first draft,RED
+254,,2,ENVHEALTH,TSM Extended Edition Accessed after 30 days - decommissioned kit,254,removed by KPMG from first draft,RED
+255,,2,FLARE,TSM Extended Edition Accessed after 30 days - decommissioned kit,255,removed by KPMG from first draft,RED
+256,,2,IIS5,TSM Extended Edition Accessed after 30 days - decommissioned kit,256,removed by KPMG from first draft,RED
+257,,2,MCAFEE-EPO,TSM Extended Edition Accessed after 30 days - decommissioned kit,257,removed by KPMG from first draft,RED
+258,,2,NETCRUNCH,TSM Extended Edition Accessed after 30 days - decommissioned kit,258,removed by KPMG from first draft,RED
+259,,2,SAMBA1,TSM Extended Edition Accessed after 30 days - decommissioned kit,259,removed by KPMG from first draft,RED
+260,,2,SQLSERV1,TSM Extended Edition Accessed after 30 days - decommissioned kit,260,removed by KPMG from first draft,RED
+261,,2,SQLSERV1_SQL,TSM Extended Edition Accessed after 30 days - decommissioned kit,261,removed by KPMG from first draft,RED
+262,,2,SQLSERV2_SQL,TSM Extended Edition Accessed after 30 days - decommissioned kit,262,removed by KPMG from first draft,RED
+263,,2,SQLSERV2,TSM Extended Edition Accessed after 30 days - decommissioned kit,263,removed by KPMG from first draft,RED
+264,,2,SYS11.IOW.GOV.UK,TSM Extended Edition Accessed after 30 days - decommissioned kit,264,removed by KPMG from first draft,RED
+265,,2,TRINITY,TSM Extended Edition Accessed after 30 days - decommissioned kit,265,removed by KPMG from first draft,RED
+266,,2,WEBEXCH,TSM Extended Edition Accessed after 30 days - decommissioned kit,266,removed by KPMG from first draft,RED
+267,,2,WIGHTCARE,TSM Extended Edition Accessed after 30 days - decommissioned kit,267,removed by KPMG from first draft,RED
+268,,2,YUCCA,TSM Extended Edition Accessed after 30 days - decommissioned kit,268,removed by KPMG from first draft,RED
+269,,2,BLACKBERRY_SQL,TSM Databases Accessed within 30 days,269,,GREEN
+270,,2,CARPARKS_SQL,TSM Databases Accessed within 30 days,270,,GREEN
+271,,2,CFRMIS_SQL,TSM Databases Accessed within 30 days,271,,GREEN
+272,,2,FARM1TEST_SQL,TSM Databases Accessed within 30 days,272,,GREEN
+273,,2,IWCIKEN_SQL,TSM Databases Accessed within 30 days,273,,GREEN
+274,,2,IWCLSDDB_SQL,TSM Databases Accessed within 30 days,274,,GREEN
+275,SQLREP1,2,SQLREP1,TSM Databases Accessed within 30 days,275,This is not a server see above ,AMBER
+276,,2,SQLREP1_SQL,TSM Databases Accessed within 30 days,276,,GREEN
+277,,2,VLANDESK_SQL,TSM Databases Accessed within 30 days,277,,GREEN
+278,,2,ACCOLAID_SQL,TSM Databases Accessed within 30 days,278,,GREEN
+279,,2,ACOLNET_SQL,TSM Databases Accessed within 30 days,279,,GREEN
+280,,2,ELECTORALREG_SQL,TSM Databases Accessed within 30 days,280,,GREEN
+281,IWCVCSQL,2,IWCVCSQL,TSM Databases Accessed within 30 days,281,This is not a server see above ,AMBER
+282,,2,IWCVCSQL_SQL,TSM Databases Accessed within 30 days,282,,GREEN
+283,IWCEMSORACLE,2,IWCEMSORACLE,TSM Databases Accessed within 30 days,283,This is not a server see above ,AMBER
+284,,2,IWCBSIPDEVEPD_SQL,TSM Databases Accessed within 30 days,284,,GREEN
+285,,2,IWCBSIPDEVEPD_SQL_MONTH,TSM Databases Accessed within 30 days,285,This is not a server see above ,AMBER
+286,,2,IWCBSIPDEVEPD_SQL_WEEK,TSM Databases Accessed within 30 days,286,This is not a server see above ,AMBER
+287,,2,IWCBSIPDEVEPD_SQL_YEAR,TSM Databases Accessed within 30 days,287,This is not a server see above ,AMBER
+288,,2,IWCBSIPDEVERD_SQL,TSM Databases Accessed within 30 days,288,,GREEN
+289,,2,IWCBSIPDEVERD_SQL_MONTH,TSM Databases Accessed within 30 days,289,This is not a server see above ,AMBER
+290,,2,IWCBSIPDEVERD_SQL_WEEK,TSM Databases Accessed within 30 days,290,This is not a server see above ,AMBER
+291,,2,IWCBSIPDEVERD_SQL_YEAR,TSM Databases Accessed within 30 days,291,This is not a server see above ,AMBER
+292,,2,IWCBSIPDEVPID_SQL,TSM Databases Accessed within 30 days,292,,GREEN
+293,,2,IWCBSIPDEVPID_SQL_MONTH,TSM Databases Accessed within 30 days,293,This is not a server see above ,AMBER
+294,,2,IWCBSIPDEVPID_SQL_WEEK,TSM Databases Accessed within 30 days,294,This is not a server see above ,AMBER
+295,,2,IWCBSIPDEVPID_SQL_YEAR,TSM Databases Accessed within 30 days,295,This is not a server see above ,AMBER
+296,,2,IWCBSIPDEVSOL_SQL,TSM Databases Accessed within 30 days,296,,GREEN
+297,,2,IWCBSIPDEVSOL_SQL_MONTH,TSM Databases Accessed within 30 days,297,This is not a server see above ,AMBER
+298,,2,IWCBSIPDEVSOL_SQL_WEEK,TSM Databases Accessed within 30 days,298,This is not a server see above ,AMBER
+299,,2,IWCBSIPDEVSOL_SQL_YEAR,TSM Databases Accessed within 30 days,299,This is not a server see above ,AMBER
+300,,2,IWCBSIPDEVSRD_SQL,TSM Databases Accessed within 30 days,300,,GREEN
+301,,2,IWCBSIPDEVSRD_SQL_MONTH,TSM Databases Accessed within 30 days,301,This is not a server see above ,AMBER
+302,,2,IWCBSIPDEVSRD_SQL_WEEK,TSM Databases Accessed within 30 days,302,This is not a server see above ,AMBER
+303,,2,IWCBSIPDEVSRD_SQL_YEAR,TSM Databases Accessed within 30 days,303,This is not a server see above ,AMBER
+304,,2,IWCBSIPQASEPQ_SQL,TSM Databases Accessed within 30 days,304,,GREEN
+305,,2,IWCBSIPQASEPQ_SQL_MONTH,TSM Databases Accessed within 30 days,305,This is not a server see above ,AMBER
+306,,2,IWCBSIPQASEPQ_SQL_WEEK,TSM Databases Accessed within 30 days,306,This is not a server see above ,AMBER
+307,,2,IWCBSIPQASEPQ_SQL_YEAR,TSM Databases Accessed within 30 days,307,This is not a server see above ,AMBER
+308,,2,IWCBSIPQASERQ_SQL,TSM Databases Accessed within 30 days,308,,GREEN
+309,,2,IWCBSIPQASERQ_SQL_MONTH,TSM Databases Accessed within 30 days,309,This is not a server see above ,AMBER
+310,,2,IWCBSIPQASERQ_SQL_WEEK,TSM Databases Accessed within 30 days,310,This is not a server see above ,AMBER
+311,,2,IWCBSIPQASERQ_SQL_YEAR,TSM Databases Accessed within 30 days,311,This is not a server see above ,AMBER
+312,,2,IWCBSIPQASSRQ_SQL,TSM Databases Accessed within 30 days,312,,GREEN
+313,,2,IWCBSIPQASSRQ_SQL_MONTH,TSM Databases Accessed within 30 days,313,This is not a server see above ,AMBER
+314,,2,IWCBSIPQASSRQ_SQL_WEEK,TSM Databases Accessed within 30 days,314,This is not a server see above ,AMBER
+315,,2,IWCBSIPQASSRQ_SQL_YEAR,TSM Databases Accessed within 30 days,315,This is not a server see above ,AMBER
+316,,2,ICTHELPDESKBACK_SQL,TSM Databases Accessed within 30 days,316,,GREEN
+317,,2,ICTHELPDESKLIVE_SQL,TSM Databases Accessed within 30 days,317,,GREEN
+318,,2,IIS3_SQL,TSM Databases Accessed within 30 days,318,,GREEN
+319,,2,IKEN_SQL,TSM Databases Accessed within 30 days,319,,GREEN
+320,,2,IWCBSIPCASREC_SQL,TSM Databases Accessed within 30 days,320,,GREEN
+321,,2,IWCBSIPCASREC_SQL_MONTH,TSM Databases Accessed within 30 days,321,This is not a server see above ,AMBER
+322,,2,IWCBSIPCASREC_SQL_WEEK,TSM Databases Accessed within 30 days,322,This is not a server see above ,AMBER
+323,,2,IWCBSIPCASREC_SQL_YEAR,TSM Databases Accessed within 30 days,323,This is not a server see above ,AMBER
+324,,2,IWCBSIPPRDEPP_SQL,TSM Databases Accessed within 30 days,324,,GREEN
+325,,2,IWCBSIPPRDEPP_SQL_MONTH,TSM Databases Accessed within 30 days,325,This is not a server see above ,AMBER
+326,,2,IWCBSIPPRDEPP_SQL_WEEK,TSM Databases Accessed within 30 days,326,This is not a server see above ,AMBER
+327,,2,IWCBSIPPRDEPP_SQL_YEAR,TSM Databases Accessed within 30 days,327,This is not a server see above ,AMBER
+328,,2,IWCBSIPPRDERP_SQL,TSM Databases Accessed within 30 days,328,,GREEN
+329,,2,IWCBSIPPRDERP_SQL_MONTH,TSM Databases Accessed within 30 days,329,This is not a server see above ,AMBER
+330,,2,IWCBSIPPRDERP_SQL_WEEK,TSM Databases Accessed within 30 days,330,This is not a server see above ,AMBER
+331,,2,IWCBSIPPRDERP_SQL_YEAR,TSM Databases Accessed within 30 days,331,This is not a server see above ,AMBER
+332,,2,IWCBSIPPRDPIP_SQL,TSM Databases Accessed within 30 days,332,,GREEN
+333,,2,IWCBSIPPRDPIP_SQL_MONTH,TSM Databases Accessed within 30 days,333,This is not a server see above ,AMBER
+334,,2,IWCBSIPPRDPIP_SQL_WEEK,TSM Databases Accessed within 30 days,334,This is not a server see above ,AMBER
+335,,2,IWCBSIPPRDPIP_SQL_YEAR,TSM Databases Accessed within 30 days,335,This is not a server see above ,AMBER
+336,,2,IWCBSIPPRDSRP_SQL,TSM Databases Accessed within 30 days,336,,GREEN
+337,,2,IWCBSIPPRDSRP_SQL_MONTH,TSM Databases Accessed within 30 days,337,This is not a server see above ,AMBER
+338,,2,IWCBSIPPRDSRP_SQL_WEEK,TSM Databases Accessed within 30 days,338,This is not a server see above ,AMBER
+339,,2,IWCBSIPPRDSRP_SQL_YEAR,TSM Databases Accessed within 30 days,339,This is not a server see above ,AMBER
+340,,2,IWCCGAZ_SQL,TSM Databases Accessed within 30 days,340,,GREEN
+341,,2,IWCCTXMAN2_SQL,TSM Databases Accessed within 30 days,341,,GREEN
+342,,2,IWCDIPDB_SQL,TSM Databases Accessed within 30 days,342,,GREEN
+343,,2,IWCFFS3_SQL,TSM Databases Accessed within 30 days,343,,GREEN
+344,IWCSQL01,2,IWCSQL01,TSM Databases Accessed within 30 days,344,This is not a server see above ,AMBER
+345,,2,IWCSQL01_SQL,TSM Databases Accessed within 30 days,345,,GREEN
+346,,2,IWCTMPRO_SQL,TSM Databases Accessed within 30 days,346,,GREEN
+347,IWCWEBSQL,2,IWCWEBSQL,TSM Databases Accessed within 30 days,347,This is not a server see above ,AMBER
+348,,2,IWCWEBSQL_SQL,TSM Databases Accessed within 30 days,348,,GREEN
+349,IWLIBSQL,2,IWLIBSQL,TSM Databases Accessed within 30 days,349,This is not a server see above ,AMBER
+350,,2,IWLIBSQL_SQL,TSM Databases Accessed within 30 days,350,,GREEN
+351,LIVESQL,2,LIVESQL,TSM Databases Accessed within 30 days,351,This is not a server see above ,AMBER
+352,,2,LIVESQL_SQL,TSM Databases Accessed within 30 days,352,,GREEN
+353,,2,LORDLIB_SQL,TSM Databases Accessed within 30 days,353,,GREEN
+354,,2,PROPSERV_SQL,TSM Databases Accessed within 30 days,354,,GREEN
+355,,2,SPOCC_SQL,TSM Databases Accessed within 30 days,355,,GREEN
+356,,2,SRV179033_SQL,TSM Databases Accessed within 30 days,356,,GREEN
+357,,2,SQLSERV1,TSM for Databases Accessed after 30 days - decommissioned,357,removed by KPMG from first draft,RED
+358,,2,SQLSERV1_SQL,TSM for Databases Accessed after 30 days - decommissioned,358,removed by KPMG from first draft,RED
+359,,2,SQLSERV2_SQLTDPMSSQL,TSM for Databases Accessed after 30 days - decommissioned,359,removed by KPMG from first draft,RED
+360,,2,SQLSERV2,TSM for Databases Accessed after 30 days - decommissioned,400,removed by KPMG from first draft,RED
+361,,2,COUNTYMAIL_EXCH,TSM for Mail Accessed within 30 days,401,,GREEN
+362,IWCCHMAIL,2,IWCCHMAIL,TSM for Mail Accessed within 30 days,402,,GREEN
+363,IWCENTMAIL,2,IWCENTMAIL,TSM for Mail Accessed within 30 days,403,,GREEN
+364,NODE1-EXCH,2,NODE1-EXCH,TSM for Mail Accessed within 30 days,404,Decomissioned,AMBER
+365,NODE2-EXCH,2,NODE2-EXCH,TSM for Mail Accessed within 30 days,405,Decomissioned,AMBER
+366,,2,WEBEXCH,TSM for Mail Accessed after 30 days,406,Decomissioned,AMBER
