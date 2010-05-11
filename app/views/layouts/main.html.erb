@@ -14,9 +14,6 @@
         <%= content_tag :div, msg, :id => "flash_#{name}" %>
       <%- end -%>
       
-      <%- if show_title? -%>
-        <h1><%=h yield(:title) %></h1>
-      <%- end -%>
     </div>
 		<div id="user_nav">
 			<% if current_user %>
@@ -74,6 +71,8 @@
 						<%= link_to 'Registers', :controller => 'registers' %>
 						&nbsp;
 						<%= link_to 'Devices', :controller => 'devices' %>
+						&nbsp;
+						<%= link_to 'Servers', :controller => 'servers' %>
 						&nbsp;
 						</td><td class="nav">
 						<h3>Software</h3>

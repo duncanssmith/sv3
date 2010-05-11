@@ -9,6 +9,7 @@ register_1:
   accuracy: 99
   device_id: 1
   asset_id: 1
+  client_id: 1
 
 register_2:
   id: 2
@@ -19,6 +20,7 @@ register_2:
   accuracy: 89
   device_id: 1
   asset_id: 1
+  client_id: 1
 
 register_3:
   id: 3
@@ -29,6 +31,7 @@ register_3:
   accuracy: 72
   device_id: 1
   asset_id: 1
+  client_id: 1
 
 register_4:
   id: 4
@@ -39,3 +42,48 @@ register_4:
   accuracy: 55
   device_id: 1
   asset_id: 1
+  client_id: 1
+
+register_5:
+  id: 5
+  name: Walkaround Audit
+  date: 2010-03-25 18:42:43
+  frequency: Annual
+  regtype: Main
+  accuracy: 99
+  device_id: 1
+  asset_id: 1
+  client_id: 2
+
+register_6:
+  id: 6
+  name: Network Discovery
+  date: 2010-03-25 18:42:43
+  frequency: Monthly
+  regtype: Centennial
+  accuracy: 89
+  device_id: 1
+  asset_id: 1
+  client_id: 2
+
+register_7:
+  id: 7
+  name: Fixed Asset Register
+  date: 2010-03-25 18:42:43
+  frequency: Once
+  regtype: Excel Spreadsheet 
+  accuracy: 72
+  device_id: 1
+  asset_id: 1
+  client_id: 2
+
+register_8:
+  id: 8
+  name: Purchase Records
+  date: 2010-03-25 18:42:43
+  frequency: Once
+  regtype: Manual
+  accuracy: 55
+  device_id: 1
+  asset_id: 1
+  client_id: 2
