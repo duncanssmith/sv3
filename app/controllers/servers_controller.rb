@@ -1,10 +1,12 @@
 class ServersController < ApplicationController
+	load_and_authorize_resource
   # GET /servers
   # GET /servers.xml
   def index
-    @servers = Server.all
+    @servers = Server.paginate(:per_page => 12, :page => params[:page])
 
     respond_to do |format|
+      format.js # index.js.erb
       format.html # index.html.erb
       format.xml  { render :xml => @servers }
     end

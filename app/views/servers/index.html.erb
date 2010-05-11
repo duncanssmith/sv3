@@ -1,31 +1,10 @@
 <h1>Listing servers</h1>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Client</th>
-    <th>Alternative name</th>
-    <th>Licence type</th>
-    <th>Alt reference</th>
-    <th>Comment</th>
-    <th>Scope</th>
-  </tr>
+<% javascript "pagination" %>
 
-<% @servers.each do |server| %>
-  <tr>
-    <td><%=h server.name %></td>
-    <td><%=h server.client_id %></td>
-    <td><%=h server.alternative_name %></td>
-    <td><%=h server.licence_type %></td>
-    <td><%=h server.alt_reference %></td>
-    <td><%=h server.comment %></td>
-    <td><%=h server.scope %></td>
-    <td><%= link_to 'Show', server %></td>
-    <td><%= link_to 'Edit', edit_server_path(server) %></td>
-    <td><%= link_to 'Destroy', server, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
+<div id="servers">
+<%= render :partial => 'servers' %>
+</div>
 
 <br />
 
