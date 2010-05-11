@@ -1,0 +1,40 @@
+<h1>Editing server</h1>
+
+<% form_for(@server) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :client_id %><br />
+    <%= f.text_field :client_id %>
+  </p>
+  <p>
+    <%= f.label :alternative_name %><br />
+    <%= f.text_field :alternative_name %>
+  </p>
+  <p>
+    <%= f.label :licence_type %><br />
+    <%= f.text_field :licence_type %>
+  </p>
+  <p>
+    <%= f.label :alt_reference %><br />
+    <%= f.text_field :alt_reference %>
+  </p>
+  <p>
+    <%= f.label :comment %><br />
+    <%= f.text_field :comment %>
+  </p>
+  <p>
+    <%= f.label :scope %><br />
+    <%= f.text_field :scope %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @server %> |
+<%= link_to 'Back', servers_path %>

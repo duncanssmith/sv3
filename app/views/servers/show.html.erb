@@ -1,0 +1,38 @@
+<p>
+  <b>Name:</b>
+  <%=h @server.name %>
+</p>
+
+<p>
+  <b>Client:</b>
+  <%=h @server.client_id %>
+</p>
+
+<p>
+  <b>Alternative name:</b>
+  <%=h @server.alternative_name %>
+</p>
+
+<p>
+  <b>Licence type:</b>
+  <%=h @server.licence_type %>
+</p>
+
+<p>
+  <b>Alt reference:</b>
+  <%=h @server.alt_reference %>
+</p>
+
+<p>
+  <b>Comment:</b>
+  <%=h @server.comment %>
+</p>
+
+<p>
+  <b>Scope:</b>
+  <%=h @server.scope %>
+</p>
+
+
+<%= link_to 'Edit', edit_server_path(@server) %> |
+<%= link_to 'Back', servers_path %>

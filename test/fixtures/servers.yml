@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  client_id: 1
+  alternative_name: MyString
+  licence_type: MyString
+  alt_reference: 1
+  comment: MyString
+  scope: MyString
+
+two:
+  name: MyString
+  client_id: 1
+  alternative_name: MyString
+  licence_type: MyString
+  alt_reference: 1
+  comment: MyString
+  scope: MyString
