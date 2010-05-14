@@ -3,7 +3,11 @@ class DevicesController < ApplicationController
   # GET /devices
   # GET /devices.xml
   def index
-    @devices = Device.paginate(:per_page => 3, :page => params[:page])
+    @client_id = current_user.client_id
+    @clients = Client.find :all, :conditions => "id = '#{@client_id}'"
+		@registers = Register.find :all, :conditions => "client_id = '#{@client_id}'"
+    @devices = Device.paginate(:per_page => 3, :page => params[:page], :conditions => "client_id = '#{@client_id}'")
+
 
     respond_to do |format|
       format.js # index.html.erb

@@ -8,13 +8,17 @@
     <%= javascript_include_tag :defaults %>
     <%= yield(:head) %>
 	</head>		
+
 	<body>
+		<div id="banner">
+						<%= image_tag("asset_cio_000.png", :size => "140x35", :title => "SAM Eclat Asset CIO TM") %>
+		</div>
 	  <div id="container">
       <%- flash.each do |name, msg| -%>
-        <%= content_tag :div, msg, :id => "flash_#{name}" %>
+      <%= content_tag :div, msg, :id => "flash_#{name}" %>
       <%- end -%>
-      
     </div>
+
 		<div id="user_nav">
 			<% if current_user %>
 				<% if current_user.role == 'admin' %>
@@ -28,77 +32,104 @@
 		<% end %>
 		</div>
 
-		<h1>SAM &Eacute;clat Asset CIO</h1>
 			<% if !current_user %>
-				<div style="background-color:LightGreen">
+				<div class="view_public">
 					<%= link_to 'Home', home_path  %>	|
 					<%= link_to 'Login', login_path %>			
 				</div>
 			<% end %>
 
 			<% if current_user %>
-				<div style="background-color:LightBlue">
+				<div class="view_authorised">
 				<p class="navbar">
 
 					<table class="nav"><tr><td class="nav">
-						<h2>Client View</h2>
+						<h2>For Clients</h2>
 						<table class="nav"><tr><td class="nav">
-						<h3>Client Functions</h3>
-						&nbsp;
+						<h3>Functions</h3>
+						<ul>
+										<li>
 						<%= link_to 'Home', :controller => 'home' %>
-						&nbsp;
+										</li>
+										<li>
 						<%= link_to 'Dashboard', :controller => 'home', :action => 'dashboard' %>
-						&nbsp;
+										</li>
+										<li>
 						<%= link_to 'Servers', :controller => 'servers' %>
-						&nbsp;
+										</li>
+										<li>
 						<%= link_to 'Licences', :controller => 'licences' %>
+										</li>
+						</ul>
 						</td></tr></table>
 
 			<% end %>
 
 					<% if current_user && current_user.role == 'admin' %>
 						</td><td class="nav"> 	
-						<h2>Adminstration View</h2>
+						<h2>For Adminstrators</h2>
 						<table class="nav"><tr><td class="nav">
-						<h3>Users and Roles</h3>
-						&nbsp;
-						<%= link_to "User", new_user_path %>
-						&nbsp;
+						<h3>Users and Role Management</h3>
+
+						<ul>
+										<li>
+										<%= link_to "Users", :controller => 'users' %>
+										</li>
+										<li>
+										<%= link_to "New User", new_user_path %>
+										</li>
+										<li>
 						<%= link_to "Clients", :controller => 'clients' %>
-						&nbsp;
+										</li>
+										<li>
 						<%= link_to 'Locations', :controller => 'locations' %>
+										</li>
+						</ul>
 						</td><td class="nav">
-						<h3>Hardware</h3>
-						&nbsp;
+						<h3>Hardware Management</h3>
+						<ul>
+										<li>
 						<%= link_to 'Registers', :controller => 'registers' %>
-						&nbsp;
+										</li>
+										<li>
 						<%= link_to 'Devices', :controller => 'devices' %>
-						&nbsp;
+										</li>
+										<li>
 						<%= link_to 'Servers', :controller => 'servers' %>
-						&nbsp;
+										</li>
+						</ul>
 						</td><td class="nav">
-						<h3>Software</h3>
-						&nbsp;
+						<h3>Software Management</h3>
+						<ul>
+										<li>
 						<%= link_to 'Publishers', :controller => 'publishers' %>
-						&nbsp;
+										</li>
+										<li>
 						<%= link_to 'Products', :controller => 'products' %>
-						&nbsp;
+										</li>
+										<li>
 						<%= link_to 'Versions', :controller => 'versions' %>
+										</li>
+						</ul>
 						</td><td class="nav">
-						<h3>Licencing</h3>
-						&nbsp;
+						<h3>Licencing Management</h3>
+						<ul>
+										<li>
 						<%= link_to 'Licences', :controller => 'licences' %>
-						&nbsp;
+										</li>
+										<li>
 						<%= link_to 'Entitlements', :controller => 'entitlements' %>
+										</li>
+						</ul>
 						</td></tr></table>
 					<% end %>
 					</td></tr></table>
 					</p>
 					</div>
 
-		<p style="color: green"><%= flash[:notice] %></p>
-		<p style="color: orange"><%= flash[:warning] %></p>
-		<p style="color: red"><%= flash[:error] %></p>
+		<p class="flash_notice"><%= flash[:notice] %></p>
+		<p class="flash_warn"><%= flash[:warning] %></p>
+		<p class="flash_error"><%= flash[:error] %></p>
 		<div class="content">
 						<%= yield  :layout %>
 		</div>

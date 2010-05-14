@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+	load_and_authorize_resource
   def new
     @user = User.new
   end
@@ -27,4 +28,15 @@ class UsersController < ApplicationController
       render :action => "edit" 
     end
   end
+
+  def index
+    @users = User.paginate(:per_page => 6, :page => params[:page] )
+
+    respond_to do |format|
+      format.js # index.js.erb
+      format.html # index.html.erb
+      format.xml  { render :xml => @users }
+    end
+  end
+
 end

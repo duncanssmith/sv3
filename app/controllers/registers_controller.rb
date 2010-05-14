@@ -16,6 +16,7 @@ class RegistersController < ApplicationController
   # GET /registers/1.xml
   def show
 		@devices = @register.devices
+		@servers = @register.servers
 
     respond_to do |format|
       format.html # show.html.erb

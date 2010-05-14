@@ -1,8 +1,13 @@
 <h1>Listing users</h1>
 
+<%= will_paginate @users %>
+
 <table>
   <tr>
     <th>Name</th>
+    <th>Email</th>
+    <th>Role</th>
+    <th>Client ID</th>
   </tr>
 
 <% for user in @users %>
@@ -11,13 +16,14 @@
     <td><%=h user.email %></td>
     <td><%=h user.role %></td>
     <td><%=h user.client_id %></td>
-    <td><%=h user.persistence_token %></td>
     <td><%= link_to 'Show', user %></td>
     <td><%= link_to 'Edit', edit_user_path(user) %></td>
     <td><%= link_to 'Destroy', user, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
+
+<%= will_paginate @users %>
 
 <br />
 

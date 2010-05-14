@@ -1,10 +1,10 @@
 body {
   font-size: 8pt;
-  color: blue;
+  color: darkblue;
   background: white;
   font-family: verdana,tahoma,arial,helvetica,sans-serif;
-  margin: 20px;
-  padding: 10px; }
+  margin: 10px;
+  padding:10px; }
 
 h1 {
   font-size: 12pt; }
@@ -26,13 +26,26 @@ h6 {
 
 p {
   font-size: 8pt;
-  color: green; }
+  color: DarkBlue; 
+}
+p.flash_notice{
+  color:green;
+}
+p.flash_warn{
+  color:orange;
+}
+p.flash_error{
+  color:red;
+}
+tr.headline{
+	background: lightblue;
+}
 
 tr.list-line-odd {
-  background: #ddffbb; }
+  background: #bbcbee; }
 
 tr.list-line-even {
-  background: #ddffdd; }
+  background: #ddedef; }
 
 #main {
   border: solid 1px blue;
@@ -58,31 +71,40 @@ tr.list-line-even {
           float: right; }
 
 div.content {
-  background: #eeffd3; }
+  background: #eff; }
 
 #user_nav {
   float: right;
-  font-size: 8pt; }
+  font-size: 8pt; 
+  padding: 2px;
+  margin: 20px;
+}
 
 .navbar {
-  padding: 2px;
-  padding-bottom: 2px;
-  margin-bottom: 2px;
-  background-color: LightBlue; }
+  padding: 0px;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+  background-color: #ccf; }
 
 table.nav {
   padding: 0px;
-  padding-left: 2px;
+  padding-left: 0px;
   padding-right: 0px;
-  padding-bottom: 2px;
-  margin: 2px;
-  margin: 2px;
+  padding-bottom: 0px;
+  margin: 0px;
   border: solid 0px grey; }
 
 td.nav {
   padding: 1px;
-  padding-left: 6px;
-  padding-right: 7px;
-  margin: 2px;
+  padding-left: 2px;
+  padding-right: 4px;
+  margin: 0px;
   border: solid 1px grey;
   border-left: solid 1px grey; }
+
+div.view_public{
+				background-color: #ccf;
+}
+div.view_authorised{
+				background-color: #6bd;
+}

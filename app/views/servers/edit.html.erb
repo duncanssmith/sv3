@@ -31,6 +31,14 @@
     <%= f.label :scope %><br />
     <%= f.text_field :scope %>
   </p>
+	<p>
+	<% for register in Register.find :all, :conditions => "client_id = '#{@client_id}'" %> 		
+	<div>
+	  <%= check_box_tag "server[register_ids][]", register.id, @server.registers.include?(register) %>
+	  <%= register.name %>
+	</div>
+  <% end %>
+	</p>
   <p>
     <%= f.submit 'Update' %>
   </p>

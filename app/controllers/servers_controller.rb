@@ -3,7 +3,11 @@ class ServersController < ApplicationController
   # GET /servers
   # GET /servers.xml
   def index
-    @servers = Server.paginate(:per_page => 12, :page => params[:page])
+
+    @client_id = current_user.client_id
+    @clients = Client.find :all, :conditions => "id = '#{@client_id}'"
+		@registers = Register.find :all, :conditions => "client_id = '#{@client_id}'", :order => "id"
+    @servers = Server.paginate(:per_page => 12, :page => params[:page], :conditions => "client_id = '#{@client_id}'" )
 
     respond_to do |format|
       format.js # index.js.erb
@@ -15,7 +19,9 @@ class ServersController < ApplicationController
   # GET /servers/1
   # GET /servers/1.xml
   def show
+    @client_id = current_user.client_id
     @server = Server.find(params[:id])
+		@registers = @server.registers
 
     respond_to do |format|
       format.html # show.html.erb
@@ -36,6 +42,7 @@ class ServersController < ApplicationController
 
   # GET /servers/1/edit
   def edit
+    @client_id = current_user.client_id
     @server = Server.find(params[:id])
   end
 
@@ -76,7 +83,6 @@ class ServersController < ApplicationController
   # DELETE /servers/1
   # DELETE /servers/1.xml
   def destroy
-    @server = Server.find(params[:id])
     @server.destroy
 
     respond_to do |format|

@@ -636,6 +636,56 @@ INSERT INTO `registers` VALUES
 (3, "Fixed Asset Register","2010-03-25 18:36:09","Once","Catalog Z",72, 1, 1,"2010-03-18 18:25:09","2010-03-18 18:25:09"),
 (4, "Purchase Record","2010-03-25 18:36:09","Once","Catalog AA",55, 1, 1,"2010-03-18 18:25:09","2010-03-18 18:25:09");
 
+DROP TABLE IF EXISTS `servers`;
+
+CREATE TABLE `servers`( 
+	`id` SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(128),
+  `client_id` SMALLINT UNSIGNED,
+  `alternative_name` VARCHAR(128),
+  `licence_type` VARCHAR(128),
+  `alt_reference` SMALLINT UNSIGNED,
+  `comment` VARCHAR(512),
+  `scope` ENUM("","RED","GREEN","AMBER"),
+  `created_at` DATETIME,
+  `updated_at` DATETIME,
+  PRIMARY KEY (`id`)
+); 
+
+INSERT INTO `servers` VALUES
+(1,'BLACKBERRY',2,'BLACKBERRY','TSM standard Tivoli licence (STL)',1,'','GREEN','2010-05-11 09:55:27','2010-05-11 09:55:27'),
+(2,'',2,'BLACKBERRY_SQL','TSM standard Tivoli licence (STL)',2,'not a server','AMBER','2010-05-11 09:55:27','2010-05-11 09:55:27'),
+(3,'BLACKBERRYDMZ',2,'BLACKBERRYDMZ','TSM standard Tivoli licence (STL)',3,'','GREEN','2010-05-11 09:55:27','2010-05-11 09:55:27'),
+(4,'BUSINESSOBJECTS',2,'BUSINESSOBJECTS','TSM standard Tivoli licence (STL)',4,'','GREEN','2010-05-11 09:55:27','2010-05-11 09:55:27'),
+(5,'CARPARKS',2,'CARPARKS','TSM standard Tivoli licence (STL)',5,'','GREEN','2010-05-11 09:55:27','2010-05-11 09:55:27'),
+(6,'',2,'CARPARKS_SQL','TSM standard Tivoli licence (STL)',6,'not a server','AMBER','2010-05-11 09:55:27','2010-05-11 09:55:27'),
+(7,'CFRMIS',2,'CFRMIS','TSM standard Tivoli licence (STL)',7,'','GREEN','2010-05-11 09:55:27','2010-05-11 09:55:27'),
+(8,'',2,'CFRMIS_SQL','TSM standard Tivoli licence (STL)',8,'not a server','AMBER','2010-05-11 09:55:27','2010-05-11 09:55:27'),
+(9,'CTISERVER',2,'CTISERVER','TSM standard Tivoli licence (STL)',9,'','GREEN','2010-05-11 09:55:27','2010-05-11 09:55:27'),
+(10,'CTXFR001',2,'CTXFR001','TSM standard Tivoli licence (STL)',10,'','GREEN','2010-05-11 09:55:27','2010-05-11 09:55:27'),
+(11,'CTXHW001',2,'CTXHW001','TSM standard Tivoli licence (STL)',11,'','GREEN','2010-05-11 09:55:27','2010-05-11 09:55:27'),
+(12,'CTXHW002',2,'CTXHW002','TSM standard Tivoli licence (STL)',12,'','GREEN','2010-05-11 09:55:27','2010-05-11 09:55:27'),
+(13,'',2,'DIP_GROUP','TSM standard Tivoli licence (STL)',13,'not a server','AMBER','2010-05-11 09:55:27','2010-05-11 09:55:27'),
+(14,'',2,'DIP_SHARES','TSM standard Tivoli licence (STL)',14,'not a server','AMBER','2010-05-11 09:55:27','2010-05-11 09:55:27'),
+(15,'DIP1',2,'DIP1','TSM standard Tivoli licence (STL)',15,'','GREEN','2010-05-11 09:55:27','2010-05-11 09:55:27'),
+(16,'DIP2',2,'DIP2','TSM standard Tivoli licence (STL)',16,'','GREEN','2010-05-11 09:55:27','2010-05-11 09:55:27'),
+(17,'',2,'DISNEY_GROUP','TSM standard Tivoli licence (STL)',17,'not a server','AMBER','2010-05-11 09:55:27','2010-05-11 09:55:27'),
+(18,'',2,'DISNEY_SHARES','TSM standard Tivoli licence (STL)',18,'not a server','AMBER','2010-05-11 09:55:27','2010-05-11 09:55:27'),
+(19,'DONALD',2,'DONALD','TSM standard Tivoli licence (STL)',19,'','GREEN','2010-05-11 09:55:27','2010-05-11 09:55:27'),
+(20,'GOOFY',2,'GOOFY','TSM standard Tivoli licence (STL)',20,'','GREEN','2010-05-11 09:55:27','2010-05-11 09:55:27'),
+(21,'MICKEY',2,'MICKEY','TSM standard Tivoli licence (STL)',21,'','GREEN','2010-05-11 09:55:27','2010-05-11 09:55:27'),
+(22,'EDUNT-3',2,'EDUNT-3','TSM standard Tivoli licence (STL)',22,'','GREEN','2010-05-11 09:55:27','2010-05-11 09:55:27'),
+(23,'EDUNT-FIZ',2,'EDUNT-FIZ','TSM standard Tivoli licence (STL)',23,'','GREEN','2010-05-11 09:55:27','2010-05-11 09:55:27'),
+(24,'EPICENTRE',2,'EPICENTRE','TSM standard Tivoli licence (STL)',24,'','GREEN','2010-05-11 09:55:27','2010-05-11 09:55:27'),
+(25,'CORVUREP',2,'CORVUREP','TSM standard Tivoli licence (STL)',25,'','GREEN','2010-05-11 09:55:27','2010-05-11 09:55:27'),
+(26,'DEVLGOL',2,'DEVLGOL','TSM standard Tivoli licence (STL)',26,'','GREEN','2010-05-11 09:55:27','2010-05-11 09:55:27'),
+(27,'FARM1TEST',2,'FARM1TEST','TSM standard Tivoli licence (STL)',27,'','GREEN','2010-05-11 09:55:27','2010-05-11 09:55:27'),
+(28,'',2,'FARM1TEST_SQL','TSM standard Tivoli licence (STL)',28,'not a server','AMBER','2010-05-11 09:55:27','2010-05-11 09:55:27'),
+(29,'FIRE',2,'FIRE','TSM standard Tivoli licence (STL)',29,'','GREEN','2010-05-11 09:55:27','2010-05-11 09:55:27'),
+(30,'IWCEPO4',2,'IWCEPO4','TSM standard Tivoli licence (STL)',30,'','GREEN','2010-05-11 09:55:27','2010-05-11 09:55:27');
+
+DROP TABLE IF EXISTS `sessions`;
+
 CREATE TABLE `sessions`(
 	`id` SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT,
 	`session_id` VARCHAR(256) NOT NULL,
