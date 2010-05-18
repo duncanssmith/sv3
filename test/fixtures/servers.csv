@@ -365,3 +365,6 @@ id,name,client_id,alternative_name,licence_type,alt_reference,comment,scope
 364,NODE1-EXCH,2,NODE1-EXCH,TSM for Mail Accessed within 30 days,404,Decomissioned,AMBER
 365,NODE2-EXCH,2,NODE2-EXCH,TSM for Mail Accessed within 30 days,405,Decomissioned,AMBER
 366,,2,WEBEXCH,TSM for Mail Accessed after 30 days,406,Decomissioned,AMBER
+367,,1,WEBEXCH1,TSM for Mail Accessed after 30 days,1,Decomissioned,GREEN
+368,,1,WEBEXCH2,TSM for Mail Accessed after 30 days,2,Decomissioned,AMBER
+369,,1,WEBEXCH3,TSM for Mail Accessed after 30 days,3,Decomissioned,RED

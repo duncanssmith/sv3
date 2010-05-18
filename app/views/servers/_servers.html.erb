@@ -13,12 +13,11 @@
     <th>Licence type</th>
 		<th>Alt reference</th>
 		<% @registers.each do |r| %>
-						<th> <%=h r.name %> <%=h r.id %></th>
+						<th> <%=h r.name %></th>
 		<% end %>
     <th>Scope</th>
     <th>Comment</th>
   </tr>
-
 	<% @servers.each do |server| %>
 
 	<tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
@@ -27,44 +26,35 @@
     <td><%=h server.licence_type %></td>
 		<td><%=h server.alt_reference %></td>
 
-    <% count = 4 %>
+    <% countr = @registers.count %>
+    <% count = server.registers.count %>
     <% i = 0 %>
 		<% j = 0 %>
 		<% k = 0 %>
-		<% a = [] %>
-		<% r = 0 %>
+		<% this_server_registers = Array.new %>
 
-		<% while k < count do %>
+		<% while k < count do # loop through all the registers for this server and identify them %>
       <% if (server.registers[k]) %>
-			  <% r = r + 1 %>
+				<% this_server_registers[k] = server.registers[k].id %>
       <% end %>	
       <% k = k + 1 %>
 		<% end %>	
 
-		<% server.registers %>
-
-		<% while i < count do %>
-			<% while j < count do %>
-        <% if(server.registers[i]) %>
-				  <% if((@registers[j]) && (@registers[j].name == server.registers[i].name)) %>
-						<!-- print the server register id -->
-						<td><%=h i %>:<%=h j %>:<%=h r %>
-					  <%=h server.registers[i].id %> 
-					  <%=h server.registers[i].name %> 
-					  <%=h @registers[j].name %> 
-			      </td>
-				  <% else %>
-					  <td>  </td>
-		      <% end %>
-				  <% else %>
-					  <td>  </td>
-				<% end %>
-					<% j = j + 1 %>
-			<% end %>
-        <% j = 0 %>
-				<% i = i + 1 %>
+		<% @registers.each do |r| %>
+        <% flag = false %>
+				<% this_server_registers.each do |t| %>
+				<% if t == r.id %>
+					<% flag = true %>
+	      <% end %>
+	      <% end %>
+				<% if flag %>
+					<td> 
+						<%= image_tag("tick_000.png", :size => "18x18", :title => "TICK" ) %>
+				<% else %>
+					<td>  
+						<%= image_tag("tick_001.png", :size => "18x18", :title => "NONE" ) %>
+	      <% end %>
 		<% end %>
-
 
 		<td> 
 		<% if server.scope == "GREEN" %>

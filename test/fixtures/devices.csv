@@ -1,28 +1,29 @@
-id,Asset_id ,Make ,Model ,Serial ,Location_ID ,Network_user_name ,Node ,OS ,OS_service_level ,Chassis ,Domain ,IP ,MAC_Address ,Processor_count ,Processor_type ,Processor_speed ,RAM ,Bios_date
-1,393744,Dell,Latitude D410,D9LZ42J,1,agay,DCAL08320,Windows XP,2,Network Portable,Aramis,170.22.33.87,,"1",x64 Family 6 Model 15 Stepping 6 Intel Core 2,1733,1024,14/05/2004
-2,432234,Dell,Latitude D510,QZSD798A,1,dsmith,DCAL08321,Windows XP,2,Network Portable,Aramis,170.22.33.89,,"1",x64 Family 6 Model 15 Stepping Intel Core 2,2366,4096,24/09/2009
-3,537729,Dell,Latitude D510,RREX238B,4,tcollis,ER0034A91,Windows XP,2,Network Portable,Aramis,170.22.33.62,,"1",x64 Family 6 Model 15 Stepping Intel Core 2,1733,2048,11/07/2008
-4,467389,Dell,Latitude D660,T829FGH,2,jspringall,DCAL08320,Windows 7 Pro,0,Network Portable,Aramis,170.22.33.37,,"2",x64 Family 6 Model 15 Stepping 6 Intel Core 2,2900,4096,14/02/2010
-5,432234,Dell,Latitude D510,QZSD798A,1,dsmith,DCAL08321,Windows XP,2,Network Portable,Aramis,170.22.33.89,,"1",x64 Family 6 Model 15 Stepping Intel Core 2,2366,4096,24/09/2009
-6,537729,Dell,Latitude D510,RREX238B,4,tcollis,ER0034A91,Windows XP,2,Network Portable,Aramis,170.22.33.62,,"1",x64 Family 6 Model 15 Stepping Intel Core 2,1733,2048,11/07/2008
-7,393744,Dell,Latitude D410,D9LZ42J,1,agay,DCAL08320,Windows XP,2,Network Portable,Aramis,170.22.33.87,,"1",x64 Family 6 Model 15 Stepping 6 Intel Core 2,1733,1024,14/05/2004
-8,432234,Dell,Latitude D510,QZSD798A,1,dsmith,DCAL08321,Windows XP,2,Network Portable,Aramis,170.22.33.89,,"1",x64 Family 6 Model 15 Stepping Intel Core 2,2366,4096,24/09/2009
-9,537729,Dell,Latitude D510,RREX238B,4,tcollis,ER0034A91,Windows XP,2,Network Portable,Aramis,170.22.33.62,,"1",x64 Family 6 Model 15 Stepping Intel Core 2,1733,2048,11/07/2008
-10,393744,Dell,Latitude D410,D9LZ42J,1,agay,DCAL08320,Windows XP,2,Network Portable,Aramis,170.22.33.87,,"1",x64 Family 6 Model 15 Stepping 6 Intel Core 2,1733,1024,14/05/2004
-11,432234,Dell,Latitude D510,QZSD798A,1,dsmith,DCAL08321,Windows XP,2,Network Portable,Aramis,170.22.33.89,,"1",x64 Family 6 Model 15 Stepping Intel Core 2,2366,4096,24/09/2009
-12,537729,Dell,Latitude D510,RREX238B,4,tcollis,ER0034A91,Windows XP,2,Network Portable,Aramis,170.22.33.62,,"1",x64 Family 6 Model 15 Stepping Intel Core 2,1733,2048,11/07/2008
-13,467389,Dell,Latitude D660,T829FGH,2,jspringall,DCAL08320,Windows 7 Pro,0,Network Portable,Aramis,170.22.33.37,,"2",x64 Family 6 Model 15 Stepping 6 Intel Core 2,2900,4096,14/02/2010
-14,432234,Dell,Latitude D510,QZSD798A,1,dsmith,DCAL08321,Windows XP,2,Network Portable,Aramis,170.22.33.89,,"1",x64 Family 6 Model 15 Stepping Intel Core 2,2366,4096,24/09/2009
-15,537729,Dell,Latitude D510,RREX238B,4,tcollis,ER0034A91,Windows XP,2,Network Portable,Aramis,170.22.33.62,,"1",x64 Family 6 Model 15 Stepping Intel Core 2,1733,2048,11/07/2008
-16,393744,Dell,Latitude D410,D9LZ42J,1,agay,DCAL08320,Windows XP,2,Network Portable,Aramis,170.22.33.87,,"1",x64 Family 6 Model 15 Stepping 6 Intel Core 2,1733,1024,14/05/2004
-17,432234,Dell,Latitude D510,QZSD798A,1,dsmith,DCAL08321,Windows XP,2,Network Portable,Aramis,170.22.33.89,,"1",x64 Family 6 Model 15 Stepping Intel Core 2,2366,4096,24/09/2009
-18,537729,Dell,Latitude D510,RREX238B,4,tcollis,ER0034A91,Windows XP,2,Network Portable,Aramis,170.22.33.62,,"1",x64 Family 6 Model 15 Stepping Intel Core 2,1733,2048,11/07/2008
-19,393744,Dell,Latitude D410,D9LZ42J,1,agay,DCAL08320,Windows XP,2,Network Portable,Aramis,170.22.33.87,,"1",x64 Family 6 Model 15 Stepping 6 Intel Core 2,1733,1024,14/05/2004
-20,432234,Dell,Latitude D510,QZSD798A,1,dsmith,DCAL08321,Windows XP,2,Network Portable,Aramis,170.22.33.89,,"1",x64 Family 6 Model 15 Stepping Intel Core 2,2366,4096,24/09/2009
-21,537729,Dell,Latitude D510,RREX238B,4,tcollis,ER0034A91,Windows XP,2,Network Portable,Aramis,170.22.33.62,,"1",x64 Family 6 Model 15 Stepping Intel Core 2,1733,2048,11/07/2008
-22,467389,Dell,Latitude D660,T829FGH,2,jspringall,DCAL08320,Windows 7 Pro,0,Network Portable,Aramis,170.22.33.37,,"2",x64 Family 6 Model 15 Stepping 6 Intel Core 2,2900,4096,14/02/2010
-23,432234,Dell,Latitude D510,QZSD798A,1,dsmith,DCAL08321,Windows XP,2,Network Portable,Aramis,170.22.33.89,,"1",x64 Family 6 Model 15 Stepping Intel Core 2,2366,4096,24/09/2009
-24,537729,Dell,Latitude D510,RREX238B,4,tcollis,ER0034A91,Windows XP,2,Network Portable,Aramis,170.22.33.62,,"1",x64 Family 6 Model 15 Stepping Intel Core 2,1733,2048,11/07/2008
-25,393744,Dell,Latitude D410,D9LZ42J,1,agay,DCAL08320,Windows XP,2,Network Portable,Aramis,170.22.33.87,,"1",x64 Family 6 Model 15 Stepping 6 Intel Core 2,1733,1024,14/05/2004
-26,432234,Dell,Latitude D510,QZSD798A,1,dsmith,DCAL08321,Windows XP,2,Network Portable,Aramis,170.22.33.89,,"1",x64 Family 6 Model 15 Stepping Intel Core 2,2366,4096,24/09/2009
-27,537729,Dell,Latitude D510,RREX238B,4,tcollis,ER0034A91,Windows XP,2,Network Portable,Aramis,170.22.33.62,,"1",x64 Family 6 Model 15 Stepping Intel Core 2,1733,2048,11/07/2008
+id,Asset_id ,Make ,Model ,Serial ,Location_ID ,Network_user_name ,Node ,OS ,OS_service_level ,Chassis ,Domain ,IP ,MAC_Address ,Processor_count ,Processor_type ,Processor_speed ,RAM ,Bios_date, Client_id
+1,393744,Dell,Latitude D410,D9LZ42J,1,agay,DCAL08320,Windows XP,2,Network Portable,Aramis,170.22.33.87,,"1",x64 Family 6 Model 15 Stepping 6 Intel Core 2,1733,1024,14/05/2004,1
+2,432234,Dell,Latitude D510,QZSD798A,1,dsmith,DCAL08321,Windows XP,2,Network Portable,Aramis,170.22.33.89,,"1",x64 Family 6 Model 15 Stepping Intel Core 2,2366,4096,24/09/2009,1
+3,537729,Dell,Latitude D510,RREX238B,4,tcollis,ER0034A91,Windows XP,2,Network Portable,Aramis,170.22.33.62,,"1",x64 Family 6 Model 15 Stepping Intel Core 2,1733,2048,11/07/2008,1
+4,467389,Dell,Latitude D660,T829FGH,2,jspringall,DCAL08320,Windows 7 Pro,0,Network Portable,Aramis,170.22.33.37,,"2",x64 Family 6 Model 15 Stepping 6 Intel Core 2,2900,4096,14/02/2010,1
+5,432234,Dell,Latitude D510,QZSD798A,1,dsmith,DCAL08321,Windows XP,2,Network Portable,Aramis,170.22.33.89,,"1",x64 Family 6 Model 15 Stepping Intel Core 2,2366,4096,24/09/2009,1
+6,537729,Dell,Latitude D510,RREX238B,4,tcollis,ER0034A91,Windows XP,2,Network Portable,Aramis,170.22.33.62,,"1",x64 Family 6 Model 15 Stepping Intel Core 2,1733,2048,11/07/2008,1
+7,393744,Dell,Latitude D410,D9LZ42J,1,agay,DCAL08320,Windows XP,2,Network Portable,Aramis,170.22.33.87,,"1",x64 Family 6 Model 15 Stepping 6 Intel Core 2,1733,1024,14/05/2004,1
+8,432234,Dell,Latitude D510,QZSD798A,1,dsmith,DCAL08321,Windows XP,2,Network Portable,Aramis,170.22.33.89,,"1",x64 Family 6 Model 15 Stepping Intel Core 2,2366,4096,24/09/2009,1
+9,537729,Dell,Latitude D510,RREX238B,4,tcollis,ER0034A91,Windows XP,2,Network Portable,Aramis,170.22.33.62,,"1",x64 Family 6 Model 15 Stepping Intel Core 2,1733,2048,11/07/2008,1
+10,393744,Dell,Latitude D410,D9LZ42J,1,agay,DCAL08320,Windows XP,2,Network Portable,Aramis,170.22.33.87,,"1",x64 Family 6 Model 15 Stepping 6 Intel Core 2,1733,1024,14/05/2004,1
+11,432234,Dell,Latitude D510,QZSD798A,1,dsmith,DCAL08321,Windows XP,2,Network Portable,Aramis,170.22.33.89,,"1",x64 Family 6 Model 15 Stepping Intel Core 2,2366,4096,24/09/2009,1
+12,537729,Dell,Latitude D510,RREX238B,4,tcollis,ER0034A91,Windows XP,2,Network Portable,Aramis,170.22.33.62,,"1",x64 Family 6 Model 15 Stepping Intel Core 2,1733,2048,11/07/2008,1
+13,467389,Dell,Latitude D660,T829FGH,2,jspringall,DCAL08320,Windows 7 Pro,0,Network Portable,Aramis,170.22.33.37,,"2",x64 Family 6 Model 15 Stepping 6 Intel Core 2,2900,4096,14/02/2010,1
+14,432234,Dell,Latitude D510,QZSD798A,1,dsmith,DCAL08321,Windows XP,2,Network Portable,Aramis,170.22.33.89,,"1",x64 Family 6 Model 15 Stepping Intel Core 2,2366,4096,24/09/2009,1
+15,537729,Dell,Latitude D510,RREX238B,4,tcollis,ER0034A91,Windows XP,2,Network Portable,Aramis,170.22.33.62,,"1",x64 Family 6 Model 15 Stepping Intel Core 2,1733,2048,11/07/2008,1
+16,393744,Dell,Latitude D410,D9LZ42J,1,agay,DCAL08320,Windows XP,2,Network Portable,Aramis,170.22.33.87,,"1",x64 Family 6 Model 15 Stepping 6 Intel Core 2,1733,1024,14/05/2004,1
+17,432234,Dell,Latitude D510,QZSD798A,1,dsmith,DCAL08321,Windows XP,2,Network Portable,Aramis,170.22.33.89,,"1",x64 Family 6 Model 15 Stepping Intel Core 2,2366,4096,24/09/2009,1
+18,537729,Dell,Latitude D510,RREX238B,4,tcollis,ER0034A91,Windows XP,2,Network Portable,Aramis,170.22.33.62,,"1",x64 Family 6 Model 15 Stepping Intel Core 2,1733,2048,11/07/2008,1
+19,393744,Dell,Latitude D410,D9LZ42J,1,agay,DCAL08320,Windows XP,2,Network Portable,Aramis,170.22.33.87,,"1",x64 Family 6 Model 15 Stepping 6 Intel Core 2,1733,1024,14/05/2004,1
+20,432234,Dell,Latitude D510,QZSD798A,1,dsmith,DCAL08321,Windows XP,2,Network Portable,Aramis,170.22.33.89,,"1",x64 Family 6 Model 15 Stepping Intel Core 2,2366,4096,24/09/2009,1
+21,537729,Dell,Latitude D510,RREX238B,4,tcollis,ER0034A91,Windows XP,2,Network Portable,Aramis,170.22.33.62,,"1",x64 Family 6 Model 15 Stepping Intel Core 2,1733,2048,11/07/2008,1
+22,467389,Dell,Latitude D660,T829FGH,2,jspringall,DCAL08320,Windows 7 Pro,0,Network Portable,Aramis,170.22.33.37,,"2",x64 Family 6 Model 15 Stepping 6 Intel Core 2,2900,4096,14/02/2010,1
+23,432234,Dell,Latitude D510,QZSD798A,1,dsmith,DCAL08321,Windows XP,2,Network Portable,Aramis,170.22.33.89,,"1",x64 Family 6 Model 15 Stepping Intel Core 2,2366,4096,24/09/2009,1
+24,537729,Dell,Latitude D510,RREX238B,4,tcollis,ER0034A91,Windows XP,2,Network Portable,Aramis,170.22.33.62,,"1",x64 Family 6 Model 15 Stepping Intel Core 2,1733,2048,11/07/2008,1
+25,393744,Dell,Latitude D410,D9LZ42J,1,agay,DCAL08320,Windows XP,2,Network Portable,Aramis,170.22.33.87,,"1",x64 Family 6 Model 15 Stepping 6 Intel Core 2,1733,1024,14/05/2004,1
+26,432234,Dell,Latitude D510,QZSD798A,1,dsmith,DCAL08321,Windows XP,2,Network Portable,Aramis,170.22.33.89,,"1",x64 Family 6 Model 15 Stepping Intel Core 2,2366,4096,24/09/2009,1
+27,537729,Dell,Latitude D510,RREX238B,4,tcollis,ER0034A91,Windows XP,2,Network Portable,Aramis,170.22.33.62,,"1",x64 Family 6 Model 15 Stepping Intel Core 2,1733,2048,11/07/2008,1
+28,879823,Linux,HP 7632,RREX238B,4,dsmith,ER0034A91,Windows XP,2,Network Fixed,Vector,175.12.32.69,,"1",x64 Family 4 Model 24 Intel Core 4,2533,4096,11/09/2010,1
