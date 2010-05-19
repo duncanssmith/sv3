@@ -619,6 +619,7 @@ DROP TABLE IF EXISTS `registers`;
 CREATE TABLE `registers` (
 	`id`	SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(24),
+  `client_id` SMALLINT,
   `date` DATETIME,
   `frequency` VARCHAR(24),
   `regtype` VARCHAR(24),
@@ -631,10 +632,23 @@ CREATE TABLE `registers` (
 );
 
 INSERT INTO `registers` VALUES
-(1, "Walkaround Audit","2010-03-25 18:36:09","Annual","Catalog X",99, 1, 1,"2010-03-18 18:25:09","2010-03-18 18:25:09"),
-(2, "Network Discovery","2010-03-25 18:36:09","Monthly","Catalog Y",89, 1, 1,"2010-03-18 18:25:09","2010-03-18 18:25:09"),
-(3, "Fixed Asset Register","2010-03-25 18:36:09","Once","Catalog Z",72, 1, 1,"2010-03-18 18:25:09","2010-03-18 18:25:09"),
-(4, "Purchase Record","2010-03-25 18:36:09","Once","Catalog AA",55, 1, 1,"2010-03-18 18:25:09","2010-03-18 18:25:09");
+(1, "Walkaround Audit", 1, "2010-03-25 18:36:09","Annual","Catalog X",99, 1, 1,"2010-03-18 18:25:09","2010-03-18 18:25:09"),
+(2, "Network Discovery", 1, "2010-03-25 18:36:09","Monthly","Catalog Y",89, 1, 1,"2010-03-18 18:25:09","2010-03-18 18:25:09"),
+(3, "Fixed Asset Register", 1, "2010-03-25 18:36:09","Once","Catalog Z",72, 1, 1,"2010-03-18 18:25:09","2010-03-18 18:25:09"),
+(4, "Purchase Record", 1, "2010-03-25 18:36:09","Once","Catalog AA",55, 1, 1,"2010-03-18 18:25:09","2010-03-18 18:25:09"),
+(5, "Walkaround Audit", 2, "2010-03-25 18:36:09","Annual","Catalog X",99, 1, 1,"2010-03-18 18:25:09","2010-03-18 18:25:09"),
+(6, "Network Discovery", 2, "2010-03-25 18:36:09","Monthly","Catalog Y",89, 1, 1,"2010-03-18 18:25:09","2010-03-18 18:25:09"),
+(7, "Fixed Asset Register", 2, "2010-03-25 18:36:09","Once","Catalog Z",72, 1, 1,"2010-03-18 18:25:09","2010-03-18 18:25:09"),
+(8, "Purchase Record", 2, "2010-03-25 18:36:09","Once","Catalog AA",55, 1, 1,"2010-03-18 18:25:09","2010-03-18 18:25:09");
+
+DROP TABLE IF EXISTS `registers_servers`;
+
+CREATE TABLE `registers_servers`(
+	`register_id` SMALLINT UNSIGNED NOT NULL,
+	`server_id` SMALLINT UNSIGNED NOT NULL,
+  PRIMARY KEY (`register_id`,`server_id`)
+);
+
 
 DROP TABLE IF EXISTS `servers`;
 
