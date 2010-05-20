@@ -731,12 +731,12 @@ CREATE TABLE `users` (
 );
 
 INSERT INTO `users` VALUES(1,'duncan','duncan.smith@sameclat.com','admin',1,'a9eb68b19ca177bb9390484bcb18077b3a8c725d2cd9b91d9ed95bb3644b0aedeee9e7a176bc990b11cee2873c12adaf3f098e8668f93d1b8057c443931595b9','5a8wyjsIyKIztIGMjqRl',0,'2010-04-20 14:07:07','2010-04-20 14:07:07'),
-(2,'john','john.springall@sameclat.com','admin',1,'2314bed3e92f00f9b0e2eac0c74f5fefc61fdbfdfc67fab3fd4f15f7bf0b642a7d204310b17b26416dc6f4a62e2721c3fa5f55b065fb7a931ec9d87c023e3508','4WAj-Subnz06HiU0ASwG',0,'2010-04-20 14:07:07','2010-04-20 14:07:07'),
-(3,'fraz','fraz.hamid@sameclat.com','admin',0,'9bb51d932c527dc83cd5b3ea2ce96c166258d81f0dff146c689b9e2c46735f4376579245967ab1e03ca505e0a322c61a48bfde598caba4a1df50ca17e2741965','Acy2xGODHCEZh05bELpu',0,'2010-04-20 14:07:07','2010-04-20 14:07:07'),
-(4,'tim','tim.collis@sameclat.com','admin',0,'95a72263b0affc65abb9a85b427cab17d552c975ff8f2a810d18e14225ec1805a01f944ab11b249234d3587559a213a149aef123707307bb1e2c7d02ab168f39','8leQruhRbGLxPB_EWMvD',0,'2010-04-20 14:07:07','2010-04-20 14:07:07'),
-(5,'admin','admin@sameclat.com','admin',0,'4e17a991c62470639abc5f7a7e9f0eb99b2e8eb46e2520e68636afdf5f0c26060e1200eb5b3424a87157291575b674ad12a170df17a70beabe95ce1c4d5616b1','f1mvaOl0YOR_n0qoDRS8',0,'2010-04-20 14:07:07','2010-04-20 14:07:07'),
-(6,'client','client@sameclat.com','client',1,'ba3ff0b7cb5e376a343f2e930f374934d0a80f4c2b74cddf91ab1b44f0cc6a696b230a80ed7509882812a93af0631be861796fc83fb48e7594b4c4f5ab106fe9','Rt6wZ07E_5zW-xyerPAB',0,'2010-04-20 14:07:07','2010-04-20 14:07:07'),
-(7,'clientmaintainer','clientmaintainer@sameclat.com','clientmaintainer',1,'625057bcc44ea3710c2152ce87c81d1739d4faa768b978f72b044b03ac7e7c4eaef3f4c1871d780a342caf09fd3b5c7ce2896e28f3f97f7281509d178e0692a8','1lvy8He6F2QaemGnrzWW',0,'2010-04-20 14:07:07','2010-04-20 14:07:07');
+(2,'john','john.springall@sameclat.com','admin',2,'2314bed3e92f00f9b0e2eac0c74f5fefc61fdbfdfc67fab3fd4f15f7bf0b642a7d204310b17b26416dc6f4a62e2721c3fa5f55b065fb7a931ec9d87c023e3508','4WAj-Subnz06HiU0ASwG',0,'2010-04-20 14:07:07','2010-04-20 14:07:07'),
+(3,'fraz','fraz.hamid@sameclat.com','admin',2,'9bb51d932c527dc83cd5b3ea2ce96c166258d81f0dff146c689b9e2c46735f4376579245967ab1e03ca505e0a322c61a48bfde598caba4a1df50ca17e2741965','Acy2xGODHCEZh05bELpu',0,'2010-04-20 14:07:07','2010-04-20 14:07:07'),
+(4,'tim','tim.collis@sameclat.com','admin',2,'95a72263b0affc65abb9a85b427cab17d552c975ff8f2a810d18e14225ec1805a01f944ab11b249234d3587559a213a149aef123707307bb1e2c7d02ab168f39','8leQruhRbGLxPB_EWMvD',0,'2010-04-20 14:07:07','2010-04-20 14:07:07'),
+(5,'admin','admin@sameclat.com','admin',2,'4e17a991c62470639abc5f7a7e9f0eb99b2e8eb46e2520e68636afdf5f0c26060e1200eb5b3424a87157291575b674ad12a170df17a70beabe95ce1c4d5616b1','f1mvaOl0YOR_n0qoDRS8',0,'2010-04-20 14:07:07','2010-04-20 14:07:07'),
+(6,'client','client@sameclat.com','client',2,'ba3ff0b7cb5e376a343f2e930f374934d0a80f4c2b74cddf91ab1b44f0cc6a696b230a80ed7509882812a93af0631be861796fc83fb48e7594b4c4f5ab106fe9','Rt6wZ07E_5zW-xyerPAB',0,'2010-04-20 14:07:07','2010-04-20 14:07:07'),
+(7,'clientmaintainer','clientmaintainer@sameclat.com','clientmaintainer',2,'625057bcc44ea3710c2152ce87c81d1739d4faa768b978f72b044b03ac7e7c4eaef3f4c1871d780a342caf09fd3b5c7ce2896e28f3f97f7281509d178e0692a8','1lvy8He6F2QaemGnrzWW',0,'2010-04-20 14:07:07','2010-04-20 14:07:07');
 
 DROP TABLE IF EXISTS `versions`;
 
