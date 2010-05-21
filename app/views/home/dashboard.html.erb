@@ -13,9 +13,9 @@
 			<h3>
 				Financial Summary
 </h3>
-			<table border="0" bgcolor="#ccc" cellpadding="20" cellspacing="10">
-				<tr><td align="top">Total over-licenced cost</td><td>£1,203,321.00</td></tr>
-				<tr><td align="top">Total under-licenced cost</td><td>£157,015.00</td></tr>
+			<table class="dashboard1">
+				<tr><td class="dashboard1" align="top">Total over-licenced cost</td><td class="dashboard1">£1,203,321.00</td></tr>
+				<tr><td class="dashboard1" align="top">Total under-licenced cost</td><td class="dashboard1">£157,015.00</td></tr>
 			</table>
   	</td>
 	</tr>
@@ -25,10 +25,10 @@
 				Software Usage	
 		</h3>
 		<h4>Most under-utilised product</h4>
-			<table border="0" bgcolor="#ccc" cellpadding="16" cellspacing="2">
-							<tr><td></td><td>Product</td><td>Unused</td><td>Estimated Cost</td></tr>
-							<tr><td>by volume</td><td>Microsoft Project</td><td>354</td><td>£75,566</td></tr>
-							<tr><td>by percentage</td><td>Microsoft Visio</td><td>67%</td><td>£34,352</td></tr>
+			<table class="dashboard2">
+							<tr><td class="dashboard2">&nbsp;</td><td class="dashboard2">Product</td><td class="dashboard2">Unused</td><td class="dashboard2">Estimated Cost</td></tr>
+							<tr><td class="dashboard2">by volume</td><td class="dashboard2">Microsoft Project</td><td class="dashboard2">354</td><td class="dashboard2">£75,566</td></tr>
+							<tr><td class="dashboard2">by percentage</td><td class="dashboard2">Microsoft Visio</td><td class="dashboard2">67%</td><td class="dashboard2">£34,352</td></tr>
 			</table>
 
 
@@ -38,20 +38,20 @@
 				Risk Status	
 			</h3>
 		<h4>All products by RAG status</h4>
-			<table border="0" bgcolor="#ccc" cellpadding="6" cellspacing="7">
-							<tr><td>
-							<%= image_tag("spacer_40.gif", { :title => "spacer"})  %>
-							</td><td>
-							<%= image_tag("spacer_40.gif", { :title => "spacer"})  %>
+			<table class="dashboard3">
+							<tr><td class="dashboard3">Number of items
+															<%= image_tag("spacer_40.gif", { :size => "100" })  %>
+							</td><td class="dashboard3">Status
+							<%= image_tag("spacer_40.gif", {  :size => "60x1" }) %>
 							</td></tr>
-							<tr><td>121</td><td>
-							<%= image_tag("red_traffic_light.png", { :size => "15x15", :title => "red traffic light"})  %>
+							<tr><td class="dashboard3">121</td><td class="dashboard3">
+							<%= image_tag("red_traffic_light_1.png", { :size => "15x15", :title => "red traffic light"})  %>
 							</td></tr>
-							<tr><td>37</td><td>
-															<%= image_tag("amber_traffic_light.png", { :size => "15x15", :title => "amber traffic light"})  %>
+							<tr><td class="dashboard3">37</td><td class="dashboard3">
+															<%= image_tag("amber_traffic_light_1.png", { :size => "15x15", :title => "amber traffic light"})  %>
 							</td></tr>
-							<tr><td>537</td><td>
-															<%= image_tag("green_traffic_light.png", { :size => "15x15", :title => "green traffic light"})  %>
+							<tr><td class="dashboard3">537</td><td class="dashboard3">
+															<%= image_tag("green_traffic_light_1.png", { :size => "15x15", :title => "green traffic light"})  %>
 							</td></tr>
 			</table> &nbsp;
 		</td>

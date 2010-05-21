@@ -26,20 +26,19 @@ h6 {
 
 p {
   font-size: 8pt;
-  color: DarkBlue; 
-}
+  color: DarkBlue; }
+
 p.flash_notice{
-  color:green;
-}
+  color:green; }
+
 p.flash_warn{
-  color:orange;
-}
+  color:orange; }
+
 p.flash_error{
-  color:red;
-}
+  color:red; }
+
 tr.headline{
-	background: lightblue;
-}
+	background: lightblue; }
 
 tr.list-line-odd {
   background: #bbcbee; }
@@ -77,8 +76,7 @@ div.content {
   float: right;
   font-size: 8pt; 
   padding: 2px;
-  margin: 20px;
-}
+  margin: 20px; }
 
 .navbar {
   padding: 0px;
@@ -92,19 +90,62 @@ table.nav {
   padding-right: 0px;
   padding-bottom: 0px;
   margin: 0px;
-  border: solid 0px grey; }
+  border: solid 0px gray; }
 
 td.nav {
   padding: 1px;
   padding-left: 2px;
   padding-right: 4px;
   margin: 0px;
-  border: solid 1px grey;
-  border-left: solid 1px grey; }
+  border: solid 1px gray;
+  border-left: solid 1px gray; }
+
+table#dashboard{
+  padding:2px;
+	background-color:white;
+  border: solid 1px lightblue;}	
+
+table.dashboard1{
+  padding:2px;
+  padding:2px;
+  margin:10px;
+	background-color: white;
+  border: solid 1px silver;}	
+
+td.dashboard1{
+  padding:20px;
+  margin:10px;
+	background-color: silver;
+  border: solid 1px silver;}	
+ 
+table.dashboard2{
+  padding:2px;
+  margin:1px;
+	background-color: white;
+  border: solid 1px silver;}	
+
+td.dashboard2{
+  padding:10px;
+  margin:2px;
+	background-color: silver;
+  border: solid 1px silver;}	
+ 
+
+table.dashboard3{
+  padding:2px;
+  margin:1px;
+	background-color: white;
+  border: solid 1px silver;}	
+
+td.dashboard3{
+  padding:10px;
+  margin:2px;
+	background-color: silver;
+  border: solid 1px silver;}	
+ 
 
 div.view_public{
-				background-color: #ccf;
-}
+				background-color: #ccf; }
 div.view_authorised{
-				background-color: #6bd;
-}
+				background-color: #6bd; }
+
