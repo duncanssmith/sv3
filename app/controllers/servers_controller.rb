@@ -5,7 +5,13 @@ class ServersController < ApplicationController
   def index
 
     @client_id = current_user.client_id
-    @clients = Client.find :all, :conditions => "id = '#{@client_id}'"
+
+		if(@selected_client)
+      @clients = Client.find :all, :conditions => "id = '#{@selected_client}'"
+		else
+      @clients = Client.find :all, :conditions => "id = '#{@client_id}'"
+		end
+
 		@registers = Register.find :all, :conditions => "client_id = '#{@client_id}'", :order => "id"
     @servers = Server.paginate(:per_page => 12, :page => params[:page], :conditions => "client_id = '#{@client_id}'" )
 

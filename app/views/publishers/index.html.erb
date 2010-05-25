@@ -4,6 +4,7 @@
   <tr>
     <th>Name</th>
     <th>Shortname</th>
+    <th>URL</th>
     <th>Description</th>
   </tr>
 
@@ -11,6 +12,7 @@
 	  <tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
     <td><%=h publisher.name %></td>
     <td><%=h publisher.shortname %></td>
+    <td><%=h publisher.url %></td>
     <td><%=h publisher.description %></td>
     <td><%= link_to 'Show', publisher %></td>
     <td><%= link_to 'Edit', edit_publisher_path(publisher) %></td>

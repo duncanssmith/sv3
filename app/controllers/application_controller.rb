@@ -47,5 +47,9 @@ class ApplicationController < ActionController::Base
 		@current_user = current_user_session && current_user_session.record
 	end
 
+	def current_admin_user_select_client
+    @current_user_session = UserSession.find
+	  	
+	end
 
 end

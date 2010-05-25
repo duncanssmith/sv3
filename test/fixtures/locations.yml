@@ -7,8 +7,8 @@ location_1:
   address1: 1342 Ocean Boulevard
   address2: Santa Ana
   address3: California
-  address4: USA
-  address5: 
+  address4: 
+  country: USA
   postcode: 98231
 
 location_2:
@@ -18,8 +18,8 @@ location_2:
   address1: Vega Point
   address2: 1 London Bridge Street
   address3: London
-  address4: UK
-  address5:
+  address4: 
+  country: UK
   postcode: SE1 1AZ
 
 location_3:
@@ -30,7 +30,7 @@ location_3:
   address2: 345 Steinerstrasse 
   address3: Frankfurt
   address4: Deutschland
-  address5: Germany
+  country: Germany
   postcode: 891002 
 
 location_4:
@@ -40,8 +40,8 @@ location_4:
   address1: Glass House Estates 
   address2: 10 Great Pulteney Street 
   address3: London
-  address4: UK
-  address5: 
+  address4: 
+  country: UK
   postcode: W1N 3RT 
 
 location_5:
@@ -51,6 +51,6 @@ location_5:
   address1: Axe Yard 
   address2: 5 Tooley Street 
   address3: London
-  address4: UK
-  address5: 
+  address4: 
+  country: UK
   postcode: EC1 5XY 

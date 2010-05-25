@@ -4,7 +4,7 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
-  def create
+	def create
     @user = User.new(params[:user])
     if @user.save
       flash[:notice] = "Registration successful."
@@ -30,7 +30,7 @@ class UsersController < ApplicationController
   end
 
   def index
-    @users = User.paginate(:per_page => 6, :page => params[:page] )
+    @users = User.paginate(:per_page => 12, :page => params[:page] )
 
     respond_to do |format|
       format.js # index.js.erb

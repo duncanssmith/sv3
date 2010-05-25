@@ -4,94 +4,110 @@ publisher_1:
   id: 1
   name: Adobe 
   shortname:  Adobe
-  description:
+  url: http://www.adobe.com/
+  description: Graphics and Visual Design Software
 
 publisher_2:
   id: 2
   name: Autodesk 
   shortname:  Autodesk
-  description:
+  url: http://www.autodesk.co.uk/  
+  description: Computer Aided Design Software (CAD)
 
 publisher_3:
   id: 3
   name: Badley Geoscience 
   shortname:  Badley Geoscience
-  description:
+  url: http://www.badleys.co.uk/  
+  description: Geoscience software
 
 publisher_4:
   id: 4
   name: ePulse 
   shortname:  ePulse
-  description:
+  url: http://www.epulse.ltd.uk/
+  description: Dealing and Brokerage solutions
 
 publisher_5:
   id: 5
   name: Globalview Software Inc. 
   shortname: Globalview 
-  description:
+  url: http://www.gvsi.com/
+  description: Energy Market Data Solutions
 
 publisher_6:
   id: 6
   name: Informatica Corporation 
   shortname: Informatica 
-  description:
+  url: http://www.informatica.com/
+  description: Data Integration
 
 publisher_7:
   id: 7
   name: Information Builders 
   shortname: Information Builders 
-  description:
+  url: http://www.informationbuilders.co.uk/
+  description: Business Data Analysis
 
 publisher_8:
   id: 8
   name: Open Text Corporation 
-  shortname: Open Text 
-  description:
+  shortname: Open Text
+  url: http://www.opentext.com/
+  description: Content Management
 
 publisher_9:
   id: 9
   name: Primavera System Inc.
-  shortname: Primavera 
-  description: 
+  shortname: Primavera
+  url: http://www.oracle.com/primavera/
+  description: Project Portfolio Management
 
 publisher_10:
   id: 10
   name: Quest Software 
-  shortname: Quest 
-  description:
+  shortname: Quest
+  url: http://www.quest.com/
+  description: Smart Systems Management
 
 publisher_11:
   id: 11
   name: Salesforce.com Inc. 
   shortname: Salesforce
-  description:
+  url: http://www.salesforce.com/
+  description: Customer Relationship Management Software Cloud Computing
 
 publisher_12:
-  id: 12 
-  name: SAS Institute Inc. 
+  id: 12
+  name: SAS Institute Inc.
   shortname:  SAS Institute
-  description:
+  url: http://www.sas.com/
+  description: Business Analytics Software
 
 publisher_13:
   id: 13
   name: Serverware Group Inc. 
   shortname: Serverware
-  description:
+  url: http://www.serverware.com/
+  description: Compliance Change and Configuration Management Solutions
 
 publisher_14:
   id: 14
   name: Silicon Graphics Inc. 
   shortname: Silicon Graphics
-  description:
+  url: http://www.sgi.com/
+  description: HPC Servers Storage Data Center Solutions Cloud Computing
 
 publisher_15:
   id: 15
   name: The Mathworks Limited 
   shortname: The Mathworks
-  description:
+  url: http://www.mathworks.com/
+  description: Science and Engineering Software
 
 publisher_16:
   id: 16
   name: Websense Inc.
   shortname: Websense
-  description:
+  url: http://www.websense.com  
+  description: Information Protection

@@ -7,23 +7,26 @@ ActionController::Routing::Routes.draw do |map|
   map.login "login", :controller => "user_sessions", :action => "new"
   map.logout "logout", :controller => "user_sessions", :action => "destroy"
 
-	map.home "home", :controller => "home", :action => "index"
+  map.adminselectclient "adminselectclient", :controller => "user_sessions", :action => "adminselectclient"
+
+	map.home "home", :controller => "home", :action => "admin"
 	map.dashboard "dashboard", :controller => "home", :action => "dashboard"
 
-  map.resources :clients
-  map.resources :licences
-  map.resources :registers
-  map.resources :installations
-  map.resources :entitlements
-  map.resources :locations
-  map.resources :devices
-  map.resources :versions
-  map.resources :products
   map.resources :assets
-  map.resources :publishers
-  map.resources :users
-  map.resources :user_sessions
+  map.resources :clients
   map.resources :compliances
+  map.resources :devices
+  map.resources :entitlements
+  map.resources :installations
+  map.resources :licences
+  map.resources :locations
+  map.resources :products
+  map.resources :publishers
+  map.resources :registers
+  map.resources :servers
+  map.resources :user_sessions
+  map.resources :users
+  map.resources :versions
 
   # The priority is based upon order of creation: first created -> highest priority.
 
