@@ -20,10 +20,4 @@ class UserSessionsController < ApplicationController
     redirect_to root_url
   end
 
-  def adminselectclient
-		@user_session = UserSession.find
-    @user_session.selected_client_id = @client.id
-    @user_session.save		
-
-	end
 end
