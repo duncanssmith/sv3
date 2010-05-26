@@ -10,6 +10,7 @@ location_1:
   address4: 
   country: USA
   postcode: 98231
+  client_id: 1
 
 location_2:
   id: 2
@@ -21,6 +22,7 @@ location_2:
   address4: 
   country: UK
   postcode: SE1 1AZ
+  client_id: 2
 
 location_3:
   id: 3
@@ -32,6 +34,7 @@ location_3:
   address4: Deutschland
   country: Germany
   postcode: 891002 
+  client_id: 3
 
 location_4:
   id: 4
@@ -43,6 +46,7 @@ location_4:
   address4: 
   country: UK
   postcode: W1N 3RT 
+  client_id: 4
 
 location_5:
   id: 5
@@ -54,3 +58,4 @@ location_5:
   address4: 
   country: UK
   postcode: EC1 5XY 
+  client_id: 3

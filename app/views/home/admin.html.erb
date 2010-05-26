@@ -1,36 +1,39 @@
+<% if @client_id  == 0 %>
 
-<p>client
-<%=h @client_id %>
-</p>
-<p>selected client:
-<%=h @selected_client %>
-</p>
-<p>user role:
-<%=h @role %>
-</p>
-
-
-
-<h1>Home - Admin</h1>
-<p>Welcome to Asset CIO</p>
-
-<% if @client_id  == 0 && @selected_client == 0 %>
+  <h1>Home</h1>
+  <p>Welcome to Asset CIO</p>
 
   <div id="select_client">
 		<p>Please select Client:<br/>
+
 		<% form_tag home_path, :method => 'post' do  %>
 
 			<% @clients.each do |client| %>
-					<br/><%= radio_button_tag 'client', client.id, @client == client %>
-					<label for="client"><%= client.name %></label>
-				<% end %>
-			<br/><%= submit_tag 'Select', :name => nil %>
+			  <br/>
+				<%= radio_button_tag 'client', client.id, @client == client %>
+				<label for="client"><%= client.name %></label>
+			<% end %>
+
+				<br/>
+				<br/>
+				<%= submit_tag 'Select', :name => nil %>
     <% end %>
 	</div>
+<% elsif ((@client_id == 0) && (@selected_client != 0)) %>
+  <h1>Home</h1>
+	<p>Welcome to Asset CIO. <%= @client.name %>
+	</p> 
+
+
+<% elsif ((@client_id != 0) && (@selected_client == 0)) %>
+
+  <h1>Home</h1>
+	<p>Welcome to Asset CIO.
+	</p> 
+
 
 	<% else %>
-					<p>Thank you. You selected to work with: </p>
-    <% end %>
 
+<% end %>
 
 

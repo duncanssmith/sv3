@@ -1,16 +1,21 @@
 <p>
-  <b>Name:</b>
+  <b>Publisher:</b>
+  <%=h @publisher.name %>
+</p>
+
+<p>
+  <b>Product:</b>
+  <%=h @product.name %>
+</p>
+
+<p>
+  <b>Version Name:</b>
   <%=h @version.name %>
 </p>
 
 <p>
   <b>Fullname:</b>
   <%=h @version.fullname %>
-</p>
-
-<p>
-  <b>Product:</b>
-  <%=h @version.product_id %>
 </p>
 
 <p>
@@ -22,7 +27,6 @@
   <b>Language:</b>
   <%=h @version.language %>
 </p>
-
 
 <%= link_to 'Edit', edit_version_path(@version) %> |
 <%= link_to 'Back', versions_path %>

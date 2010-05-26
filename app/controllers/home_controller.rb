@@ -3,10 +3,16 @@ class HomeController < ApplicationController
   end
 
   def admin	  
-	  @clients = Client.find (:all, :select => 'id, name')
 		@client_id = current_user.client_id
 		@role = current_user.role
-		session[:selected_client] = 0 
+	  @clients = Client.find (:all, :select => 'id, name')
+
+		if( ( session[:selected_client] ) && ( session[:selected_client] != 0) )
+		  @client_index = session[:selected_client]
+		else
+			@client_index = @client_id
+		end
+    
 
 		if params['client']
 		  @selected_client = params['client']

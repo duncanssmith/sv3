@@ -14,6 +14,9 @@ class VersionsController < ApplicationController
   # GET /versions/1
   # GET /versions/1.xml
   def show
+    #@product = Product.find :all, :conditions => "id = '#{@version.id}'"
+    @product = Product.find @version.id 
+    @publisher = Publisher.find @product.id
 
     respond_to do |format|
       format.html # show.html.erb

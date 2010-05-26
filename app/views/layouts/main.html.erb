@@ -23,9 +23,9 @@
 		<div id="user_nav">
 			<% if current_user %>
 				<% if current_user.role == 'admin' %>
-				<%= current_user.name %> (<%= current_user.role %> user) is logged in. &nbsp; 
+								<%= current_user.name %> (<%= current_user.role %> user) is logged in for client #<%= current_user.client_id %>. &nbsp; 
 			<% else %>
-				<%= current_user.name %> is logged in as <%= current_user.role %>. &nbsp; 
+							<%= current_user.name %> is logged in as <%= current_user.role %>. <%= current_user.client_id %>. &nbsp; 
 			<% end %>
 			<%= link_to "Edit Profile", edit_user_path(:current) %> |
 			<%= link_to "Logout", logout_path %> 

@@ -4,17 +4,18 @@
   <tr>
     <th>Name</th>
     <th>Fullname</th>
-    <th>Publisher</th>
+    <th>Publisher *</th>
     <th>Serial</th>
     <th>Sku</th>
     <th>Identifier</th>
   </tr>
 
 <% @products.each do |product| %>
+<% publisher = Publisher.find product.publisher_id %>
 	  <tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
     <td><%=h product.name %></td>
     <td><%=h product.fullname %></td>
-    <td><%=h product.publisher_id %></td>
+    <td><%=h publisher.name %></td>
     <td><%=h product.serial %></td>
     <td><%=h product.sku %></td>
     <td><%=h product.identifier %></td>

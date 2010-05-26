@@ -4,13 +4,8 @@ class Ability
 	def initialize(user)
 	#	current_user ||= User.new # guest user
 	#	user ||= User.new # guest user
-		  can :manage, Server if user.role == "admin"
-		  can :manage, Device if user.role == "admin"
-		  can :manage, Licence if user.role == "admin"
-		  can :manage, Publisher if user.role == "admin"
-		  can :manage, Product if user.role == "admin"
-		  can :manage, Version if user.role == "admin"
-		  can :read, User if user.role == "admin"
+					#	:manage, :create, :update, :destroy, :read etc
+		  can :manage, :all if user.role == "admin"
 			can :manage, Licence if user.role == "clientmaintainer"
 			can :manage, Server if user.role == "clientmaintainer"
 			can :read, Asset if user.role == "clientmaintainer"

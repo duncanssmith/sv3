@@ -4,7 +4,7 @@ class LocationsController < ApplicationController
   # GET /locations.xml
   def index
     @locations = Location.all
-
+     
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @locations }
@@ -14,7 +14,7 @@ class LocationsController < ApplicationController
   # GET /locations/1
   # GET /locations/1.xml
   def show
-
+    @client = Client.find @location.id
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @location }
