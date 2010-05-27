@@ -11,10 +11,9 @@
     <%= f.label :fullname %><br />
     <%= f.text_field :fullname %>
   </p>
-  <p>
-    <%= f.label :product_id %><br />
-    <%= f.text_field :product_id %>
-  </p>
+
+	<%= render :partial => 'products', :locals => { :f => f } %>
+
   <p>
     <%= f.label :serial %><br />
     <%= f.text_field :serial %>

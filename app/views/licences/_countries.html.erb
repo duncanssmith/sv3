@@ -2,4 +2,4 @@
 <% @countries = Country.find (:all, :select => 'iso_code, country') %>
     <%= f.label :region_or_country %><br />
 		<%= select_tag(:region_or_country, "\n<option> - Select - </option>\n" + options_from_collection_for_select(@countries, :iso_code, :country)) %>
-  </p>
+</p>

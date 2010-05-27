@@ -111,3 +111,10 @@ publisher_16:
   shortname: Websense
   url: http://www.websense.com  
   description: Information Protection
+
+publisher_17:
+  id: 17
+  name: Microsoft
+  shortname: Microsoft
+  url: http://www.Microsoft.com  
+  description: Operating System and Office Software 

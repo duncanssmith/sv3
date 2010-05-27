@@ -9,8 +9,9 @@
 </p>
 
 <p>
-  <b>Publisher:</b>
-  <%=h @product.publisher_id %>
+<b>Publisher:</b>
+<% @publisher = Publisher.find @product.publisher_id %>
+  <%=h @publisher.name %>
 </p>
 
 <p>

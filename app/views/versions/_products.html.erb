@@ -1,0 +1,6 @@
+<p>
+<% @products = Product.find (:all, :select => 'id, name') %>
+    <%= f.label :product %><br />
+		<%= select_tag(:product, "\n<option> - Select - </option>\n" + options_from_collection_for_select(@products, :id, :name)) %>
+</p>
+

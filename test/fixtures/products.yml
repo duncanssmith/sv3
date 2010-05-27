@@ -53,3 +53,57 @@ product_6:
   serial: 237482774983
   sku: 28739872938728
   identifier: 288282882
+
+product_7:
+  id: 7
+  name: Windows
+  fullname: Windows 7
+  publisher_id: 17
+  serial: 4738288299993
+  sku: 37746377289328
+  identifier: 388290882
+
+product_8:
+  id: 8
+  name: Office 
+  fullname: Office
+  publisher_id: 17
+  serial: 283928374929
+  sku: 47893893457934
+  identifier: 387427342
+
+product_9:
+  id: 9
+  name: Word 
+  fullname: Word 
+  publisher_id: 17
+  serial: 555333366633
+  sku: 48398749897434
+  identifier: 377283902
+
+product_10:
+  id: 10
+  name: Excel 
+  fullname: Excel 
+  publisher_id: 17
+  serial: 555333366633
+  sku: 48398749897434
+  identifier: 377283902
+
+product_11:
+  id: 11
+  name: Outlook 
+  fullname: Outlook 
+  publisher_id: 17
+  serial: 555333366633
+  sku: 48398749897434
+  identifier: 377283902
+
+product_12:
+  id: 12
+  name: Powerpoint 
+  fullname: Powerpoint 
+  publisher_id: 17
+  serial: 555333366633
+  sku: 48398749897434
+  identifier: 377283902
