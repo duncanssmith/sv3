@@ -3,7 +3,10 @@ class PublishersController < ApplicationController
   # GET /publishers
   # GET /publishers.xml
   def index
-    @publishers = Publisher.all
+    #@publishers = Publisher.all
+
+    @publishers = Publisher.paginate(:per_page => 6, :page => params[:page] )
+
 
     respond_to do |format|
       format.html # index.html.erb

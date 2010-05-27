@@ -1,35 +1,10 @@
 <h1>Listing products</h1>
 
-<table>
-  <tr>
-    <th>ID</th>
-    <th>Name</th>
-    <th>Fullname</th>
-    <th>Publisher .</th>
-    <th>Version Count .</th>
-    <th>Serial</th>
-    <th>Sku</th>
-    <th>Identifier</th>
-  </tr>
+<% javascript "pagination" %>
 
-<% @products.each do |product| %>
-<% publisher = Publisher.find product.publisher_id %>
-<% version_count = Version.count :conditions => "product_id = #{product.id}" %>
-	  <tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
-    <td><%=h product.id %></td>
-    <td><%=h product.name %></td>
-    <td><%=h product.fullname %></td>
-    <td><%=h publisher.name %></td>
-    <td><%=h version_count %></td>
-    <td><%=h product.serial %></td>
-    <td><%=h product.sku %></td>
-    <td><%=h product.identifier %></td>
-    <td><%= link_to 'Show', product %></td>
-    <td><%= link_to 'Edit', edit_product_path(product) %></td>
-    <td><%= link_to 'Destroy', product, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
+<div id="products">
+<%= render :partial => 'products' %>
+</div>
 
 <br />
 

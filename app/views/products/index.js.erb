@@ -1,0 +1,9 @@
+var $j = jQuery.noConflict();
+$j(document).ready(function() {
+
+//Enter jQuery code here
+
+  $j("#products").html("<%= escape_javascript(render("products")) %>");
+
+});
+

@@ -3,7 +3,8 @@ class VersionsController < ApplicationController
   # GET /versions
   # GET /versions.xml
   def index
-    @versions = Version.all
+    #@versions = Version.all
+    @versions = Version.paginate(:per_page => 6, :page => params[:page] )
 
     respond_to do |format|
       format.html # index.html.erb

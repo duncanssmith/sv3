@@ -2,6 +2,7 @@ class Product < ActiveRecord::Base
 	belongs_to :publisher
 	has_many :versions
 	validates_presence_of :name
+	validates_presence_of :publisher_id
 	after_update :save_versions
 	validates_associated :versions
 

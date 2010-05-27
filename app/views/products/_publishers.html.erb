@@ -1,0 +1,6 @@
+<p>
+<% @publishers = Publisher.find (:all, :select => 'id, name') %>
+    <%= f.label :publisher %><br />
+		<%= select_tag(:publisher, "\n<option> - Select - </option>\n" + options_from_collection_for_select(@publishers, :id, :name, params[:publisher])) %>
+</p>
+

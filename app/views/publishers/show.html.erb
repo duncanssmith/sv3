@@ -18,6 +18,14 @@
   <%=h @publisher.description %>
 </p>
 
+<p>
+<b>Products:</b>
+there are <%=h @products.count %> products by this publisher.<br/>
+  <% for product in @products %>
+					<%=h product.name %><br/>
+	<% end %>
+</p>
+
 
 <%= link_to 'Edit', edit_publisher_path(@publisher) %> |
 <%= link_to 'Back', publishers_path %>

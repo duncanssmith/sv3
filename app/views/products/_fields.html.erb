@@ -8,10 +8,9 @@
     <%= f.label :fullname %><br />
     <%= f.text_field :fullname %>
   </p>
-  <p>
-    <%= f.label :publisher_id %><br />
-    <%= f.text_field :publisher_id %>
-  </p>
+
+	<%= render :partial => 'publishers', :locals => { :f => f } %>
+
   <p>
     <%= f.label :serial %><br />
     <%= f.text_field :serial %>
