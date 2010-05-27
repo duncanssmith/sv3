@@ -7,6 +7,7 @@ class ProductsController < ApplicationController
     @products = Product.paginate(:per_page => 6, :page => params[:page] )
 
     respond_to do |format|
+      format.js # index.js.erb
       format.html # index.html.erb
       format.xml  { render :xml => @products }
     end

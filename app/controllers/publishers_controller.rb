@@ -9,6 +9,7 @@ class PublishersController < ApplicationController
 
 
     respond_to do |format|
+      format.js # index.js.erb
       format.html # index.html.erb
       format.xml  { render :xml => @publishers }
     end
