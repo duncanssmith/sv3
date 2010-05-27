@@ -14,7 +14,7 @@
 
 <% @products.each do |product| %>
 <% publisher = Publisher.find product.publisher_id %>
-<% version_count = Version.count :conditions => "product_id = #{product.id}" %>
+<% version_count = Version.count :conditions => "product_id = '#{product.id}'" %>
 	  <tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
     <td><%=h product.id %></td>
     <td><%=h product.name %></td>
