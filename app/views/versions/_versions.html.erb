@@ -2,10 +2,10 @@
 
 <table>
   <tr>
-    <th>Name</th>
-    <th>Fullname</th>
     <th>Publisher .</th>
     <th>Product .</th>
+    <th>Version name</th>
+    <th>Fullname</th>
     <th>Serial</th>
     <th>Language</th>
   </tr>
@@ -14,10 +14,10 @@
   <% product = Product.find version.product_id %>
   <% publisher = Publisher.find product.publisher_id %>
 	  <tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
-    <td><%=h version.name %></td>
-    <td><%=h version.fullname %></td>
     <td><%=h publisher.name %></td>
     <td><%=h product.name %></td>
+    <td><%=h version.name %></td>
+    <td><%=h version.fullname %></td>
     <td><%=h version.serial %></td>
     <td><%=h version.language %></td>
     <td><%= link_to 'Show', version %></td>

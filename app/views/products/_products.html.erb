@@ -2,11 +2,10 @@
 
 <table>
   <tr>
-    <th>ID</th>
-    <th>Name</th>
-    <th>Fullname</th>
     <th>Publisher .</th>
-    <th>Version Count .</th>
+    <th>Product name</th>
+    <th>Fullname</th>
+    <th>Versions .</th>
     <th>Serial</th>
     <th>Sku</th>
     <th>Identifier</th>
@@ -16,10 +15,9 @@
 <% publisher = Publisher.find product.publisher_id %>
 <% version_count = Version.count :conditions => "product_id = '#{product.id}'" %>
 	  <tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
-    <td><%=h product.id %></td>
+    <td><%=h publisher.name %></td>
     <td><%=h product.name %></td>
     <td><%=h product.fullname %></td>
-    <td><%=h publisher.name %></td>
     <td><%=h version_count %></td>
     <td><%=h product.serial %></td>
     <td><%=h product.sku %></td>
