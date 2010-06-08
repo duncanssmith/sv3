@@ -1,6 +1,4 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :servers
-
 
 
 
@@ -12,6 +10,7 @@ ActionController::Routing::Routes.draw do |map|
 	map.home "home", :controller => "home", :action => "admin"
 	map.dashboard "dashboard", :controller => "home", :action => "dashboard"
 
+
   map.resources :assets
   map.resources :clients
   map.resources :compliances
@@ -20,10 +19,12 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :installations
   map.resources :licences
   map.resources :locations
-  map.resources :products
   map.resources :publishers
+	map.resources :products, :has_many => :versions
+	#map.resources :products, :collection => { :search => :get }
   map.resources :registers
   map.resources :servers
+	map.resources :servers, :collection => { :search => :get }
   map.resources :user_sessions
   map.resources :users
   map.resources :versions

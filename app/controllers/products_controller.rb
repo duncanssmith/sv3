@@ -4,21 +4,39 @@ class ProductsController < ApplicationController
   # GET /products.xml
   def index
     #@products = Product.all
-    @products = Product.paginate(:per_page => 6, :page => params[:page] )
+		sort_by = (params[:order] == 'name' ? 'name asc' : 'publisher_id')
+
+    @products = Product.paginate(:per_page => 6, :page => params[:page], :order => sort_by)
 
     respond_to do |format|
       format.js # index.js.erb
       format.html # index.html.erb
       format.xml  { render :xml => @products }
+      format.json { render :json => @products } 
+      format.yaml { render :yaml => @products } 
     end
   end
+
+	def search
+		@products = Product.search(params[:q])
+
+    respond_to do |format|
+      format.yaml  
+      format.js  
+      format.html  
+      format.xml  { render :xml => @products }
+    end
+  end
+
 
   # GET /products/1
   # GET /products/1.xml
   def show
-		@versions = @product.versions
-
+    @publisher = Publisher.find @product.publisher_id 
+		@versions = Version.find :all, :conditions => "product_id = '#{@product.id}'"
     respond_to do |format|
+      format.yaml 
+      format.json 
       format.html # show.html.erb
       format.xml  { render :xml => @product }
     end

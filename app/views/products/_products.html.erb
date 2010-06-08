@@ -2,23 +2,32 @@
 
 <table>
   <tr>
-    <th>Publisher .</th>
-    <th>Product name</th>
+    <th>Publisher</th>
+    <th>Product</th>
     <th>Fullname</th>
-    <th>Versions .</th>
+    <th>Versions.</th>
     <th>Serial</th>
     <th>Sku</th>
     <th>Identifier</th>
   </tr>
 
-<% @products.each do |product| %>
-<% publisher = Publisher.find product.publisher_id %>
-<% version_count = Version.count :conditions => "product_id = '#{product.id}'" %>
+	<% @products.each do |product| %>
+	  <% if product.publisher_id != 0 %>
+	    <% publisher = Publisher.find product.publisher_id %>
+			<% publisher_name = publisher.name %>
+		<% else %>
+			<% publisher_name = "" %>
+		<% end %>
+		<% if Version.find :all, :conditions => "product_id = '#{product.id}'" %>
+			<% version_count = Version.count :conditions => "product_id = '#{product.id}'" %>
+		<% else %>
+			<% version_count = 0 %> 
+		<% end %>
 	  <tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
-    <td><%=h publisher.name %></td>
+						<td><%=h publisher_name %></td>
     <td><%=h product.name %></td>
-    <td><%=h product.fullname %></td>
-    <td><%=h version_count %></td>
+		<td><%=h product.fullname %></td>
+		<td><%=h version_count %> </td>
     <td><%=h product.serial %></td>
     <td><%=h product.sku %></td>
     <td><%=h product.identifier %></td>

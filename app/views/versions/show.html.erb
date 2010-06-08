@@ -1,12 +1,17 @@
+
+<% if @publisher %>
 <p>
   <b>Publisher:</b>
   <%=h @publisher.name %>
 </p>
+<% end %>
 
+<% if @product %>
 <p>
   <b>Product:</b>
   <%=h @product.name %>
 </p>
+<% end %>
 
 <p>
   <b>Version Name:</b>
@@ -28,5 +33,5 @@
   <%=h @version.language %>
 </p>
 
-<%= link_to 'Edit', edit_version_path(@version) %> |
-<%= link_to 'Back', versions_path %>
+<%= link_to 'Edit', edit_product_version_path(@product, @version) %> |
+<%= link_to 'Back', product_versions_path([@product, @version]) %>

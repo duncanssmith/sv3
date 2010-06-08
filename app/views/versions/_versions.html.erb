@@ -2,27 +2,22 @@
 
 <table>
   <tr>
-    <th>Publisher .</th>
-    <th>Product .</th>
-    <th>Version name</th>
+    <th>Name</th>
     <th>Fullname</th>
     <th>Serial</th>
     <th>Language</th>
+    <th>&nbsp;</th>
+    <th>&nbsp;</th>
   </tr>
 
 <% @versions.each do |version| %>
-  <% product = Product.find version.product_id %>
-  <% publisher = Publisher.find product.publisher_id %>
-	  <tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
-    <td><%=h publisher.name %></td>
-    <td><%=h product.name %></td>
+	<tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
     <td><%=h version.name %></td>
     <td><%=h version.fullname %></td>
     <td><%=h version.serial %></td>
     <td><%=h version.language %></td>
-    <td><%= link_to 'Show', version %></td>
-    <td><%= link_to 'Edit', edit_version_path(version) %></td>
-    <td><%= link_to 'Destroy', version, :confirm => 'Are you sure?', :method => :delete %></td>
+		<td><%= link_to 'Show', product_version_path(@product, version) %></td>
+    <td><%= link_to 'Edit', edit_product_version_path(@product, version) %></td>
   </tr>
 <% end %>
 </table>

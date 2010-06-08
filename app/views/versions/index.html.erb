@@ -1,4 +1,7 @@
-<h1>Listing versions</h1>
+<% @publisher = Publisher.find @product.publisher_id %>
+<h1>Listing product versions</h1>
+<h4><%= @publisher.name %> </h4>
+<h4><%= @product.name %> </h4>
 
 <% javascript "pagination" %>
 
@@ -6,6 +9,5 @@
 <%= render :partial => 'versions' %>
 </div>
 
-<br />
-
-<%= link_to 'New version', new_version_path %>
+<br/>
+<%= link_to 'Back', products_path %>

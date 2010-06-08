@@ -6,7 +6,7 @@ class Product < ActiveRecord::Base
 	after_update :save_versions
 	validates_associated :versions
 
-	def version_attributes=(version_attributes)
+	def product_version_attributes=(version_attributes)
 	  version_attributes.each do |attributes|	
 			if attributes[:id].blank?
 			  versions.build(attributes)

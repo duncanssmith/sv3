@@ -10,7 +10,6 @@
 
 <p>
 <b>Publisher:</b>
-<% @publisher = Publisher.find @product.publisher_id %>
   <%=h @publisher.name %>
 </p>
 
@@ -30,10 +29,16 @@
 </p>
 <p>
 <b>Versions:</b>
-there are <%=h @versions.count %> versions of this product.<br/>
-  <% for version in @versions %>
-					<%=h version.name %><br/>
+there are <%=h @versions.count %> versions of this product:<br/>
+<% count = 0 %>
+<% for version in @versions %>
+				<% count += 1 %>
+					<%=h count %>. 
+					<%=h version.fullname %>
+					<br/>
 	<% end %>
+	<br/>
+	<%= link_to 'Versions', product_versions_path(@product) %>
 </p>
 
 <%= link_to 'Edit', edit_product_path(@product) %> |

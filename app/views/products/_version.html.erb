@@ -1,7 +1,24 @@
 <div class="version">
-  <% fields_for "product[version_attributes][]", version do |version_form| %>
+  <% fields_for "product[product_version_attributes][]", version do |version_form| %>
+		<p> Version: </p>
     <p>
-		Version: <%= version_form.text_field :name, :index => nil %>			
+		<%= version_form.label :name %><br/>
+		<%= version_form.text_field :name, :index => nil %>
+		</p>
+		<p>
+		<%= version_form.label :fullname %><br/>
+		<%= version_form.text_field :fullname, :index => nil %>
+		</p>
+		<p>
+		<%= version_form.label :serial %><br/>
+		<%= version_form.text_field :serial, :index => nil %>
+		</p>
+		<p>
+		<%= version_form.label :language %><br/>
+		<%= version_form.text_field :language, :index => nil %>
+		</p>
+		<p>
+
 		<% if version.new_record? %>
 		  <%= link_to_function "remove", "this.up('.version').remove()"  %>
 		<% else %>
@@ -9,6 +26,7 @@
 		  <%= version_form.hidden_field :id, :index => nil %>
 			<%= version_form.hidden_field :should_destroy, :index => nil, :class => 'should_destroy' %>
 		<% end %>
+
 	  </p>
   <% end %>
 </div>
