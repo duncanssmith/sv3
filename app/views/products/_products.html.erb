@@ -27,7 +27,7 @@
 						<td><%=h publisher_name %></td>
     <td><%=h product.name %></td>
 		<td><%=h product.fullname %></td>
-		<td><%=h version_count %> </td>
+		<td><%= link_to "#{version_count}", product_versions_path(product) %> </td>
     <td><%=h product.serial %></td>
     <td><%=h product.sku %></td>
     <td><%=h product.identifier %></td>
