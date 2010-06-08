@@ -9,10 +9,12 @@
     <th>Accuracy</th>
     <th>Device-ID</th>
     <th>Asset-ID</th>
+    <th>Client .</th>
     <th>Client-ID</th>
   </tr>
 
 <% @registers.each do |register| %>
+  <% client = Client.find register.client_id %>
 	  <tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
     <td><%=h register.name %></td>
     <td><%=h register.date %></td>
@@ -21,6 +23,7 @@
     <td><%=h register.accuracy %></td>
     <td><%=h register.device_id %></td>
     <td><%=h register.asset_id %></td>
+    <td><%=h client.name %></td>
     <td><%=h register.client_id %></td>
     <td><%= link_to 'Show', register %></td>
     <td><%= link_to 'Edit', edit_register_path(register) %></td>
