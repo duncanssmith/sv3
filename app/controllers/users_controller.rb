@@ -2,10 +2,12 @@ class UsersController < ApplicationController
 	load_and_authorize_resource
   def new
     @user = User.new
+    @clients = Client.find (:all, :select => 'id, name')
   end
 
 	def create
     @user = User.new(params[:user])
+    @clients = Client.find (:all, :select => 'id, name')
     if @user.save
       flash[:notice] = "Registration successful."
       redirect_to root_url
@@ -16,6 +18,7 @@ class UsersController < ApplicationController
 
   def edit
     @user = current_user
+    @clients = Client.find (:all, :select => 'id, name')
   end
 
   def update

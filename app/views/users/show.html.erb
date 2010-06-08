@@ -7,10 +7,10 @@
   <b>Email:</b>
   <%=h @user.email %>
 </p>
-
+<% @client = Client.find @user.client_id %>
 <p>
-  <b>Client_id:</b>
-  <%=h @user.client_id %>
+  <b>Client:</b>
+  <%=h @client.name %>
 </p>
 
 <p>
