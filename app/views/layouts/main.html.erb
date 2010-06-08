@@ -23,7 +23,19 @@
 		<div id="user_nav">
 			<% if current_user %>
 				<% if current_user.role == 'admin' %>
-								<%= current_user.name %> (<%= current_user.role %> user) is logged in for client #<%= current_user.client_id %>. &nbsp; 
+					<% if session[:selected_client] %>
+						<% client = Client.find session[:selected_client] %> 
+						<% client_name = client.name %> 
+					<% else %>
+						<% client_name = current_user %> 
+					<% end %>
+
+			  <%= current_user.name %> (<%= current_user.role %> ) is logged in for <%= client_name %> 
+
+				<% if session[:selected_client] %>
+					<%= current_user.name %> is accessing data for <%= client_name %>.
+				<% end %>
+
 			<% else %>
 							<%= current_user.name %> is logged in as <%= current_user.role %>. <%= current_user.client_id %>. &nbsp; 
 			<% end %>
@@ -56,6 +68,9 @@
 						<%= link_to 'Dashboard', :controller => 'home', :action => 'dashboard' %>
 										</li>
 										<li>
+						<%= link_to 'Devices', :controller => 'devices' %>
+										</li>
+										<li>
 						<%= link_to 'Servers', :controller => 'servers' %>
 										</li>
 										<li>
@@ -73,6 +88,11 @@
 						<h3>Users and Role Management</h3>
 
 						<ul>
+								<% if current_user.client_id == 0 %>
+								  <li>
+									<%= link_to "Admin", :controller => 'home', :action => 'admin' %>
+									</li>
+								<% end %>
 										<li>
 										<%= link_to "Users", :controller => 'users' %>
 										</li>
