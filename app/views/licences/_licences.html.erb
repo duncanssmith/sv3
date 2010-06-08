@@ -38,6 +38,7 @@
     <th>Unit</th>
     <th>Cost unit</th>
     <th>Maintenance pa</th>
+    <th>Client ID</th>
   </tr>
 
 <% @licences.each do |licence| %>
@@ -78,6 +79,7 @@
     <td><%=h licence.unit %></td>
     <td><%=h licence.cost_unit %></td>
     <td><%=h licence.maintenance_pa %></td>
+    <td><%=h licence.client_id %></td>
     <td><%= link_to 'Show', licence %></td>
     <td><%= link_to 'Edit', edit_licence_path(licence) %></td>
     <td><%= link_to 'Destroy', licence, :confirm => 'Are you sure?', :method => :delete %></td>

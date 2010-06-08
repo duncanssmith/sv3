@@ -38,7 +38,7 @@ licence_1:
   unit: GBP
   cost_unit: 2134
   maintenance_pa: 1234 
-
+  client_id: 1
 
 licence_2:
   id: 2
@@ -78,6 +78,7 @@ licence_2:
   unit: GBP
   cost_unit: 320000
   maintenance_pa: 20000 
+  client_id: 1
 
 
 licence_3:
@@ -118,6 +119,7 @@ licence_3:
   unit: USD
   cost_unit: 178723
   maintenance_pa: 12342 
+  client_id: 1
 
 
 licence_4:
@@ -158,6 +160,7 @@ licence_4:
   unit: GBP
   cost_unit: 320000
   maintenance_pa: 20000 
+  client_id: 1
 
 
 licence_5:
@@ -198,6 +201,7 @@ licence_5:
   unit: GBP
   cost_unit: 2134
   maintenance_pa: 1234 
+  client_id: 2
 
 
 licence_6:
@@ -238,4 +242,5 @@ licence_6:
   unit: GBP
   cost_unit: 320000
   maintenance_pa: 20000 
+  client_id: 2
 
