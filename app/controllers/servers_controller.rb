@@ -24,6 +24,18 @@ class ServersController < ApplicationController
     end
   end
 
+	def search
+		@servers = Server.search(params[:q])
+
+    respond_to do |format|
+      format.js # index.js.erb
+      format.html # index.html.erb
+      format.xml  { render :xml => @servers }
+    end
+  end
+
+
+
   # GET /servers/1
   # GET /servers/1.xml
   def show
