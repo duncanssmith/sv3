@@ -27,6 +27,8 @@ class HomeController < ApplicationController
   end
 
   def dashboard
+		@total_licence_cost = Licence.sum :total_cost_of_line_item
+
   end
 
 	private
