@@ -148,4 +148,7 @@ div.view_public{
 				background-color: #ccf; }
 div.view_authorised{
 				background-color: #6bd; }
+div.version{
+				background-color: #6bd; 
+				border: solid 1px silver; }
 
