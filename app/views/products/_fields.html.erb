@@ -1,5 +1,7 @@
   <%= f.error_messages %>
 
+	<%= render :partial => 'publishers', :locals => { :f => f } %>
+
   <p>
     <%= f.label :name %><br />
     <%= f.text_field :name %>
@@ -8,9 +10,6 @@
     <%= f.label :fullname %><br />
     <%= f.text_field :fullname %>
   </p>
-
-	<%= render :partial => 'publishers', :locals => { :f => f } %>
-
   <p>
     <%= f.label :serial %><br />
     <%= f.text_field :serial %>
