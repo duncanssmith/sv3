@@ -4,12 +4,6 @@
 	<p>
 		Name: <%= f.text_field :name %>
   <p>
-	<div id="products">
-		<%= render :partial => 'product', => :collection => @publisher.products %>
-	</div>
-	<p>
-	  <%= add_product_link "Add a product" %>
-	</p>
 	<p>
 	  <%= f.submit "Submit" %>
 	</p>

@@ -4,9 +4,10 @@ class PublishersController < ApplicationController
   # GET /publishers.xml
   def index
     #@publishers = Publisher.all
+	  @publishers_count = Publisher.count				
+		sort_by = (params[:order] == 'description' ? 'description asc' : 'name')
 
-    @publishers = Publisher.paginate(:per_page => 6, :page => params[:page] )
-
+    @publishers = Publisher.paginate(:per_page => 6, :page => params[:page], :order => sort_by )
 
     respond_to do |format|
       format.js # index.js.erb
@@ -15,9 +16,24 @@ class PublishersController < ApplicationController
     end
   end
 
+  def index_selected
+
+    @publishers = Publisher.paginate(:per_page => 6, :page => params[:page], :conditions => "id = '#{params[:id]}'" )
+
+    respond_to do |format|
+      format.js # index.js.erb
+      format.html # index.html.erb
+      format.xml  { render :xml => @publishers }
+    end
+  end
+
+
+
   # GET /publishers/1
   # GET /publishers/1.xml
   def show
+
+		@products = Product.find :all, :conditions => "publisher_id = '#{@publisher.id}'"
 
     respond_to do |format|
       format.html # show.html.erb
@@ -46,9 +62,9 @@ class PublishersController < ApplicationController
 
     respond_to do |format|
       if @publisher.save
-        flash[:notice] = 'Publisher (and products) successfully created.'
-        #format.html { redirect_to(@publisher) }
-        format.html { redirect_to publisher_path }
+        flash[:notice] = 'Publisher successfully created.'
+        format.html { redirect_to(@publisher) }
+        #format.html { redirect_to publisher_path }
         format.xml  { render :xml => @publisher, :status => :created, :location => @publisher }
       else
         format.html { render :action => "new" }
@@ -60,15 +76,6 @@ class PublishersController < ApplicationController
   # PUT /publishers/1
   # PUT /publishers/1.xml
   def update
-		params[:publisher][:existing_product_attributes] ||= {}
-
-		if @publisher.update_attributes(params[:publisher])
-			flash[:notice] = "Successfully updated publisher and products."
-			redirect_to publisher_path(@publisher)
-		else
-			render :action => 'edit'
-		end
-
 
     respond_to do |format|
       if @publisher.update_attributes(params[:publisher])

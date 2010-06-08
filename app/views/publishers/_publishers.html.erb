@@ -5,17 +5,19 @@
     <th>Name</th>
     <th>Shortname</th>
 		<th>URL</th>
-		<th>Product Count .</th>
+		<th>Products.</th>
     <th>Description</th>
   </tr>
 
 	<% @publishers.each do |publisher| %>
-					<% product_count = Product.count :conditions => "publisher_id = '#{publisher.id}'" %> 
+	  <% product_count = Product.count :conditions => "publisher_id = '#{publisher.id}'" %> 
 	  <tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
+
+
     <td><%=h publisher.name %></td>
     <td><%=h publisher.shortname %></td>
     <td><%=h publisher.url %></td>
-    <td><%=h product_count %></td>
+		<td><%=h product_count %> </td>
     <td><%=h publisher.description %></td>
     <td><%= link_to 'Show', publisher %></td>
     <td><%= link_to 'Edit', edit_publisher_path(publisher) %></td>
