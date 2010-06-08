@@ -10,6 +10,7 @@
 
 <table>
   <tr>
+    <th>Client</th>
     <th>Asset</th>
     <th>Make</th>
     <th>Model</th>
@@ -28,11 +29,12 @@
     <th>Processor speed</th>
     <th>RAM</th>
     <th>Bios date</th>
-    <th>Client</th>
   </tr>
 
 <% @devices.each do |device| %>
-	<tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
+		<tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
+		<% client = Client.find device.client_id %>
+    <td><%=h client.name %></td>
     <td><%=h device.asset_id %></td>
     <td><%=h device.make %></td>
     <td><%=h device.model %></td>
@@ -51,7 +53,6 @@
     <td><%=h device.processor_speed %></td>
     <td><%=h device.ram %></td>
     <td><%=h device.bios_date %></td>
-    <td><%=h device.client_id %></td>
     <td><%= link_to 'Show', device %></td>
     <td><%= link_to 'Edit', edit_device_path(device) %></td>
     <td><%= link_to 'Destroy', device, :confirm => 'Are you sure?', :method => :delete %></td>

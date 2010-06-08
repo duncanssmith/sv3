@@ -6,8 +6,9 @@
 </p>
 
 <p>
+<% client = Client.find @device.client_id %>
   <b>Client:</b>
-  <%=h @device.client_id %>
+  <%=h client.name %>
 </p>
 
 <p>

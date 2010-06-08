@@ -3,10 +3,8 @@
 <% form_for(@device) do |f| %>
   <%= f.error_messages %>
 
-  <p>
-    <%= f.label :client_id %><br />
-    <%= f.text_field :client_id %>
-  </p>
+	<%= render :partial => 'shared/clients', :object => @device, :locals => { :f => f } %>
+
   <p>
     <%= f.label :asset_id %><br />
     <%= f.text_field :asset_id %>

@@ -1,0 +1,5 @@
+<p>
+    <%= f.label :client_id %><br />
+		<%= select("device", "client_id", Client.all.collect {|c| [ c.name, c.id ]}, { :include_blank => true} ) %>
+</p>
+
