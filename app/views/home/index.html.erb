@@ -2,4 +2,8 @@
 
 <h1>Home</h1>
 <p>Welcome to Asset CIO</p>
-
+<% if current_user %>
+<p>You are logged in as 
+<%= current_user.name %>
+</p>
+<% end %>

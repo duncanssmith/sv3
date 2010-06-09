@@ -1,7 +1,7 @@
-<% if @client_id  == 0 %>
+<% if @client_id  == 0 && session[:selected_client] %>
 
   <h1>Home</h1>
-  <p>Welcome to Asset CIO</p>
+	<p>Welcome to Asset CIO</p>
 
   <div id="select_client">
 		<p>Please select Client:<br/>
@@ -24,7 +24,6 @@
 	<p>Welcome to Asset CIO. <%= @client.name %>
 	</p> 
 
-
 <% elsif ((@client_id != 0) && (@selected_client == 0)) %>
 
   <h1>Home</h1>
@@ -32,7 +31,7 @@
 	</p> 
 
 
-	<% else %>
+<% else %>
 
 <% end %>
 

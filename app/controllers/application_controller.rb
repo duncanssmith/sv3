@@ -20,7 +20,6 @@ class ApplicationController < ActionController::Base
 
 
 
-
   protected
 
 	  #def authorize

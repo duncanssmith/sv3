@@ -1,18 +1,21 @@
 class HomeController < ApplicationController
+
   def index
   end
 
   def admin	  
-		@client_id = current_user.client_id
-		@role = current_user.role
-	  @clients = Client.find (:all, :select => 'id, name')
+
+		if current_user
+		  @client_id = current_user.client_id
+		  @role = current_user.role
+	    @clients = Client.find (:all, :select => 'id, name')
+    end
 
 		if( ( session[:selected_client] ) && ( session[:selected_client] != 0) )
 		  @client_index = session[:selected_client]
 		else
 			@client_index = @client_id
 		end
-    
 
 		if params['client']
 		  @selected_client = params['client']
@@ -28,7 +31,6 @@ class HomeController < ApplicationController
 
   def dashboard
 		@total_licence_cost = Licence.sum :total_cost_of_line_item
-
   end
 
 	private
