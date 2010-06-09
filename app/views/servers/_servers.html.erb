@@ -1,13 +1,8 @@
-		<h2> 
-    <% @clients.each do |client| %>
-			<%=h client.name %>
-		<% end %>
-		</h2>
 
 <%= will_paginate @servers %>
 
 <table>
-  <tr class="headline">
+		<tr> 
 		<th>Name </th>
     <th>Alternative name</th>
     <th>Licence type</th>

@@ -1,4 +1,8 @@
-<h1>Listing licences</h1>
+<h1>Listing licences for 
+    <% @clients.each do |client| %>
+			<%=h client.name %>
+		<% end %>
+		</h1>
 
 <% javascript "pagination" %>
 

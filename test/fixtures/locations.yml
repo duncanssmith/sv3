@@ -2,7 +2,7 @@
 
 location_1:
   id: 1
-  name: Antares Incorporated
+  name: Operations Headquarters 
   reference: 1234
   address1: 1342 Ocean Boulevard
   address2: Santa Ana
@@ -14,19 +14,19 @@ location_1:
 
 location_2:
   id: 2
-  name: Vega Ltd
+  name: Vega Virtual Hosting Centre
   reference: 89223
-  address1: Vega Point
-  address2: 1 London Bridge Street
+  address1: The Point
+  address2: 1 London Bridge
   address3: London
   address4: 
   country: UK
   postcode: SE1 1AZ
-  client_id: 2
+  client_id: 1
 
 location_3:
   id: 3
-  name: Sirius GmbH
+  name: Sirius Training Center
   reference: 66473
   address1: Sirius Plaza 
   address2: 345 Steinerstrasse 
@@ -34,23 +34,23 @@ location_3:
   address4: Deutschland
   country: Germany
   postcode: 891002 
-  client_id: 3
+  client_id: 4
 
 location_4:
   id: 4
-  name: Aquarius Holdings plc
+  name: Aquarius Logistics Hub
   reference: 477382
-  address1: Glass House Estates 
+  address1: The Glass House 
   address2: 10 Great Pulteney Street 
   address3: London
   address4: 
   country: UK
   postcode: W1N 3RT 
-  client_id: 4
+  client_id: 3
 
 location_5:
   id: 5
-  name: Orion Incorporated plc
+  name: Orion Centre
   reference: 283991
   address1: Axe Yard 
   address2: 5 Tooley Street 
@@ -58,4 +58,16 @@ location_5:
   address4: 
   country: UK
   postcode: EC1 5XY 
-  client_id: 3
+  client_id: 2
+
+location_6:
+  id: 6
+  name: Saturn Parkway
+  reference: 283991
+  address1: Hamley Way 
+  address2: Stallybridge 
+  address3: Milton Keynes
+  address4: 
+  country: UK
+  postcode: MK23 7AU 
+  client_id: 4

@@ -1,15 +1,12 @@
+
 <%= will_paginate @licences %>
 
 <table>
   <tr>
     <th>Sku</th>
-    <th>Publisher</th>
-    <th>Product</th>
-    <th>Edition</th>
-    <th>Version</th>
+    <th>Version ID</th>
     <th>Identifying number</th>
-    <th>Product</th>
-    <th>Region or country</th>
+    <th>Country</th>
     <th>Cal</th>
     <th>Licence type</th>
     <th>Term</th>
@@ -44,13 +41,9 @@
 <% @licences.each do |licence| %>
  	<tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
     <td><%=h licence.sku %></td>
-    <td><%=h licence.publisher %></td>
-    <td><%=h licence.product %></td>
-    <td><%=h licence.edition %></td>
-    <td><%=h licence.version %></td>
+    <td><%=h licence.version_id %></td>
     <td><%=h licence.identifying_number %></td>
-    <td><%=h licence.product_id %></td>
-    <td><%=h licence.region_or_country %></td>
+    <td><%=h licence.country %></td>
     <td><%=h licence.cal %></td>
     <td><%=h licence.licence_type %></td>
     <td><%=h licence.term %></td>

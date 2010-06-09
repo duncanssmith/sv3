@@ -2,16 +2,20 @@
 
 client_1:
   id: 1
-  name: BP
+  name: Global Oil Inc
 
 client_2:
   id: 2
-  name: Isle of Wight Council
+  name: Walford Council
 
 client_3:
   id: 3
-  name: RSPCA
+  name: Redbrick University
 
 client_4:
   id: 4
-  name: Cumbria
+  name: Satellite Ltd
+
+client_5:
+  id: 5
+  name: General Hydroelectric Ltd

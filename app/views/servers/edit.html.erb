@@ -32,7 +32,14 @@
     <%= f.text_field :scope %>
   </p>
 	<p>
-	<% for register in Register.find :all, :conditions => "client_id = '#{@client_id}'" %> 		
+
+	<%	if( ( session[:selected_client] ) && ( session[:selected_client] != 0) ) %>
+		<% @client_index = session[:selected_client] %>
+  <% else %>
+    <% @client_index = @client_id %>
+  <% end %>
+
+	<% for register in Register.find :all, :conditions => "client_id = '#{@client_index}'" %> 		
 	<div>
 	  <%= check_box_tag "server[register_ids][]", register.id, @server.registers.include?(register) %>
 	  <%= register.name %>

@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100608171112) do
+ActiveRecord::Schema.define(:version => 20100609111740) do
 
   create_table "assets", :force => true do |t|
     t.string   "name"
@@ -117,13 +117,7 @@ ActiveRecord::Schema.define(:version => 20100608171112) do
 
   create_table "licences", :force => true do |t|
     t.string   "sku"
-    t.string   "publisher"
-    t.string   "product"
-    t.string   "edition"
-    t.string   "version"
     t.string   "identifying_number"
-    t.integer  "product_id"
-    t.string   "region_or_country"
     t.string   "cal"
     t.string   "licence_type"
     t.string   "term"
@@ -155,6 +149,8 @@ ActiveRecord::Schema.define(:version => 20100608171112) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "client_id"
+    t.integer  "version_id"
+    t.string   "country"
   end
 
   create_table "locations", :force => true do |t|

@@ -1,9 +1,13 @@
-<h1>Listing locations</h1>
+<h1>Listing locations for
+    <% @clients.each do |client| %>
+			<%=h client.name %>
+		<% end %>
+		</h1>
 
 <table>
   <tr>
+    <th>Client.</th>
     <th>Name</th>
-    <th>Client *</th>
     <th>Reference</th>
     <th>Address1</th>
     <th>Address2</th>
@@ -16,8 +20,8 @@
 	<% @locations.each do |location| %>
 		<% client = Client.find location.client_id %>
 	  <tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
-    <td><%=h location.name %></td>
     <td><%=h client.name %></td>
+    <td><%=h location.name %></td>
     <td><%=h location.reference %></td>
     <td><%=h location.address1 %></td>
     <td><%=h location.address2 %></td>
