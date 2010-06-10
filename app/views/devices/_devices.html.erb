@@ -3,7 +3,6 @@
 
 <table>
   <tr>
-    <th>Client</th>
     <th>Asset</th>
     <th>Make</th>
     <th>Model</th>
@@ -26,8 +25,6 @@
 
 <% @devices.each do |device| %>
 		<tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
-		<% client = Client.find device.client_id %>
-    <td><%=h client.name %></td>
     <td><%=h device.asset_id %></td>
     <td><%=h device.make %></td>
     <td><%=h device.model %></td>

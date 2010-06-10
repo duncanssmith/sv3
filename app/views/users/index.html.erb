@@ -3,40 +3,34 @@
 		<% end %>
 <h1>Listing users</h1>
 
-<%= will_paginate @users %>
+<% if @users.blank? %>
+				<p>There are no users listed</p>
+<% else %>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Email</th>
-    <th>Role</th>
-    <th>Client</th>
-  </tr>
+  <%= will_paginate @users %>
 
-	<% for user in @users %>
-		<% if user.client_id > 0 %>
-	    <% client = Client.find user.client_id %>
-			<% admin = false %>
-		<% else %>
-			<% admin = true %>
-    <% end %>
-	<tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
-    <td><%=h user.name %></td>
-    <td><%=h user.email %></td>
-    <td><%=h user.role %></td>
-		<% if admin %>
-						<td> - </td>
-		<% else %>
-						<td><%=h client.name %></td>
-		<% end %>
-    <td><%= link_to 'Show', user %></td>
-    <td><%= link_to 'Edit', edit_user_path(user) %></td>
-    <td><%= link_to 'Destroy', user, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Role</th>
+    </tr>
 
-<%= will_paginate @users %>
+  	<% for user in @users %>
+  	<tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
+      <td><%=h user.name %></td>
+      <td><%=h user.email %></td>
+      <td><%=h user.role %></td>
+      <td><%= link_to 'Show', user %></td>
+      <td><%= link_to 'Edit', edit_user_path(user) %></td>
+      <td><%= link_to 'Destroy', user, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+  </table>
+
+  <%= will_paginate @users %>
+
+ <% end %>
 
 <br />
 

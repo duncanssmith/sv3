@@ -3,13 +3,16 @@
 <% end %>
 <h1>Listing servers</h1> 
 
+<% if @servers.blank? %>
+				<p>There are no servers listed</p>
+<% else %>
 
 <% javascript "pagination" %>
 
 <div id="servers">
 <%= render :partial => 'servers' %>
 </div>
-
+<% end %>
 <br />
 
 <%= link_to 'New server', new_server_path %>
