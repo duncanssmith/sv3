@@ -1,3 +1,6 @@
+    <% @clients.each do |client| %>
+			<%=h client.name %>
+		<% end %>
 <h1>Listing users</h1>
 
 <%= will_paginate @users %>
@@ -7,7 +10,6 @@
     <th>Name</th>
     <th>Email</th>
     <th>Role</th>
-    <th>Client ID</th>
     <th>Client</th>
   </tr>
 
@@ -22,7 +24,6 @@
     <td><%=h user.name %></td>
     <td><%=h user.email %></td>
     <td><%=h user.role %></td>
-		<td><%=h user.client_id %></td>
 		<% if admin %>
 						<td> - </td>
 		<% else %>
