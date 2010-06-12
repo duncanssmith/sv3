@@ -1,13 +1,12 @@
-
 <%= will_paginate @devices %>
 
 <table>
-  <tr>
+  <tr class="table_header_row">
     <th>Asset</th>
     <th>Make</th>
     <th>Model</th>
     <th>Serial</th>
-    <th>Location ID</th>
+    <th>Location </th>
     <th>Network user name</th>
     <th>Node</th>
     <th>OS</th>
@@ -24,12 +23,15 @@
   </tr>
 
 <% @devices.each do |device| %>
+
+<% location = Location.find device.location_id %>
+
 		<tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
     <td><%=h device.asset_id %></td>
     <td><%=h device.make %></td>
     <td><%=h device.model %></td>
     <td><%=h device.serial %></td>
-    <td><%=h device.location_id %></td>
+    <td><%=h location.name %></td>
     <td><%=h device.network_user_name %></td>
     <td><%=h device.node %></td>
     <td><%=h device.os %></td>

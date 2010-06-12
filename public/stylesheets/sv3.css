@@ -3,8 +3,8 @@ body {
   color: darkblue;
   background: white;
   font-family: verdana,tahoma,arial,helvetica,sans-serif;
-  margin: 10px;
-  padding:10px; }
+  margin: 20px;
+  padding: 10px; }
 
 h1 {
   font-size: 12pt; }
@@ -26,25 +26,18 @@ h6 {
 
 p {
   font-size: 8pt;
-  color: DarkBlue; }
-
-p.flash_notice{
-  color:green; }
-
-p.flash_warn{
-  color:orange; }
-
-p.flash_error{
-  color:red; }
-
-tr.headline{
-	background: lightblue; }
+  color: green; }
 
 tr.list-line-odd {
-  background: #bbcbee; }
+  background: #ddffbb; }
 
 tr.list-line-even {
-  background: #ddedef; }
+  background: #ddffdd; }
+
+tr.table_header_row {
+  background-image: url('../../../images/green_button.png'); }
+  tr.table_header_row th {
+    background-image: inherit; }
 
 #main {
   border: solid 1px blue;
@@ -70,85 +63,31 @@ tr.list-line-even {
           float: right; }
 
 div.content {
-  background: #eff; }
+  background: #eeffd3; }
 
 #user_nav {
   float: right;
-  font-size: 8pt; 
-  padding: 2px;
-  margin: 20px; }
+  font-size: 8pt; }
 
 .navbar {
-  padding: 0px;
-  padding-bottom: 0px;
-  margin-bottom: 0px;
-  background-color: #ccf; }
+  padding: 2px;
+  padding-bottom: 2px;
+  margin-bottom: 2px;
+  background-color: LightBlue; }
 
 table.nav {
   padding: 0px;
-  padding-left: 0px;
+  padding-left: 2px;
   padding-right: 0px;
-  padding-bottom: 0px;
-  margin: 0px;
-  border: solid 0px gray; }
+  padding-bottom: 2px;
+  margin: 2px;
+  margin: 2px;
+  border: solid 0px grey; }
 
 td.nav {
   padding: 1px;
-  padding-left: 2px;
-  padding-right: 4px;
-  margin: 0px;
-  border: solid 1px gray;
-  border-left: solid 1px gray; }
-
-table#dashboard{
-  padding:2px;
-	background-color:white;
-  border: solid 1px lightblue;}	
-
-table.dashboard1{
-  padding:2px;
-  padding:2px;
-  margin:10px;
-	background-color: white;
-  border: solid 1px silver;}	
-
-td.dashboard1{
-  padding:20px;
-  margin:10px;
-	background-color: silver;
-  border: solid 1px silver;}	
- 
-table.dashboard2{
-  padding:2px;
-  margin:1px;
-	background-color: white;
-  border: solid 1px silver;}	
-
-td.dashboard2{
-  padding:10px;
-  margin:2px;
-	background-color: silver;
-  border: solid 1px silver;}	
- 
-
-table.dashboard3{
-  padding:2px;
-  margin:1px;
-	background-color: white;
-  border: solid 1px silver;}	
-
-td.dashboard3{
-  padding:10px;
-  margin:2px;
-	background-color: silver;
-  border: solid 1px silver;}	
- 
-
-div.view_public{
-				background-color: #ccf; }
-div.view_authorised{
-				background-color: #6bd; }
-div.version{
-				background-color: #6bd; 
-				border: solid 1px silver; }
-
+  padding-left: 6px;
+  padding-right: 7px;
+  margin: 2px;
+  border: solid 1px grey;
+  border-left: solid 1px grey; }

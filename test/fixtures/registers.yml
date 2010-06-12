@@ -7,8 +7,6 @@ register_1:
   frequency: Annual
   regtype: Main
   accuracy: 99
-  device_id: 1
-  asset_id: 1
   client_id: 1
 
 register_2:
@@ -18,8 +16,6 @@ register_2:
   frequency: Monthly
   regtype: Centennial
   accuracy: 89
-  device_id: 1
-  asset_id: 1
   client_id: 1
 
 register_3:
@@ -29,8 +25,6 @@ register_3:
   frequency: Once
   regtype: Excel Spreadsheet 
   accuracy: 72
-  device_id: 1
-  asset_id: 1
   client_id: 1
 
 register_4:
@@ -40,8 +34,6 @@ register_4:
   frequency: Once
   regtype: Manual
   accuracy: 55
-  device_id: 1
-  asset_id: 1
   client_id: 1
 
 register_5:
@@ -51,8 +43,6 @@ register_5:
   frequency: Annual
   regtype: Main
   accuracy: 99
-  device_id: 1
-  asset_id: 1
   client_id: 2
 
 register_6:
@@ -62,8 +52,6 @@ register_6:
   frequency: Monthly
   regtype: Centennial
   accuracy: 89
-  device_id: 1
-  asset_id: 1
   client_id: 2
 
 register_7:
@@ -73,8 +61,6 @@ register_7:
   frequency: Once
   regtype: Excel Spreadsheet 
   accuracy: 72
-  device_id: 1
-  asset_id: 1
   client_id: 2
 
 register_8:
@@ -84,6 +70,4 @@ register_8:
   frequency: Once
   regtype: Manual
   accuracy: 55
-  device_id: 1
-  asset_id: 1
   client_id: 2
