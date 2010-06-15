@@ -1,8 +1,8 @@
 
 
 <%= will_paginate @licences %>
-<table>
-  <tr class="table_header_row">
+<table class="index_data">
+	<tr>
 		<th>Sku</th>
     <th>Publisher </th>
     <th>Product </th>
@@ -37,6 +37,9 @@
     <th>Unit</th>
     <th>Cost unit</th>
     <th>Maintenance pa</th>
+    <th>&nbsp;</th>
+    <th>&nbsp;</th>
+    <th>&nbsp;</th>
   </tr>
 
 <% @licences.each do |licence| %>

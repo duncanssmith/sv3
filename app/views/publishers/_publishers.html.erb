@@ -1,13 +1,15 @@
 <%= will_paginate @publishers %>
 
-<table>
-    <tr class="table_header_row">
-
+<table class="index_data">
+  <tr>
     <th>Name</th>
     <th>Shortname</th>
 		<th>URL</th>
 		<th>Products.</th>
     <th>Description</th>
+    <th>&nbsp;</th>
+    <th>&nbsp;</th>
+    <th>&nbsp;</th>
   </tr>
 
 	<% @publishers.each do |publisher| %>

@@ -68,9 +68,17 @@
   <p>
     <%= f.label :bios_date %><br />
     <%= f.date_select :bios_date %>
-	</p>
+		</p>
+
+	<%	if( ( session[:selected_client] ) && ( session[:selected_client] != 0) ) %>
+		<% @client_index = session[:selected_client] %>
+  <% else %>
+    <% @client_index = @client_id %>
+  <% end %>
+
+
 	<p>
-	<% for register in Register.find :all %> 		
+	<% for register in Register.find :all, :conditions => "client_id = '#{@client_index}'" %> 		
 	<div>
 	  <%= check_box_tag "device[register_ids][]", register.id, @device.registers.include?(register) %>
 	  <%= register.name %>

@@ -8,8 +8,8 @@
 				<p>There are no locations listed</p>
 <% else %>
 
-<table>
-  <tr class="table_header_row">
+<table class="index_data">
+	<tr>
     <th>Name</th>
     <th>Reference</th>
     <th>Address1</th>
@@ -18,6 +18,9 @@
     <th>Address4</th>
     <th>Country</th>
     <th>Postcode</th>
+    <th>&nbsp;</th>
+    <th>&nbsp;</th>
+    <th>&nbsp;</th>
   </tr>
 
 	<% @locations.each do |location| %>

@@ -7,29 +7,31 @@
 				<p>There are no registers listed</p>
 <% else %>
 
-				<table>
-  <tr class="table_header_row">
+<table class="index_data">
+  <tr>
+		<th>Name</th>
+		<th>Date</th>
+		<th>Frequency</th>
+		<th>Type</th>
+		<th>Accuracy</th>
+    <th>&nbsp;</th>
+    <th>&nbsp;</th>
+    <th>&nbsp;</th>
+	</tr>
 
-						<th>Name</th>
-						<th>Date</th>
-						<th>Frequency</th>
-						<th>Type</th>
-						<th>Accuracy</th>
-					</tr>
-
-				<% @registers.each do |register| %>
-						<tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
-						<td><%=h register.name %></td>
-						<td><%=h register.date %></td>
-						<td><%=h register.frequency %></td>
-						<td><%=h register.type %></td>
-						<td><%=h register.accuracy %></td>
-						<td><%= link_to 'Show', register %></td>
-						<td><%= link_to 'Edit', edit_register_path(register) %></td>
-						<td><%= link_to 'Destroy', register, :confirm => 'Are you sure?', :method => :delete %></td>
-					</tr>
-				<% end %>
-				</table>
+  <% @registers.each do |register| %>
+	  <tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
+		  <td><%=h register.name %></td>
+			<td><%=h register.date %></td>
+			<td><%=h register.frequency %></td>
+			<td><%=h register.type %></td>
+			<td><%=h register.accuracy %></td>
+			<td><%= link_to 'Show', register %></td>
+			<td><%= link_to 'Edit', edit_register_path(register) %></td>
+			<td><%= link_to 'Destroy', register, :confirm => 'Are you sure?', :method => :delete %></td>
+		</tr>
+	<% end %>
+	</table>
 
 <% end %>
 

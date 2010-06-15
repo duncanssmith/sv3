@@ -1,8 +1,7 @@
 <%= will_paginate @products %>
 
-<table>
-    <tr class="table_header_row">
-
+<table class="index_data">
+  <tr>
     <th>Publisher</th>
     <th>Product</th>
     <th>Fullname</th>
@@ -10,6 +9,9 @@
     <th>Serial</th>
     <th>Sku</th>
     <th>Identifier</th>
+    <th>&nbsp;</th>
+    <th>&nbsp;</th>
+    <th>&nbsp;</th>
   </tr>
 
 	<% @products.each do |product| %>

@@ -9,11 +9,14 @@
 
   <%= will_paginate @users %>
 
-  <table>
-   <tr class="table_header_row">
+	<table class="index_data">
+		<tr>
       <th>Name</th>
       <th>Email</th>
       <th>Role</th>
+      <th>&nbsp;</th>
+      <th>&nbsp;</th>
+      <th>&nbsp;</th>
     </tr>
 
   	<% for user in @users %>

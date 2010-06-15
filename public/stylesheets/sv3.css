@@ -1,9 +1,9 @@
 body {
-  font-size: 8pt;
+  font-size: 9pt;
   color: darkblue;
   background: white;
   font-family: verdana,tahoma,arial,helvetica,sans-serif;
-  margin: 20px;
+  margin: 10px;
   padding: 10px; }
 
 h1 {
@@ -26,18 +26,25 @@ h6 {
 
 p {
   font-size: 8pt;
-  color: green; }
+  color: darkblue; }
 
-tr.list-line-odd {
-  background: #ddffbb; }
-
-tr.list-line-even {
-  background: #ddffdd; }
-
-tr.table_header_row {
-  background-image: url('../../../images/green_button.png'); }
-  tr.table_header_row th {
-    background-image: inherit; }
+table.index_data {
+  background-image: none;
+  margin: 0px;
+  border: 0px;
+  padding: 0px;
+  font-size: 8pt; }
+  table.index_data tr {
+    background-image: none; }
+    table.index_data tr th {
+      background: green;
+      background-image: url('../../../images/green_button.png'); }
+    table.index_data tr td {
+      background-image: none; }
+  table.index_data tr.list-line-odd {
+    background: #e6e6e9; }
+  table.index_data tr.list-line-even {
+    background: #eeeef2; }
 
 #main {
   border: solid 1px blue;
@@ -62,18 +69,18 @@ tr.table_header_row {
           width: 200px;
           float: right; }
 
-div.content {
-  background: #eeffd3; }
+#content div {
+  border: solid 1px blue;
+  background: #fff; }
 
 #user_nav {
-  float: right;
-  font-size: 8pt; }
+  float: right; }
 
 .navbar {
   padding: 2px;
   padding-bottom: 2px;
-  margin-bottom: 2px;
-  background-color: LightBlue; }
+  margin-bottom: 20px;
+  background-color: green; }
 
 table.nav {
   padding: 0px;
@@ -91,3 +98,44 @@ td.nav {
   margin: 2px;
   border: solid 1px grey;
   border-left: solid 1px grey; }
+
+table.dashboard {
+  padding: 2px;
+  background-color: white;
+  border: solid 1px lightblue; }
+
+table.dashboard1 {
+  padding: 2px;
+  margin: 10px;
+  background-color: white;
+  border: solid 1px silver; }
+
+td.dashboard1 {
+  padding: 20px;
+  margin: 10px;
+  background-color: silver;
+  border: solid 1px silver; }
+
+table.dashboard2 {
+  padding: 2px;
+  margin: 1px;
+  background-color: white;
+  border: solid 1px silver; }
+
+td.dashboard2 {
+  padding: 10px;
+  margin: 2px;
+  background-color: silver;
+  border: solid 1px silver; }
+
+table.dashboard3 {
+  padding: 2px;
+  margin: 1px;
+  background-color: white;
+  border: solid 1px silver; }
+
+td.dashboard3 {
+  padding: 10px;
+  margin: 2px;
+  background-color: silver;
+  border: solid 1px silver; }

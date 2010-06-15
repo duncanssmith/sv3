@@ -1,7 +1,7 @@
 <%= will_paginate @devices %>
 
-<table>
-  <tr class="table_header_row">
+<table class="index_data">
+  <tr>
     <th>Asset</th>
     <th>Make</th>
     <th>Model</th>
@@ -20,6 +20,9 @@
     <th>Processor speed</th>
     <th>RAM</th>
     <th>Bios date</th>
+    <th>&nbsp;</th>
+    <th>&nbsp;</th>
+    <th>&nbsp;</th>
   </tr>
 
 <% @devices.each do |device| %>

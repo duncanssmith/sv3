@@ -1,14 +1,19 @@
+
     <% @clients.each do |client| %>
 			<%=h client.name %>
 		<% end %>
 <h1>Listing licences</h1>
+
+<% if @licences.blank? %>
+				<p>There are no licences listed</p>
+<% else %>
 
 <% javascript "pagination" %>
 
 <div id="licences">
 <%= render :partial => 'licences' %>
 </div>
-
+<% end %>
 <br />
 
 <%= link_to 'New licence', new_licence_path %>

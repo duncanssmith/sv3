@@ -54,6 +54,13 @@ class ServersController < ApplicationController
   def new
     @server = Server.new
 
+		if( ( session[:selected_client] ) && ( session[:selected_client] != 0) )
+		  @client_index = session[:selected_client]
+    else
+      @client_index = @client_id
+    end
+
+
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @server }

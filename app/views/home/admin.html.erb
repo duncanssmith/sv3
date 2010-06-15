@@ -6,12 +6,13 @@
   <div id="select_client">
 		<p>Please select Client:<br/>
 
-		<% form_tag home_path, :method => 'post' do  %>
+		<% form_tag dashboard_path, :method => 'post' do  %>
 
 			<% @clients.each do |client| %>
-			  <br/>
-				<%= radio_button_tag 'client', client.id, @client == client %>
-				<label for="client"><%= client.name %></label>
+			  <p>
+				  <%= radio_button_tag 'client', client.id, @client == client %>
+				 <label for="client"><%= client.name %></label>
+				</p>
 			<% end %>
 
 				<br/>
@@ -21,14 +22,12 @@
 	</div>
 <% elsif ((@client_id == 0) && (@selected_client != 0)) %>
   <h1>Home</h1>
-	<p>Welcome to Asset CIO. <%= @client.name %>
-	</p> 
+	<p>Welcome to Asset CIO. <%= @client.name %> </p> 
 
 <% elsif ((@client_id != 0) && (@selected_client == 0)) %>
 
   <h1>Home</h1>
-	<p>Welcome to Asset CIO.
-	</p> 
+	<p>Welcome to Asset CIO.  </p> 
 
 
 <% else %>

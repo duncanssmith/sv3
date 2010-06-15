@@ -1,8 +1,8 @@
 
 <%= will_paginate @servers %>
 
-<table>
-  <tr class="table_header_row">
+<table class="index_data">
+	<tr>
 		<th>Name </th>
     <th>Alternative name</th>
     <th>Licence type</th>
@@ -12,7 +12,11 @@
 		<% end %>
     <th>Scope</th>
     <th>Comment</th>
-  </tr>
+    <th>&nbsp;</th>
+    <th>&nbsp;</th>
+    <th>&nbsp;</th>
+
+  </tr >
 	<% @servers.each do |server| %>
 
 	<tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
