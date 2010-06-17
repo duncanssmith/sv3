@@ -1,0 +1,31 @@
+.underlinemenu{
+font-size: 7pt;
+font-weight: bold;
+background: #22aa22;
+width: 100%;
+}
+
+.underlinemenu ul{
+padding: 10px 0 14px 0; /*6px should equal top padding of "ul li a" below, 7px should equal bottom padding + bottom border of "ul li a" below*/
+margin: 0;
+text-align: left; //set value to "left", "center", or "right"*/
+}
+
+.underlinemenu ul li{
+display: inline;
+}
+
+.underlinemenu ul li a{
+color: #e3e3e3;
+padding: 10px 3px 4px 3px; /*top padding is 6px, bottom padding is 4px*/
+background: #22aa22;
+background-image: '/public/images/green_button.png';
+margin-right: 20px; /*spacing between each menu link*/
+text-decoration: none;
+border-bottom: 2px solid #22aa22; /*bottom border is 3px*/
+}
+
+.underlinemenu ul li a:hover, .underlinemenu ul li a.selected{
+border-bottom-color: #eeeeee;
+}
+

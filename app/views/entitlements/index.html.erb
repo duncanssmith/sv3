@@ -1,4 +1,11 @@
-<h1>Listing entitlements</h1>
+<h3>
+				Asset CIO for
+    <% @clients.each do |client| %>
+			<%=h client.name %>
+		<% end %>
+</h3>
+
+<h1>Entitlements</h1>
 
 <table class="index_data">
 	<tr>

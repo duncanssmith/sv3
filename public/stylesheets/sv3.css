@@ -1,50 +1,67 @@
 body {
-  font-size: 9pt;
-  color: darkblue;
+  font-size: 8pt;
+  color: #333333;
   background: white;
   font-family: verdana,tahoma,arial,helvetica,sans-serif;
   margin: 10px;
   padding: 10px; }
 
 h1 {
-  font-size: 12pt; }
+  font-size: 12pt;
+  color: #22aa22; }
 
 h2 {
-  font-size: 11pt; }
+  font-size: 11pt;
+  color: #22aa22; }
+
+#client h3 {
+  font-size: 9pt;
+  color: #22aa22; }
 
 h3 {
-  font-size: 9pt; }
+  font-size: 9pt;
+  color: #666666; }
 
 h4 {
-  font-size: 8pt; }
+  font-size: 8pt;
+  color: #22aa22; }
 
 h5 {
-  font-size: 7pt; }
+  font-size: 7pt;
+  color: #22aa22; }
 
 h6 {
-  font-size: 6pt; }
+  font-size: 6pt;
+  color: #22aa22; }
 
 p {
   font-size: 8pt;
-  color: darkblue; }
+  color: gray; }
 
 table.index_data {
   background-image: none;
   margin: 0px;
-  border: 0px;
+  border: 0px solid;
   padding: 0px;
-  font-size: 8pt; }
+  font-size: 7pt; }
   table.index_data tr {
     background-image: none; }
     table.index_data tr th {
-      background: green;
-      background-image: url('../../../images/green_button.png'); }
+      background: #22aa22;
+      color: #e3e3e3;
+      padding-left: 4px;
+      padding-right: 4px;
+      height: 32px; }
     table.index_data tr td {
       background-image: none; }
   table.index_data tr.list-line-odd {
     background: #e6e6e9; }
   table.index_data tr.list-line-even {
     background: #eeeef2; }
+
+#appcontent div {
+  font-size: 8pt;
+  border: solid 0px red; }
 
 #main {
   border: solid 1px blue;
@@ -89,53 +106,32 @@ table.nav {
   padding-bottom: 2px;
   margin: 2px;
   margin: 2px;
-  border: solid 0px grey; }
+  border: solid 0px silver; }
 
 td.nav {
   padding: 1px;
   padding-left: 6px;
   padding-right: 7px;
   margin: 2px;
-  border: solid 1px grey;
-  border-left: solid 1px grey; }
+  border: solid 1px silver;
+  border-left: solid 1px silver; }
 
-table.dashboard {
+#dashboard table {
   padding: 2px;
-  background-color: white;
-  border: solid 1px lightblue; }
-
-table.dashboard1 {
-  padding: 2px;
-  margin: 10px;
-  background-color: white;
+  background-color: #e0e0e0;
+  color: blue;
   border: solid 1px silver; }
+  #dashboard table td {
+    color: green;
+    vertical-align: top;
+    padding: 8px;
+    background-color: #d0d0d0;
+    border: solid 1px white; }
+    #dashboard table td h3 {
+      color: #22aa22; }
+    #dashboard table td h4 {
+      color: #666666; }
 
-td.dashboard1 {
-  padding: 20px;
-  margin: 10px;
-  background-color: silver;
-  border: solid 1px silver; }
-
-table.dashboard2 {
-  padding: 2px;
-  margin: 1px;
-  background-color: white;
-  border: solid 1px silver; }
-
-td.dashboard2 {
-  padding: 10px;
-  margin: 2px;
-  background-color: silver;
-  border: solid 1px silver; }
-
-table.dashboard3 {
-  padding: 2px;
-  margin: 1px;
-  background-color: white;
-  border: solid 1px silver; }
-
-td.dashboard3 {
-  padding: 10px;
-  margin: 2px;
-  background-color: silver;
-  border: solid 1px silver; }
+#dashboard_inner table td {
+  background-color: #f3f3f3;
+  color: #666690; }

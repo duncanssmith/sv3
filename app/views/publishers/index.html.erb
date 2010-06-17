@@ -1,4 +1,11 @@
-<h1>Listing publishers</h1>
+<h3>
+				Asset CIO for
+    <% @clients.each do |client| %>
+			<%=h client.name %>
+		<% end %>
+</h3>
+
+<h1>Publishers</h1>
 <p> There are	<%=h @publishers_count %> publishers in total </p>
 
 <% javascript "pagination" %>

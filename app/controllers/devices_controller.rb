@@ -5,7 +5,6 @@ class DevicesController < ApplicationController
   def index
     @client_id = current_user.client_id
 
-
 		if( ( session[:selected_client] ) && ( session[:selected_client] != 0) )
 		  @client_index = session[:selected_client]
 		else
@@ -15,7 +14,6 @@ class DevicesController < ApplicationController
     @clients = Client.find :all, :conditions => "id = '#{@client_index}'"
 		@registers = Register.find :all, :conditions => "client_id = '#{@client_index}'", :order => "id"
     @devices = Device.paginate(:per_page => 6, :page => params[:page], :conditions => "client_id = '#{@client_index}'")
-
 
     respond_to do |format|
       format.js # index.html.erb

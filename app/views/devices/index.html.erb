@@ -1,8 +1,10 @@
-<% @clients.each do |client| %>
-  <%=h client.name %>
-<% end %>
-
-<h1>Listing devices</h1>
+<h3>
+				Asset CIO for
+    <% @clients.each do |client| %>
+			<%=h client.name %>
+		<% end %>
+</h3>
+<h1>Devices</h1>
 
 <% if @devices.blank? %>
 				<p>There are no devices listed</p>
