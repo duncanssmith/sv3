@@ -53,7 +53,8 @@ table.index_data {
       padding-right: 4px;
       height: 32px; }
     table.index_data tr td {
-      background-image: none; }
+      background-image: none;
+      height: 26px; }
   table.index_data tr.list-line-odd {
     background: #e6e6e9; }
   table.index_data tr.list-line-even {
@@ -91,7 +92,8 @@ table.index_data {
   background: #fff; }
 
 #user_nav {
-  float: right; }
+  float: right;
+  color: #666; }
 
 .navbar {
   padding: 2px;

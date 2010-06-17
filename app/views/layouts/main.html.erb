@@ -33,12 +33,12 @@
 						<% client_name = "" %>
 					<% end %>
 
-			    <%= current_user.name %> is logged in 
+					<b> <%= current_user.name %></b> is logged in &nbsp; 
 
 			<% else %>
-					<%= current_user.name %> is logged in as <%= current_user.role %>
+							<b><%= current_user.name %></b> is logged in as <%= current_user.role %> &nbsp;
 	    <% end %>
-							<%= link_to "Edit Profile", edit_user_path(:current) %>
+							<% link_to "Edit Profile", edit_user_path(:current) %>
 							<%= link_to "Logout", logout_path %>
 		<% else %>
 		<% end %>
@@ -61,7 +61,7 @@
 				<div class="underlinemenu">
 					<ul>
 						<li> &nbsp; </li>
-						<li> <%= link_to 'Main', :controller => 'home' %> </li>
+						<li> <%= link_to 'Home', :controller => 'home' %> </li>
 						<li> <%= link_to 'Dashboard', :controller => 'home', :action => 'dashboard' %> </li>
 						<li> <%= link_to 'Asset Registers', :controller => 'registers' %> </li>
 						<li> <%= link_to 'Devices', :controller => 'devices' %> </li>
@@ -78,7 +78,7 @@
 					<div class="underlinemenu">
 						<ul>
 							<li> &nbsp; </li>
-							<li> <%= link_to 'Main', :controller => 'home' %> </li>
+							<li> <%= link_to 'Home', :controller => 'home' %> </li>
 							<li> <%= link_to 'Dashboard', :controller => 'home', :action => 'dashboard' %> </li>
 							<li> <%= link_to 'Asset Registers', :controller => 'registers' %> </li>
 							<li> <%= link_to 'Devices', :controller => 'devices' %> </li>

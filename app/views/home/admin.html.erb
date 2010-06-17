@@ -21,10 +21,16 @@
     <% end %>
 	</div>
 <% elsif ((@client_id == 0) && (@selected_client != 0)) %>
+
   <h1>Home</h1>
 	<p>Welcome to Asset CIO. <%= @client.name %> </p> 
 
 <% elsif ((@client_id != 0) && (@selected_client == 0)) %>
+<h3>Asset CIO for 
+    <% @clients.each do |client| %>
+			<%=h client.name %>
+		<% end %>
+</h3>
 
   <h1>Home</h1>
 	<p>Welcome to Asset CIO.  </p> 

@@ -15,7 +15,7 @@ class ServersController < ApplicationController
       @clients = Client.find :all, :conditions => "id = '#{@client_index}'"
 
 		  @registers = Register.find :all, :conditions => "client_id = '#{@client_index}'", :order => "id"
-      @servers = Server.paginate(:per_page => 12, :page => params[:page], :conditions => "client_id = '#{@client_index}'" )
+      @servers = Server.paginate(:per_page => 6, :page => params[:page], :conditions => "client_id = '#{@client_index}'" )
 
     respond_to do |format|
       format.js # index.js.erb

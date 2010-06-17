@@ -5,16 +5,15 @@
 	<tr>
 		<th>Name </th>
     <th>Alternative name</th>
-    <th>Licence type</th>
 		<th>Alt reference</th>
 		<% @registers.each do |r| %>
 						<th> <%=h r.name %></th>
 		<% end %>
     <th>Scope</th>
     <th>Comment</th>
-    <th>&nbsp;</th>
-    <th>&nbsp;</th>
-    <th>&nbsp;</th>
+		<th><%= image_tag("show.png", :size => '20x20', :title => "Show this record", :alt => "Show")  %></th>
+		<th><%= image_tag("edit.png",  :size => '20x20',:title => "Edit this record", :alt => "Edit")  %></th>
+		<th><%= image_tag("destroy.png", :size => '20x20', :title => "Destroy this record", :alt => "Destroy")  %></th>
 
   </tr >
 	<% @servers.each do |server| %>
@@ -22,7 +21,6 @@
 	<tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
     <td><%=h server.name %></td>
     <td><%=h server.alternative_name %></td>
-    <td><%=h server.licence_type %></td>
 		<td><%=h server.alt_reference %></td>
 
     <% countr = @registers.length %>

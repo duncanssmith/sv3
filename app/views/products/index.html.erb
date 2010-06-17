@@ -1,4 +1,8 @@
-<h3> Asset CIO </h3>
+<h3>Asset CIO for
+    <% @clients.each do |client| %>
+			<%=h client.name %>
+		<% end %>
+</h3>
 
 <h1>Products</h1>
 

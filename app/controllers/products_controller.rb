@@ -6,6 +6,20 @@ class ProductsController < ApplicationController
     #@products = Product.all
 		sort_by = (params[:order] == 'name' ? 'name asc' : 'publisher_id')
 
+		if current_user
+		  @client_id = current_user.client_id
+		  @role = current_user.role
+	   # @clients = Client.find (:all, :select => 'id, name')
+    end
+
+		if( ( session[:selected_client] ) && ( session[:selected_client] != 0) )
+		  @client_index = session[:selected_client]
+		else
+			@client_index = @client_id
+		end
+
+	  @clients = Client.find :all, :conditions => "id = '#{@client_index}'"
+
     @products = Product.paginate(:per_page => 6, :page => params[:page], :order => sort_by)
 
     respond_to do |format|

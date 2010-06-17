@@ -18,9 +18,9 @@
 		<th>Frequency</th>
 		<th>Type</th>
 		<th>Accuracy</th>
-    <th>&nbsp;</th>
-    <th>&nbsp;</th>
-    <th>&nbsp;</th>
+		<th><%= image_tag("show.png", :size => '20x20', :title => "Show this record", :alt => "Show")  %></th>
+		<th><%= image_tag("edit.png",  :size => '20x20',:title => "Edit this record", :alt => "Edit")  %></th>
+		<th><%= image_tag("destroy.png", :size => '20x20', :title => "Destroy this record", :alt => "Destroy")  %></th>
 	</tr>
 
   <% @registers.each do |register| %>

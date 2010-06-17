@@ -1,4 +1,4 @@
-<h3>
+<h3>Asset CIO for 
     <% @clients.each do |client| %>
 			<%=h client.name %>
 		<% end %>
@@ -17,11 +17,16 @@
 			<h3> Financial Summary </h3>
     <div id="dashboard_inner">
 			<table id="dashboard_inner">
-				<tr><td>Total licence cost        </td><td><%=	number_to_currency(@total_licence_cost, :unit => "£") %></td></tr>
+							<tr><td>Total licence cost        </td><td>
+															<%=	number_to_currency(@total_licence_cost, :unit => "£") %>
+							</td></tr>
 				<tr><td>Total licences            </td><td><%=h @total_licences  %></td></tr>
 				<tr><td>Average licence cost      </td><td> <%=  number_to_currency(@average_licence_cost, :unit => "£") %> </td></tr>
-				<tr><td>Total over-licenced cost  </td><td>£1,203,321.00  </td></tr>
-				<tr><td>Total under-licenced cost </td><td>£157,015.00  </td></tr>
+				<tr><td>Total over-licenced cost  </td><td> <%=	number_to_currency(@total_over_licenced_cost, :unit => "£") %> </td></tr>
+				<tr><td>Total under-licenced cost </td><td> <%=	number_to_currency(@total_under_licenced_cost, :unit => "£") %> </td></tr>
+												<!--£1,203,321.00  
+												£157,015.00  -->
+				
 			</table>
     </div>
   	</td>
