@@ -1,71 +1,62 @@
 <h3>Asset CIO for 
-    <% @clients.each do |client| %>
-			<%=h client.name %>
-		<% end %>
+<% @clients.each do |client| %>
+	<%=h client.name %>
+	<% end %>
 </h3>
 
 <h1>Dashboard</h1>
 
 <div id="dashboard">
-<table id="dashboard" border="1" cellpadding="6">
-  <tr>
-	  <td>
-		  <h3 class="client"> Compliance Position by Product </h3>
-			<%= image_tag("cpgraph.png", { :width => "300", :title => "Position Graph"})  %>
-		</td>
-		<td>
-			<h3> Financial Summary </h3>
-    <div id="dashboard_inner">
-			<table id="dashboard_inner">
-							<tr><td>Total licence cost        </td><td>
-															<%=	number_to_currency(@total_licence_cost, :unit => "£") %>
-							</td></tr>
-				<tr><td>Total licences            </td><td><%=h @total_licences  %></td></tr>
-				<tr><td>Average licence cost      </td><td> <%=  number_to_currency(@average_licence_cost, :unit => "£") %> </td></tr>
-				<tr><td>Total over-licenced cost  </td><td> <%=	number_to_currency(@total_over_licenced_cost, :unit => "£") %> </td></tr>
-				<tr><td>Total under-licenced cost </td><td> <%=	number_to_currency(@total_under_licenced_cost, :unit => "£") %> </td></tr>
-												<!--£1,203,321.00  
-												£157,015.00  -->
-				
-			</table>
-    </div>
-  	</td>
-	</tr>
-	<tr>
-		<td valign="top">
+	<table id="dashboard" border="1" cellpadding="6">
+		<tr>
+			<td>
+				<h3 class="client"> Compliance Position by Product </h3>
+				<%= image_tag("my_compliance_graph.png", { :width => "300", :title => "Compliance Position Graph"})  %>
+				<%= image_tag("my_savings_graph.png", { :width => "300", :title => "Savings Graph"})  %>
+			</td>
+			<td>
+				<h3> Financial Summary </h3>
+				<div id="dashboard_inner">
+					<table id="dashboard_inner">
+						<tr>
+							<td>Total licence cost        </td><td>
+							<%=	number_to_currency(@total_licence_cost, :unit => "£") %>
+							</td>
+						</tr>
+						<tr><td>Total licences            </td><td><%=h @total_licences  %></td></tr>
+						<tr><td>Average licence cost      </td><td> <%= number_to_currency(@average_licence_cost, :unit => "£") %> </td></tr>
+						<tr><td>Total over-licenced cost  </td><td> <%=	number_to_currency(@total_over_licenced_cost, :unit => "£") %> </td></tr>
+						<tr><td>Total under-licenced cost </td><td> <%=	number_to_currency(@total_under_licenced_cost, :unit => "£") %> </td></tr>
+					</table>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td valign="top">
 			<h3> Software Usage	</h3>
-		  <h4>Most under-utilised product</h4>
-    <div id="dashboard_inner">
-			<table class="dashboard_inner">
-							<tr><td class="dashboard_inner" >&nbsp;</td><td class="dashboard_inner" >Product</td><td class="dashboard_inner" >Unused</td><td class="dashboard_inner" >Estimated Cost</td></tr>
-							<tr><td class="dashboard_inner" >by volume</td><td class="dashboard_inner" >Microsoft Project</td><td class="dashboard_inner" >354</td><td class="dashboard_inner" >£75,566</td></tr>
-							<tr><td class="dashboard_inner" >by percentage</td><td class="dashboard_inner" >Microsoft Visio</td><td class="dashboard_inner" >67%</td> <td class="dashboard_inner" >£34,352</td></tr>
-			</table>
-    </div>
-
-
+			<h4>Most under-utilised product</h4>
+			<%= image_tag("my_software_usage_graph_01.png", { :width => "300", :title => "Most Under Utilised Product (Qty)"})  %>
+			<%= image_tag("my_software_usage_graph_02.png", { :width => "300", :title => "Most Under Utilised Product (Cost, GBP)"})  %>
+			<div id="dashboard_inner">
+				<table class="dashboard_inner">
+					<tr><th class="dashboard_inner" >&nbsp;</th><th class="dashboard_inner" >Product</th><th class="dashboard_inner" >Unused</th><th class="dashboard_inner" >Estimated Cost</th></tr>
+					<tr><td class="dashboard_inner" >by volume</td><td class="dashboard_inner" >Microsoft Project</td><td class="dashboard_inner" >354</td><td class="dashboard_inner" >£75,566</td></tr>
+					<tr><td class="dashboard_inner" >by percentage</td><td class="dashboard_inner" >Microsoft Visio</td><td class="dashboard_inner" >67%</td> <td class="dashboard_inner" >£34,352</td></tr>
+				</table>
+			</div>
 		</td>
 		<td valign="top" >
 			<h3> Risk Status	</h3>
-		  <h4>All products by RAG status</h4>
-    <div id="dashboard_inner">
-			<table class="dashboard_inner" >
-							<tr><td class="dashboard_inner" >Number of items
-															<%= image_tag("spacer_40.gif", { :size => "100" })  %>
-							</td><td class="dashboard_inner" >Status
-							<%= image_tag("spacer_40.gif", {  :size => "60x1" }) %>
-							</td></tr>
-							<tr><td class="dashboard_inner" ><%=h @rag_red_items %></td><td class="dashboard_inner" >
-							<%= image_tag("red_traffic_light_1.png", { :size => "15x15", :title => "red traffic light"})  %>
-							</td></tr>
-							<tr><td class="dashboard_inner" ><%=h @rag_amber_items %></td><td class="dashboard_inner" >
-															<%= image_tag("amber_traffic_light_1.png", { :size => "15x15", :title => "amber traffic light"})  %>
-							</td></tr>
-							<tr><td class="dashboard_inner" ><%=h @rag_green_items %></td><td class="dashboard_inner" >
-															<%= image_tag("green_traffic_light_1.png", { :size => "15x15", :title => "green traffic light"})  %>
-							</td></tr>
-			</table> &nbsp;
-    </div>
+			<h4>All products by RAG status</h4>
+			<%= image_tag("my_rag_status_graph.png", { :width => "300", :title => "Risk Status"})  %>
+			<br />
+			<br />
+			<div id="dashboard_inner">
+			<table class="dashboard_inner">
+					<tr><th class="dashboard_inner">&nbsp;</th><th class="dashboard_inner">Green</th><th class="dashboard_inner">Amber</th><th class="dashboard_inner">Red</th></tr>
+					<tr><td class="dashboard_inner">Products:</td><td class="dashboard_inner"><%= @rag_green_items %></td><td class="dashboard_inner"><%= @rag_amber_items %></td><td class="dashboard_inner"><%= @rag_red_items %></td></tr>
+			</table>
+			</div>
 		</td>
 	</tr>
 </table>
