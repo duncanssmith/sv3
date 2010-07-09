@@ -1,0 +1,193 @@
+!appcontentfontsize = 8pt
+!bodyfontsize = 8pt
+!bodytextcolor = #333 
+!bodybgcolor = #fff
+!bodymargin = 10px
+!bodypadding = 10px
+
+!tablefontsize = 7pt
+!tabletextcolor =  #333
+!tableheadercolor = #22aa22 
+!tableheadertextcolor = #e3e3e3 
+!tableheaderpadding = 4px 
+!tableheadermargin = 4px 
+!tablebgcolor = #fff
+!tableborder = 0px 
+!tablemargin = 0px
+!tablepadding = 0px
+
+!paragraphfontsize = 8pt
+!paragraphtextcolor = gray 
+
+!listlineoddcolor = #e6e6e9
+!listlineevencolor = #eeeef2
+
+!h1size = 12pt
+!h2size = 11pt
+!h3size = 9pt
+!h3color = #22aa22 
+!h3clientcolor = #666666 
+!h4size = 8pt
+!h5size = 7pt
+!h6size = 6pt
+!h1color = #2a2 
+
+body
+  font-size = !bodyfontsize
+  color = !bodytextcolor
+  background = !bodybgcolor
+  font-family: verdana,tahoma,arial,helvetica,sans-serif
+  margin = !bodymargin
+  padding = !bodypadding
+
+h1
+  font-size = !h1size
+  color = !h1color
+
+h2
+  font-size = !h2size
+  color = !h1color
+
+#client
+  h3
+    font-size = !h3size
+    color = !h3color
+
+h3
+  font-size = !h3size
+  color = !h3clientcolor
+
+h4
+  font-size = !h4size
+  color = !h1color
+
+h5
+  font-size = !h5size
+  color = !h1color
+
+h6
+  font-size = !h6size
+  color = !h1color
+
+p
+  font-size = !paragraphfontsize
+  color = !paragraphtextcolor
+
+table.index_data
+  background-image: none 
+  margin = !tablemargin
+  border: 3px solid !tableheadercolor
+  padding = !tablepadding
+  font-size = !tablefontsize
+  tr
+    background-image: none 
+    th
+      //background-image: url('../../../images/green_button.png')
+      background = !tableheadercolor
+      color = !tableheadertextcolor
+      padding-left = !tableheaderpadding
+      padding-right = !tableheaderpadding
+      height: 32px
+    td
+      background-image: none 
+      height: 26px
+  tr.list-line-odd
+    background = !listlineoddcolor
+  tr.list-line-even
+    background = !listlineevencolor
+
+#appcontent
+  
+  div
+    font-size = !appcontentfontsize
+    border: solid 0px red
+
+#main
+  border: solid 1px blue
+  width: 940px
+  padding: 10px
+  margin: 4px
+  background: #fff
+
+  div
+    float: left
+    border: solid 1px red
+
+    div
+      border: solid 1px yellow
+      margin: 4px
+      width: 185px
+      float: left
+
+      div
+        border: solid 0px green
+        width: 200px
+        float: right
+
+        div
+          border: solid 1px purple
+          width: 200px
+          float: right
+
+#content
+  div
+    border: solid 1px blue
+    background: #fff
+
+
+#user_nav 
+  float: right
+  color: #666
+
+
+.navbar
+  padding: 2px
+  padding-bottom: 2px
+  margin-bottom: 20px
+  background-color: green
+
+
+table.nav
+  padding: 0px
+  padding-left: 2px
+  padding-right: 0px
+  padding-bottom: 2px
+  margin: 2px
+  margin: 2px
+  border: solid 0px silver
+
+
+td.nav
+  padding: 1px
+  padding-left: 6px
+  padding-right: 7px
+  margin: 2px
+  border: solid 1px silver
+  border-left: solid 1px silver
+
+
+#dashboard
+  table
+    padding: 2px
+    background-color: #e0e0e0
+    color: blue
+    border: solid 1px silver
+    td
+      color: green
+      vertical-align: top
+      padding: 8px
+      background-color: #d0d0d0
+      border: solid 1px white
+      h3
+        color: #22aa22
+      h4
+        color: #666666
+
+#dashboard_inner
+  table
+    th
+      background-color: #f3f3f3
+      color: #666690 
+    td
+      background-color: #f3f3f3
+      color: #666690 

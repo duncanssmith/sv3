@@ -41,7 +41,7 @@ p {
 table.index_data {
   background-image: none;
   margin: 0px;
-  border: 0px solid;
+  border: 3px solid !tableheadercolor;
   padding: 0px;
   font-size: 7pt; }
   table.index_data tr {
@@ -134,6 +134,9 @@ td.nav {
     #dashboard table td h4 {
       color: #666666; }
 
+#dashboard_inner table th {
+  background-color: #f3f3f3;
+  color: #666690; }
 #dashboard_inner table td {
   background-color: #f3f3f3;
   color: #666690; }
