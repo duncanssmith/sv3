@@ -18,7 +18,7 @@ class UserSessionsController < ApplicationController
     @user_session.destroy
 		session[:selected_client] = nil
     flash[:notice] = "Successfully logged out."
-    redirect_to root_url
+    redirect_to home_url
   end
 
 end

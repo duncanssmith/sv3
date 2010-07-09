@@ -66,38 +66,49 @@ class HomeController < ApplicationController
 		@rag_amber_items = Server.count :conditions => "scope = 'AMBER' and client_id = '#{@client_index}'"
 		@rag_green_items = Server.count :conditions => "scope = 'GREEN' and client_id = '#{@client_index}'"
 
+		@software_usage_quantity = Hash['Microsoft Project', 354.0, 'Microsoft Visio', 325.0, 'All others', 138.0]
+		@software_usage_cost = Hash['Microsoft Project', 75566.0, 'Microsoft Visio', 34352.0, 'All others', 13500.0]
+
+		@ad1 = Register.count
+		@ad2 = Server.count
+		@ad3 = Licence.count
+		@ad4 = Device.count
+
+		@audit_data = Hash['Walkaround', @ad1, 'Network Discovery', @ad2, 'Fixed Assets', @ad3, 'Purchase Records', @ad4]
+
+    @sum = @software_usage_quantity["Microsoft Project"] + @software_usage_quantity["Microsoft Visio"] + @software_usage_quantity["All others"] 
+
+		@visio_percentage = ((@software_usage_quantity["Microsoft Visio"] / @sum) * 100)
+		@project_percentage = ((@software_usage_quantity["Microsoft Project"]/@sum) * 100)
+		@allother_percentage = ((@software_usage_quantity["All others"]/@sum) * 100)
+
+
 		if @average_licence_cost == nil
 			@average_licence_cost = 0
 		end
 
+# Graph Themes
 		g_theme_00 = {
-			:colors => ['#2b0', '#eb0', '#d30', '#3bb000', '#1e90ff', '#efba00', '#0aaafd'],
-			:marker_color => '#aaa',
-			:background_colors => ['#eaeaea', '#fff']
-		}
-
-		g_theme_02 = {
-			:colors => ['#cd0', '#29e', '#d3b', '#1ae'],
+			:colors => ['#2b0', '#eb0', '#d30', '#4b0', '#29f', '#eb0', '#1ae'],
 			:marker_color => '#aaa',
 			:background_colors => ['#eaeaea', '#fff']
 		}
 
 		g_theme_01 = {
-			:colors => ['#579', '#692', '#ca0', '#36a'],
+			:colors => ['#1ae', '#eb0','#4b0', '#cd0', '#29e', '#d3b', '#1ae'],
 			:marker_color => '#aaa',
 			:background_colors => ['#eaeaea', '#fff']
 		}
-
+# Graphs
+		# Graph 0
 		g0 = Gruff::Line.new
 		g0.theme = g_theme_00
 		g0.title = "Compliance Position by Product"
 		g0.data("% Compliance", [65, 83, 84, 100])
-		g0.data("% Non-comp", [35, 53, 94, 52])
-		g0.data("% Upsy Daisy", [25, 13, 54, 87])
-		g0.data("% Iggle Piggle", [85, 73, 54, 56])
 		g0.labels = {0 => 'Month 1', 1 => 'Month 2', 2 => 'Month 3', 3 => 'Month 4'}
 		g0.write('public/images/my_compliance_graph.png')
 
+		# Graph 1
 		g1 = Gruff::Bar.new
 		g1.theme = g_theme_00
 		g1.title = "Cost Savings (x GBP 10,000)"
@@ -107,6 +118,7 @@ class HomeController < ApplicationController
 		g1.labels = {0 => 'Month 1', 1 => 'Month 2', 2 => 'Month 3', 3 => 'Month 4'}
 		g1.write('public/images/my_savings_graph.png')
 
+		# Graph 2
 		g2 = Gruff::Pie.new
 		g2.theme = g_theme_00
 		g2.title = "RAG Risk Status"
@@ -116,21 +128,33 @@ class HomeController < ApplicationController
 		g2.labels = {0 => 'Month 1', 1 => 'Month 2', 2 => 'Month 3', 3 => 'Month 4'}
 		g2.write('public/images/my_rag_status_graph.png')
 
+		# Graph 3
 		g3 = Gruff::Bar.new
-		g3.theme = g_theme_01
-		g3.title = "Most under-utilised product (quantity)"
-		g3.data("All Others", [203])
-		g3.data("Microsoft Visio", [322])
-		g3.data("Microsoft Project", [354])
+		g3.theme = g_theme_00
+		g3.title = "Most under-utilised product (qty)"
+		g3.data("All others", [@software_usage_quantity["All others"]])
+		g3.data("Microsoft Visio", [@software_usage_quantity["Microsoft Visio"]])
+		g3.data("Microsoft Project", [@software_usage_quantity["Microsoft Project"]])
 		g3.write('public/images/my_software_usage_graph_01.png')
 
+		# Graph 4
 		g4 = Gruff::Bar.new
-		g4.theme = g_theme_01
-		g4.title = "Most under-utilised product (estimated cost £)"
-		g4.data("All Others", [13500])
-		g4.data("Microsoft Visio", [34352])
-		g4.data("Microsoft Project", [75566])
+		g4.theme = g_theme_00
+		g4.title = "Most under-utilised product (est. cost £)"
+		g4.data("All others", [@software_usage_cost["All others"]])
+		g4.data("Microsoft Visio", [@software_usage_cost["Microsoft Visio"]])
+		g4.data("Microsoft Project", [@software_usage_cost["Microsoft Project"]])
 		g4.write('public/images/my_software_usage_graph_02.png')
+
+		# Graph 5
+		g5 = Gruff::Bar.new
+		g5.theme = g_theme_00
+		g5.title = "Audit data"
+		g5.data("Walkaround", [@audit_data["Walkaround"]])
+		g5.data("Network Discovery", [@audit_data["Network Discovery"]])
+		g5.data("Fixed Assets", [@audit_data["Fixed Assets"]])
+		g5.data("Purchase Records", [@audit_data["Purchase Records"]])
+		g5.write('public/images/my_audit_data_graph_01.png')
 
 	end
 

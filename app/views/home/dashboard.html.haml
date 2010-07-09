@@ -1,0 +1,124 @@
+%h3 
+  Asset CIO for 
+  - @clients.each do |client| 
+    = client.name
+
+%h1
+  Dashboard
+#dashboard
+  %table#dashboard{ :border => "1", :cellpadding => "6" }
+    %tr
+      %td
+        %h3.client
+          Compliance Position by Product
+        .graph#graph_1
+          = image_tag("my_compliance_graph.png", { :width => "300", :title => "Compliance Position Graph"})
+          = image_tag("my_savings_graph.png", { :width => "300", :title => "Savings Graph"})
+      %td
+        %h3
+          Financial Summary
+        #dashboard_inner
+          %table.dashboard_inner
+            %tr
+              %td
+                Total licence cost
+              %td
+                = number_to_currency(@total_licence_cost, :unit => "£")
+            %tr
+              %td
+                Total licences
+              %td
+                = @total_licences
+            %tr
+              %td
+                Average licence cost
+              %td
+                = number_to_currency(@average_licence_cost, :unit => "£")
+            %tr
+              %td
+                Total over-licenced cost
+              %td
+                = number_to_currency(@total_over_licenced_cost, :unit => "£")
+            %tr
+              %td
+                Total under-licenced cost
+              %td
+                = number_to_currency(@total_under_licenced_cost, :unit => "£")
+    %tr
+      %td{ :valign => "top" }
+        %h3
+          Software Usage
+        %h4
+          Most under-utilised product
+        .graph#graph_2
+          = image_tag("my_software_usage_graph_01.png", { :width => "300", :title => "Most Under Utilised Product (Qty)"}) 
+          = image_tag("my_software_usage_graph_02.png", { :width => "300", :title => "Most Under Utilised Product (Cost GBP)"}) 
+        #dashboard_inner
+          %table.dashboard_inner
+            %tr
+              %th.dashboard_inner
+                \&nbsp;
+              %th.dashboard_inner
+                Product
+              %th.dashboard_inner
+                Unused
+              %th.dashboard_inner
+                Estimated Cost
+            %tr
+              %td.dashboard_inner
+                by volume
+              %td.dashboard_inner
+                Microsoft Project
+              %td.dashboard_inner
+                = @software_usage_quantity['Microsoft Project']
+              %td.dashboard_inner
+                = number_to_currency(@software_usage_cost['Microsoft Project'], :unit => "£")
+
+            %tr
+              %td.dashboard_inner
+                by percentage
+              %td.dashboard_inner
+                Microsoft Visio
+              %td.dashboard_inner
+                = @software_usage_quantity['Microsoft Visio']
+                \%
+              %td.dashboard_inner
+                = number_to_currency(@software_usage_cost['Microsoft Visio'], :unit => "£")
+      %td{ :valign => "top" }
+        %h3
+          Risk Status
+        %h4
+          All products by RAG status
+        .graph#graph_3
+          = image_tag("my_rag_status_graph.png", { :width => "300", :title => "Risk Status"})
+        %br
+        %br
+        #dashboard_inner
+          %table.dashboard_inner
+            %tr
+              %th.dashboard_inner
+                \&nbsp;
+              %th.dashboard_inner
+                Green
+              %th.dashboard_inner
+                Amber
+              %th.dashboard_inner
+                Red
+            %tr
+              %td.dashboard_inner
+                Products:
+              %td.dashboard_inner
+                = @rag_green_items
+              %td.dashboard_inner
+                = @rag_amber_items
+              %td.dashboard_inner
+                = @rag_red_items
+    %tr
+      %td{ :valign => "top" }
+        %h3
+          Audit Data
+        .graph#graph_4
+          = image_tag("my_audit_data_graph_01.png", { :width => "300", :title => "Device Audits"})
+      %td{ :valign => "top" }
+        %h3
+          Summary Data
