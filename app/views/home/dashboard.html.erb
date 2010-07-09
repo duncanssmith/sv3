@@ -11,8 +11,12 @@
 		<tr>
 			<td>
 				<h3 class="client"> Compliance Position by Product </h3>
-				<%= image_tag("my_compliance_graph.png", { :width => "300", :title => "Compliance Position Graph"})  %>
-				<%= image_tag("my_savings_graph.png", { :width => "300", :title => "Savings Graph"})  %>
+				<div class="graph">
+					<%= image_tag("my_compliance_graph.png", { :width => "300", :title => "Compliance Position Graph"})  %>
+				</div>
+				<div class="graph">
+					<%= image_tag("my_savings_graph.png", { :width => "300", :title => "Savings Graph"})  %>
+				</div>
 			</td>
 			<td>
 				<h3> Financial Summary </h3>
@@ -35,20 +39,30 @@
 			<td valign="top">
 			<h3> Software Usage	</h3>
 			<h4>Most under-utilised product</h4>
+				<div class="graph">
 			<%= image_tag("my_software_usage_graph_01.png", { :width => "300", :title => "Most Under Utilised Product (Qty)"})  %>
+				</div>
+				<div class="graph">
 			<%= image_tag("my_software_usage_graph_02.png", { :width => "300", :title => "Most Under Utilised Product (Cost, GBP)"})  %>
+				</div>
 			<div id="dashboard_inner">
 				<table class="dashboard_inner">
 					<tr><th class="dashboard_inner" >&nbsp;</th><th class="dashboard_inner" >Product</th><th class="dashboard_inner" >Unused</th><th class="dashboard_inner" >Estimated Cost</th></tr>
-					<tr><td class="dashboard_inner" >by volume</td><td class="dashboard_inner" >Microsoft Project</td><td class="dashboard_inner" >354</td><td class="dashboard_inner" >£75,566</td></tr>
-					<tr><td class="dashboard_inner" >by percentage</td><td class="dashboard_inner" >Microsoft Visio</td><td class="dashboard_inner" >67%</td> <td class="dashboard_inner" >£34,352</td></tr>
+					<tr><td class="dashboard_inner" >by volume</td><td class="dashboard_inner" >Microsoft Project</td><td class="dashboard_inner" >
+													<%= @software_usage_quantity["Microsoft Project"].round %>
+					</td><td class="dashboard_inner" ><%= number_to_currency(@software_usage_cost["Microsoft Project"], :unit => "£") %></td></tr>
+					<tr><td class="dashboard_inner" >by percentage</td><td class="dashboard_inner" >Microsoft Visio</td><td class="dashboard_inner" >
+													<%= @visio_percentage.round(2) %> %
+					</td> <td class="dashboard_inner" ><%= number_to_currency(@software_usage_cost["Microsoft Visio"], :unit => "£") %></td></tr>
 				</table>
 			</div>
 		</td>
 		<td valign="top" >
 			<h3> Risk Status	</h3>
 			<h4>All products by RAG status</h4>
-			<%= image_tag("my_rag_status_graph.png", { :width => "300", :title => "Risk Status"})  %>
+				<div class="graph">
+					<%= image_tag("my_rag_status_graph.png", { :width => "300", :title => "Risk Status"})  %>
+				</div>
 			<br />
 			<br />
 			<div id="dashboard_inner">
@@ -57,6 +71,17 @@
 					<tr><td class="dashboard_inner">Products:</td><td class="dashboard_inner"><%= @rag_green_items %></td><td class="dashboard_inner"><%= @rag_amber_items %></td><td class="dashboard_inner"><%= @rag_red_items %></td></tr>
 			</table>
 			</div>
+		</td>
+	</tr>
+	<tr>
+		<td valign="top" >
+			<h3> Audit Data	</h3>
+				<div class="graph">
+					<%= image_tag("my_audit_data_graph_01.png", { :width => "300", :title => "Device Audits"})  %>
+				</div>
+		</td>
+		<td valign="top" >
+			<h3> Summary Data	</h3>
 		</td>
 	</tr>
 </table>

@@ -1,0 +1,107 @@
+!!!
+%html{ "xml:lang" => "en", :lang => "en", :xmlns => "http://www.w3.org/1999/xhtml" }
+  %head
+    %title
+      = h(yield(:title)) || controller.action_name
+    = stylesheet_link_tag 'sv3', 'tabs', 'underlinenav'
+    = javascript_include_tag 'jquery','application', 'tabs'
+    = javascript_include_tag :defaults
+    %style{ :type => "text/css" }
+      a.test { font-weight: bold; }
+    = yield(:head)
+  %body
+    #banner
+      = image_tag("AssetCIOLogo.png", :title => "SAM Eclat Asset CIO TM")
+    #container
+      - flash.each do |name, msg|
+        - content_tag :div, msg, :id => "flash_#{name}"
+    #user_nav
+      - if current_user
+        - if current_user.role == 'admin'
+          - if ((session[:selected_client]) && (session[:selected_client] != 0))
+            - client = Client.find session[:selected_client]
+            - client_name = client.name
+          - else
+            - client_name = ""
+            -# end
+          %b
+            = current_user.name
+            is logged in &nbsp;
+        - else
+          %b
+            = current_user.name
+            is logged in as
+            = current_user.role
+            \&nbsp;
+        -# end
+        = link_to "Edit Profile", edit_user_path(:current)
+        = link_to "Logout", logout_path
+      - else
+        = link_to "Register", new_user_path
+        = link_to "Login", login_path
+      -# end
+    - if !current_user
+      %br
+      .underlinemenu
+        %ul
+          %li
+            \&nbsp;
+          %li
+            = link_to "Home", home_path
+          %li
+            = link_to "Login", login_path
+          %li
+            \&nbsp;
+    -# end
+    - if current_user && current_user.role != 'admin'
+      %br
+      .underlinemenu
+        %ul
+          %li
+            \&nbsp;
+          %li
+            = link_to 'Home', :controller => 'home'
+          %li
+            = link_to 'Dashboard', :controller => 'home', :action => 'dashboard'
+          %li
+            = link_to 'Asset Registers', :controller => 'registers'
+          %li
+            = link_to 'Devices', :controller => 'devices'
+          %li
+            = link_to 'Dicovery Data', :controller => 'servers'
+          %li
+            = link_to 'Licences', :controller => 'licences'
+          %li
+            = link_to 'Products', :controller => 'products'
+          %li
+            \&nbsp;
+    - if current_user && current_user.role == 'admin'
+      %br
+      .underlinemenu
+        %ul
+          %li
+            \&nbsp;
+          %li
+            = link_to 'Home', :controller => 'home'
+          %li
+            = link_to 'Dashboard', :controller => 'home', :action => 'dashboard'
+          %li
+            = link_to 'Asset Registers', :controller => 'registers'
+          %li
+            = link_to 'Devices', :controller => 'devices'
+          %li
+            = link_to 'Discovery Data', :controller => 'servers'
+          %li
+            = link_to 'Licences', :controller => 'licences'
+          %li
+            = link_to 'Products', :controller => 'products'
+          %li
+            \&nbsp;
+    %p.flash_notice
+      = flash[:notice]
+    %p.flash_warn
+      = flash[:warning]
+    %p.flash_error
+      = flash[:error]
+    .content
+      = yield  :layout
