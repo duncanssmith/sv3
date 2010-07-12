@@ -58,8 +58,6 @@
       .underlinemenu
         %ul
           %li
-            \&nbsp;
-          %li
             = link_to 'Home', :controller => 'home'
           %li
             = link_to 'Dashboard', :controller => 'home', :action => 'dashboard'
@@ -73,8 +71,7 @@
             = link_to 'Licences', :controller => 'licences'
           %li
             = link_to 'Products', :controller => 'products'
-          %li
-            \&nbsp;
+
     - if current_user && current_user.role == 'admin'
       %br
       .underlinemenu
