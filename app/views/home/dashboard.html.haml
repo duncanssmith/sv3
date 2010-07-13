@@ -114,11 +114,24 @@
               %td.dashboard_inner
                 = @rag_red_items
     %tr
-      %td{ :valign => "top" }
+      %td{ :valign => "top", :colspan => 2 }
         %h3
           Audit Data
         .graph#graph_4
           = image_tag("my_audit_data_graph_01.png", { :width => "300", :title => "Device Audits"})
-      %td{ :valign => "top" }
-        %h3
-          Summary Data
+        %br
+        %br
+        #dashboard_inner
+          %table.dashboard_inner
+            %tr
+              %th.dashboard_inner
+                &nbsp;
+              - @ad.each do |k|
+                %th.dashboard_inner
+                  = k.keys
+            %tr
+              %td.dashboard_inner
+                Registered Servers
+              - @ad.each do |k|
+                %td.dashboard_inner
+                  = k.values 

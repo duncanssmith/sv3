@@ -34,7 +34,7 @@ class HomeController < ApplicationController
 	def dashboard
 		if current_user
 			@client_id = current_user.client_id
-	end
+		end
 
 		if((session[:selected_client])&&(session[:selected_client] != 0))
 			@client_index = session[:selected_client]
@@ -69,12 +69,23 @@ class HomeController < ApplicationController
 		@software_usage_quantity = Hash['Microsoft Project', 354.0, 'Microsoft Visio', 325.0, 'All others', 138.0]
 		@software_usage_cost = Hash['Microsoft Project', 75566.0, 'Microsoft Visio', 34352.0, 'All others', 13500.0]
 
-		@ad1 = Register.count
-		@ad2 = Server.count
-		@ad3 = Licence.count
-		@ad4 = Device.count
+		registers = Register.find :all, :conditions => "client_id = '#{@client_index}'"
+	  @ad = Array.new
 
-		@audit_data = Hash['Walkaround', @ad1, 'Network Discovery', @ad2, 'Fixed Assets', @ad3, 'Purchase Records', @ad4]
+    i = 0 
+    j = 0 
+		@tmp = Array.new
+
+	  registers.each do |r|
+
+			@tmp = Server.find_by_sql("select * from servers, registers_servers rs, registers r where servers.client_id='#{@client_index}' and r.id=rs.register_id and r.id=#{r.id} and servers.id = rs.server_id")
+
+			@ad[i] = Array.new
+			@ad[i] = {r.name, @tmp.length}
+      @tmp = Array.new
+			i += 1
+
+		end	
 
     @sum = @software_usage_quantity["Microsoft Project"] + @software_usage_quantity["Microsoft Visio"] + @software_usage_quantity["All others"] 
 
@@ -95,7 +106,7 @@ class HomeController < ApplicationController
 		}
 
 		g_theme_01 = {
-			:colors => ['#1ae', '#eb0','#4b0', '#cd0', '#29e', '#d3b', '#1ae'],
+			:colors => ['#1ae', '#eb0','#4b0', '#cd0', '#a9c', '#d3b', '#1ae'],
 			:marker_color => '#aaa',
 			:background_colors => ['#eaeaea', '#fff']
 		}
@@ -104,12 +115,13 @@ class HomeController < ApplicationController
 		g0 = Gruff::Line.new
 		g0.theme = g_theme_00
 		g0.title = "Compliance Position by Product"
-		g0.data("% Compliance", [65, 83, 84, 100])
+		g0.data("% Projected Compliance", [65, 83, 84, 100])
+		g0.data("% Actual Compliance", [60, 70, 72, 76])
 		g0.labels = {0 => 'Month 1', 1 => 'Month 2', 2 => 'Month 3', 3 => 'Month 4'}
 		g0.write('public/images/my_compliance_graph.png')
 
 		# Graph 1
-		g1 = Gruff::Bar.new
+		g1 = Gruff::Line.new
 		g1.theme = g_theme_00
 		g1.title = "Cost Savings (x GBP 10,000)"
 		g1.data("Savings", [0, 10,  36, 58])
@@ -131,7 +143,7 @@ class HomeController < ApplicationController
 		# Graph 3
 		g3 = Gruff::Bar.new
 		g3.theme = g_theme_00
-		g3.title = "Most under-utilised product (qty)"
+		g3.title = "Most under-utilised product (Qty)"
 		g3.data("All others", [@software_usage_quantity["All others"]])
 		g3.data("Microsoft Visio", [@software_usage_quantity["Microsoft Visio"]])
 		g3.data("Microsoft Project", [@software_usage_quantity["Microsoft Project"]])
@@ -140,7 +152,7 @@ class HomeController < ApplicationController
 		# Graph 4
 		g4 = Gruff::Bar.new
 		g4.theme = g_theme_00
-		g4.title = "Most under-utilised product (est. cost £)"
+		g4.title = "Most under-utilised product (GBP)"
 		g4.data("All others", [@software_usage_cost["All others"]])
 		g4.data("Microsoft Visio", [@software_usage_cost["Microsoft Visio"]])
 		g4.data("Microsoft Project", [@software_usage_cost["Microsoft Project"]])
@@ -148,13 +160,21 @@ class HomeController < ApplicationController
 
 		# Graph 5
 		g5 = Gruff::Bar.new
-		g5.theme = g_theme_00
-		g5.title = "Audit data"
-		g5.data("Walkaround", [@audit_data["Walkaround"]])
-		g5.data("Network Discovery", [@audit_data["Network Discovery"]])
-		g5.data("Fixed Assets", [@audit_data["Fixed Assets"]])
-		g5.data("Purchase Records", [@audit_data["Purchase Records"]])
+		g5.theme = g_theme_01
+		g5.title = "Asset Registers"
+		@ad.each do |k|
+    g5.data( k.keys, k.values )
+		end
 		g5.write('public/images/my_audit_data_graph_01.png')
+
+		# Graph 6
+		#g6 = Gruff::Bar.new
+		#g6.theme = g_theme_01
+		#g6.title = "Audit data %"
+		#@adp.each do |k|
+    #g6.data( k.keys, k.values )
+		#end
+		#g6.write('public/images/my_audit_data_graph_01.png')
 
 	end
 
@@ -162,6 +182,11 @@ class HomeController < ApplicationController
 
 	def find_selected_client
 		session[:selected_client] ||= 0
+	end
+
+	def get_servers_by_register(register_id)
+		@servers = Server.find_by_sql("select * from servers, registers_servers rs, registers r where servers.client_id='#{@client_index}' and r.id=rs.register_id and r.id='#{register_id}' and servers.id = rs.server_id")
+    @servers.count
 	end
 
 end
