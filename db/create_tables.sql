@@ -806,6 +806,75 @@ INSERT INTO `devices_registers` VALUES
 (8,3),
 (9,3);
 
+DROP TABLE IF EXISTS `devices_versions`;
+
+CREATE TABLE `devices_versions`(
+	`device_id` INTEGER UNSIGNED NOT NULL,
+	`register_id` INTEGER UNSIGNED NOT NULL,
+  PRIMARY KEY (`device_id`,`register_id`)
+);
+
+INSERT INTO `devices_versions` VALUES
+(1,1),
+(1,20),
+(1,21),
+(1,22),
+(1,2),
+(1,4),
+(1,6),
+(1,7),
+(1,100),
+(1,148),
+(2,149),
+(2,1),
+(2,2),
+(2,3),
+(2,4),
+(2,5),
+(2,6),
+(2,7),
+(2,8),
+(2,9),
+(3,150),
+(3,2),
+(3,3),
+(3,42),
+(3,35),
+(3,54),
+(4,56),
+(4,76),
+(4,87),
+(4,150),
+(4,1),
+(5,150),
+(5,20),
+(5,21),
+(5,22),
+(5,2),
+(6,4),
+(6,6),
+(6,7),
+(6,100),
+(6,150),
+(7,1),
+(7,2),
+(7,150),
+(7,4),
+(7,5),
+(8,6),
+(8,7),
+(8,8),
+(8,9),
+(9,150),
+(9,2),
+(9,3),
+(10,42),
+(10,35),
+(11,54),
+(11,56),
+(11,76),
+(12,87),
+(12,150);
 
 
 DROP TABLE IF EXISTS `entitlements`;
@@ -3823,21 +3892,20 @@ CREATE TABLE `users` (
 	`email` VARCHAR(128) NOT NULL,
 	`role` VARCHAR(48) NOT NULL,
 	`client_id`	SMALLINT,
-	`crypted_password` VARCHAR(256),
-	`password_salt` VARCHAR(256),
-	`persistence_token` VARCHAR(256),
+	`crypted_password` VARCHAR(255),
+	`password_salt` VARCHAR(255),
+	`persistence_token` VARCHAR(255),
 	`created_at` DATETIME,
 	`updated_at` DATETIME,
 	PRIMARY KEY (`id`)
 );
 
-INSERT INTO `users` VALUES(1,'duncan','duncan.smith@sameclat.com','admin',2,'a9eb68b19ca177bb9390484bcb18077b3a8c725d2cd9b91d9ed95bb3644b0aedeee9e7a176bc990b11cee2873c12adaf3f098e8668f93d1b8057c443931595b9','5a8wyjsIyKIztIGMjqRl',0,'2010-04-20 14:07:07','2010-04-20 14:07:07'),
-(2,'john','john.springall@sameclat.com','admin',1,'2314bed3e92f00f9b0e2eac0c74f5fefc61fdbfdfc67fab3fd4f15f7bf0b642a7d204310b17b26416dc6f4a62e2721c3fa5f55b065fb7a931ec9d87c023e3508','4WAj-Subnz06HiU0ASwG',0,'2010-04-20 14:07:07','2010-04-20 14:07:07'),
-(3,'fraz','fraz.hamid@sameclat.com','admin',0,'9bb51d932c527dc83cd5b3ea2ce96c166258d81f0dff146c689b9e2c46735f4376579245967ab1e03ca505e0a322c61a48bfde598caba4a1df50ca17e2741965','Acy2xGODHCEZh05bELpu',0,'2010-04-20 14:07:07','2010-04-20 14:07:07'),
-(4,'tim','tim.collis@sameclat.com','admin',1,'95a72263b0affc65abb9a85b427cab17d552c975ff8f2a810d18e14225ec1805a01f944ab11b249234d3587559a213a149aef123707307bb1e2c7d02ab168f39','8leQruhRbGLxPB_EWMvD',0,'2010-04-20 14:07:07','2010-04-20 14:07:07'),
-(5,'admin','admin@sameclat.com','admin',2,'4e17a991c62470639abc5f7a7e9f0eb99b2e8eb46e2520e68636afdf5f0c26060e1200eb5b3424a87157291575b674ad12a170df17a70beabe95ce1c4d5616b1','f1mvaOl0YOR_n0qoDRS8',0,'2010-04-20 14:07:07','2010-04-20 14:07:07'),
-(6,'client','client@sameclat.com','client',2,'ba3ff0b7cb5e376a343f2e930f374934d0a80f4c2b74cddf91ab1b44f0cc6a696b230a80ed7509882812a93af0631be861796fc83fb48e7594b4c4f5ab106fe9','Rt6wZ07E_5zW-xyerPAB',0,'2010-04-20 14:07:07','2010-04-20 14:07:07'),
-(7,'clientmaintainer','clientmaintainer@sameclat.com','clientmaintainer',2,'625057bcc44ea3710c2152ce87c81d1739d4faa768b978f72b044b03ac7e7c4eaef3f4c1871d780a342caf09fd3b5c7ce2896e28f3f97f7281509d178e0692a8','1lvy8He6F2QaemGnrzWW',0,'2010-04-20 14:07:07','2010-04-20 14:07:07');
+INSERT INTO `users` VALUES(1,'Duncan','duncan.smith@sameclat.com','admin',2,'60bf4bd5c66cd2e15d50112c5ac0ffa38c64e0d95e7b0bd10bef52a01ae8f5c7f36eeb4593a911f91e15c5e75788441b431b9b236c2cfa42c33f5305162f074d','rqp9W9oAdW2TZwT-9n_d','c3a56c70b4b38630316c4d6bd38a29d9816fef04226c209d8805a9b92621f555b098f59aa2e19f96dc8a579a1eb9b7460ec28002daeb0a25093bd4c9d30dc380','2010-07-14 16:20:08','2010-07-15 16:41:14'),
+(2,'John','john.springall@sameclat.com','admin',1,'d0ae19857beb5e05051120ae6993339931f3535bb74adbb5b6b036013bd4db9f10b51a1e1ecf7f8c1b2d0069c414733d2b9aa8ec344ebfc9469418030dbc8ece','hze6f0EOAXJl6jS9-Zup','c4117a52787ac012a530057bd3e346b4013eea0f1d504d2800500cccb9b36b1ecb56e58feed2dfb6a450082f4a88d65e8e12b3fc3cb6feffc6fef8c213092fb9','2010-07-14 16:20:08','2010-07-15 16:36:28'),
+(3,'Fraz','fraz.hamid@sameclat.com','admin',0,'40b3cd1a0724ccc395e387e6eada857840ecf6f8e1b5a59bc0328deecf9d74807532df0572ae17fde31d0d8db6547412b12e6c301680eab8bb66c53f279ea9ea','2OPiAoR0fnc5GGRftVgA','dceab885c22ac006e57c9f96140a4602ee2aa3f5e4dcd32583c22985dad13a4fe2a4a243500d560513836b00c0d0351036d7d686b402746b1f1add7852abba36','2010-07-14 16:20:08','2010-07-15 16:39:07'),
+(4,'Admin','admin@sameclat.com','admin',0,'4e17a991c62470639abc5f7a7e9f0eb99b2e8eb46e2520e68636afdf5f0c26060e1200eb5b3424a87157291575b674ad12a170df17a70beabe95ce1c4d5616b1','f1mvaOl0YOR_n0qoDRS8',0,'2010-07-14 16:20:08','2010-07-14 16:20:08'),
+(5,'Client','client@sameclat.com','client',1,'ba3ff0b7cb5e376a343f2e930f374934d0a80f4c2b74cddf91ab1b44f0cc6a696b230a80ed7509882812a93af0631be861796fc83fb48e7594b4c4f5ab106fe9','Rt6wZ07E_5zW-xyerPAB',0,'2010-07-14 16:20:08','2010-07-14 16:20:08'),
+(6,'Clientmaintainer','clientmaintainer@sameclat.com','clientmaintainer',1,'625057bcc44ea3710c2152ce87c81d1739d4faa768b978f72b044b03ac7e7c4eaef3f4c1871d780a342caf09fd3b5c7ce2896e28f3f97f7281509d178e0692a8','1lvy8He6F2QaemGnrzWW',0,'2010-07-14 16:20:08','2010-07-14 16:20:08');
 
 DROP TABLE IF EXISTS `versions`;
 
