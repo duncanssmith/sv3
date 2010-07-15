@@ -1,3 +1,11 @@
+<p>
+  <b>Devices with this product version:</b>
+<% for device in @devices do  %>
+	<%=h device.node %> | 
+	<% end %>
+</p>
+
+
 
 <% if @publisher %>
 <p>

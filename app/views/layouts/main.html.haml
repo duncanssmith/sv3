@@ -83,17 +83,21 @@
           %li
             = link_to 'Dashboard', :controller => 'home', :action => 'dashboard'
           %li
-            = link_to 'Asset Registers', :controller => 'registers'
+            = link_to 'Registers', :controller => 'registers'
           %li
             = link_to 'Devices', :controller => 'devices'
           %li
-            = link_to 'Discovery Data', :controller => 'servers'
+            = link_to 'Servers', :controller => 'servers'
           %li
             = link_to 'Licences', :controller => 'licences'
           %li
+            = link_to 'Publishers', :controller => 'publishers'
+          %li
             = link_to 'Products', :controller => 'products'
           %li
-            \&nbsp;
+            = link_to 'Locations', :controller => 'locations'
+          %li
+            = link_to 'Users', :controller => 'users'
     %p.flash_notice
       = flash[:notice]
     %p.flash_warn

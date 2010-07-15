@@ -15,6 +15,9 @@
 !tableborder = 0px 
 !tablemargin = 0px
 !tablepadding = 0px
+!tablebackgroundcolor = #e0e0e0
+!tablecellbackgroundcolor = #d0d0d0
+!tablebackgroundcolordashboard_inner = #f3f3f3
 
 !paragraphfontsize = 8pt
 !paragraphtextcolor = gray 
@@ -100,7 +103,21 @@ table.index_data
   
   div
     font-size = !appcontentfontsize
+    color: red
     border: solid 0px red
+
+div.habtm
+  border: solid 0px red
+  table
+    background-color = !tablebackgroundcolordashboard_inner 
+    color: gray
+    font-size = !appcontentfontsize
+    border: solid 1px silver
+    tr
+      color: green
+      td
+        color = !bodytextcolor
+        border: solid 1px silver
 
 #main
   border: solid 1px blue
@@ -169,14 +186,14 @@ td.nav
 #dashboard
   table
     padding: 2px
-    background-color: #e0e0e0
+    background-color = !tablebackgroundcolor 
     color: blue
     border: solid 1px silver
     td
       color: green
       vertical-align: top
       padding: 8px
-      background-color: #d0d0d0
+      background-color = !tablecellbackgroundcolor
       border: solid 1px white
       h3
         color: #22aa22
@@ -186,8 +203,14 @@ td.nav
 #dashboard_inner
   table
     th
-      background-color: #f3f3f3
+      background-color = !tablebackgroundcolordashboard_inner 
       color: #666690 
     td
-      background-color: #f3f3f3
-      color: #666690 
+      background-color = !tablebackgroundcolordashboard_inner
+        color: #666690 
+
+div.graph
+  color: blue
+#graph_1
+  color: red
+

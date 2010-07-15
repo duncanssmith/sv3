@@ -26,6 +26,8 @@ class DevicesController < ApplicationController
   # GET /devices/1.xml
   def show
 		@registers = @device.registers
+		@versions = @device.versions
+
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @device }

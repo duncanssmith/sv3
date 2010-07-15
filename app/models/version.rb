@@ -1,6 +1,6 @@
 class Version < ActiveRecord::Base
-	belongs_to :product
-	belongs_to :devices
+	belongs_to :products
+	has_and_belongs_to_many :devices
 	validates_presence_of :name
 	validates_presence_of :fullname
 	validates_presence_of :product_id

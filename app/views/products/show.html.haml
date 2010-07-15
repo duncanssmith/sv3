@@ -1,0 +1,44 @@
+%p
+  %b
+    Name:
+  =h @product.name
+%p
+  %b
+    Fullname:
+  =h @product.fullname
+%p
+  %b
+    Publisher:
+  =h @publisher.name
+%p
+  %b
+    Serial:
+  =h @product.serial
+%p
+  %b
+    Sku:
+  =h @product.sku
+%p
+  %b
+    Identifier:
+  =h @product.identifier
+%p
+  %b
+    Versions: 
+  there are 
+  =h @versions.count 
+  versions of this product:
+
+  %br
+  - count = 0
+  - for version in @versions
+    - count += 1
+    =h count
+    =h version.fullname
+    %br
+  %br
+  = link_to 'Versions', product_versions_path(@product)
+  %br
+  %br
+  = link_to 'Edit', edit_product_path(@product) |
+  = link_to 'Back', products_path

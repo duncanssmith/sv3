@@ -1,0 +1,108 @@
+%h1 Device
+%p
+  - client = Client.find @device.client_id
+  %b
+    Client:
+    =h client.name
+
+- if @versions.length != 0
+  %p
+    %b
+      Product versions installed:
+
+  %div.habtm
+    %table
+      %tr
+        %th Name
+        %th Full Name
+        %th ID
+        %th Language
+      - for version in @versions do
+        %tr
+          %td
+            =h version.name 
+          %td
+            =h version.fullname 
+          %td
+            =h version.id 
+          %td
+            =h version.language 
+
+- if @registers.length != 0
+  %p
+    %b
+      Registered in:
+  %div.habtm
+    %table
+      %tr
+        %th Register
+      - for register in @registers do
+        %tr
+          %td
+            =h register.name
+
+%p
+  %b
+    Device Details
+%div.habtm
+  %table
+    %tr
+      %th Asset ID
+      %th Make
+      %th Model
+      %th Serial
+    %tr
+      %td
+        =h @device.asset_id
+      %td
+        =h @device.make
+      %td
+        =h @device.model
+      %td
+        =h @device.serial
+    %tr
+      %th Network Username
+      %th Node
+      %th OS
+      %th OS Service Level
+    %tr
+      %td
+        =h @device.network_user_name
+      %td
+        =h @device.node
+      %td
+        =h @device.os
+      %td
+        =h @device.os_service_level
+    %tr
+      %th Chassis
+      %th Domain
+      %th IP Address
+      %th Processors
+    %tr
+      %td
+        =h @device.chassis
+      %td
+        =h @device.domain
+      %td
+        =h @device.ip
+      %td
+        =h @device.processor_count
+    %tr
+      %th Processor Type
+      %th Processor Speed
+      %th RAM
+      %th BIOS Date
+    %tr
+      %td
+        =h @device.processor_type
+      %td
+        =h @device.processor_speed
+      %td
+        =h @device.ram
+      %td
+        =h @device.bios_date
+
+
+= link_to 'Edit', edit_device_path(@device) |
+= link_to 'Back', devices_path

@@ -11,9 +11,8 @@
       %td
         %h3.client
           Compliance Position by Product
-        .graph#graph_1
+        %div.graph#graph_1
           = image_tag("my_compliance_graph.png", { :width => "300", :title => "Compliance Position Graph"})
-          = image_tag("my_savings_graph.png", { :width => "300", :title => "Savings Graph"})
       %td
         %h3
           Financial Summary
@@ -51,8 +50,7 @@
         %h4
           Most under-utilised product
         .graph#graph_2
-          = image_tag("my_software_usage_graph_01.png", { :width => "300", :title => "Most Under Utilised Product (Qty)"}) 
-          = image_tag("my_software_usage_graph_02.png", { :width => "300", :title => "Most Under Utilised Product (Cost GBP)"}) 
+
         #dashboard_inner
           %table.dashboard_inner
             %tr

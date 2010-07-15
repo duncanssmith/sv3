@@ -119,18 +119,18 @@ class HomeController < ApplicationController
 		g0.data("% Actual Compliance", [60, 70, 72, 76])
 		g0.labels = {0 => 'Month 1', 1 => 'Month 2', 2 => 'Month 3', 3 => 'Month 4'}
 		g0.write('public/images/my_compliance_graph.png')
-
-		# Graph 1
-		g1 = Gruff::Line.new
-		g1.theme = g_theme_00
-		g1.title = "Cost Savings (x GBP 10,000)"
-		g1.data("Savings", [0, 10,  36, 58])
-		g1.data("Unused Licence Cost", [35, 20, 9, 0])
-		g1.data("Licence cost", [94, 70, 48, 35])
-		g1.labels = {0 => 'Month 1', 1 => 'Month 2', 2 => 'Month 3', 3 => 'Month 4'}
-		g1.write('public/images/my_savings_graph.png')
-
-		# Graph 2
+#
+#		# Graph 1
+#		g1 = Gruff::Line.new
+#		g1.theme = g_theme_00
+#		g1.title = "Cost Savings (x GBP 10,000)"
+#		g1.data("Savings", [0, 10,  36, 58])
+#		g1.data("Unused Licence Cost", [35, 20, 9, 0])
+#		g1.data("Licence cost", [94, 70, 48, 35])
+#		g1.labels = {0 => 'Month 1', 1 => 'Month 2', 2 => 'Month 3', 3 => 'Month 4'}
+#		g1.write('public/images/my_savings_graph.png')
+#
+#		# Graph 2
 		g2 = Gruff::Pie.new
 		g2.theme = g_theme_00
 		g2.title = "RAG Risk Status"
@@ -139,42 +139,42 @@ class HomeController < ApplicationController
 		g2.data("Red",   [@rag_red_items])
 		g2.labels = {0 => 'Month 1', 1 => 'Month 2', 2 => 'Month 3', 3 => 'Month 4'}
 		g2.write('public/images/my_rag_status_graph.png')
-
-		# Graph 3
-		g3 = Gruff::Bar.new
-		g3.theme = g_theme_00
-		g3.title = "Most under-utilised product (Qty)"
-		g3.data("All others", [@software_usage_quantity["All others"]])
-		g3.data("Microsoft Visio", [@software_usage_quantity["Microsoft Visio"]])
-		g3.data("Microsoft Project", [@software_usage_quantity["Microsoft Project"]])
-		g3.write('public/images/my_software_usage_graph_01.png')
-
-		# Graph 4
-		g4 = Gruff::Bar.new
-		g4.theme = g_theme_00
-		g4.title = "Most under-utilised product (GBP)"
-		g4.data("All others", [@software_usage_cost["All others"]])
-		g4.data("Microsoft Visio", [@software_usage_cost["Microsoft Visio"]])
-		g4.data("Microsoft Project", [@software_usage_cost["Microsoft Project"]])
-		g4.write('public/images/my_software_usage_graph_02.png')
-
-		# Graph 5
-		g5 = Gruff::Bar.new
-		g5.theme = g_theme_01
-		g5.title = "Asset Registers"
-		@ad.each do |k|
-    g5.data( k.keys, k.values )
-		end
-		g5.write('public/images/my_audit_data_graph_01.png')
-
-		# Graph 6
-		#g6 = Gruff::Bar.new
-		#g6.theme = g_theme_01
-		#g6.title = "Audit data %"
-		#@adp.each do |k|
+#
+#		# Graph 3
+#		g3 = Gruff::Bar.new
+#		g3.theme = g_theme_00
+#		g3.title = "Most under-utilised product (Qty)"
+#		g3.data("All others", [@software_usage_quantity["All others"]])
+#		g3.data("Microsoft Visio", [@software_usage_quantity["Microsoft Visio"]])
+#		g3.data("Microsoft Project", [@software_usage_quantity["Microsoft Project"]])
+#		g3.write('public/images/my_software_usage_graph_01.png')
+#
+#		# Graph 4
+#		g4 = Gruff::Bar.new
+#		g4.theme = g_theme_00
+#		g4.title = "Most under-utilised product (GBP)"
+#		g4.data("All others", [@software_usage_cost["All others"]])
+#		g4.data("Microsoft Visio", [@software_usage_cost["Microsoft Visio"]])
+#		g4.data("Microsoft Project", [@software_usage_cost["Microsoft Project"]])
+#		g4.write('public/images/my_software_usage_graph_02.png')
+#
+#		# Graph 5
+#		g5 = Gruff::Bar.new
+#		g5.theme = g_theme_01
+#		g5.title = "Asset Registers"
+#		@ad.each do |k|
+#     g5.data( k.keys, k.values )
+#		end
+#		g5.write('public/images/my_audit_data_graph_01.png')
+#
+#		# Graph 6
+#		#g6 = Gruff::Bar.new
+#		#g6.theme = g_theme_01
+#		#g6.title = "Audit data %"
+#		#@adp.each do |k|
     #g6.data( k.keys, k.values )
-		#end
-		#g6.write('public/images/my_audit_data_graph_01.png')
+#		#end
+#		#g6.write('public/images/my_audit_data_graph_01.png')
 
 	end
 

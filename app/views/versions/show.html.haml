@@ -1,0 +1,56 @@
+%h1
+  Product Version
+
+%div.habtm
+  %table
+    %tr
+      - if @publisher
+        %th Publisher
+      - if @product
+        %th Product
+      %th Version Name
+      %th Fullname
+      %th Serial
+      %th Language
+    %tr
+      - if @publisher
+        %td
+          =h @publisher.name
+      - if @product
+        %td
+          =h @product.name
+      %td
+        =h @version.name
+      %td
+        =h @version.fullname
+      %td
+        =h @version.serial
+      %td
+        =h @version.language
+  %br
+
+Devices with this product version:
+%div.habtm 
+  %table
+    %tr
+      %th Node
+      %th Make
+      %th Model
+      %th Serial
+      %th IP Address 
+    - for device in @devices do 
+      %tr
+        %td
+          =h device.node
+        %td
+          =h device.make
+        %td
+          =h device.model
+        %td
+          =h device.serial
+        %td
+          =h device.ip
+
+= link_to 'Edit', edit_product_version_path(@product, @version)
+|
+= link_to 'Back', product_versions_path([@product, @version]) 

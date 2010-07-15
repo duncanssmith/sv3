@@ -62,7 +62,21 @@ table.index_data {
 
 #appcontent div {
   font-size: 8pt;
+  color: red;
   border: solid 0px red; }
+
+div.habtm {
+  border: solid 0px red; }
+  div.habtm table {
+    background-color: #f3f3f3;
+    color: gray;
+    font-size: 8pt;
+    border: solid 1px silver; }
+    div.habtm table tr {
+      color: green; }
+      div.habtm table tr td {
+        color: #333333;
+        border: solid 1px silver; }
 
 #main {
   border: solid 1px blue;
@@ -139,4 +153,10 @@ td.nav {
   color: #666690; }
 #dashboard_inner table td {
   background-color: #f3f3f3;
-  color: #666690; }
+  background-color-color: #666690; }
+
+div.graph {
+  color: blue; }
+
+#graph_1 {
+  color: red; }

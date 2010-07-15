@@ -2,6 +2,7 @@
 
 <table class="index_data">
   <tr>
+    <th>Devices with this Product</th>
     <th>Publisher</th>
     <th>Product</th>
     <th>Fullname</th>
@@ -27,7 +28,8 @@
 			<% version_count = 0 %> 
 		<% end %>
 	  <tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
-						<td><%=h publisher_name %></td>
+						<td><%= link_to image_tag("show.png", :size => '20x20', :border => 0, :title => "View devices with this product", :alt => "Devices"), product %></td>
+		<td><%=h publisher_name %></td>
     <td><%=h product.name %></td>
 		<td><%=h product.fullname %></td>
 		<td><%= link_to "#{version_count}", product_versions_path(product) %> </td>

@@ -1,4 +1,11 @@
 <p>
+  <b>Product versions installed:</b>
+<% for version in @versions do  %>
+	<%=h version.name %> | 
+	<% end %>
+</p>
+
+<p>
   <b>Registered in:</b>
 <% for register in @registers do  %>
 	<%=h register.name %> | 

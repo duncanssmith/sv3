@@ -20,6 +20,7 @@ class VersionsController < ApplicationController
   # GET /versions/1.xml
   def show
 		@version = @product.versions.find(params[:id])
+    @devices = @version.devices
 
     respond_to do |format|
       format.js # new.js.erb
