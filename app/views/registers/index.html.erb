@@ -1,14 +1,7 @@
-<h3>
-				Asset CIO for
-    <% @clients.each do |client| %>
-			<%=h client.name %>
-		<% end %>
-</h3>
-
-<h1>Asset Registers</h1>
+<h1>Registers</h1>
 
 <% if @registers.blank? %>
-				<p>There are no registers listed</p>
+  <p>There are no registers listed</p>
 <% else %>
 
 <table class="index_data">

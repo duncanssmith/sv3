@@ -24,9 +24,12 @@
           - else
             - client_name = ""
             -# end
+          %b 
+            = client_name
+          &nbsp; | &nbsp;
           %b
             = current_user.name
-            is logged in &nbsp;
+            is logged in &nbsp; | &nbsp;
         - else
           %b
             = current_user.name
@@ -35,9 +38,11 @@
             \&nbsp;
         -# end
         = link_to "Edit Profile", edit_user_path(:current)
+        &nbsp; | &nbsp;
         = link_to "Logout", logout_path
       - else
         = link_to "Register", new_user_path
+        &nbsp; | &nbsp;
         = link_to "Login", login_path
       -# end
     - if !current_user
@@ -48,6 +53,7 @@
             \&nbsp;
           %li
             = link_to "Home", home_path
+            &nbsp; | &nbsp;
           %li
             = link_to "Login", login_path
           %li
