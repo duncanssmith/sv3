@@ -1,0 +1,17 @@
+- @publisher = Publisher.find @product.publisher_id 
+
+%h1
+  Product Versions
+%h4
+  = @publisher.name
+%h4
+  = @product.name
+
+= javascript "pagination"
+
+%div#versions
+  = render :partial => 'versions'
+
+%br
+%br
+= link_to 'Back', products_path

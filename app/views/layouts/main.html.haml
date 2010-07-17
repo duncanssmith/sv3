@@ -11,7 +11,7 @@
     = yield(:head)
   %body
     #banner
-      = image_tag("AssetCIOLogo.png", :title => "SAM Eclat Asset CIO TM")
+      = image_tag("AssetCIOLogo.png", :title => "SAM Eclat Asset CIO TM", :size => "105x38")
     #container
       - flash.each do |name, msg|
         - content_tag :div, msg, :id => "flash_#{name}"
@@ -24,26 +24,31 @@
           - else
             - client_name = ""
             -# end
+          - if current_client
+            - client_name = current_client.name
           %b 
+            Asset CIO for 
             = client_name
-          &nbsp; | &nbsp;
+            &nbsp; | &nbsp;
           %b
             = current_user.name
-            is logged in &nbsp; | &nbsp;
+            logged in &nbsp; | &nbsp;
         - else
           %b
             = current_user.name
-            is logged in as
+            logged in
             = current_user.role
             \&nbsp;
         -# end
-        = link_to "Edit Profile", edit_user_path(:current)
-        &nbsp; | &nbsp;
-        = link_to "Logout", logout_path
+        %b
+          -#= link_to "Edit Profile", edit_user_path(:current)
+          -#&nbsp; | &nbsp;
+          = link_to "Logout", logout_path
       - else
-        = link_to "Register", new_user_path
-        &nbsp; | &nbsp;
-        = link_to "Login", login_path
+        %b
+          -#= link_to "Register", new_user_path
+          -#&nbsp; | &nbsp;
+          = link_to "Login", login_path
       -# end
     - if !current_user
       %br
@@ -53,7 +58,6 @@
             \&nbsp;
           %li
             = link_to "Home", home_path
-            &nbsp; | &nbsp;
           %li
             = link_to "Login", login_path
           %li
@@ -89,21 +93,15 @@
           %li
             = link_to 'Dashboard', :controller => 'home', :action => 'dashboard'
           %li
-            = link_to 'Registers', :controller => 'registers'
+            = link_to 'Asset Registers', :controller => 'registers'
           %li
             = link_to 'Devices', :controller => 'devices'
           %li
-            = link_to 'Servers', :controller => 'servers'
+            = link_to 'Discovery Data', :controller => 'servers'
           %li
             = link_to 'Licences', :controller => 'licences'
           %li
-            = link_to 'Publishers', :controller => 'publishers'
-          %li
             = link_to 'Products', :controller => 'products'
-          %li
-            = link_to 'Locations', :controller => 'locations'
-          %li
-            = link_to 'Users', :controller => 'users'
     %p.flash_notice
       = flash[:notice]
     %p.flash_warn

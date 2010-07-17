@@ -1,3 +1,10 @@
+%h1 Product Version
+
+%p
+  %b
+    Publisher:
+  =h @publisher.name
+
 %p
   %b
     Name:
@@ -6,10 +13,6 @@
   %b
     Fullname:
   =h @product.fullname
-%p
-  %b
-    Publisher:
-  =h @publisher.name
 %p
   %b
     Serial:
@@ -26,16 +29,39 @@
   %b
     Versions: 
   there are 
-  =h @versions.count 
+  =h @versions.length 
   versions of this product:
 
+- count = 0
+
+%div.habtm
+  %table
+    %tr
+      %th
+        &nbsp;
+      %th
+        Name 
+      %th
+        Full Name 
+      %th
+        Serial 
+      %th
+        Language 
+    - for version in @versions
+      - count += 1
+      %tr
+        %td
+          =h count
+        %td
+          =h version.name
+        %td
+          =h version.fullname
+        %td
+          =h version.serial
+        %td
+          =h version.language
+
   %br
-  - count = 0
-  - for version in @versions
-    - count += 1
-    =h count
-    =h version.fullname
-    %br
   %br
   = link_to 'Versions', product_versions_path(@product)
   %br

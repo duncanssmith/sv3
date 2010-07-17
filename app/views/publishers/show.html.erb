@@ -20,7 +20,7 @@
 
 <p>
 <b>Products:</b>
-there are <%=h @products.count %> products by this publisher.<br/>
+there are <%=h @products.length %> products by this publisher.<br/>
   <% for product in @products %>
 					<%=h product.name %><br/>
 	<% end %>

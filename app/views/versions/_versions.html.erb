@@ -2,7 +2,7 @@
 
 <table class="index_data">
 	<tr>
-    <th>Devices with this product</th>
+    <th>Devices</th>
     <th>Name</th>
     <th>Fullname</th>
     <th>Serial</th>
@@ -13,7 +13,8 @@
 
 <% @versions.each do |version| %>
 	<tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
- <td><%= link_to image_tag("show.png", :size => '20x20', :border => 0, :title => "View devices this product version is installed on", :alt => "Devices") , product_version_path(@product, version) %></td>
+					<td><%= link_to version.devices.length, product_version_path(@product, version) %>
+					</td>
     <td><%=h version.name %></td>
     <td><%=h version.fullname %></td>
     <td><%=h version.serial %></td>

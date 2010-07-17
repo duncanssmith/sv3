@@ -1,43 +1,42 @@
-<% if @client_id  == 0 %>
+<% if @current_client %>
+				<% if @client_id  == 0 %>
 
-  <h1>Home</h1>
-	<p>Welcome to Asset CIO</p>
+					<h1>Home</h1>
+					<p>Welcome to Asset CIO</p>
 
-  <div id="select_client">
-		<p>Please select Client:<br/>
+					<div id="select_client">
+						<p>Please select Client:<br/>
 
-		<% form_tag dashboard_path, :method => 'post' do  %>
+						<% form_tag dashboard_path, :method => 'post' do  %>
 
-			<% @clients.each do |client| %>
-			  <p>
-				  <%= radio_button_tag 'client', client.id, @client == client %>
-				 <label for="client"><%= client.name %></label>
-				</p>
-			<% end %>
+							<% @clients.each do |client| %>
+								<p>
+									<%= radio_button_tag 'client', client.id, @client == client %>
+								 <label for="client"><%= client.name %></label>
+								</p>
+							<% end %>
 
-				<br/>
-				<br/>
-				<%= submit_tag 'Select', :name => nil %>
-    <% end %>
-	</div>
-<% elsif ((@client_id == 0) && (@selected_client != 0)) %>
+								<br/>
+								<br/>
+								<%= submit_tag 'Select', :name => nil %>
+						<% end %>
+					</div>
+				<% elsif ((@client_id == 0) && (@selected_client != 0)) %>
 
-  <h1>Home</h1>
-	<p>Welcome to Asset CIO. <%= @client.name %> </p> 
+					<h1>Home</h1>
+					<p>Welcome to Asset CIO. <%= @client.name %> </p> 
 
-<% elsif ((@client_id != 0) && (@selected_client == 0)) %>
-<h3>Asset CIO for 
-    <% @clients.each do |client| %>
-			<%=h client.name %>
-		<% end %>
-</h3>
+				<% elsif ((@client_id != 0) && (@selected_client == 0)) %>
 
-  <h1>Home</h1>
-	<p>Welcome to Asset CIO.  </p> 
+					<h1>Home</h1>
+					<p>Welcome to Asset CIO.  </p> 
 
+
+				<% else %>
+
+				<% end %>
 
 <% else %>
-
+				<h2>Logged out</h2>
+				<p>Please log in<p>
 <% end %>
-
-

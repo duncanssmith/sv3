@@ -1,45 +1,4 @@
 %h1 Device
-%p
-  - client = Client.find @device.client_id
-  %b
-    Client:
-    =h client.name
-
-- if @versions.length != 0
-  %p
-    %b
-      Product versions installed:
-
-  %div.habtm
-    %table
-      %tr
-        %th Name
-        %th Full Name
-        %th ID
-        %th Language
-      - for version in @versions do
-        %tr
-          %td
-            =h version.name 
-          %td
-            =h version.fullname 
-          %td
-            =h version.id 
-          %td
-            =h version.language 
-
-- if @registers.length != 0
-  %p
-    %b
-      Registered in:
-  %div.habtm
-    %table
-      %tr
-        %th Register
-      - for register in @registers do
-        %tr
-          %td
-            =h register.name
 
 %p
   %b
@@ -102,6 +61,49 @@
         =h @device.ram
       %td
         =h @device.bios_date
+
+
+- if @versions.length != 0
+  %p
+    %b
+      Product versions installed:
+
+  %div.habtm
+    %table
+      %tr
+        %th Publisher
+        %th Product
+        %th Version Name
+        %th Full Name
+        %th Serial
+        %th Language
+      - for version in @versions do
+        %tr
+          %td
+            =h version.name 
+          %td
+            =h version.name 
+          %td
+            =h version.name 
+          %td
+            =h version.fullname 
+          %td
+            =h version.serial 
+          %td
+            =h version.language 
+
+- if @registers.length != 0
+  %p
+    %b
+      Registered in:
+  %div.habtm
+    %table
+      %tr
+        %th Register
+      - for register in @registers do
+        %tr
+          %td
+            = link_to register.name, register
 
 
 = link_to 'Edit', edit_device_path(@device) |
