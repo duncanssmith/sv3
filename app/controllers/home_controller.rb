@@ -8,16 +8,12 @@ class HomeController < ApplicationController
 		if current_user
 			@client_id = current_user.client_id
 			@role = current_user.role
-	# @clients = Client.find (:all, :select => 'id, name')
+	    @clients = Client.find (:all, :select => 'id, name')
 		end
 
-		if( ( session[:selected_client] ) && ( session[:selected_client] != 0) )
-			@client_index = session[:selected_client]
-		else
-			@client_index = @client_id
+    if current_client
+			@client = @current_client
 		end
-
-	@clients = Client.find :all, :conditions => "id = '#{@client_index}'"
 
 		if params['client']
 			@selected_client = params['client']
@@ -34,15 +30,13 @@ class HomeController < ApplicationController
 	def dashboard
 		if current_user
 			@client_id = current_user.client_id
+			@role = current_user.role
 		end
 
-		if((session[:selected_client])&&(session[:selected_client] != 0))
-			@client_index = session[:selected_client]
-		else
-			@client_index = @client_id
+    if current_client
+			@client = @current_client
+			@client_index = @client.id
 		end
-
-		@clients = Client.find :all, :conditions => "id = '#{@client_index}'"
 
 		if params['client']
 			@selected_client = params['client']

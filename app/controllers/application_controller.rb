@@ -12,6 +12,7 @@ class ApplicationController < ActionController::Base
 	filter_parameter_logging "password"
 
 	helper_method :current_user
+  helper_method :current_client
 
 	rescue_from CanCan::AccessDenied do |exception|
 		flash[:error] = "Access denied."
@@ -46,4 +47,19 @@ class ApplicationController < ActionController::Base
 		@current_user = current_user_session && current_user_session.record
 	end
 
+	def current_client
+		return @current_client if defined?(@current_client)
+    @current_user = current_user_session && current_user_session.record
+
+		if( ( session[:selected_client] ) && ( session[:selected_client] != 0) )
+		  @current_client = session[:selected_client]
+		else
+			if @current_user
+			  @current_client = Client.find @current_user.client_id
+			else
+				@current_client = nil
+			end
+		end
+
+	end
 end
