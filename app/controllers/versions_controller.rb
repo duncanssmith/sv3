@@ -20,7 +20,11 @@ class VersionsController < ApplicationController
   # GET /versions/1.xml
   def show
 		@version = @product.versions.find(params[:id])
-    @devices = @version.devices
+    @installations = @version.installations
+		@devices = Array.new
+		@installations.each do |i|
+      @devices << Device.find(i.device_id)
+		end
 
     respond_to do |format|
       format.js # new.js.erb

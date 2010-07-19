@@ -2,7 +2,7 @@
 
 <table class="index_data">
   <tr>
-    <th>Installed Products</th>
+    <th>Installs</th>
     <th>Asset</th>
     <th>Make</th>
     <th>Model</th>
@@ -31,7 +31,7 @@
 <% location = Location.find device.location_id %>
 
 		<tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
-		<td><%= link_to device.versions.length, device %> </td>
+		<td><%= link_to device.installations.length, device %> </td>
     <td><%=h device.asset_id %></td>
     <td><%=h device.make %></td>
     <td><%=h device.model %></td>

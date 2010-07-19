@@ -3,6 +3,7 @@
 <%= will_paginate @licences %>
 <table class="index_data">
 	<tr>
+		<th>Installation ID</th>
 		<th>Sku</th>
     <th>Publisher </th>
     <th>Product </th>
@@ -47,6 +48,7 @@
 <% product = Product.find version.product_id  %>
 <% publisher = Publisher.find product.publisher_id  %>
  	<tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
+    <td><%=h licence.installation_id %></td>
     <td><%=h licence.sku %></td>
     <td><%=h publisher.name %></td>
     <td><%=h product.name %></td>

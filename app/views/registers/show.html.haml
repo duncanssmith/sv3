@@ -1,0 +1,51 @@
+%p
+  %b
+    Name:
+  =h @register.name
+
+%p
+  %b
+    Date:
+  =h @register.date
+
+%p
+  %b
+    Frequency:
+  =h @register.frequency
+
+%p
+  %b
+    Type:
+  =h @register.type
+
+%p
+  %b
+    Accuracy:
+  =h @register.accuracy
+
+%p
+  %b
+    Client:
+  =h @register.client_id
+
+%div.habtm
+  %table
+    %tr
+      %th
+        Make
+      %th
+        Model
+      %th
+        Serial
+    - for device in @devices
+      %tr
+        %td
+          =h device.make
+        %td
+          =h device.model
+        %td
+          =h device.serial
+      %br
+
+= link_to 'Edit', edit_register_path(@register) |
+= link_to 'Back', registers_path
