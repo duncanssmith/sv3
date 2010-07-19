@@ -1,9 +1,5 @@
 <h1>Users</h1>
 
-<% if @users.blank? %>
-				<p>There are no users listed</p>
-<% else %>
-
   <%= will_paginate @users %>
 
 	<table class="index_data">

@@ -1,0 +1,16 @@
+%h1
+  Licences
+
+- if @licences.blank?
+  %p 
+    There are no licences listed
+- else
+
+- javascript "pagination"
+
+%div.licences
+  = render :partial => 'licences'
+
+%br 
+
+= link_to 'New licence', new_licence_path 
