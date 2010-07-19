@@ -118,3 +118,31 @@ publisher_17:
   shortname: Microsoft
   url: http://www.Microsoft.com  
   description: Operating System and Office Software 
+
+publisher_18:
+  id: 18
+  name: Oracle
+  shortname: Oracle
+  url: http://www.oracle.com  
+  description: Databases
+
+publisher_19:
+  id: 19
+  name: Symantec
+  shortname: Symantec
+  url: http://www.Symantec.com  
+  description: Databases
+
+publisher_20:
+  id: 20
+  name: IBM
+  shortname: IBM
+  url: http://www.IBM.com  
+  description: Broad Spectrum of Software
+
+publisher_21:
+  id: 21
+  name: SAP
+  shortname: SAP
+  url: http://www.SAP.com  
+  description: Broad Spectrum of Software
