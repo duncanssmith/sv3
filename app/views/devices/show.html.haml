@@ -71,18 +71,25 @@
   %div.habtm
     %table
       %tr
+        %th &nbsp; 
         %th Publisher
         %th Product
         %th Version Name
         %th Full Name
         %th Serial
         %th Language
+      - count = 0
       - for version in @versions do
+        - count += 1
+        - product = Product.find(version.product_id)
+        - publisher = Publisher.find(product.publisher_id)
         %tr
           %td
-            =h version.name 
+            =h count 
           %td
-            =h version.name 
+            =h publisher.name 
+          %td
+            =h product.name 
           %td
             =h version.name 
           %td
