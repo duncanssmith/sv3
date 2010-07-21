@@ -74,13 +74,15 @@
           %li
             = link_to 'Asset Registers', :controller => 'registers'
           %li
+            = link_to 'Dicovery Data', :controller => 'servers'
+          %li
             = link_to 'Devices', :controller => 'devices'
           %li
-            = link_to 'Dicovery Data', :controller => 'servers'
+            = link_to 'Products', :controller => 'products'
           %li
             = link_to 'Licences', :controller => 'licences'
           %li
-            = link_to 'Products', :controller => 'products'
+            = link_to 'Installations', :controller => 'installations'
 
     - if current_user && current_user.role == 'admin'
       %br
@@ -95,13 +97,15 @@
           %li
             = link_to 'Asset Registers', :controller => 'registers'
           %li
+            = link_to 'Discovery Data', :controller => 'servers'
+          %li
             = link_to 'Devices', :controller => 'devices'
           %li
-            = link_to 'Discovery Data', :controller => 'servers'
+            = link_to 'Products', :controller => 'products'
           %li
             = link_to 'Licences', :controller => 'licences'
           %li
-            = link_to 'Products', :controller => 'products'
+            = link_to 'Installations', :controller => 'installations'
     %p.flash_notice
       = flash[:notice]
     %p.flash_warn
