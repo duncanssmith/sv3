@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100720145655) do
+ActiveRecord::Schema.define(:version => 20100721094600) do
 
   create_table "assets", :force => true do |t|
     t.string   "name"
@@ -160,7 +160,6 @@ ActiveRecord::Schema.define(:version => 20100720145655) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "client_id"
-    t.integer  "version_id"
     t.string   "country"
   end
 
