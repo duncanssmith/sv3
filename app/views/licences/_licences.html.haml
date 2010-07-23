@@ -1,0 +1,150 @@
+= will_paginate @licences 
+
+%table.index_data
+  %tr
+    %th
+      Client ID
+    %th
+      Sku
+    %th
+      Identifying number
+    %th
+      Country
+    %th
+      Cal
+    %th
+      Licence type
+    %th
+      Term
+    %th
+      Upgrade
+    %th
+      Term expiry date
+    %th
+      CI name
+    %th
+      Base licence
+    %th
+      Maintenance expiry
+    %th
+      Entitlement type
+    %th
+      Cost centre
+    %th
+      Volume licence agreement number
+    %th
+      Agreement location
+    %th
+      Entitlement location
+    %th
+      Supplier
+    %th
+      Supplier invoice number
+    %th
+      Invoice date
+    %th
+      PO number
+    %th
+      Country of usage
+    %th
+      Product substitution rights
+    %th
+      Secondary rights
+    %th
+      Transferability
+    %th
+      External licence transfer requirements
+    %th
+      Linkages
+    %th
+      Total cost of line item
+    %th
+      Quantity
+    %th
+      Unit
+    %th
+      Cost unit
+    %th
+      Maintenance pa
+    %th
+      = image_tag("show.png", :size => '20x20', :title => "Show this record", :alt => "Show") 
+    %th
+      = image_tag("edit.png",  :size => '20x20',:title => "Edit this record", :alt => "Edit") 
+    %th
+      = image_tag("destroy.png", :size => '20x20', :title => "Destroy this record", :alt => "Destroy") 
+
+  - @licences.each do |licence|
+    %tr{:class => cycle('list-line-odd', 'list-line-even')}
+      %td
+        =h licence.client_id
+      %td
+        =h licence.sku
+      %td
+        =h licence.identifying_number
+      %td
+        =h licence.country
+      %td
+        =h licence.cal
+      %td
+        =h licence.licence_type
+      %td
+        =h licence.term
+      %td
+        =h licence.upgrade
+      %td
+        =h licence.term_expiry_date
+      %td
+        =h licence.ci_name
+      %td
+        =h licence.base_licence
+      %td
+        =h licence.maintenance_expiry
+      %td
+        =h licence.entitlement_type
+      %td
+        =h licence.cost_centre
+      %td
+        =h licence.volume_licence_agreement_number
+      %td
+        =h licence.agreement_location
+      %td
+        =h licence.entitlement_location
+      %td
+        =h licence.supplier
+      %td
+        =h licence.supplier_invoice_number
+      %td
+        =h licence.invoice_date
+      %td
+        =h licence.po_number
+      %td
+        =h licence.country_of_usage
+      %td
+        =h licence.product_substitution_rights
+      %td
+        =h licence.secondary_rights
+      %td
+        =h licence.transferability
+      %td
+        =h licence.external_licence_transfer_requirements
+      %td
+        =h licence.linkages
+      %td
+        =h licence.total_cost_of_line_item
+      %td
+        =h licence.quantity
+      %td
+        =h licence.unit
+      %td
+        =h licence.cost_unit
+      %td
+        =h licence.maintenance_pa
+      %td
+        = link_to 'Show', licence
+      %td
+        = link_to 'Edit', edit_licence_path(licence)
+      %td
+        = link_to 'Destroy', licence, :confirm => 'Are you sure?', :method => :delete
+
+= will_paginate @licences
+

@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100721094600) do
+ActiveRecord::Schema.define(:version => 20100722095330) do
 
   create_table "assets", :force => true do |t|
     t.string   "name"
@@ -118,7 +118,6 @@ ActiveRecord::Schema.define(:version => 20100721094600) do
     t.integer  "device_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "client_id"
   end
 
   create_table "installations_licences", :id => false, :force => true do |t|
