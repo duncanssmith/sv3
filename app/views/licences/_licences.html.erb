@@ -1,13 +1,9 @@
-
-
 <%= will_paginate @licences %>
+
 <table class="index_data">
 	<tr>
-		<th>Installation ID</th>
+		<th>Client ID</th>
 		<th>Sku</th>
-    <th>Publisher </th>
-    <th>Product </th>
-    <th>Version </th>
     <th>Identifying number</th>
     <th>Country</th>
     <th>Cal</th>
@@ -44,15 +40,10 @@
   </tr>
 
 <% @licences.each do |licence| %>
-<% version = Version.find licence.version_id  %>
-<% product = Product.find version.product_id  %>
-<% publisher = Publisher.find product.publisher_id  %>
- 	<tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
-    <td><%=h licence.installation_id %></td>
+	<tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
+						
+    <td><%=h licence.client_id %></td>
     <td><%=h licence.sku %></td>
-    <td><%=h publisher.name %></td>
-    <td><%=h product.name %></td>
-    <td><%=h version.fullname %></td>
     <td><%=h licence.identifying_number %></td>
     <td><%=h licence.country %></td>
     <td><%=h licence.cal %></td>

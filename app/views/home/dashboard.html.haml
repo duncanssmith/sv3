@@ -7,17 +7,47 @@
         %h3.client
           Compliance Position by Product
         %div.graph#graph_1
-          = image_tag("my_compliance_graph.png", { :width => "300", :title => "Compliance Position Graph"})
+          - graph_1_name = sprintf("client_%d_compliance_graph.png", @client_index)
+          = image_tag(graph_1_name, { :width => "300", :title => "Compliance Position Graph"})
       %td
         %h3
           Financial Summary
+        %h4
+  
         #dashboard_inner
           %table.dashboard_inner
             %tr
               %td
+                Devices
+              %td
+                =h @device_count
+            %tr
+              %td
+                Installations
+              %td
+                =h @installation_count
+            %tr
+              %td
+                Licences
+              %td
+                =h @licence_count
+            - if @over_licenced_count >= 0
+              %tr
+                %td
+                  Over Licenced
+                %td
+                  = @over_licenced_count
+            - if @under_licenced_count >= 0
+              %tr
+                %td
+                  Under Licenced
+                %td
+                  = @under_licenced_count
+            %tr
+              %td
                 Total licence cost
               %td
-                = number_to_currency(@total_licence_cost, :unit => "£")
+                = number_to_currency(@total_licence_cost / 100, :unit => "£")
             %tr
               %td
                 Total licences
@@ -27,17 +57,23 @@
               %td
                 Average licence cost
               %td
-                = number_to_currency(@average_licence_cost, :unit => "£")
+                = number_to_currency(@average_licence_cost / 100, :unit => "£")
             %tr
               %td
                 Total over-licenced cost
               %td
-                = number_to_currency(@total_over_licenced_cost, :unit => "£")
+                - if @total_over_licenced_cost > 0
+                  = number_to_currency(@total_over_licenced_cost / 100, :unit => "£")
+                -else
+                  = number_to_currency(0, :unit => "£")
             %tr
               %td
                 Total under-licenced cost
               %td
-                = number_to_currency(@total_under_licenced_cost, :unit => "£")
+                - if @total_under_licenced_cost > 0
+                  = number_to_currency(@total_under_licenced_cost / 100, :unit => "£")
+                - else
+                  = number_to_currency(0, :unit => "£")
     %tr
       %td{ :valign => "top" }
         %h3
@@ -83,7 +119,8 @@
         %h4
           All products by RAG status
         .graph#graph_3
-          = image_tag("my_rag_status_graph.png", { :width => "300", :title => "Risk Status"})
+          - graph_2_name = sprintf("client_%d_rag_status_graph.png", @client_index)
+          = image_tag(graph_2_name, { :width => "300", :title => "Risk RAG Status Graph"})
         %br
         %br
         #dashboard_inner
@@ -111,7 +148,8 @@
         %h3
           Audit Data
         .graph#graph_4
-          = image_tag("my_audit_data_graph_01.png", { :width => "300", :title => "Device Audits"})
+          - graph_5_name = sprintf("client_%d_audit_data_graph.png", @client_index)
+          = image_tag(graph_5_name, { :width => "300", :title => "Device Audits"})
         %br
         %br
         #dashboard_inner

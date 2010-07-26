@@ -11,7 +11,7 @@
     = yield(:head)
   %body
     #banner
-      = image_tag("AssetCIOLogo.png", :title => "SAM Eclat Asset CIO TM", :size => "105x38")
+      = image_tag("AssetCIOLogo.png", :title => "SAM Eclat AssetCIO TM", :size => "105x38")
     #container
       - flash.each do |name, msg|
         - content_tag :div, msg, :id => "flash_#{name}"
@@ -27,7 +27,7 @@
           - if current_client
             - client_name = current_client.name
           %b 
-            Asset CIO for 
+            AssetCIO &trade; for 
             = client_name
             &nbsp; | &nbsp;
           %b
@@ -81,8 +81,6 @@
             = link_to 'Products', :controller => 'products'
           %li
             = link_to 'Licences', :controller => 'licences'
-          %li
-            = link_to 'Installations', :controller => 'installations'
 
     - if current_user && current_user.role == 'admin'
       %br
@@ -104,8 +102,6 @@
             = link_to 'Products', :controller => 'products'
           %li
             = link_to 'Licences', :controller => 'licences'
-          %li
-            = link_to 'Installations', :controller => 'installations'
     %p.flash_notice
       = flash[:notice]
     %p.flash_warn

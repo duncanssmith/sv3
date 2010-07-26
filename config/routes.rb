@@ -9,6 +9,7 @@ ActionController::Routing::Routes.draw do |map|
 
 	map.home "home", :controller => "home", :action => "admin"
 	map.dashboard "dashboard", :controller => "home", :action => "dashboard"
+	map.stats "stats", :controller => "home", :action => "stats"
 
 
   map.resources :assets

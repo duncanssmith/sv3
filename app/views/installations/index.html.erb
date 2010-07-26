@@ -3,9 +3,12 @@
 <%=h @installations.length %>
 records
 </p>
+
+<% javascript "pagination" %>
+
+<%= will_paginate @installations %>
 <table class="index_data">
 	<tr>
-    <th>Licences</th>
     <th>Version</th>
     <th>Device</th>
     <th>&nbsp;</th>
@@ -15,7 +18,6 @@ records
 
 <% @installations.each do |installation| %>
 	<tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
-    <td><%=h installation.licence_id %></td>
     <td><%=h installation.version_id %></td>
     <td><%=h installation.device_id %></td>
     <td><%= link_to 'Show', installation %></td>
@@ -24,6 +26,8 @@ records
   </tr>
 <% end %>
 </table>
+
+<%= will_paginate @installations %>
 
 <br />
 

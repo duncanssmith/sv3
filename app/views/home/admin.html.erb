@@ -2,7 +2,7 @@
 				<% if @client_id  == 0 %>
 
 					<h1>Home</h1>
-					<p>Welcome to Asset CIO</p>
+					<p>Welcome to AssetCIO</p>
 
 					<div id="select_client">
 						<p>Please select Client:<br/>
@@ -24,12 +24,12 @@
 				<% elsif ((@client_id == 0) && (@selected_client != 0)) %>
 
 					<h1>Home</h1>
-					<p>Welcome to Asset CIO. <%= @client.name %> </p> 
+					<p>Welcome to AssetCIO. <%= @client.name %> </p> 
 
 				<% elsif ((@client_id != 0) && (@selected_client == 0)) %>
 
 					<h1>Home</h1>
-					<p>Welcome to Asset CIO.  </p> 
+					<p>Welcome to AssetCIO.  </p> 
 
 
 				<% else %>

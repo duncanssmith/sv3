@@ -3,11 +3,7 @@
 %table.index_data
   %tr
     %th 
-      v
-    %th 
-      i 
-    %th 
-      v-i 
+      Installed items
     %th 
       Asset
     %th 
@@ -60,10 +56,6 @@
     %tr{:class => cycle('list-line-odd', 'list-line-even')}
       %td
         = link_to versions.length, device 
-      %td
-        =h installations.length 
-      %td
-        = (versions.length) - (installations.length) 
       %td
         =h device.asset_id
       %td

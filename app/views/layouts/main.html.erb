@@ -18,8 +18,8 @@
 	<body>
 
 		<div id="banner">
-						<% # image_tag("asset_cio_000.png", :size => "140x35", :title => "SAM Eclat Asset CIO TM") %>
-						<%= image_tag("AssetCIOLogo.png", :title => "SAM Eclat Asset CIO TM", :size => "20x20" ) %>
+						<% # image_tag("asset_cio_000.png", :size => "140x35", :title => "SAM Eclat AssetCIO TM") %>
+						<%= image_tag("AssetCIOLogo.png", :title => "SAM Eclat AssetCIO TM", :size => "20x20" ) %>
 		</div>
 
 	  <div id="container">
@@ -71,6 +71,7 @@
 						<li> &nbsp; </li>
 						<li> <%= link_to 'Home', :controller => 'home' %> </li>
 						<li> <%= link_to 'Dashboard', :controller => 'home', :action => 'dashboard' %> </li>
+						<li> <%= link_to 'Stats', :controller => 'home', :action => 'stats' %> </li>
 						<li> <%= link_to 'Asset Registers', :controller => 'registers' %> </li>
 						<li> <%= link_to 'Devices', :controller => 'devices' %> </li>
 						<li> <%= link_to 'Dicovery Data', :controller => 'servers' %> </li>
@@ -88,6 +89,7 @@
 							<li> &nbsp; </li>
 							<li> <%= link_to 'Home', :controller => 'home' %> </li>
 							<li> <%= link_to 'Dashboard', :controller => 'home', :action => 'dashboard' %> </li>
+						  <li> <%= link_to 'Stats', :controller => 'home', :action => 'stats' %> </li>
 							<li> <%= link_to 'Asset Registers', :controller => 'registers' %> </li>
 							<li> <%= link_to 'Devices', :controller => 'devices' %> </li>
 							<li> <%= link_to 'Discovery Data', :controller => 'servers' %> </li>

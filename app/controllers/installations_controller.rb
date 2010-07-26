@@ -3,23 +3,28 @@ class InstallationsController < ApplicationController
   # GET /installations
   # GET /installations.xml
   def index
-    @installations = Installation.all
+    #@installations = Installation.all
 		if current_user
 		  @client_id = current_user.client_id
 		  @role = current_user.role
 	   # @clients = Client.find (:all, :select => 'id, name')
     end
 
-		if( ( session[:selected_client] ) && ( session[:selected_client] != 0) )
-		  @client_index = session[:selected_client]
-		else
-			@client_index = @client_id
-		end
+		#if( ( session[:selected_client] ) && ( session[:selected_client] != 0) )
+		#  @client_index = session[:selected_client]
+		#else
+		#	@client_index = @client_id
+		#end
 
-	  @clients = Client.find :all, :conditions => "id = '#{@client_index}'"
+    #@licences = Licence.paginate(:per_page => 6, :page => params[:page], :conditions => "client_id = '#{@client_index}'")
+    #@installations = Installation.paginate(:per_page => 6, :page => params[:page], :conditions => "client_id = '#{@client_index}'")
+    @installations = Installation.paginate(:per_page => 6, :page => params[:page])
+	  #@installations = Installation.find :all, :conditions => "client_id = '#{@client_index}'"
+	  #@clients = Client.find :all, :conditions => "id = '#{@client_index}'"
 
     respond_to do |format|
       format.html # index.html.erb
+      format.js # index.html.js
       format.xml  { render :xml => @installations }
     end
   end

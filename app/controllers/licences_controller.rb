@@ -1,11 +1,10 @@
 class LicencesController < ApplicationController
 	load_and_authorize_resource
+
   # GET /licences
   # GET /licences.xml
-
   def index
     @client_id = current_user.client_id
-
 
 		if( ( session[:selected_client] ) && ( session[:selected_client] != 0) )
 		  @client_index = session[:selected_client]
@@ -16,10 +15,34 @@ class LicencesController < ApplicationController
     @clients = Client.find :all, :conditions => "id = '#{@client_index}'"
 		@registers = Register.find :all, :conditions => "client_id = '#{@client_index}'", :order => "id"
     @licences = Licence.paginate(:per_page => 6, :page => params[:page], :conditions => "client_id = '#{@client_index}'")
+    @licences_a = Licence.find(:all, :conditions => "client_id = '#{@client_index}'")
+
+		@devices = Device.find :all, :conditions => "client_id = '#{@client_index}'"
+    @licences_b = Array.new
+		@installations = Array.new
+		tmp_licence = Licence.new
+
+		@devices.each do |d|
+			d.installations.each do |i|
+				@installations << Installation.find(i.id)
+				i.licences.each do |l|
+				  tmp_licence = Licence.find(l.licence_id)
+				  if tmp_licence.client_id != @client_index
+					  tmp_licence = nil
+				  else
+            @licences_b << tmp_licence 
+						tmp_licence = nil
+				  end	
+				end
+			end
+		end
+
+		@installation_count = @installations.length
+		@device_count = @devices.length
 
     respond_to do |format|
-      format.js
       format.html # index.html.erb
+      format.js # index.html.js
       format.xml  { render :xml => @licences }
     end
   end
@@ -27,6 +50,33 @@ class LicencesController < ApplicationController
   # GET /licences/1
   # GET /licences/1.xml
   def show
+    @client_id = current_user.client_id
+
+		if( ( session[:selected_client] ) && ( session[:selected_client] != 0) )
+		  @client_index = session[:selected_client]
+		else
+			@client_index = @client_id
+		end
+
+		@devices = Device.find :all, :conditions => "client_id = '#{@client_index}'"
+    @licences_b = Array.new
+		@installations = Array.new
+		tmp_licence = Licence.new
+
+		@devices.each do |d|
+			d.installations.each do |i|
+				@installations << Installation.find(i.id)
+				i.licences.each do |l|
+				  tmp_licence = Licence.find(l.licence_id)
+				  if tmp_licence.client_id != @client_index
+					  tmp_licence = nil
+				  else
+            @licences_b << tmp_licence 
+						tmp_licence = nil
+				  end	
+				end
+			end
+		end
 
     respond_to do |format|
       format.html # show.html.erb

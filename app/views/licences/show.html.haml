@@ -1,168 +1,155 @@
-%p
-  %b
-    Sku:
-  =h @licence.sku
+%h1 Licence
 
 %p
   %b
-    Version ID:
-  =h @licence.version_id
+    Licence Details
+%div.habtm
+  %table
+    %tr
+      %th SKU
+      %th ID
+      %th Country
+      %th CAL
+    %tr
+      %td
+        =h @licence.sku
+      %td
+        =h @licence.identifying_number
+      %td
+        =h @licence.country
+      %td
+        =h @licence.cal
+    %tr
+      %th Licence Type
+      %th Term
+      %th Upgrade
+      %th Term Expiry
+    %tr
+      %td
+        =h @licence.licence_type
+      %td
+        =h @licence.term
+      %td
+        =h @licence.upgrade
+      %td
+        =h @licence.term_expiry_date
+    %tr
+      %th CI Name 
+      %th Base Licence
+      %th Maintenance Expiry
+      %th Entitlement Type
+    %tr
+      %td
+        =h @licence.ci_name
+      %td
+        =h @licence.base_licence
+      %td
+        =h @licence.maintenance_expiry
+      %td
+        =h @licence.entitlement_type
+    %tr
+      %th Cost Centre 
+      %th Volume licence agreement no.
+      %th Agreement location
+      %th Entitlement Type
+    %tr
+      %td
+        =h @licence.cost_centre
+      %td
+        =h @licence.volume_licence_agreement_number
+      %td
+        =h @licence.agreement_location
+      %td
+        =h @licence.entitlement_type
+    %tr
+      %th Entitlement location 
+      %th Supplier
+      %th Supplier invoice no.
+      %th Invoice date
+    %tr
+      %td
+        =h @licence.entitlement_location
+      %td
+        =h @licence.supplier
+      %td
+        =h @licence.supplier_invoice_number
+      %td
+        =h @licence.invoice_date
 
-%p
-  %b
-    Identifying number:
-  =h @licence.identifying_number
+    %tr
+      %th Po number
+      %th Country of usage
+      %th Product substitution rights
+      %th Secondary rights
+    %tr
+      %td
+        =h @licence.po_number
+      %td
+        =h @licence.country_of_usage
+      %td
+        =h @licence.product_substitution_rights
+      %td
+        =h @licence.secondary_rights
 
-%p
-  %b
-    Country:
-  =h @licence.country
+    %tr
+      %th Transferability
+      %th External licence transfer requirements
+      %th Linkages
+      %th Total cost of line item
+    %tr
+      %td
+        =h @licence.transferability
+      %td
+        =h @licence.external_licence_transfer_requirements
+      %td
+        =h @licence.linkages
+      %td
+        =h @licence.total_cost_of_line_item
+    %tr
+      %th Quantity
+      %th Unit
+      %th Cost unit
+      %th Maintenance pa
+    %tr
+      %td
+        =h @licence.quantity
+      %td
+        =h @licence.unit
+      %td
+        =h @licence.cost_unit
+      %td
+        =h @licence.maintenance_pa
+    %tr 
+      %th Client id
+    %tr
+      %td
+        =h @licence.client_id
 
-%p
-  %b
-    Cal:
-  =h @licence.cal
+- if @installation_count != 0
+  %p
+    %b
+      Installations to which this licence applies
 
-%p
-  %b
-    Licence type:
-  =h @licence.licence_type
+%div.habtm
+  %table.habtm
+    %tr
+      %th
+        Device ID 
+      %th
+        Make 
+      %th
+        Model 
+    - @licence.installations.each do |i|
+      %tr
+        %td
+          = i.device_id
+        %td
+          = i.device_id
+        %td
+          = i.device_id
+          
 
-%p
-  %b
-    Term:
-  =h @licence.term
-
-%p
-  %b
-    Upgrade:
-  =h @licence.upgrade
-
-%p
-  %b
-    Term expiry date:
-  =h @licence.term_expiry_date
-
-%p
-  %b
-    Ci name:
-  =h @licence.ci_name
-
-%p
-  %b
-    Base licence:
-  =h @licence.base_licence
-
-%p
-  %b
-    Maintenance expiry:
-  =h @licence.maintenance_expiry
-
-%p
-  %b
-    Entitlement type:
-  =h @licence.entitlement_type
-
-%p
-  %b
-    Cost centre:
-  =h @licence.cost_centre
-
-%p
-  %b
-    Volume licence agreement number:
-  =h @licence.volume_licence_agreement_number
-
-%p
-  %b
-    Agreement location:
-  =h @licence.agreement_location
-
-%p
-  %b
-    Entitlement location:
-  =h @licence.entitlement_location
-
-%p
-  %b
-    Supplier:
-  =h @licence.supplier
-
-%p
-  %b
-    Supplier invoice number:
-  =h @licence.supplier_invoice_number
-
-%p
-  %b
-    Invoice date:
-  =h @licence.invoice_date
-
-%p
-  %b
-    Po number:
-  =h @licence.po_number
-
-%p
-  %b
-    Country of usage:
-  =h @licence.country_of_usage
-
-%p
-  %b
-    Product substitution rights:
-  =h @licence.product_substitution_rights
-
-%p
-  %b
-    Secondary rights:
-  =h @licence.secondary_rights
-
-%p
-  %b
-    Transferability:
-  =h @licence.transferability
-
-%p
-  %b
-    External licence transfer requirements:
-  =h @licence.external_licence_transfer_requirements
-
-%p
-  %b
-    Linkages:
-  =h @licence.linkages
-
-%p
-  %b
-    Total cost of line item:
-  =h @licence.total_cost_of_line_item
-
-%p
-  %b
-    Quantity:
-  =h @licence.quantity
-
-%p
-  %b
-    Unit:
-  =h @licence.unit
-
-%p
-  %b
-    Cost unit:
-  =h @licence.cost_unit
-
-%p
-  %b
-    Maintenance pa:
-  =h @licence.maintenance_pa
-
-%p
-  %b
-    Client id:
-  =h @licence.client_id
-
+%br
 
 = link_to 'Edit', edit_licence_path(@licence) |
 = link_to 'Back', licences_path

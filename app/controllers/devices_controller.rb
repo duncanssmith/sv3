@@ -12,7 +12,7 @@ class DevicesController < ApplicationController
 			@client_index = @client_id
 		end
 		
-		@registers = Register.find :all, :conditions => "client_id = '#{@client_index}'", :order => "id"
+		@registers = Register.find(:all, :conditions => "client_id = '#{@client_index}'", :order => "id")
     @devices = Device.paginate(:per_page => 6, :page => params[:page], :conditions => "client_id = '#{@client_index}'")
 
     respond_to do |format|
@@ -26,7 +26,9 @@ class DevicesController < ApplicationController
   # GET /devices/1.xml
   def show
 		@registers = @device.registers
-		@versions = @device.versions
+		@versions =  @device.versions
+		#@versions = Versions.find :all, :conditions => "client_id = '#{@client_index}'" # and id in @device.versions"
+
 
     respond_to do |format|
       format.html # show.html.erb
