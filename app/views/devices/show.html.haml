@@ -79,7 +79,8 @@
         %th Serial
         %th Language
       - count = 0
-      - for version in @versions do
+      - @versions_a = @versions.sort_by{ |x| x.product_id }
+      - for version in @versions_a do
         - count += 1
         - product = Product.find(version.product_id)
         - publisher = Publisher.find(product.publisher_id)

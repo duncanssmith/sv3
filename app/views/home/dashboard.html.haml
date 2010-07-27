@@ -45,35 +45,35 @@
                   = @under_licenced_count
             %tr
               %td
-                Total licence cost
+                Compliance
               %td
-                = number_to_currency(@total_licence_cost / 100, :unit => "£")
+                =h number_to_percentage(@ccp, :precision => 2)
             %tr
               %td
-                Total licences
+                Total licence cost
               %td
-                = @total_licences
+                = number_to_currency(@total_licence_cost / 100, :precision => 0, :unit => "&pound;")
             %tr
               %td
                 Average licence cost
               %td
-                = number_to_currency(@average_licence_cost / 100, :unit => "£")
+                = number_to_currency(@average_licence_cost / 100, :precision => 0, :unit => "&pound;")
             %tr
               %td
                 Total over-licenced cost
               %td
                 - if @total_over_licenced_cost > 0
-                  = number_to_currency(@total_over_licenced_cost / 100, :unit => "£")
+                  = number_to_currency(@total_over_licenced_cost / 100, :precision => 0, :unit => "&pound;")
                 -else
-                  = number_to_currency(0, :unit => "£")
+                  = number_to_currency(0, :precision => 0, :unit => "&pound;")
             %tr
               %td
                 Total under-licenced cost
               %td
                 - if @total_under_licenced_cost > 0
-                  = number_to_currency(@total_under_licenced_cost / 100, :unit => "£")
+                  = number_to_currency(@total_under_licenced_cost / 100, :precision => 0, :unit => "&pound;")
                 - else
-                  = number_to_currency(0, :unit => "£")
+                  = number_to_currency(0, :precision => 0, :unit => "&pound;")
     %tr
       %td{ :valign => "top" }
         %h3
@@ -86,7 +86,7 @@
           %table.dashboard_inner
             %tr
               %th.dashboard_inner
-                \&nbsp;
+                &nbsp;
               %th.dashboard_inner
                 Product
               %th.dashboard_inner
@@ -101,7 +101,7 @@
               %td.dashboard_inner
                 = @software_usage_quantity['Microsoft Project']
               %td.dashboard_inner
-                = number_to_currency(@software_usage_cost['Microsoft Project'], :unit => "£")
+                = number_to_currency(@software_usage_cost['Microsoft Project'], :precision => 0, :unit => "&pound;")
 
             %tr
               %td.dashboard_inner
@@ -112,7 +112,7 @@
                 = @software_usage_quantity['Microsoft Visio']
                 \%
               %td.dashboard_inner
-                = number_to_currency(@software_usage_cost['Microsoft Visio'], :unit => "£")
+                = number_to_currency(@software_usage_cost['Microsoft Visio'],  :precision => 0, :unit => "&pound;")
       %td{ :valign => "top" }
         %h3
           Risk Status
