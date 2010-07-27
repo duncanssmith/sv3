@@ -337,7 +337,7 @@ DROP TABLE IF EXISTS `devices`;
 
 CREATE TABLE `devices`(
 	`id` INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
-	`asset_id` SMALLINT NOT NULL,
+	`asset_id` VARCHAR(64), 
   `make` VARCHAR(64) ,
   `model` VARCHAR(64),
   `serial` VARCHAR(64) ,
