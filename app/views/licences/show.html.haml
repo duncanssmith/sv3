@@ -119,11 +119,6 @@
         =h @licence.cost_unit
       %td
         =h @licence.maintenance_pa
-    %tr 
-      %th Client id
-    %tr
-      %td
-        =h @licence.client_id
 
 - if @installation_count != 0
   %p
@@ -133,26 +128,34 @@
 %div.habtm
   %table.habtm
     %tr
-      %th
-        Device ID 
-      %th
-        Make 
-      %th
-        Model 
-      %th
-        Version 
+      %th Publisher 
+      %th Product 
+      %th Version 
+      %th Version Full 
+      %th Make  
+      %th Model 
+      %th Location  
     - @licence.installations.each do |i|
+      - v = Version.find(i.version_id)
+      - d = Device.find(i.device_id)
+      - p = Product.find(v.product_id)
+      - pb = Publisher.find(p.publisher_id)
+      - l = Location.find(d.location_id)
       %tr
         %td
-          = i.device_id
+          =h pb.name
         %td
-          = i.device_id
+          =h p.name
         %td
-          = i.device_id
+          =h v.name
         %td
-          = i.version_id
-          
-
+          =h v.fullname
+        %td
+          =h d.make 
+        %td
+          =h d.model
+        %td
+          =h l.name 
 %br
 
 = link_to 'Edit', edit_licence_path(@licence) |

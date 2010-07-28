@@ -23,23 +23,23 @@ class HomeController < ApplicationController
     @devices.each do |d|
       d.installations.each do |i|
         @installations << Installation.find(i.id)
-        i.licences.each do |l|
-          tmp_licence = Licence.find(l.licence_id)
-          if tmp_licence.client_id != @client_index
-            tmp_licence = nil
-          else
-            @licences << tmp_licence 
-            tmp_licence = nil
-          end  
-        end
+        #i.licences.each do |l|
+        #  tmp_licence = Licence.find(l.licence_id)
+        #  if tmp_licence.client_id != @client_index
+        #    tmp_licence = nil
+        #  else
+        #    @licences << tmp_licence 
+        #    tmp_licence = nil
+        #  end  
+        #end
       end
     end
 
     @installation_count = @installations.length
     @device_count = @devices.length
-    @licence_count = @licences.length
-    @under_licenced_count = @installation_count - @licence_count
-    @over_licenced_count = @licence_count - @installation_count
+    #@licence_count = @licences.length
+    #@under_licenced_count = @installation_count - @licence_count
+    #@over_licenced_count = @licence_count - @installation_count
 
   end
 
@@ -88,7 +88,8 @@ class HomeController < ApplicationController
       @selected_client = 0 
     end
     @devices = Device.find :all, :conditions => "client_id = '#{@client_index}'"
-    @licences = Array.new
+		@licences = Licence.find :all, :conditions => "client_id = '#{@client_index}'"
+    #@licences = Array.new
     @installations = Array.new
     tmp_licence = Licence.new
     @total_licence_cost = 0
@@ -96,18 +97,17 @@ class HomeController < ApplicationController
     @devices.each do |d|
       d.installations.each do |i|
         @installations << Installation.find(i.id)
-        i.licences.each do |l|
-          tmp_licence = Licence.find(l.licence_id)
-          if tmp_licence.client_id != @client_index
-            tmp_licence = nil
-          else
-            @licences << tmp_licence 
-            @total_licence_cost += tmp_licence.total_cost_of_line_item
-            tmp_licence = nil
-          end  
-        end
       end
     end
+    
+		#@installations.each do |installation|
+		#  @licences << Licence.find(installation.licence_id)
+		#end
+
+
+		@licences.each do |licence|
+			@total_licence_cost += licence.total_cost_of_line_item
+		end
 
     @installation_count = 0.0 
     @licence_count =  0.0
