@@ -3,6 +3,7 @@ class Version < ActiveRecord::Base
 	#has_and_belongs_to_many :devices
 	has_many :installations
 	has_many :devices, :through => :installations, :uniq => true
+	has_many :licences, :through => :installations
 	#has_and_belongs_to_many :licences
 	validates_presence_of :name
 	validates_presence_of :fullname

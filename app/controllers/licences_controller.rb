@@ -12,12 +12,12 @@ class LicencesController < ApplicationController
 			@client_index = @client_id
 		end
 		
-    @clients = Client.find :all, :conditions => "id = '#{@client_index}'"
-		@registers = Register.find :all, :conditions => "client_id = '#{@client_index}'", :order => "id"
+    @clients ||= Client.find :all, :conditions => "id = '#{@client_index}'"
+		@registers ||= Register.find :all, :conditions => "client_id = '#{@client_index}'", :order => "id"
     @licences = Licence.paginate(:per_page => 6, :page => params[:page], :conditions => "client_id = '#{@client_index}'")
-    @licences_a = Licence.find(:all, :conditions => "client_id = '#{@client_index}'")
+    @licences_a ||= Licence.find(:all, :conditions => "client_id = '#{@client_index}'")
 
-		@devices = Device.find :all, :conditions => "client_id = '#{@client_index}'"
+		@devices ||= Device.find :all, :conditions => "client_id = '#{@client_index}'"
     @licences_b = Array.new
 		@installations = Array.new
 		tmp_licence = Licence.new
