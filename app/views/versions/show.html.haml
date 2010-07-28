@@ -38,7 +38,7 @@ Devices with this product version:
       %th Model
       %th Serial
       %th IP Address 
-    - for device in @devices do 
+    - @devices.each do |device|
       %tr
         %td
           =h device.node
