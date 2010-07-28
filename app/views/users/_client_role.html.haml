@@ -1,0 +1,8 @@
+%div
+  = form.label :role, "Role"
+  %br
+  = form.collection_select :role, User::ROLES, :to_s, :humanize
+%div
+  = form.label :client_id, "Client"
+  %br
+  = select("user", :client_id, Client.all.collect {|c| [ c.name, c.id ]}, { :include_blank => true} )
