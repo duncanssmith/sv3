@@ -1,11 +1,7 @@
 ActionController::Routing::Routes.draw do |map|
 
-
-
   map.login "login", :controller => "user_sessions", :action => "new"
   map.logout "logout", :controller => "user_sessions", :action => "destroy"
-
-  map.adminselectclient "adminselectclient", :controller => "user_sessions", :action => "adminselectclient"
 
 	map.home "home", :controller => "home", :action => "admin"
 	map.dashboard "dashboard", :controller => "home", :action => "dashboard"
@@ -26,8 +22,8 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :registers
   map.resources :servers
 	map.resources :servers, :collection => { :search => :get }
-  map.resources :user_sessions
   map.resources :users
+  map.resources :user_sessions
   map.resources :versions
 
   # The priority is based upon order of creation: first created -> highest priority.
