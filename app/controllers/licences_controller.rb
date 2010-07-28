@@ -25,15 +25,16 @@ class LicencesController < ApplicationController
 		@devices.each do |d|
 			d.installations.each do |i|
 				@installations << Installation.find(i.id)
-				i.licences.each do |l|
-				  tmp_licence = Licence.find(l.licence_id)
-				  if tmp_licence.client_id != @client_index
-					  tmp_licence = nil
-				  else
-            @licences_b << tmp_licence 
-						tmp_licence = nil
-				  end	
-				end
+
+				#i.licences.each do |l|
+				#  tmp_licence = Licence.find(l.licence_id)
+				#  if tmp_licence.client_id != @client_index
+				#	  tmp_licence = nil
+				#  else
+        #    @licences_b << tmp_licence 
+				#		tmp_licence = nil
+				#  end	
+				#end
 			end
 		end
 
@@ -66,15 +67,15 @@ class LicencesController < ApplicationController
 		@devices.each do |d|
 			d.installations.each do |i|
 				@installations << Installation.find(i.id)
-				i.licences.each do |l|
-				  tmp_licence = Licence.find(l.licence_id)
-				  if tmp_licence.client_id != @client_index
-					  tmp_licence = nil
-				  else
-            @licences_b << tmp_licence 
-						tmp_licence = nil
-				  end	
-				end
+				#i.licences.each do |l|
+				#  tmp_licence = Licence.find(l.licence_id)
+				#  if tmp_licence.client_id != @client_index
+				#	  tmp_licence = nil
+				#  else
+        #    @licences_b << tmp_licence 
+				#		tmp_licence = nil
+				#  end	
+				#end
 			end
 		end
 
