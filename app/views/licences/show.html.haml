@@ -139,6 +139,8 @@
         Make 
       %th
         Model 
+      %th
+        Version 
     - @licence.installations.each do |i|
       %tr
         %td
@@ -147,6 +149,8 @@
           = i.device_id
         %td
           = i.device_id
+        %td
+          = i.version_id
           
 
 %br

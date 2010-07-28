@@ -15,42 +15,47 @@
     #container
       - flash.each do |name, msg|
         - content_tag :div, msg, :id => "flash_#{name}"
-    #user_nav
-      - if current_user
-        - if current_user.role == 'admin'
-          - if ((session[:selected_client]) && (session[:selected_client] != 0))
-            - client = Client.find session[:selected_client]
-            - client_name = client.name
-          - else
-            - client_name = ""
+    - if current_user
+      #user_nav
+        - if current_user.role
+          - if current_user.role == 'admin'
+            - if ((session[:selected_client]) && (session[:selected_client] != 0))
+              - client = Client.find session[:selected_client]
+              - client_name = client.name
+            - else
+              - client_name = ""
             -# end
-          - if current_client
-            - client_name = current_client.name
-          %b 
-            AssetCIO &trade; for 
-            = client_name
-            &nbsp; | &nbsp;
-          %b
-            = current_user.name
-            logged in &nbsp; | &nbsp;
-        - else
-          %b
-            = current_user.name
-            logged in
-            = current_user.role
-            \&nbsp;
+            - if current_client
+              - client_name = current_client.name
+              %b 
+                AssetCIO&trade; for 
+                = client_name
+                &nbsp; | &nbsp;
+              %b
+                = current_user.name
+                logged in with r&ocirc;le: 
+                = current_user.role
+                \&nbsp; | &nbsp;
+
+            - else
+              %b
+                = current_user.name
+                logged in
+                = current_user.role
+                \&nbsp;
+            -# end
+            %b
+              -#= link_to "Edit Profile", edit_user_path(:current)
+              -#&nbsp; | &nbsp;
+              = link_to "Logout", logout_path
+          -# end
         -# end
-        %b
-          -#= link_to "Edit Profile", edit_user_path(:current)
-          -#&nbsp; | &nbsp;
-          = link_to "Logout", logout_path
-      - else
+    - else 
+      #user_nav
         %b
           -#= link_to "Register", new_user_path
           -#&nbsp; | &nbsp;
           = link_to "Login", login_path
-      -# end
-    - if !current_user
       %br
       .underlinemenu
         %ul
@@ -63,45 +68,47 @@
           %li
             \&nbsp;
     -# end
-    - if current_user && current_user.role != 'admin'
-      %br
-      .underlinemenu
-        %ul
-          %li
-            = link_to 'Home', :controller => 'home'
-          %li
-            = link_to 'Dashboard', :controller => 'home', :action => 'dashboard'
-          %li
-            = link_to 'Asset Registers', :controller => 'registers'
-          %li
-            = link_to 'Dicovery Data', :controller => 'servers'
-          %li
-            = link_to 'Devices', :controller => 'devices'
-          %li
-            = link_to 'Products', :controller => 'products'
-          %li
-            = link_to 'Licences', :controller => 'licences'
-
-    - if current_user && current_user.role == 'admin'
-      %br
-      .underlinemenu
-        %ul
-          %li
-            \&nbsp;
-          %li
-            = link_to 'Home', :controller => 'home'
-          %li
-            = link_to 'Dashboard', :controller => 'home', :action => 'dashboard'
-          %li
-            = link_to 'Asset Registers', :controller => 'registers'
-          %li
-            = link_to 'Discovery Data', :controller => 'servers'
-          %li
-            = link_to 'Devices', :controller => 'devices'
-          %li
-            = link_to 'Products', :controller => 'products'
-          %li
-            = link_to 'Licences', :controller => 'licences'
+    - if current_user 
+      - if current_user.role
+        - if current_user.role != 'admin'
+          %br
+          .underlinemenu
+            %ul
+              %li
+                = link_to 'Home', :controller => 'home'
+              %li
+                = link_to 'Dashboard', :controller => 'home', :action => 'dashboard'
+              %li
+                = link_to 'Asset Registers', :controller => 'registers'
+              %li
+                = link_to 'Dicovery Data', :controller => 'servers'
+              %li
+                = link_to 'Devices', :controller => 'devices'
+              %li
+                = link_to 'Products', :controller => 'products'
+              %li
+                = link_to 'Licences', :controller => 'licences'
+        - else 
+          %br
+          .underlinemenu
+            %ul
+              %li
+                = link_to 'Home', :controller => 'home'
+              %li
+                = link_to 'Dashboard', :controller => 'home', :action => 'dashboard'
+              %li
+                = link_to 'Asset Registers', :controller => 'registers'
+              %li
+                = link_to 'Discovery Data', :controller => 'servers'
+              %li
+                = link_to 'Devices', :controller => 'devices'
+              %li
+                = link_to 'Products', :controller => 'products'
+              %li 
+                = link_to 'Licences', :controller => 'licences'
+        -# end
+      -# end
+    -# end
     %p.flash_notice
       = flash[:notice]
     %p.flash_warn
