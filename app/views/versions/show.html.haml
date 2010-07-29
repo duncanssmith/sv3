@@ -29,17 +29,26 @@
         =h @version.language
   %br
 
-Devices with this product version:
+
+-if @devices.length !=0
+  %p
+    %b
+      Devices with this product version:
 %div.habtm 
   %table
     %tr
+      %th &nbsp;
       %th Node
       %th Make
       %th Model
       %th Serial
       %th IP Address 
+      - count = 0
     - @devices.each do |device|
+      - count += 1
       %tr
+        %td
+          = link_to count, device
         %td
           =h device.node
         %td
@@ -50,7 +59,7 @@ Devices with this product version:
           =h device.serial
         %td
           =h device.ip
-
+  %br
 = link_to 'Edit', edit_product_version_path(@product, @version)
 |
 = link_to 'Back', product_versions_path([@product, @version]) 

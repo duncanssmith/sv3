@@ -86,7 +86,7 @@
         - publisher = Publisher.find(product.publisher_id)
         %tr
           %td
-            =h count 
+            = link_to count, product_versions_path(product)
           %td
             =h publisher.name 
           %td

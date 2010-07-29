@@ -1,44 +1,14 @@
 %h1 Licences
 
--#%h4
-  Licences:[
-  =h @licences_b.length
-  ]
-  %br
-  Devices:[
-  = @devices.length
-  ]
-  %br
-  Installations:[
-  = @installations.length
-  ]
--#- @licences_a.each do |l|
-  - l.installations.each do |i|
-    - d = Device.find(i.device_id)
-    - @devices << d
-    - if d.client_id == @client_index
-      - count += 1
-    - elsif d.client_id != @client_index
-      - bad += 1
-    %div
-      =h d.id
-      =h d.client_id
-      =h d.make
-      =h d.model
-      - v = Version.find(i.version_id)
-      =h v.name
-      =h v.serial
-
 - if @licences.blank?
   %p 
     There are no licences listed
 - else
   - javascript "pagination"
 
-%div.licences
+%div#licences
   = render :partial => 'licences'
 
 %br 
-
 
 = link_to 'New licence', new_licence_path 

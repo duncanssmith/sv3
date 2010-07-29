@@ -1,8 +1,50 @@
 %h1 Licence
-
 %p
   %b
-    Licence Details
+    Licence details
+
+%div.habtm
+  - difference = (@licence.quantity - @licence.installations.length)
+  %p
+    %b Licence status: 
+    %table
+      %tr
+        %th
+          RAG
+        %th
+          Status
+        %th
+          Under/Over Licenced Figure
+        %th
+          Licences available
+        %th
+          Licences consumed/required
+      %tr
+        - if @licence.installations.length > @licence.quantity 
+          %td
+            = image_tag("red_traffic_light_1.png", :size => "18x18", :title => "Under Licenced" )
+          %td
+            %b Under Licenced
+        - elsif @licence.installations.length < @licence.quantity
+          %td
+            = image_tag("green_traffic_light_1_over.png", :size => "18x18", :title => "Over Licenced" )
+          %td
+            %b Over Licenced
+        - else
+          %td
+            = image_tag("green_traffic_light_1.png", :size => "18x18", :title => "Correctly Licenced" )
+          %td
+            %b Licences match installation quantity
+        %td
+          %b
+            =h difference
+        %td
+          %b
+            =h @licence.quantity
+        %td
+          %b
+            =h @licence.installations.length
+
 %div.habtm
   %table
     %tr
@@ -77,7 +119,7 @@
         =h @licence.invoice_date
 
     %tr
-      %th Po number
+      %th PO number
       %th Country of usage
       %th Product substitution rights
       %th Secondary rights
@@ -124,38 +166,37 @@
   %p
     %b
       Installations to which this licence applies
-
-%div.habtm
-  %table.habtm
-    %tr
-      %th Publisher 
-      %th Product 
-      %th Version 
-      %th Version Full 
-      %th Make  
-      %th Model 
-      %th Location  
-    - @licence.installations.each do |i|
-      - v = Version.find(i.version_id)
-      - d = Device.find(i.device_id)
-      - p = Product.find(v.product_id)
-      - pb = Publisher.find(p.publisher_id)
-      - l = Location.find(d.location_id)
+  %div.habtm
+    %table.habtm
       %tr
-        %td
-          =h pb.name
-        %td
-          =h p.name
-        %td
-          =h v.name
-        %td
-          =h v.fullname
-        %td
-          =h d.make 
-        %td
-          =h d.model
-        %td
-          =h l.name 
+        %th Publisher 
+        %th Product 
+        %th Version 
+        %th Version Full 
+        %th Make  
+        %th Model 
+        %th Location  
+      - @licence.installations.each do |i|
+        - v = Version.find(i.version_id)
+        - d = Device.find(i.device_id)
+        - p = Product.find(v.product_id)
+        - pb = Publisher.find(p.publisher_id)
+        - l = Location.find(d.location_id)
+        %tr
+          %td
+            =h pb.name
+          %td
+            =h p.name
+          %td
+            =h v.name
+          %td
+            =h v.fullname
+          %td
+            =h d.make 
+          %td
+            =h d.model
+          %td
+            =h l.name 
 %br
 
 = link_to 'Edit', edit_licence_path(@licence) |

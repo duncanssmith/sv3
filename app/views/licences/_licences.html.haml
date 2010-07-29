@@ -3,6 +3,9 @@
 %table.index_data
   %tr
     %th Installs
+    %th Licence quantity
+    %th RAG
+    %th Over/Under Licenced qty
     %th Sku
     %th Identifying number
     %th Country
@@ -30,7 +33,6 @@
     %th External licence transfer requirements
     %th Linkages
     %th Total cost of line item
-    %th Quantity
     %th Unit
     %th Cost unit
     %th Maintenance pa
@@ -44,7 +46,23 @@
   - @licences.each do |licence|
     %tr{:class => cycle('list-line-odd', 'list-line-even')}
       %td 
-        = link_to licence.installations.length, licence
+        - if licence.installations.length != 0
+          = link_to licence.installations.length, licence
+        -else
+          0
+      %td
+        =h licence.quantity
+      %td
+        - difference = (licence.quantity - licence.installations.length)
+        - if licence.installations.length > licence.quantity 
+          = image_tag("red_traffic_light_1.png", :size => "18x18", :title => "Under Licenced" )
+        - elsif licence.installations.length < licence.quantity
+          -#= image_tag("amber_traffic_light_1.png", :size => "18x18", :title => "Over Licenced" )
+          = image_tag("green_traffic_light_1_over.png", :size => "18x18", :title => "Over Licenced" )
+        -else
+          = image_tag("green_traffic_light_1.png", :size => "18x18", :title => "Correctly Licenced" )
+      %td
+        =h difference
       %td
         =h licence.sku
       %td
@@ -99,8 +117,6 @@
         =h licence.linkages
       %td
         =h licence.total_cost_of_line_item
-      %td
-        =h licence.quantity
       %td
         =h licence.unit
       %td

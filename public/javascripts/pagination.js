@@ -5,7 +5,7 @@ $j(document).ready(function() {
 //$(document).ready(
 $j(function() {
   $j(".pagination a").live("click", function() {
-    $j(".pagination").html( "loading data ..." );
+    $j(".pagination").html( "fetching data..." );
     $j.get( this.href, null, null, "script" );
     return false;
   });

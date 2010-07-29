@@ -12,7 +12,6 @@ class HomeController < ApplicationController
       @client_index = @client_id
     end
     
-#    @licence = Licence.find(:all, :id => :params[:id], :conditions => "client_id = '#{@client_index}'") 
     @registers = Register.find :all, :conditions => "client_id = '#{@client_index}'", :order => "id"
 
     @devices = Device.find :all, :conditions => "client_id = '#{@client_index}'"
@@ -23,23 +22,11 @@ class HomeController < ApplicationController
     @devices.each do |d|
       d.installations.each do |i|
         @installations << Installation.find(i.id)
-        #i.licences.each do |l|
-        #  tmp_licence = Licence.find(l.licence_id)
-        #  if tmp_licence.client_id != @client_index
-        #    tmp_licence = nil
-        #  else
-        #    @licences << tmp_licence 
-        #    tmp_licence = nil
-        #  end  
-        #end
       end
     end
 
     @installation_count = @installations.length
     @device_count = @devices.length
-    #@licence_count = @licences.length
-    #@under_licenced_count = @installation_count - @licence_count
-    #@over_licenced_count = @licence_count - @installation_count
 
   end
 
@@ -87,11 +74,11 @@ class HomeController < ApplicationController
     else
       @selected_client = 0 
     end
+
     @devices = Device.find :all, :conditions => "client_id = '#{@client_index}'"
-		@licences = Licence.find :all, :conditions => "client_id = '#{@client_index}'"
+    @licences = Licence.find :all, :conditions => "client_id = '#{@client_index}'"
     #@licences = Array.new
     @installations = Array.new
-    tmp_licence = Licence.new
     @total_licence_cost = 0
 
     @devices.each do |d|
@@ -100,14 +87,11 @@ class HomeController < ApplicationController
       end
     end
     
-		#@installations.each do |installation|
-		#  @licences << Licence.find(installation.licence_id)
-		#end
 
 
-		@licences.each do |licence|
-			@total_licence_cost += licence.total_cost_of_line_item
-		end
+    @licences.each do |licence|
+      @total_licence_cost += licence.total_cost_of_line_item
+    end
 
     @installation_count = 0.0 
     @licence_count =  0.0
@@ -126,27 +110,22 @@ class HomeController < ApplicationController
     @under_licenced_count = @installation_count - @licence_count
     @over_licenced_count = @licence_count - @installation_count
 
-    #@total_licence_cost = Licence.sum :total_cost_of_line_item, :conditions => "client_id = '#{@client_index}'"
-    #@total_licences = Licence.count :conditions => "client_id = '#{@client_index}'"
     @total_licences = @licence_count
 
-    #@average_licence_cost = (Licence.average :total_cost_of_line_item, :conditions => "client_id = '#{@client_index}'") / 10
     if @licence_count > 0
       @average_licence_cost =  @total_licence_cost / @licence_count
     else
       @average_licence_cost = 0
     end
-    #@total_over_licenced_cost = (Licence.sum :maintenance_pa, :conditions => "client_id = '#{@client_index}'") * 3.35
 
     @total_over_licenced_cost = @average_licence_cost * @over_licenced_count  
-    #@total_under_licenced_cost = (Licence.sum :cost_unit, :conditions => "client_id = '#{@client_index}'") / 930
     @total_under_licenced_cost = @average_licence_cost * @under_licenced_count 
 
     @rag_red_items = Server.count :conditions => "scope = 'RED' and client_id = '#{@client_index}'" 
     @rag_amber_items = Server.count :conditions => "scope = 'AMBER' and client_id = '#{@client_index}'"
     @rag_green_items = Server.count :conditions => "scope = 'GREEN' and client_id = '#{@client_index}'"
 
-    @software_usage_quantity = Hash['Microsoft Project', 354.0, 'Microsoft Visio', 325.0, 'All others', 138.0]
+    @software_usage_quantity = Hash['Microsoft Project', 354, 'Microsoft Visio', 62, 'All others', 138]
     @software_usage_cost = Hash['Microsoft Project', 75566.0, 'Microsoft Visio', 34352.0, 'All others', 13500.0]
 
     registers = Register.find :all, :conditions => "client_id = '#{@client_index}'"
