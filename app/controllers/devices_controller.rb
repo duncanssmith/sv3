@@ -27,6 +27,7 @@ class DevicesController < ApplicationController
   def show
 		@registers = @device.registers
 		@versions =  @device.versions
+		@licences = @device.licences
 		#@versions = Versions.find :all, :conditions => "client_id = '#{@client_index}'" # and id in @device.versions"
 
 

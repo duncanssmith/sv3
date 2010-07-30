@@ -86,7 +86,7 @@
         - publisher = Publisher.find(product.publisher_id)
         %tr
           %td
-            = link_to count, product_versions_path(product)
+            = link_to count, product_version_path(product, version)
           %td
             =h publisher.name 
           %td
@@ -100,10 +100,37 @@
           %td
             =h version.language 
 
+- if @licences.length != 0
+  %p
+    %b
+      Licences related to this device:
+  %div.habtm
+    %table
+      %tr
+        %th Licence
+        %th CAL
+        %th Expiry
+        %th Type
+      - count = 0
+      - @licences_sorted = @licences.sort_by{ |s| s.id }
+      - @licences_sorted.each do |l|
+        - count += 1
+        %tr
+          %td
+            = link_to count, l
+          %td
+            = l.cal
+          %td
+            = l.entitlement_type
+          %td
+            = l.licence_type
+ 
+
 - if @registers.length != 0
   %p
     %b
       Registered in:
+
   %div.habtm
     %table
       %tr
