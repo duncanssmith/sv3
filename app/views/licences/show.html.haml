@@ -1,12 +1,9 @@
 %h1 Licence
-%p
-  %b
-    Licence details
 
 %div.habtm
   - difference = (@licence.quantity - @licence.installations.length)
   %p
-    %b Licence status: 
+    %b Licence status
     %table
       %tr
         %th
@@ -22,17 +19,17 @@
       %tr
         - if @licence.installations.length > @licence.quantity 
           %td
-            = image_tag("red_traffic_light_1.png", :size => "18x18", :title => "Under Licenced" )
+            = image_tag("red_traffic_light_1.png", :size => "24x24", :title => "Under Licenced" )
           %td
             %b Under Licenced
         - elsif @licence.installations.length < @licence.quantity
           %td
-            = image_tag("green_traffic_light_1_over.png", :size => "18x18", :title => "Over Licenced" )
+            = image_tag("green_traffic_light_1_over.png", :size => "24x24", :title => "Over Licenced" )
           %td
             %b Over Licenced
         - else
           %td
-            = image_tag("green_traffic_light_1.png", :size => "18x18", :title => "Correctly Licenced" )
+            = image_tag("green_traffic_light_1.png", :size => "24x24", :title => "Correctly Licenced" )
           %td
             %b Licences match installation quantity
         %td
@@ -45,7 +42,12 @@
           %b
             =h @licence.installations.length
 
+%br
+
 %div.habtm
+  %p
+    %b
+      Licence details
   %table
     %tr
       %th SKU
@@ -73,8 +75,13 @@
         =h @licence.term
       %td
         =h @licence.upgrade
-      %td
-        =h @licence.term_expiry_date
+      - if @licence.term_expiry_date <= @now
+        %td.cellred
+          Expired on
+          =h @licence.term_expiry_date
+      - else
+        %td.cellgreen
+          =h @licence.term_expiry_date
     %tr
       %th CI Name 
       %th Base Licence
@@ -85,8 +92,13 @@
         =h @licence.ci_name
       %td
         =h @licence.base_licence
-      %td
-        =h @licence.maintenance_expiry
+      - if @licence.maintenance_expiry <= @now
+        %td.cellred
+          Expired on
+          =h @licence.maintenance_expiry
+      - else
+        %td.cellgreen
+          =h @licence.maintenance_expiry
       %td
         =h @licence.entitlement_type
     %tr
@@ -162,13 +174,18 @@
       %td
         =h @licence.maintenance_pa
 
+%br
+
 - if @installation_count != 0
   %p
     %b
+      =h @licence.installations.length
       Installations to which this licence applies
   %div.habtm
     %table.habtm
       %tr
+        %th Product version
+        %th Device 
         %th Publisher 
         %th Product 
         %th Version 
@@ -176,13 +193,19 @@
         %th Make  
         %th Model 
         %th Location  
+        - count = 0
       - @licence.installations.each do |i|
+        - count += 1
         - v = Version.find(i.version_id)
         - d = Device.find(i.device_id)
         - p = Product.find(v.product_id)
         - pb = Publisher.find(p.publisher_id)
         - l = Location.find(d.location_id)
         %tr
+          %td
+            = link_to "View #{count}", product_version_path(p, v)
+          %td
+            = link_to d.id, d
           %td
             =h pb.name
           %td

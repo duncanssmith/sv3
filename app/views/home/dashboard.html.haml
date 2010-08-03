@@ -19,49 +19,54 @@
             %tr
               %td
                 Devices
-              %td
+              %td.num
                 =h @device_count
             %tr
               %td
                 Installations
-              %td
+              %td.num
                 =h @installation_count
             %tr
               %td
                 Licences
-              %td
+              %td.num
                 =h @licence_count
             - if @over_licenced_count >= 0
               %tr
                 %td
                   Over Licenced
-                %td
+                %td.num
                   = @over_licenced_count
             - if @under_licenced_count >= 0
               %tr
                 %td
                   Under Licenced
-                %td
+                %td.num
                   = @under_licenced_count
             %tr
               %td
-                Compliance
+                Total entitlements
+              %td.num
+                =h number_to_currency(@total_entitlements, :precision => 0, :delimiter => ',', :unit => "")
+            %tr
               %td
+                Compliance
+              %td.num
                 =h number_to_percentage(@ccp, :precision => 0)
             %tr
               %td
                 Total licence cost
-              %td
+              %td.num
                 = number_to_currency(@total_licence_cost / 100, :precision => 0, :unit => "&pound;")
             %tr
               %td
                 Average licence cost
-              %td
+              %td.num
                 = number_to_currency(@average_licence_cost / 100, :precision => 0, :unit => "&pound;")
             %tr
               %td
                 Total over-licenced cost
-              %td
+              %td.num
                 - if @total_over_licenced_cost > 0
                   = number_to_currency(@total_over_licenced_cost / 100, :precision => 0, :unit => "&pound;")
                 -else
@@ -69,7 +74,7 @@
             %tr
               %td
                 Total under-licenced cost
-              %td
+              %td.num
                 - if @total_under_licenced_cost > 0
                   = number_to_currency(@total_under_licenced_cost / 100, :precision => 0, :unit => "&pound;")
                 - else

@@ -79,7 +79,8 @@ class HomeController < ApplicationController
     @licences = Licence.find :all, :conditions => "client_id = '#{@client_index}'"
     #@licences = Array.new
     @installations = Array.new
-    @total_licence_cost = 0
+    @total_licence_cost = 0.0
+    @total_entitlements = 0
 
     @devices.each do |d|
       d.installations.each do |i|
@@ -90,7 +91,8 @@ class HomeController < ApplicationController
 
 
     @licences.each do |licence|
-      @total_licence_cost += licence.total_cost_of_line_item
+      @total_licence_cost += licence.total_cost_of_line_item 
+			@total_entitlements += licence.quantity
     end
 
     @installation_count = 0.0 

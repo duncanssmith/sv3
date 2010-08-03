@@ -20,6 +20,9 @@ class VersionsController < ApplicationController
   # GET /versions/1.xml
   def show
 		@version = @product.versions.find(params[:id])
+		@product = Product.find(@version.product_id)
+		@publisher = Publisher.find(@product.publisher_id)
+
     @installations = @version.installations
 		@devices = Array.new
 		@installations.each do |i|

@@ -74,6 +74,18 @@ div.habtm {
     border: solid 1px silver; }
     div.habtm table tr {
       color: green; }
+      div.habtm table tr td.cellamber {
+        color: #fff;
+        font-weight: bold;
+        background-color: #ee3; }
+      div.habtm table tr td.cellred {
+        color: #fff;
+        font-weight: bold;
+        background-color: #f33; }
+      div.habtm table tr td.cellgreen {
+        color: #fff;
+        font-weight: bold;
+        background-color: #3c6; }
       div.habtm table tr td {
         color: #333333;
         border: solid 1px silver; }
@@ -154,6 +166,8 @@ td.nav {
 #dashboard_inner table td {
   background-color: #f3f3f3;
   background-color-color: #666690; }
+#dashboard_inner table td.num {
+  text-align: right; }
 
 div.graph {
   color: blue; }

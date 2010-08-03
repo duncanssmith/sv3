@@ -44,6 +44,9 @@ class LicencesController < ApplicationController
 			end
 		end
 
+    @now = DateTime.now
+    @one_month_from_now = 1.month.from_now
+
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @licence }

@@ -61,11 +61,12 @@
         =h @device.ram
       %td
         =h @device.bios_date
-
+%br
 
 - if @versions.length != 0
   %p
     %b
+      =h @versions.length
       Product versions installed:
 
   %div.habtm
@@ -99,10 +100,12 @@
             =h version.serial 
           %td
             =h version.language 
+%br
 
 - if @licences.length != 0
   %p
     %b
+      =h @licences.length
       Licences related to this device:
   %div.habtm
     %table
@@ -125,6 +128,7 @@
           %td
             = l.licence_type
  
+%br
 
 - if @registers.length != 0
   %p
